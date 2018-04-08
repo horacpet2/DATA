@@ -1,0 +1,75 @@
+\input /home/petr/bin/TeXMakro
+\def\odsadit{\hskip 5mm}
+\Nadpis{Popis kódu jazyka C}
+
+Zdrojový kód nebo zdrojový text je programátorem napsaný kód v nějakém programovacím jazyce uložený v jednom nebo více souborech - zdrojové soubory. 
+Jako první jsou ve zdrojovém kódu na řadě knihovny. Knihovna je označení pro hlavičkové soubory obsahující  před-připravené funkce, proměnné, makra, ... Knihovna usnadňuje programátorovy tvorbu zdrojového kódu tím, že umožňuje použít při vývoji již vytvořený a odladěný kód. Knihovna poskytuje své služby pomocí aplikačního rozhraní - API, což jsou názvy funkcí, předávané parametry a návratové hodnoty. Statické knihovny tvoří s přeloženým programem kompaktní celek. Toto rozšíření zdrojového kódu o kód z hlavičkových souborů knihoven obstarává preprocesor pomocí direktivy \#~include za níž následuje jméno hlavičkového souboru. Základní knihovnou pro vstup a výstup do konzole je knihovna stdio.h (standard input and output).
+Jako další ve zdrojovém kódu následuje hlavní funkce main(). Tato funkce definuje místo odkud program při spuštění začíná číst programový kód. Kód obsažení v hlavní funkci main() je uzavřen do bloku skládající se z pravé a levé složené závorky $\{\}$.\par
+Funkce main() může, ale nemusí mít specifikovaný typ návratové hodnoty. Pomocí návratové hodnoty lze operačnímu systému vracet nějaké výsledky práce spuštěného programu. Hodnoty se operačnímu systému navracejí příkazem return za nímž následují navracená data.
+{
+\verbatim
+\odradkovat
+\# include $<$stdio.h$>$
+\odradkovat
+int main()
+\odradkovat
+$\{$
+\odradkovat
+\odsadit printf("Hello world");
+\odradkovat
+\odsadit return 0;
+\odradkovat
+$\}$
+}
+
+\Nadpis{ Popis kódu jazyka C++}
+
+V jazyce C++ stejně jako v jazyce C začíná instrukcemi pro preprocesor. Pro preprocesor kompilátoru jazyka C++ platí stejná pravidla jako pro preprocesor jazyka C. Cokoliv začíná znakem \# definuje nastavení preprocesoru. 
+Nejdříve jsou do programu importovány knihovny, které obsahují zdrojové kódy již vytvořených funkcí a tříd, které jsou v průběhu programování využívány. Základní knihovnou pro vstupní a výstupní operace v jazyce C++ je knihovna iostream, která se do programu vloží příkazem \#~include$<$iostream$>$. 
+Následuje vytvoření hlavní funkce main(), která definuje místo kde se začíná vykonávat kód programu. Tato funkce může být vytvořena s návratovým typem - int main(), nebo bez návratového typu void main(). Složené závorky $\{kód...\}$ definují platnost funkce main() a proměnných definovaných uvnitř. Uvnitř těchto závorek je veškerý kód nebo odkazy na funkce které se mají v programu provést. Když je tato hlavní funkce definována s návratovým typem musí být na konci funkce příkaz return, který vrátí řízení operačnímu systému a předá mu výsledek programu.
+{
+\verbatim
+\odradkovat
+\#include $<$iostream$>$
+\odradkovat
+int main()
+\odradkovat
+$\{$
+\odradkovat
+\odsadit std::cout $<<$ "Hello world!" $<<$ std::endl; 
+\odradkovat
+\odsadit return 0;
+\odradkovat
+$\}$
+}
+
+\Nadpis{ Argumenty příkazové řádky}
+Když jsou programy spouštěny z příkazové řádky je možné jim současně předávat vstupní argumenty. Argumenty příkazové řádky jsou všechny slova, která jsou zapsána za název programu v příkazové řádce. Slova, která jsou za názvem programu oddělena mezerou nebo tabulátorem jsou předávána zvlášť. Pokud je třeba předat jako jeden argument celou větu, je třeba ji uzavřít do uvozovek.
+Argumenty příkazové řádky je možné číst pomocí funkce main, která je deklarována způsobem, který je shodný jak pro jazyk C tak pro C++:
+{
+\verbatim
+\odradkovat
+int main(int argc, char *argv[]);
+\odradkovat
+$\{$
+\odradkovat
+\odsadit return 0;
+\odradkovat
+$\}$
+}
+\odradkovat
+
+Parametr argc je proměnná typu int a představuje počet argumentů příkazové řádky, parametr argv je ukazatel na pole (ukazatele) typu char (pole ukazatelů na argumenty příkazové řádky). Argumenty příkazové řádky jsou textové řetězce (i když je to jenom jeden znak nebo číslo). Mezi argumenty je počítán také název volaného programu, který se nachází na indexu 0.
+
+Není třeba striktně dodržovat názvy argc a argv, při volání argumentů příkazové řádky nerozhodují identifikátory, ale datové typy a pozice proměnných, které jsou předány do funkce main. Jedná se pouze o konvenci, kterou většina programátorů dodržuje a která umožňuje lepší čitelnost cizích zdrojových kódů.
+Předávání hodnot do programu při jeho spuštění je tedy následující:
+{\verbatim
+\odradkovat
+název\_ programu argument1 argument2 …
+}
+\odradkovat
+
+\Nadpis{ Lexikální elementy}
+Zdrojový kód jazyka C a C++ tvoří určitá slova, kterým se říká lexikální tokeny. Rozlišuje se 5 typů tokenů: klíčová slova, identifikátory, konstanty, operátory a separátory.
+
+\end

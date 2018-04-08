@@ -1,0 +1,79 @@
+%hlavička dokuentu
+
+\input Konfigurace
+\input TitulniStrana
+
+%nastavení posunutí počítání stránek (úvodní stráka se nepočítá do celkového
+% počtu stránek)
+\pageno = 1
+
+%vytvoření automaticky generovaného obsahu dokumentu
+\nonum\notoc\sec Obsah
+
+\maketoc
+
+\vfill\break
+
+%spuštění počítání stránek
+\pagenumbers
+
+%tělo dokumentu
+
+\chap Úvod
+
+Při přípravě, plánování a realizaci projektu je třeba nejprve definovat co to projekt vlastně je a co je jejím cílem. Výsledkem libovolného projektu je nějaký produkt. Produkt je něco čím má být obohacen život lidstva nebo jen skupiny lidí, nebo dokonce jen určitých jednotlivců, nebo tím má být urychlen, zjednodušen, zefektivněn vývoj nějakých jiných technolovií. Výsledkem projektu by tedy mělo být něco přesně definovaného, co plní nějaký přesně (předem) definovaný účel.
+
+Projekt a jeho realzace je pouhým prostředkem k vytvoření daného produktu (služby). Konečným cílem všech myšlenkových úvah není projekt, ale jeho konečný produkt. Produkt může být velice různorodý. Může mít povahu nějakého předmětu, zařízení, služby, poznatku, ... Úvahy o projetu tedy začínají úvahamy o produktu. Charakter produktu pak určuje průběh projektu. Projekt je možné definovat jako soustavu aktivit (činností) směřujících k předem stanovenému cíli, která má určitý začátek i konec. Vyžaduje spolupráci různorodých činností, profesí a využívá je k vytvoření výstupu - produktu.
+
+Každý projekt je vždy spojen s rizikem neuspěchu, protože každý projekt je jedinečný a nikdy nelze předem předvídat co v jeho průběhu nastane. Z toho vyplývá, že každý projekt musí být flexibilní, aby mohl vhodně reagovat na nečekané situace. Možnost neúspěchu nelze vždy chápat jako negativní výsledek. I neúspěch projektu může být pozitivní v tom, že zvolený způsob, cesta, řešení nebo obecně každý zvolený postup tak může být poučný do budoucna a to ne jen pro samotného řešitele, ale i pro ostatní. Je důležité se z každého neúspěchu nějak poučit a využít z neúspěchu maximum, aby se daná chyba v budoucnu již neopakovala. 
+
+Projektový management má za úkol zefektivnit využití zdrojů pro návrh a realizaci cílového produktu. Projektový manager, který řídí projekt musí rozdělit celý projekt do dílčích celků (úkonů, částí produktu, ...) a jejich  vývoj,realizaci, testování, ... rozdělit mezi členy projektového týmu. Mezi členy týmu a projektovým managerem musí docházet k pravidelné komunikaci a zprávě o stavu dílčích částí projektu. To je důležité z hlediska konzistence projektu. Kdyby členové týmu mezi sebou nekomunikovali, pak by mohlo dojít k nekompatibilitě jednotlivých částí produktu a celý projekt by zkončil neúspěchem. Pokud by neprobíhala komunikace členů týmu s týmovým managerem, nebylo by možné efektivně využívat přidělených prostředků (časových, materiálových, ...).
+
+Je třeba zdůraznit, že projekt je třeba navrhnout jako celek před jeho realizací, ale jeho jednotlivé části před sestavením otestovat a vyladit a teprv poté z nich sestavit výsledný produkt. Tak tomu je z toho důvodu, že pokud by některé části nefungovaly správně, nemusel by správně fungovat ani výsledný produkt a to je nežádoucí. Sestavený produkt je poté otestován zda všechny části pracují správně jako celek.
+
+\chap Životní cyklus projektu
+
+Celý projekt se skládá z několika částí. Tyto části mají za cíl logické uspořádání průběhu celého projektu, aby nedocházelo ke zbytečným chybám při jeho realizaci a odstranila se potřeba jeho přeplánování a efektivně se využilo dostupných zdrojů.
+
+Každý projekt se skládá z těchto částí:
+
+\begitems
+*{\bf Analýza požadavků} - V tomto bodě se zjišťuje co je cílem výsledného produktu, jeho vlastnosti, požadavky, ... Jedná se o inicializaci projektu od které se odvíjí průběh téměř celého projektu. Požadavky na projekt výrazně ovlivňují jeho průběh a proto je potřeba dobře pochopit co je cílem. 
+*{\bf Vzdělávací proces} -  Každý projekt, respektice produkt projektu je jedinečný a vyžaduje jiné schopnosti. Je téměř nemožné, aby každý uměl vše a proto je třeba, aby manager nejprve rozuměl problematice, kterou se projekt zabývá, aby mohl získat a efektivně rozdělovat zdroje potřebné k realizaci. V tomto kroku je třeba zjišťovat technické detajly, které se v projektu objeví.
+*{\bf Návrh architektury projektu} - Poté co jsou zjištěny požadavky produktu, kterým se daný projekt zabývá a zjištěny potřebné technické detajly, je na řadě návrh architektury, tedy výsledné podoby projektu. Návrh architektury je složitější procedůra, ke které lze přistupovat několika způsoby.
+*{\bf Sestavení projektového týmu} - Poté co je vytvořena architektura projektu a patrné co je třeba udělat, je možné sestavit tým sestávající se z odborníků na danou problematiku (konstruktéři, programátoři, ...). Bez vědomí o povaze celého projektu (produktu) nelze předem říci jaké obory bude třeba zapojit do projektu. 
+*{\bf Defragmentace projektu} - Rozdělení projektu, respektive architektury projektu na jednotlivé části, které jsou přiděleny jednotlivým členům týmu. Projektová architektura může být sestavena pouze v hrubých rysech a technické detajly mohou mít na starosti jednotlivý členové projektového týmu, které mají danou část na starosti. Při návrhu těchto částí může pro daného člena týmu platit stejný postup při realizaci projektu jako pro jeho managera, tedy analýza požadavků, vzdělávací proces, návrh části archytektury,(sestavení projektového týmu), defragmentace projektu. Jednotlivé části a požadavky na zdroje jdou následně ke schválení k projektovému managerovi, který jeho návrh může buď schválit a nebo může požadovat jejich přehodnocení a úpravu. 
+*{\bf Realizace jednotlivých části projektu} - Následuje realizace jednotlivých částí projektu podle předem sestaveného plánu. V průběhu realizace může dojít k situacím, kdy bude potřeba některé části přeplánovat a upravit část architektury. To je ale nežádoucí a proto je třeba vytvořit již předem možné alternativy, které slouží pro tento případ.
+*{\bf Testování a ladění částí projektu} - Poté co je daná část projektu dokončena je na řadě její testování a ladění. V případě, že by daná část nefungovala správně a to se projevilo až při testování výsledného produktu, chledání příčiny by mohlo být časové náročné, protože je třeba testovat více možností. Pokud je ale testována pouze jeho část, je potřeba prozkoumávat méně možností a případná chyba je nalezena mnohem snáze.
+*{\bf Testování produktu} - Konečnou fází realizace projektu je sestavení jednotlivých jeho částí a testování jednotlivých částí jako celku. I když mohou jednotlivé části samostatně fungovat bez chyby, je možné že společně mohou vykazovat různé nedostatky, které je potřeba vyřešit. 
+*{\bf Sepsání dokumentace a manuálu} - Na závěr každého projektu je třeba sepsat dokumentaci a manuál k použití. Část dokumentace se sepisuje již při návrhu architektury, ale následně je třeba také dopsat různé doplňující informace jako nalezené chyby na které je třeba si příště dávat pozor a jejich oprava a doplňující informace, které nebylo možné předem předvídat. Manuál pak slouží uživateli k obsluze daného produktu.
+\enditems
+
+Tento hierarchický postup při řízení projektu je více méně obecný pro libovolný produkt, ale je třeba jej mírně upravit v případě, že výsledným produktem je služba, či něco nehmotného jako například nějaká teorie, nebo matematická formule. V takových případech je třeba postupvat odlišným způsobem, protože se jedná o neznámé téma, které se teprve objevuje a není možné předvídat většinu jeho částí.
+
+\sec Analýza požadavků
+
+
+
+\sec Vzdělávací proces
+
+\sec Návrh architektury projektu
+
+\sec Sestavení projektového týmu
+
+\sec Defragmentace projektu
+
+\sec Realizace jednotlivých části projektu
+
+\sec Testování a ladění částí projektu
+
+\sec Testování produktu
+
+\sec Sepsání dokumentace a manuálu
+
+\sec Shrnutí
+
+
+
+\end
+

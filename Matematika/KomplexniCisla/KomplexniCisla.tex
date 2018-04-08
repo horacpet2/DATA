@@ -1,0 +1,97 @@
+%preambule
+\def\addr{/home/petr/.texLib}
+
+\input \addr/TeXMakro
+\setAddress{\addr}
+%\input \addr/KonfiguracePaperBook
+\input \addr/KonfiguraceEBook
+
+%makra
+
+%Načtení obrázků
+%\pdfximage width/height \the\SirkaOdstavce mm {./Obrazky/obr}
+\pdfximage width 70 mm {./Obrazky/GrafickeZnaceniKomplexnichCisel.png}
+
+%Titulní stránka
+%\VlozitDokument{TitulniStranka}
+
+%generování obsahu
+\Obsah
+
+\Nadpis{ Úvod}
+
+Obor komplexních čísel je přirozeným rozšířením oboru reálných čísel. Důvodem k tomuto rozšíření byla potřeba odmocňovat záporné mocniny na sudý exponent. Protože obor reálných čísel není uzavřen vůči operaci odmocnina mnoho matematických rovnic funkcí a jiných operací nemá nemá řešení. V oboru komplexních čísel má ale každá matematická operace vždy příslušný počet řešení (kořenů). 
+
+Podstatou oboru komplexních čísel je schopnost odmocnit libovolné klad-né nebo záporné komplexní číslo.
+
+\Nadpis{ Definice komplexních čísel}
+
+{\bf Obor (mnžina) komplexních čísel} se značí symbolem {\it C}.  Komplexní číslo se nazývá uspořádaná dvojice reálných čísel, pro které jsou definované početní operace sčítání, odčítání, násobení a dělení:
+
+$$ z = [x,y]; x,y \in R $$
+
+Číslu $x \in R $ se říká {\bf reálná část (reálná složka) komplexního čísla z}, číslu $y \in R $ se říká {\bf imaginární část (imaginární složka) komplexního čísla z} a symbolicky se zapisuje:
+
+\centerline{\it Re z = x, Im z = y}
+
+Rozlišují se dva druhy komplexních čísel $z=[x,y]$:
+
+\vskip 4mm
+\bod{Je-li $y=0$, pak $z=[x,0]=x$ je {\bf reálné číslo}. Takováto uspořádaná dvojice je tedy pouze jinou formou zápisu reálného čísla, protože nula v imaginární části v aritmetických operacích nemá žádný efekt.}
+\bod{Je-li $y \neq 0$, pak číslo {\bf z} není reálné a říká se mu  {\bf imaginární číslo}. Přitom může být buď $x \neq 0$ a nebo $x=0$. Jeli speciálně $x=0$, pak číslo {\it z} je ryze {\bf imaginární číslo}.}
+
+
+\Sekce {Rovnost komplexních čísel}
+
+Na rozdíl od běžných čísel komplexní čísla obsahují dvě složky. Pokud se tak mají dvě komplexní čísla rovnat, musí se rovnat v obou složkách. Dvě komplexní čísla $z_1=[x_1,y_2]$ a $z_2=[x_2,y_2]$ jsou si rovna $ z_1=z_2$ právě když jsou si rovny jejich reálné části $x_1=x_2$ a jejich imaginární části $y_1 = y_2$. 
+
+Rozdílem od reálných čísel je, že je nelze uspořádat od největšího po nejmenší, protože na první pohled nevyjadřují svoji hodnotu. Lze ale porovnávat absolutní hodnotu komplexních čísel.
+
+\Sekce{Imaginární jednotka}
+
+{\bf Imaginární jednotka} je speciální součást (konstanta) komplexního čísla, díky které je možné řešit odmocniny ze záporných čísel. Imaginární jednotka se značí písmenem {\it i} a její nejdůležitější vlastnost je,  že její druhá mocnina je rovna -1: 
+
+$$ i^2 =-1$$
+
+Tato vlastnost komplexní jednotky je na rozdíl od hodnot reálných čísel dosti podivná a těžko pochopitelná, nicméně je důležité si uvědomit, že číslo i není reálné a proto pro něj podmínka, že sudá mocnina reálného čísla je vždy kladná hodnota, neplatí.
+
+Díky tomuto vztahu lze ale napsat podle definice operace mocnina a odmocnina:
+
+$$(a^2=x\Rightarrow\sqrt{x}=a)\Rightarrow (i^2=-1 \Rightarrow \sqrt{-1}=i) \Rightarrow i=\sqrt{-1} $$
+
+Z toho vyplývá, že hodnota {\it i} je získána odmocněním hodnoty -1 ({\it i} je odmocnina z -1). Hodnotu samotného čísla {\it i} nelze určit, protože nemá reálný základ, ale lze říci, že bude platit:
+
+$$ i^3 = i^2 \cdot i = -1 \cdot i = -i $$
+
+Toto lze zobecnit i na mocniny vyšších řádů.
+
+\Sekce {Grafické značení komplexních čísel}
+
+Protože komplexní číslo je tvořeno uspořádanou dvojicí čísel, nelze je zobrazit na jednorozměrné soustavě souřadnic (číselná osa), ale je třeba využít dvojrozměrnou soustavu souřadnic (kartézská soustava souřadnic, graf). Graficky (geometricky) se komplexní čísla zobrazují pomocí bodů roviny, ve které je zavedena kartézská soustava souřadnic. Tato rovina se nazývá {\bf rovina komplexních čísel}, nebo krátce {\bf komplexní rovina}. Protože komplexní číslo $z=[x,y] $ je tvořeno uspořádanou dvojicí reálných hodnot, je v komplexní rovině zobrazeno bodem o souřadnicích x, y. Zobrazení mezi komplexními čísly, body komplexní roviny je vzájemně jednoznačné zobrazení - každému komplexnímu číslu je přiřazen právě jeden bod komplexní roviny jako jeho obraz a naopak každému bodu komplexní roviny je přiřazeno právě jedno komplexní číslo. 
+
+Osa x se v komplexní rovině nazývá {\bf osa reálných čísel}, nebo krátce {\bf reálná osa} a osa y se nazývá {\bf osa ryze imaginárních čísel}, nebo krátce {\bf imaginární osa}. 
+
+\vskip 4mm
+\centerline{\pdfrefximage 1}
+\vskip 4mm
+
+\Sekce{ Odvození komplexních čísel}
+
+Reálná čísla jsou pouze jednorozměrné hodnoty, které se graficky zobrazují na jednorozměrné (reálné) číselné ose. Na této  ose se lze pohybovat buď dopředu, v kladném směru a nebo dozadu, v záporném směru. V případě komplexních čísel se lze pohybovat také v dalším rozměru a to nahoru a dolů. To má velký význam napčíklad v počítačové grafice, kde je díky tomu pootáčen libovolný obraz (zobrazení). 
+
+\Sekce {Algebraický tvar komplexního čísla}
+
+\Sekce {Absolutní hodnota komplexního čísla}
+
+\Nadpis{Aritmetické operace s komplexními čísly}
+
+\Nadpis {Goniometrický tvar koplexního čísla}
+
+\Nadpis {Řešení rovnic oboru komplexních čísel}
+
+\Nadpis {Komplexní analýza}
+
+
+
+
+\end

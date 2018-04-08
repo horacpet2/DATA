@@ -1,0 +1,69 @@
+%preambule
+%platform select to compile
+
+\input D:/MEGA/CENTRUM/texLib/TeXMakro
+\input D:/MEGA/CENTRUM/texLib/KonfiguracePaperBook
+%\input C:/Users/HORACEK/Documents/MEGA/CENTRUM/texLib/KonfiguracePaperBook/KonfiguraceEBook
+
+%\input /home/petr/bin/texLib/TeXMakro
+%\input /home/petr/bin/texLib/KonfiguracePaperBook
+
+\Nadpis{Abeceda a Jazyk}
+
+Abeceda je libovolná konečná neprázdná množina prvků označovaná písmenem $\sum$. Prvky abecedy se nazývají {\bf symboly} nebo též znaky {\bf abecedy}. Abeceda je základní prvek systémů, které přijímají nějaký konečný počet vstupních hodnot. Příkladem abecedy může být binární abeceda $\sum = \{0, 1\}$. Tato abcededa je tvořena dvěma symboly, které jsou reprezentovány číslicemi 1 a 0. S touto abecedou pracuje libovlný logický obvod.
+
+\Sekce{Slovo}
+
+
+
+\Nadpis{Stavový automat}
+
+Stavový automat je teoretický výpočetní model počítače, který se může nacházet v jenom z definovaných vnitřních stavů na základě stavů přečtených ze vstupu. Jedná se o základ každého sekvenčního číslicového obvodu od progamovatelných mikroprocesorů až po jednoduché jednoúčelové digitální obvody. Široké uplatnění má také jako softwarový model algoritmů, který se využívá pro analýzu textů, obsluhu jednoduchých zařízení nebo jejich částí, ...
+
+Stavové automaty lze rozdělit do několika skupin:
+
+\bod{Konečný stavový automat} 
+
+\bod{Zásobníkový stavový automat}
+
+\bod{Turingův stroj}
+
+
+\Sekce{Konečný stavový automat}
+
+Konečný automat (zkráceně KA) je abstraktní model, který lze využít pro modelování systémů, u nichž lze stanovit konečný počet stavů (z toho konečný automat) a vstupních podnětů. Aktuální stav takovéhoto systému se mění pouze na základě vnějšího podnětu, přičemž platí, že pro daný stav a daný podnět je určeno, do kterého stavu systém přejde.
+
+Konečné automaty je možné rozdělit do několika skupin podle zvoleného kritéria:
+
+\bod{Deterministický konečný stavový automat}
+
+\bod{Nedeterministický konečný stavový automat}
+
+Dále je možné dělit konečné stavové automaty na základě vstupů a výstupů na:
+
+\bod{Konečný stavový se vstupy}
+
+\bod{Konečný stavový automat bez vstupů}
+
+\bod{Konečný stavový automat s výstupy}
+
+\bod{Konečný stavový automat bez výstupů}
+
+\Sekce {Deterministický konečný automat}
+
+Deterministický konečný automat (zkráceně DKA) je takový konečný automat, u něhož je přechod ze současného (aktuálního) stavu do nového stavu po příchodu vstupního symbolu jednoznačně určen.
+
+{\bf Definice:}
+\odradkovat
+Konečný automat je každá pětice prvků $A = (Q, \sum, \delta, q0, F)$, kde: 
+
+\bod {Q je konečná neprázdná množina stavů}
+\bod{$\sum$ je konečná neprázdná množina vstupních symbolů, tzv. vstupní abeceda}
+\bod{$\delta$ je přechodová funkce, $\delta: Q\time \sum \rightarrow Q$}
+\bod{q0 je počáteční neboli iniciální stav, $q0 \in Q$}
+\bod{F je množina koncových neboli přijímajících stavů, $F \subseteq Q$}
+
+
+
+\end
+

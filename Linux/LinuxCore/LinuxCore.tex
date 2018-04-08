@@ -1,0 +1,56 @@
+%preambule
+\input /home/petr/bin/TeXMakro
+\input /home/petr/bin/KonfiguracePaperBook
+%\input /home/petr/bin/KonfiguraceEBook
+
+%Načtení obrázků
+%\pdfximage width/height \the\SirkaOdstavce mm {./Obrazky/obr}
+
+
+%Titulní stránka
+%\VlozitDokument{TitulniStranka}
+
+%generování obsahu
+\Obsah
+
+\Nadpis{Úvod}
+
+
+\Nadpis{Zavádění operačního systému}
+
+\Sekce{BIOS}
+
+BIOS (Basic Input and Output system) je základní softwarové vybavení osobních počítačů, které má za úkol komunikovat s hardwarem. Jedná se o prostředníka mezi hardwarem a operačním systémem. BIOS je uložen na základní desce v malé ROM nebo flash paměti, ze které je automaticky načten do paměti při startu počítače. 
+
+BIOS bylo možné nastavit pomocí konfiguračního grafického/textového programu, který se nazývá SETUP. SETUP je možné spustit při startu ve startovacím okně, které travá určitý počet vteřin stisknutím speciální klávesy (většinou escape, delete, f1, ...). V SETUPu je možné nastavit parametry hardwarových periferií jako je například pořadí prohledávání paměťových zařízení s operačním systémem, frekvence procesoru, režimi bootování, ...
+
+\Sekce{UEFI}
+
+UEFI (Unified Extensible Firmware Interface) je nástupcem zastaralého firmware BIOS na osobních počítačích. Původně byl vyvinut firmou Intel pod názvem EFI. 
+
+UEFI přináší několik vylepšení oproti zastaralému BIOS: secure boot, využití schopností nejnovějších procesorů, ukončení zpětné kompatibility pro již nepoužívané 16-bitové procesor 8086 a podpora GPT.
+
+\PodSekce{Secure boot}
+
+Secure boot je metoda, která má zajistit, že v daném počítači je použito pouze certifikované softwarového vybavení. Při strtu počítače se kontrolují elektronické podpisy, kterými musí být podepsán zavaděč, jádro systému, jaderné moduly a podobně. To způsobuje problémy především alternativním systémům jako je Linux. 
+
+Secure boot je brán jednak jako ochrana proti virovému napadení, ale  především se jedná o marketingový tach, který nutí uživatele používat pouze zakoupené softwarové prostředky. Většina počítaču však obsahuje verzi UEFI, která umožňuje funkci secure boot vypnout.
+
+\PodSekce{Proces UEFI boot}
+
+UEFI boot nenahlíží při startu do MBR jako klasic BIOS, ale do EFI system partition - ESP (EFI systémový oddíl). Jedná se o samostatný bootovací oddíl kde jsou uložené EFI aplikace, které jsou zodpovědné za start operačního systému. Na tomto místě si každý naistalovaný operační systém vytvoří vlastní adresář obsahující vše potřebné pro jejich start a nedochází tak k ovlivňování startu ostatních operačních systémů jako to bylo u MBR. 
+
+\PodSekce{EFI system partition}
+
+ESP je systémový oddíl se souborovým systémem typu FAT32 a s nastaveným příznakem boot (nikoli boot_legaci). Běžně jej Linux připojuje do {\verbatim /boot/efi}. Jeho velikost se pohybuje od 100MiB po 512MiB v závislosti na počtu instalovaných operačních systémů, použitých zavaděčích, ...
+
+
+
+\Sekce{Bootoader}
+
+Bootloader je speciální program, který se jako první zavede do operační paměti po spuštění počítače, který má za úkol do operační paměti zavést operační systém a následně jej spustí.
+
+Mezi nejpoužívanější a nejuniverzálnější zavaděče operačního systému na bázi linuxu je {\bf Grub}. Grub umožňuje zavádět systém jak v prostředí klasického BIOS tak v prostředí UEFI.
+
+\end
+

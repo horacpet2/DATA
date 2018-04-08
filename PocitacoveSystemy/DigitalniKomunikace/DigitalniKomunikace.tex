@@ -1,0 +1,192 @@
+%preambule
+%\input /home/petr/bin/TeXMakro
+%\input /home/petr/bin/KonfiguracePaperBook
+%\input /home/petr/bin/KonfiguraceEBook
+
+
+\input D:/MEGA/CENTRUM/texLib/TeXMakro
+\input D:/MEGA/CENTRUM/texLib/KonfiguracePaperBook
+
+%Načtení obrázků
+%\pdfximage width/height \the\SirkaOdstavce mm {./Obrazky/obr}
+
+
+%Titulní stránka
+%\VlozitDokument{TitulniStranka}
+
+%generování obsahu
+\Obsah
+
+\Nadpis{Úvod}
+
+
+\Nadpis{Sběrnice}
+
+Sběrnicí je označována jakákoliv skupina vodičů, která přenáší data z jedné části systému do druhé. Sběrnice jsou v počítači zapojovány {\bf hierarchicky}, to znamená, že v systému nejpomalejší sběrnice je napojená do rychlejší. Je tomu tak proto, aby pomalejší sběrnice nezpomalovala rychlejší sběrnici.  Na tyto sběrnice jsou napojena prostřednictví {\bf komunikačního rozhraní} podle svého typu a rychlosti interní nebo externí {\bf periferní zařízení}. Rozhraní (interface) je definováno jako hranice mezi dvěma systémy, zařízeními nebo programy. Rozhraní také zahrnuje prvky spojující hranice (konektory, přenosová média, ...) a doplňkové řídící obvody určené k propojení zařízení.
+
+Mezi základní parametry každé sběrnice patří:
+
+\vskip 4mm
+\bod{{\bf Šířka sběrnice} - počet bitů, které lze přenést po sběrnici v jeden okamžik, tomu se rovná počtu vodičů sběrnice,šířka sběrnice se udává v bitech.}
+\bod{{\bf Frekvence} - maximální frekvence se kterou může sběrnice přenášet informace, udává se Hz.}
+\bod{{\bf Propustnost} - Počet bitů přenesených za jednotku času, udává se $ b\cdot s^{-1}$.}
+\vskip 4mm
+
+\Sekce{Adresová sběrnice}
+
+Šířka adresové sběrnice určuje maximální velikost operační paměti, kterou je schopna adresovat. Adresovou sběrnici lze definovat jako sadu vodičů, které přenášejí informace o adresách v paměti do kterých se budou ukládat nebo číst z nich data. Adresová svěrnice je napojena na adresový dekoder, který převádí adresu na výstupní signál, identifikující danou část paměti, nebo periferii. Vodiče přenášejí hodnotu 1 (napětí) nebo nula (bez napětí). Čím více má adresová sběrnice vodičů tím více paměti může být adresováno. To znamená, že šířka adresové sběrnice určuje maximální velikost operační paměti, kterou je procesor schopen využít.
+
+Příklad: 5 adresových vodičů $\rightarrow 2^5 = 32$ jedinečných adres.
+
+\Sekce{Periferní zařízení}
+
+Periferní zařízení (periferie) jsou všechny počítačové komponenty, které nepatří k jádru (procesor, paměť, …). Periferie nejsou nezbytně nutné pro samotný chod počítače, ale zrychlují nebo zjedodušují jeho běh nebo práci s ním. Bez periferií je počítač pouze černá skříňka ve které se něco děje, ale z vnějšku tento proces nelze nijak ovlivnit a nelze získat výsledky jeho činnosti (mikrokontrolery). Lze je rozdělit do několika skupin:
+
+\vskip 4mm
+\bod{{\bf Zařízení pro ukládání dat} - tato zařízení umožňují trvale uložit informace v elektricky nezávislé paměti a zapsat informace zpět do hlavní (operační) paměti (flash paměť, optická média, ...).}
+\bod{{\bf Vstupně-výstupní zařízení} - zařízení převádějí informace ze své interní počítačové reprezentace (bitů a bajtů) na formát srozumitelný lidem a různým technickým zařízením. Fungují také v opačném směru (displeje, klávesnice, senzory, ... ).}
+\bod{{\bf Komunikační rozhraní} - Používají se k přenosu informací mezi počítači nebo jejich částmi (modemy, adaptéry, ...). V této oblasti je nutné převést informace z jedné formy na jinou, aby je bylo možné odeslat na určitou vzdálenost.}
+\vskip 4mm
+
+\Sekce{Typy přenášených informací}
+
+Informace (data), která jsou přenášena přes rozhraní a komunikační sběrnice, mohou mít různých charakter:
+
+\vskip 4mm
+\bod{{\bf Analogové informace} - Analogové informace odrážejí proces jehož velikost se mění s časem. Na omezeném intervalu může nabývat libovolné hodnoty z nekonečného počtu hodnot. Příkladem analogových dat je zvuk, který je založen na plynulých změnách tlaku vzduchu.}
+\bod{{\bf Diskrétní informace} - Diskrétní informace popisují proces konečným počtem hodnot. Základní jednotkou diskrétní informace je bit, který může nabývat jedné ze dvou logických hodnot (1 - zapnuto, 0 - vypnuto). Jeden bit může reprezentovat stav tlačítka. Jedná se o přirozené informace pro počítač, které se nejsnáze zjišťují a zpracovávají. Diskrétní informace nemusejí být pouze binární (dva logické stavy).}
+\bod{{\bf Digitální informace} - Digitální informace je tvořena posloupností hodnot konečné délky (a konečným počtem možných hodnot). Příkladem je kódované písmeno v ascii. Digitální informace jsou speciálním případem diskrétních informací.}
+\vskip 4mm
+
+Aby bylo možné data přenést, je nutné je převést na signál. Jedná se o proces (elektrický, optický, elektromagnetický, …), který zakóduje dané informace do fizikální veličiny. Typ a povaha signálu závisí na požadavcích rozhraní (rychlost, kódování dat).
+
+\Sekce{Typy přenášených dat}
+ 
+Data přenášená prostřednictvím komunikačních sběrnic mohou být různého druhu - mají různý účel (význam). Podle účelu vzniku lze přenášená data rozdělit na: režie, řídící data a vlastní data.
+
+{\bf Režie} (Overhead) jsou data, která jsou do komunikace přidána komunikačním protokolem z důvodu zajištění úspěšného přenosu, nebo jako nárůst objemu dat v důsledku jejich kódování. Do režie lze zahrnout i poškozené datagramy, které je nutné opětovným odesláním nahradit.
+
+{\bf Řídící data} jsou povely, které mají zajistit určitou operaci s přijatými daty. Někdy není zcela jasné, zda se jedná o řídící data nebo o vlastní data.
+
+{\bf Vlastní data} (Payload) jsou informace upravené do přenositelného tvaru. Vlastní data mohou reprezentovat text, příkazy, data ze senzorů, ...
+
+\Sekce{Paralelní a sériová komunikace}
+
+Nejčastějším úkolem počítačů a k nim připojeným zařízením je přenos (většinou) velkého množství diskrétních dat. Data jsou reprezentována pomocí signálů typicky binární metodou. Logická jednička odpovídá vysoké úrovni napětí a logickou nulu představuje nízká úroveň napětí. Je také možné opačné uspořádání (1 = vypnuto, 0 = zapnuto). Jeden binární signál přenáší během časové jednotky jeden bit informace. Existují dva přístupy jak uspořádat rozhraní pro přenos skupiny bitů:
+
+\vskip 4mm
+\bod{{\bf Paralelní komunikace} - Pro každý přenesený bit skupiny se používá samostatná linka (datový vodič) a všechny bity ve skupině se přenášejí v rámci jedné časové jednotky souběžně (putují po datových linkách paralelně).}
+\bod{{\bf Sériové rozhraní} - Používá se pouze jedna signální linka a bity ve skupině jsou odesílány postupně jeden po druhém. Každému z nich je přiřazena časová jednotka (bitový interval), která je navzájem identifikuje (rozděluje) při přenosu. Nejmenší položka dat přenesená sériově je označována jako {\bf znak} - character (rozsah obvykle 7-8 bitů). Informace vyjádřená přímo ve formě posloupnosti dvojkových bitů, které se skutečně přenášejí, se pak označuje jako {\bf značka} (znak se skládá ze značek - jednotlivé bity).}
+\vskip 4mm
+
+Nevýhodou paralelního rozhraní je velký počet vodičů a kontaktů konektoru na propojovacím kabelu (minimálně jeden vodič pro každý bit). Naproti tomu vysílač sériového rozhraní je funkčně složitější. Paralelním rozhraním, ale na rozdíl od sériového nelze posílat data na větší vzdálenosti kvůli vzájemnému rušení vodičů.
+
+U paralelního rozhraní se vyskytuje jev označovaný jako {\bf rozfázování} výstupních signálů, které ovlivňuje dosažitelný frekvenční limit komunikační rychlosti. Rozfázování znamená, že signály odeslané současně po paralelním rozhraní, po jednotlivých jeho vodičích, nedorazí na opačný konec současně kvůli rozdílům v parametrech jednotlivých signálových vodičů. Rozfázování tedy znamená rozdíl v čase doručení jednotlivých bitů slova na paralelní lince. Je zřejmé, že rozfázování (doba doručení všech bitů slova) musí být menší, než časová jednotka (synchronizační frekvence komunikace), jinak by došlo ke smíchání bitů na stejnolehlých pozicích z předchozích a následujících přenosů. Při stejném rozdílu rychlosti šíření signálu po přenosovém médiu roste při zvětšení vzdálenosti přenosu i rozfázování, proto velmi omezuje přípustnou délku kabelu rozhraní. Například pokud budou přenášeny 2 bity současně a jejich rozfázování bude 1 milisekunda na jednom metru (druhý bit dorazí milisekundu po první), tak na čtyřech metrech bude rozfázování čtyřikrát větší. 
+
+Problém rozfázování v sériové komunikaci neexistuje. Jejich frekvenci lze proto zvyšovat až na možnou mez vysílacích obvodů (omezení kladou pouze přenosové schopnosti přenosových médií). Tyto důvody vysvětlují převážné používání sériových komunikačních rozhraní. Paralelní rozhraní se používá převážně při interní komunikace mezi procesorem a pamětí, kde při velmi krátké vzdálenosti dosahují vyšší rychlosti než sériové rozhraní.
+
+\Sekce{Přenosová rychlost baudová rychlost}
+
+Přenosová (komunikační) rychlost určuje jak dlouho bude trvat přenos daného množství dat. Přenosová rychlost dat definuje počet bitů odeslaných za časovou jednotku dělenou trváním této jednotky 
+
+$$rychlost={data\over čas}[bit \cdot s^{-1}]$$	
+
+Přenosová rychlost tedy udává počet bitů (popřípadě jejich násobky - Kb, Mb, ...) přenesených za jednu vteřinu.
+
+Baudová rychlost udává modulační rychlost, která vyjadřuje počet změn logického stavu komunikačního média (napětí, světla, elektromagnetické záření, ...) za jednotku času. Při modulaci (kódování dat do výstupního signálu) může dojít k redundanci datových informací, které způsobí, že baudová rychlost nemusí odpovídat rychlosti komunikační. Modulační rychlost se udává jako v jednotká {\bf baud} (Bd). Typickým případem je zakódování digitálních informací do analogového signálu. 
+
+\Nadpis{Řízení komunikace}
+
+\Sekce{Handshake}
+
+Handshake je automatizované vyjednávání, jehož úkolem je nastavit parametry komunikačního kanálu mezi dvěma subjekty před zahájením vlastní komunikace.
+
+
+\Nadpis{USART}
+
+UART nebo také USART je zkratka Universal Synchronous / Asynchronous Receiver and Transmitter, tedy {\bf Synchronní / asynchronní sériové rozhraní}. Jedná se o nízkoúrovnǒvý komunikační protoko, v kontextu procesorů se jedná o integrovaný obvod, který tento protokol realizuje. USART lze ale také vytvořit softwarově v podobě knihovny, využívající nitřní časovače a svstupně výstupní obvody. USART je sériové komunikační rozhraní používané pro obousměrnou (full duplex) komunikaci mezi periferiemi procesoru popřípadě vzájemně mezi více procesory. Jde o zařízení pro sériovou komunikaci, které lze nastavit buď pro asynchronní režim (SCI), anebo pro synchronní režim (běžně označovaný jako SPI). Protokol UART je v principu typu point-to-point, to znamená, spolu můžou komunikují právě dvě protistrany.
+
+USART pro svou komunikaci používá v základu 3 vodiče:
+
+\vskip 4mm
+\bod{RX (Read teXt) - přijámací vodič}
+\bod{TX (Transmite teXt) - vysílací vodič}
+\bod{GND - uzemnění}
+\bod{RTS,CTS,DTR - řízení toku dat}
+\vskip 4mm
+
+V případě asynchronního režimu musí mít přijímač i vysílač vlastní zdroj hodinového synchronizačního signálu, který řídí platnost jednotlivých signálů. Zároveň je možné frekvenci tohoto řídícího signálu měnit. USART v synchronním režimu používá pro řízení komunikace hodinový signál vysílajícího zařízení.
+
+\Sekce{Popis komunikace}
+
+USART pro definici logických stavů používá napěťové úrovně 0 - UCC (napájecí napětí procesoru). Datová linka je v neutrálním stavu držena výstupem (Tx) v log. 1. To znamená, že v době kdy přes datovou linku neproudí žádná data, je na ní napájecí napětí procesoru.
+
+V případě asynchronního vysílání dat probíhá momunikace takto:
+
+\vskip 4mm
+\bod{Přijímač na svém RX vstupu sleduje hodnotu napětí - logický stav. Jakmile se na vstupu RX objeví logická nula (start bit), spustí přijímač se sestupnou hranou vnitřní synchronizační hodiny, které pracují na stejné frekvenci (baudová rychlost) jako na straně vysílače a synchronizují přijímání a vysílání dat obou stran.}
+\bod{V pravidelných časových intervalech daných vnitřním synchronizačním signálem příjímač čte logické stavy na vstupu RX a uloží si tuto hodnotu do vstupního bufferu.}
+\bod{Jakmile je přijat daný počet bitů, který dán nastavením komunikace, zastaví se vnitřní synchronizační signál a příjem dat se umončí.}
+\vskip 4mm
+
+Start bit slouží k synchronizaci synchronizačního signálu přijímače i vysílače. Stop byt naproti tomu slouží k oddělení jednotlivých zpráv - je nutné aby se na RX lince objevila opět logická jednička, aby mohlo dojít k inicializaci start bitu. 
+
+\Sekce{Generátor hodinového signálu}
+
+Generátor hodinového signálu slouží pro synchronizaci (vzorkování) přenosu informací mezi zdrojem a příjemcem. USART podporuje čtyři časovací módy:
+
+\vskip 4mm
+\bod{Normální asynchronní mód}
+\bod{Dvojnásobná asynchronní rychlost}
+\bod{Master synchronní režim}
+\bod{Slave synchronní režim}
+\vskip 4mm
+
+\Sekce{Formát dat}
+
+Data jsou přes USART posílána ve formě rámců, které se skládají z několika částí:
+
+\vskip 4mm
+\bod{Start bit}
+\bod{5-9 datových bitů}
+\bod{Žádná, sudá nebo lichá parita}
+\bod{1 nebo 2 stop bity}
+\vskip 4mm
+
+Formát datového rámce určuje nastavení komunikace přes USART.
+
+\Sekce{Popis obvodu USART}
+
+
+\Sekce{Registry USARTu}
+
+Registry USARTU lze rozdělit na konfigurační, stavové a pracovní. Mezi stavové registry patří registr  UCSRnA. Mezi konfigurační registry patří  UCSRnB, UCSRnC a UBRRn. Mezi pracovní regitry patří registr UDRn. 
+
+Jeden procesor může obsahovat více než jeden USART, proto malé písmeno {\it n} označuje index USARTu v daném procesoru.
+
+\PodSekce{Stavové registry}
+
+Registr UCSRnA (USART Configuration and Status Registr) umožňuje sledovat vnitřní stav obvodu USART. Mezi sledované stavy patří:
+
+\vskip 4mm
+\bod{RXC - USART Receive Complete, bit je nastaven v případě, že jsou ve vstupním bufferu nepřečtená data a zároveň je nastaven na nulu v případě, že ve vstupním bufferu již žádná data po přečtení nejsou. Tento příznakový bit může být použit pro obsluhu přerušení, která má za úkol obsloužit příchozí komunikaci.}
+\bod{TXC -  USART Transmit Complete, bit je nastaven v případě, že byl odesílaný datový rámec odstraněn z výstupního bufferu a již se v něm nenacházejí další data k odeslání. }
+\bod{}
+\vskip 4mm
+
+Konfigurační registr 
+
+\Sekce{Inicializace USARTu}
+
+
+\Sekce{Odesílání dat}
+
+\Sekce{Přijímání dat}
+
+\Nadpis{Komunikační protokoly}
+
+
+\Nadpis{Kódování dat}
+
+\end
+

@@ -1,0 +1,173 @@
+%preambule
+%\input /home/petr/bin/texLib/TeXMakro
+%\input /home/petr/bin/texLib/KonfiguracePaperBook
+%\input /home/petr/bin/texLib/KonfiguraceEBook
+
+\input D:/MEGA/CENTRUM/texLib/TeXMakro
+\input D:/MEGA/CENTRUM/texLib/KonfiguracePaperBook
+%\input D:/MEGA/CENTRUM/texLib/KonfiguraceEBook
+
+%makra
+
+%Načtení obrázků
+%\pdfximage width/height \the\SirkaOdstavce mm {./Obrazky/obr}
+\pdfximage width \the\SirkaOdstavce mm {./Obrazky/TermalniAkcelerometr.jpg}
+\pdfximage width \the\SirkaOdstavce mm {./Obrazky/PWM_diagram.png}
+
+%Titulní stránka
+%\VlozitDokument{TitulniStranka}
+
+%generování obsahu
+\Obsah
+
+\Nadpis{DA a AD převodník}
+
+\Nadpis{Pulzně šířková modulace}
+
+Pulzně šířková modulace - PWM je metoda, kterou lze pomocí dvoustavového signálu regulovat průtok elektrického proudu nebo velikost napětí. Tím je možné měnit například otáčky motoru, jas světelných diod, teplotu vyhřívaných částí, ...
+
+Principem PWM je cyklické střídání logických hodnot 0 a 1 při dané frekvenci v určitém časovém poměru. Tomuto poměru se říká {\bf střída}. Frekvence PWM je vždy stejná (konstantní) a určuje jak rychle bude docházet ke změně stavu. Střáda určuje poměr poměr v jakém se výstupní signál nachází v logické hodnotě 1, čímž se určuje průměrné množství výstupního napětí/proudu. Střída je určena vztahem:
+
+$$ D = {t_{on}\over T} \cdot 100[\%] $$
+
+kde {\it D} označuje střídá, $t_{on}$ označuje čas ve kterém je výstupní signál v logické hodnotě 1 a {\it T} označuje časovou periodu signálu. Hodnota PWM se zadává ve velikosti střídy, tedy v intervalu $0 - 100\%$.
+
+Parametry výstupního signálu mají v časovém součtu, kdy je v logické jedničce průměrnou hodnotu vynásobenou procentuální hodnotou střídy. V případě, že pro log 0 = 0V a pro log 1 = 5V, platí, že při střídě $D = 50\%$ je hodnota výstupního napětí rovna $50/100*5 = 2,5V$
+
+To proto, že v případě, že je při střídě $D = 100\%$ přeneseno 5V, pak je zároveň při odporu na vedení $5\Omega$ přeneseno $I = {U\over R} = {5V\over 5\Omega} 1A $, V případě, že je střída $D=50\%$, je přeneseno poloviční množství náboje:
+
+$$I = {U\over R} = {Q\over t} \rightarrow I = {Q\over t}\cdot {D\over 100} = 1Q \cdot {50\over 100} = 0,5A$$
+
+potom tedy platí, že výsledné napětí při dané střídě je také poloviční: 
+
+$$U = {I\cdot R} \rightarrow U={(I\cdot {D\over 100})\cdot R} = 1A \cdot {50\over 100}\cdot 5\Omega = {1\over 2}A \cdot 5 \Omega = 2,5V$$
+
+\vskip 4mm
+\centerline{\pdfrefximage 2}
+\vskip 4mm
+
+Frekvence signálu určuje {\bf rozlišení PWM modulece}. Čím vyšší frekvence signálu tím citlivější (přesnější) je nastavení výstupních parametrů PWM.
+
+PWM lze jednoduše emulovat softwarovým algoritmem:
+\vskip 4mm
+{
+\verbatim
+\odradkovat
+\odradkovat double F = frekvence
+\odradkovat double T = 1/F
+\odradkovat double D = střída
+\odradkovat double Ton = (D/100)*T
+\odradkovat 
+\odradkovat while(true)
+\odradkovat $\{$ 
+\odradkovat \hskip 4mm out = 1
+\odradkovat \hskip 4mm delay(Ton)
+\odradkovat \hskip 4mm out = 0
+\odradkovat \hskip 4mm delay(T-Ton)
+\odradkovat $\}$
+}
+
+\vskip 4mm
+\Nadpis{Řízení a regulace}
+
+
+\Sekce{Spětnovazební řízení a regulace}
+
+{\bf Zpětná vazba} je termín pro situaci, kdy {\it výstup} dynamického systému ovlivňuje zpětně jeho {\it vstup}. Zpětnovazební řízení a regulace spočívá v řízení na základě zjištění aktuálního vnitřního stavu řízeného systému, podle kterého jsou řídící vstupy, které opět mohou upravit vnitřní stav systému. 
+
+Typické použití zpětnovazební regulace je při řízení teploty, kdy pro úpravu vyhřívacího akčního členu je nutné znát aktuální teplotu daného prostředí.
+
+\Sekce{Setrvačnost dynamckého systému}
+Dynamický systém je charakteristický určitou setrvačností. To znamená, že hodnota vnitřního stavu určitou dobu stoupá i po vypnutí akčního členu. Tato vlastnost dynamického systému je nežádoucí je snahou konstruovat takový systém, který má co nejnižší setrvačnost. 
+
+Setrvačnost způsobuje odchylky - hysterezi od požadované hodnoty vnitřního stavu. Některé regulační algoritmi umožňují setrvačnost z větší části kompenzovat tím, že včas vypnou nebo naopak zanou akční prvek a hodnota vnitřního stavu setrvačností dojde do požadované hodnoty.  
+
+Setrvačnost se projevuje především u rychlých změn stavů dynamických systémů.
+
+\Sekce{Regulační algoritmy} 
+
+Pro regulaci je využíváno několik základních řídících algoritmů, které umožňují účině reagovat na zpětnou vazbu dynamického systému a tím účině a přesně udržovat požadovaný stav dynamického systému. Každý z řídících algoritmů má své praktické použití (požadavky na přesnosti, nebo na výpočetní nenáročnost na řící systém). 
+
+\PodSekce{ON/OFF regulace}
+
+ON/OFF regulace, též dvoupolohová regulace je základním (nejjednodušším) typem regulačního algoritmu, který pro řízení stavu systému používá pouze dvou stavů - zapnuto a vypnuto. Základní hodnoty pro řídící algoritmus ON/OFF je {\bf žádaná hodnota}, {\bf hystereze} (rozdíl mezi žádanou a zkutečnou hodnotou stavu řízeného systému) a rychlost generování regulačního hodnot.
+
+Algoritmus regulace ON/OFF funguje na základě ovlivňování vnitřního stavu systému cyklickým zapnutím a vypináním ovlivňujícího akčního členu. V případě, že je hodnota vnitřního stavu systému nižší než požadovaná hodnota, je akční člen ve stavu zapnuto. V případě, že hodnota vnitřního stavu systému překročí požadovanou hodnotu, je akční člen přepnut do stavu vypnuto. Příčemž se předpokládá, že v zapnutém stavu akčního prvku hodnota vnitřního stavu systému stoupá a ve vypnutém stavu hodnota vnitřního stavu systému klesá. 
+
+% obrázek
+
+Algoritmus ON/OFF se umí se setrvačností dynamických systémů vypořádat jen velice těžko a v případě systémů s velkou setrvačností bývá velmi nepřesný. 
+
+\PodSekce{PID regulace}
+
+PID algoritmus regulace umožňuje mnohem přesněji řídít vnitřní stav systému, než algoritmus 0N/OFF.  To je především proto, využívá změnu výkomu akčního prvku a zároveň díky matematickému principu fungování dokáže počítat se setrvačností dynamického systému a předvídá (podle nastavní vnitřních konstant), kdy má již zvyšovat nebo snižovat výstupní výkon akčního prvku. 
+
+PID regulátor je spojením tří nezávislích regulátoru:
+
+\vskip 4mm
+\bod{Proporcionální regulátor}
+\bod{Integrační regulátor}
+\bod{Derivační regulátor}
+\vskip 4mm
+
+
+
+\PodSekce{Použití ON/OFF a PID regulace}
+
+\Nadpis{Akcelerometr}
+Akcelerometr je elektromechanické zařízení, které měří velikost a směr působení zrychlení sil. Tyto síly mohou být statické jako například tíhová síla, nebo dynamické - způsobeny pohybem nebo vibrováním akcelerometru.
+
+Akcelerometry se využívají v embedded systémech, kde umožňují vnímat okolí. Typickým příkladem použití jsou letecké drony, kde je díky tomu možné sledovat náklon dronu a kompenzovat působení turbulentního proudění vzduchu.
+
+\Sekce{Popis funkce akcelerometru}
+
+Akcelerometry mohou pracovat na několika různých principech:
+\vskip 4mm
+\bod{Piezoelektrický}
+\bod{Termální}
+\bod{Kapacitní}
+\vskip 4mm
+
+\PodSekce{Piezoelektrický akcelerometr}
+
+Aktivní prvek akcelerometru je z piezoelektrického materiálu. Deformační kotouč je umístěn mezi dvě elektrody, které umožňují měřit napětí na deformačním disku. Síla působící kolmo na deformační disk způsobuje způsobuje napětí na elektrodách, které lze následně detekovat jako zrychlení.
+
+\PodSekce{Termální akcelerometr}
+
+Termální akcelerometr se skládá z komory naplněné plynem, v jejímž středu se nachází topný článek a teplotní snímače na stěnách komory. Právě tak jako teplý vzduch stoupá a studený vzduch klesá se chová i teplý a studený plyn v komoře akcelerometru. Jestliže je akcelerometr v klidu, snímá pouze gravitaci. Když se poloha akcelerometru nemění, horká plynový bublina stoupne ke stropu uprostřed komory akcelerometru a všechny snímače teploty měří stejnou teplotu. V závislosti na vychýlení akcelerometru bude horký plyn blíže k jednomu, možná dvěma snímačům teplot.
+
+\vskip 4mm
+\centerline{\pdfrefximage 1}
+\vskip 4mm
+
+\Sekce {Základní vlastnosti akcelerometru}
+Každý akcelerometr se z vyznačuje určitými vlastnostmi, které jsou dány jeho konstrukcí. Na základě konstrukce akcelerometru se určuje okruh jeho použitelnosti.
+
+\PodSekce{Digitální vs analogové výstupy akcelerometru}
+
+Výstupy akcelerometru mohou být buď analogové a nebo digitální. To je určeno hardwarem, který naměřené udaje převádí buď do digitální analogové nebo do digitální podoby. 
+
+U akcelerometrů s analogovým výstupem spojité napětí, jehož velikost je závislá na naměřeném zrychlení.  Například 2.5 pro 0g 2.6V pro 0.5g, 2.7 pro 1g, ...
+
+Digitální akcelerometry pro výstup používají pulzně šířkovou modulaci (PWM).   
+
+\PodSekce{Osy akcelerometru}
+
+Akcelerometry se dělí na dvou-osé pro měření zrychlení v ploše a tří-osé, které umožňují měřit zrychlení ve 3D. 
+
+\PodSekce{Šířka pásma}
+
+Šířka pásma udává kolikrát za danou časovou jednotku lze číst data z akcelerometru (maximální možná frekvence čtení nových dat). To výrazně ovlivňuje praktickou použitelnost daného akcelerometru. V případě pomalu se pohybujících zařízení postačí nižší frekvence, pro rychle se pohybující stroje je nutná frekvence vyšší, aby mohly účinně reagovat na změny pohybu.
+
+\PodSekce{Citlivost akcelerometru}
+Citlivost akcelerometru udává poměr velikost změny zrychlení k velikosti změny výstupního signálu. Všeobecně platí, čím vyšší citlivost akcelerometru tím lépe. To znamená, že pro danou změnu zrychlení je získána větší změna v signálu. Větší změny signálu jsou snadněji měřitelné a dávají přesnější naměřené údaje.
+
+\PodSekce{Rozsah měření akcelerometru}
+
+Rozsah měření akcelerometru určuje v jakém rozsahu zrychlení lze  Maximální rozsah měření akcelerometru závisí na jeho použití. V případě, že je použit pouze pro měření náklonu v zemské gravitaci, bude 1.5g bohatě stačit
+
+\Sekce{Progamování akcelerometru}
+
+Akcelerometr bývá ve formě mikročipu, který je osazen na elektronickou desku řídícího systému, popřípadě senzorického modulu.
+
+\end

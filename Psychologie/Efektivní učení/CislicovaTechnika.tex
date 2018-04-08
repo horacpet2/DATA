@@ -1,0 +1,78 @@
+\input Konfigurace
+\input TitulniStrana
+
+%vkládání obrázků
+
+
+\pageno = 1
+\nonum\notoc\sec Obsah
+
+\maketoc
+
+\vfill\break
+
+\pagenumbers
+
+\chap Úvod
+
+Číslicová technika tvoří nezbytný základ pro automatizaci a procesorovou techniku. Jedná se o část elektroniky, která je tvořena logickými hradly, které jsou tvořeny polovodičovými součástkami a umoňují snadno skládat jednoduché logické součásti do komplexních celků, které provádějí nějakou předem definovanou činnost. 
+
+Číslicová technika se z velké části nezabívá elekterickými obovody, ale vytváří abstraktní vrstvu s metodamy návrhu složitých číslicových struktur. Tyto metody umožňují minimalizovat výsledný obvod a optimalizovat tak jeho spotřebu, spolehlivost, cenu, \atd  
+
+
+\chap Logická aritmetika
+
+Mnoho logických obvodů je založených na principu vykonávání aritmetických operací s čísly. Typickým příkladem je aritmeticko-logická jednotka procesoru. Základní aritmetické operace jsou sčítání, odčítání, násobení a dělení. Obecně platí, že tyto aritmetické operace se vykonávají ve všech číselných soustavách stejně, pouze musí být vzat v úvahu základ dané soustavy a jeho přenos do vyšších řádů. V číslicových obvodech jsou ale nejpoužívanější číselné soustavy dvojková osmičková a šestnáctková.
+
+\sec Aritmetická operace součet
+
+Sčítání v soustavách dvojkové, osmičkové a šestnáctkové probíhá podobně jako v soustavě desítkové. Jediný rozdíl je v přenosech do vyšších řádů.
+
+Přenos do vyššího řádu nastane v případě, že je součet sčítaných číslic roven nebo větší než základ číselné soustavy, ve které se nacházejí daná čísla. Obecně lze součet čísel {\it A} a {\it B} zapsat jako:
+
+$$ S = A + B $$
+
+Nebo také v souladu s polynomální rovnicí definující libovolné číslo v libovolné číselné soustavě:
+
+$$  $$
+
+\chap Logická funkce
+
+Logika je nauka o základech myšlení v procesu vytváření úsudku a důkazu. Logický obvod je takový obvod, u něhož může každá veličina na vstupu i výstupu v ustáleném stavu s určenou přesností nabývat jen jedné ze dvou možných hodnot a který obsahuje takové prvky, jejichž vstupní a výstupní veličiny mohou nabývat také jen jedné ze dvou možných hodnot. 
+
+Logický obvod je realizován skupinou logických členů vzájemně spojených tak, aby realizovaly požadované logické funkce. Podle druhu realizované logické funkce se logické obvody dělí na:
+
+\begitems \style o
+ *{\bf Kombinační logické obvody } -  jedná se o systémy, jejichž odezva je v určitém časovém okamžiku podmíněna výhradně hodnotami, které panují na vstupech tohoto systému (podle toho jaká kombinace logických hodnot je na vstupu je určitá kombinace logických hodnot na výstupu). Kombinační logické obvody lze popsat konečným množstvím rovnic tvaru:
+ 
+$$ \left[ \matrix{y_0 = f_0(x_1, x_2, \atd x_n)\cr y_1 = f_1(x_1, x_2, \atd x_n) \cr \atd \cr y_m = f_m(x_1, x_2, \atd x_n)} \right]. $$
+
+Kde $y_1$, $y_2$, \atd, $y_m$ značí výstupní bitové proměnné logického obvodu a $x_1$, $x_2$, \atd, $x_n$ značí výstupní bitové proměnné.
+
+*{\bf Sekvenční logické obvody} - jedná se o systémy, jejichž odezva je v určitém časovém okamžiku dána ne jen hodnotami bitových proměnných na vstupech tohoto systému, ale i posloupností (sekvencí) předcházejících vstupních hodnot. Sekvenční obvod je proto opatřen pamětí, která svým stavem definuje vnitřní stav tohoto. Formálně lze sekvenční logický obvod popsat dvěma soustavami rovnic, jednou pro vstup a jednou pro vnitřní stavy (u kombinačních logických obvodů jsou vstupní hodnoty závislé ne jen na kombinaci vstupních hodnot, ale také na vnitřním stavu obvodu).
+ 
+\enditems
+
+U kombinačního i sekvenčního logického obvodu lze v postupu jejich návrhu rozlišovat dva základní kroky:
+\begitems\style n
+*Přesný popis chování systému logickými funkcemi případně jejich zjednodušení (minimalizace).
+*Obvodová realizace logického systému, která splňuje chování dané logickými funkcemi.
+
+\enditems
+
+\sec Logická proměnná
+
+Logická proměnná je obecně proměnná, která může nabývat nějakého konečného počtu logických hodnot. V případě logických obvodů jsou to zpravidla hodnoty 1 a 0 definující stav zapnuto a vypnuto popřípadě pravda a nepravda. Obecně se ale může jednat o jakékoli jiné dva související stavy.
+
+\sec Logická funkce
+
+Logická funkce je taková funkce, která pro konečný počet vstupních parametrů vrací logické hodnoty. Parametry logických funkcí jsou opět logické proměnné (hodnoty). Úkolem kombinačních logických obvodů je realizovat funkce $f_i$ tak, že každé kombinaci hodnot vstupních proměnných přiřadí určitou hodnotu výstupní proměnné. Popisem funkcí logických obvodů se zabývá logická algebra. Jedná se o algebraickou strukturu zobecňující vlastnosti množinových a logických operací.
+
+Na vstupu systému lze z vnějšku dosadit až $2^n$ různých binárních kombinací, kde {\it n} je počet vstupních bitových proměnných. Pro {\it n} vstupních bitových proměnných lze definovat až $2^{n^n}$ různých funkcí $f_i$. To znamená, že pro {\it n} vstupních proměnných je možné definovat $2^{n^n}$ různých logických funkcí aniž by se definiční obor dvou libovolných funkcí shodoval.
+Všem kombinacím vstupních proměnných se říká {\bf definiční obor funkce} a výsledným hodnotám na základě kombinací vstupních proměnných se říká {\bf obor hodnot funkce}. Vstup dané logické funkce tedy tvoří uspořádanou n-tici logických hodnot.
+
+\secc Logické funkce jedné proměnné
+
+Logickou funkci jedné nezávislé proměnné lze vyjádřit čtyřmi způsoby.
+
+\end

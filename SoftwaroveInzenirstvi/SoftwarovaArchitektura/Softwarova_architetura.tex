@@ -1,0 +1,44 @@
+\def\ddr{/home/petr/MEGA/CENTRUM/texLib}
+
+\input \ddr/TeXMakro
+\setAddress{\ddr}
+\input \ddr/KonfiguracePaperBook
+%\input \ddr/KonfiguraceEBook
+%makra
+
+%Načtení obrázků
+%\pdfximage width/height \the\SirkaOdstavce mm {./Obrazky/obr}
+
+%Titulní stránka
+%\VlozitDokument{TitulniStranka}
+
+%generování obsahu
+\Obsah
+
+
+\Nadpis{Úvod}
+
+\Nadpis{Vnitřní architektura software}
+
+Vnitřní architektura softwaru vyjadřuje jakým způsobem je navržena vnitřní struktura, uspořádání a komunikace jednotlivých částí softwarového projektu. Softwarová architektura ve výsledku ovlivňuje rychlost programu, rychlost vývoje, přehlednost zdrojových kódů, znovupoužitelnost kódu, ...
+
+\Sekce{Závislost}
+
+Softwarové projekty se často skládají s mnoha tísích programových řádků. Abych se zvíšila přehlednost takového zdrojového kódu, je celý projekt rozdělen do jednotlivých částí (objektů, vrstev, souborů) které jsou zodpovědné pouze za jednu jedinou činnost. Zdrojový kód projektu je tak sestaven z desítek ale i stovek objektů jako skládačka. Jedna oblast zodpovědnosti je tak složena z více dílčích objektů, které mezi sebou potřebují určitým způsobem komunikovat. Tím vznikají tzv. {\bf Závislosti}. Uvnitř softwaru je většinou zapotřebí, aby od jedné části existoval pouze jeden objekt a ten byl předán tam kde je potřeba. Závislost je tedy potřeba přístupu objektu k nějakým dalším objektů.
+
+\Sekce{Ortogonalita}
+Ortogonalita je pojem z geometrie, který vyjadřuje vzájemný vstah dvou přímek. Dvě přímky jsou ortogonální jestliže se protínají pod pravým úhlem (jsou kolmé). Ve vektorové terminologii jsou dvě takové přímky {\it nezávislé}. Při pohybu po jedné z těchto přímek se nebude  měnit průmět pozice na druhou přímku. Do programování byl tento pojem zanesen pro zdůraznění neexistence vazeb. Dvě nebo více věcí jsou ortogonálních pokud, změny v jedné části nemají vliv na ostatní.
+
+V softwarovém pojetí je ortogonalita vytváření (navrhování) částí softwaru, které se vzájemně neovlivňují. To má hned několik výhod. 
+
+\Nadpis{Modulární programování}
+
+
+\Nadpis {Událostně řízené a stavově řízené programování}
+
+
+\Nadpis{Multiplatformní kód}
+
+Můltiplatformní software je takový software, který je schopen běžet na více jak jedné softwarové nebo hardwarové platformě. 
+
+\end

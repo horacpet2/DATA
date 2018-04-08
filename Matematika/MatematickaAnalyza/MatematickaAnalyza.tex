@@ -1,0 +1,143 @@
+%preambule
+%\def\addr{D:/MEGA/CENTRUM/texLib/}
+\def\addr{/home/petr/.texLib/}
+
+\input \addr TeXMakro
+\setAddress{\addr}
+%\input \addr KonfiguracePaperBook
+\input \addr KonfiguraceEBook
+
+
+%Načtení obrázků
+%\pdfximage width/height \the\SirkaOdstavce mm {./Obrazky/name.png}
+\pdfximage width \the\SirkaOdstavce mm {./Obrazky/ZobrazeniMnozin.png}
+\pdfximage width \the\SirkaOdstavce mm {./Obrazky/GarfFunkce.png}
+%\pdfximage width \the\SirkaOdstavce mm {./Obrazky/GrafPosloupnosti.png}
+
+ 
+%Titulní stránka
+%\VlozitDokument{TitulniStranka}
+
+%generování obsahu
+\Obsah
+
+\Nadpis{Úvod}
+
+Matematická analýza je jednou z nejdůležitějších matematických disciplín, protože umožňuje zkoumat různé fyzikální jevy. To se odráží i v technických oborech kde jsou tyto fyzikální jevy prakticky aplikovány. 
+Základními oblastmi matematické analýzy jsou teorie posloupností, limit, integrální počet a diferenciální počet na množině reálných čísel. Dále sem patří teorie obyčejných i parciálních diferenciálních rovnic, integrálních rovnic.
+
+\Nadpis{Funkce}
+
+Funkce je speciálním typem zobrazení jedné množiny (definiční obor) do druhé (obor hodnot). Funkce je nástroj, který slouží ke zkoumání (analýze) vlastností a chování algebraických výrazů. Umožňuje zkoumat jak se mění (vyvíjí) hodnoty daného výrazu pokud jsou za proměnnou výrazu postupně dosazovány hodnoty z dané množiny (intervalu) hodnotu.
+
+Reálná funkce jedné proměnné je definována jako zobrazení neprázdné množiny $ A \subseteq R $ do neprázdné množiny $ B = R $, které každému prvku $ x \in A $ podle předem daného předpisu přiřadí právě jeden prvek z množiny $y \in B $. Tím je získána uspořádaná dvojice hodnot $ [ x,y]$, která se nazývá {\bf reálná funkce reálné proměnné x } (krátce funkce proměnné x).
+
+\vskip 4mm
+\centerline{\pdfrefximage 1}
+\vskip 4mm
+
+Symbolem x je označována proměnná, která se nazývá {\bf argument funkce}, jednotlivým číslům (hodnotám) z množiny A se říká {\bf hodnoty proměnné (argumenty)}. Množina A všech hodnot proměnné x se nazývá {\bf definiční obor funkce} a značí se $D_f $ nebo $ D(f) $. Číslo {\it y} přiřazené číslu {\it x} se nazývá {\bf funkční hodnota} nebo {\bf hodnota funkce} {\it f} v bodě {\it x } a značí se {\it f(x)} nebo $ y=f(x) $ nebo $x \rightarrow f(x)$ (pro danou hodnotu {\it x} se hodnota funkce {\it f(x)} rovná {\it y}). Množina všech  hodnot (funkčních hodnot) funkce {\it f} se nazývá {\bf obor hodnot funkce {\it f}} nebo obor {\bf funkčních hodnot funkce {\it f}} a značí se $ H_f $ nebo $H(f)$ .
+
+Symbolicky se funkce vyjadřuje pomocí zápisu (předpis funkce):
+
+$$ f:A \rightarrow B, D_f = A$$
+$$ f: y = f(x), x \in D $$
+$$ f: A \rightarrow f(x), x \in D_f $$
+
+Pro označení funkcí se používají různá písmena g, h, f, $\gamma$, ... Pro některé často užívané funkce se používají speciální označení, například sin, cos, log, ...
+
+\Sekce{Grafické značení funkcí}
+
+Názornou představu o vlastnostech funkcí poskytují jejich grafická znázornění - graf funkce {\it f}. Graf dané funkce se sestrojí tak, že se zvolí pravoúhlá (kartézská) soustava souřadnic s počátkem v bodě 0 a (navzájem kolmými) osami {\it x} a {\it y}. Množiny obor hodnota $H_f$ definiční obor $D_f$ tvoří uspořádanou dvojici hodnot  $ [D_f,H_f] $ na číselných osách {\it x} a {\it y} $\rightarrow [x,y]$.
+
+Graf funkce je křivka (přímka je speciální případ naprosto rovné křivky), která popisuje chování dané funkce.
+
+\vskip 4mm
+\centerline{\pdfrefximage 3}
+\vskip 4mm
+
+
+Graf funkce se do souřadnicového systému zanese tak, že se vezme nějaký bod {\it x} z definičního oboru a vypočítá se pro ni její funkční hodnota funkce {\it f}, tím je získána hodnota {\it y} z oboru hodnot. Uspořádaná dvojicepředstavuje uspořádanou dvojici $[x,y]$ dvourozměrných souřadnic bodů grafu. První souřadnice (hodnota {\it x} z definičního oboru) se zanese na osu {\it x} a druhá souřadnice ({\it f(x)} z oboru hodnot) se zanese na osu {\it y}.
+Jestliže tedy jsou x-ové souřadnice tvořeny definičním oborem funkce a y-ové souřadnice jsou tvořeny oborem hodnot funkce, pak kartézským součinem těchto dvou množin se získá množina uspořádaných bodů grafu funkce {\it f}.
+
+\Sekce{Způsoby zadání funkce}
+
+K zadání funkce je třeba stanovit několik informací:
+
+\vskip 4mm
+\bod{\bf Funkční předpis - pravidlo (formulace slovně nebo častěji pomocí matematických symbolů) podle kterého je ke každému číslu $x \in D_f$ přiřazena jednoznačně funkční hodnota $y=f(x)$, $y \in H_f $.}
+\bod{\bf Definiční obor $D_f$}
+\vskip 4mm
+
+Podle formy funkčního předpisu se rozlišují způsoby zadání funkce {\it f} :
+
+\vskip 4mm
+\bod{{\bf Analytické zadání} - funkční předpis je dán vzorcem, to je rovnicí tvaru $y=f(x)$, kde {\it f(x)} je výraz s proměnnou {\it x }. Tento způsob zadání je nejčastější, protože je nejpřesnější a umožňuje přesně vyjádřit všechny funkční hodnoty z celého definičního oboru. Příkladem může být předpis: $f(x)=x^2$.}
+\bod{{\bf Grafické zadání} - funkční předpis je dán grafem funkce.}
+\bod{{\bf Zadání výčtem} (tabelární zadání) - funkční předpis je dán {\bf výčtem} (zpravidla tabulkou) všech uspořádaných dvojic $[x:y=f(x)]$ hodnot argumentů {\it x} a příslušných funkčních hodnot. Takový způsob zadání funkce lze ovšem použít pouze pro funkce, jejichž definiční obor je {\bf konečná množina}}.
+\vskip 4mm
+
+\Sekce {Maximální definiční obor}
+
+Je-li funkce {\it f} zadána analyticky vzorcem (rovnicí) {\it y=f(x)}, kde {\it f(x)} je nějaký výraz s proměnnou {\it x}, a není-li zároveň uveden definiční obor funkce, pak se jím rozumí množina všech takových reálných čísel {\it x}, pro něž má výraz {\it f(x)} smysl. Takovému definičnímu oboru se říká {\bf maximální definiční obor funkce}. Pro stručnost se ale uvádí pouze krátce {\bf definiční obor funkce}. 
+
+\Sekce {Rovnost funkcí}
+
+O dvou funkcí {\it f, g} se říká, že {\bf jsou si rovny} (psáno {\it f = g}), právě když mají stejné definiční obor $D(f) = D(g)$ a v každém bodě {\it x} tohoto definičního oboru je $f(x) = g(x)$.
+
+O funkcích {\it f, g}, které nejsou si rovny, se říká, že jsou {\bf různé} (psáno $f\neq g$).
+
+\Sekce {Operace s funkcemi}
+
+Protože funkce, jejíž předpis je zadán v algebraickém tvaru je definovaná jako algebraický výraz, lze s funkcemi provádět stejné algebraické oprece a úpravy jako s algebraickými výrazy. To je krácení, sčítání, násobení nenulovým číslem,...
+
+\Sekce{Složená funkce}
+
+Protože funkce je speciálním typem množinového zobrazení, je možné je stejným způsobem dosebe {\bf skládat}. To znamená, že pokud je dána funkce $g:u=g(x)$, která má definiční obor $D_g$, které přísluší definiční obor $H_g \neq \oslash$ (je neprázdná množina) a funkce $f:y = f(u)$ s definičním oboru $D_f$, takovým že platí $H_g \subseteq D_f$, pak pro každé $x \in D_g$ je $g(x) \subseteq D_f$ (funkční hodnota funkce {\it g} v bodě {\it x} patří do definičního oboru funkce {\it f}). Pak lze vytvořit novou funkci $ h:y = h(x) $ s definičním oborem $D_h = D_g$ (stejný definiční obor jako funkce {\it g}), jejíž funkční předpis je:
+
+$$ h(x) = f(g(x)), \forall x \in D_h $$ 
+
+Tato funkce {\it h} se nazývá {\bf složená funkce} z funkcí {\it g, f} (v uvedením pořadí) a značí se $h=f \circ g$. Funkce {\it f} se nazývá {\bf vnější složka} (funkce) a funkce {\it g} se nazývá {\bf vnitřní složka} (funkce) složené funkce {\it h}.
+
+V praxi se jedná o vložení výrazu vnitřní funkce za proměnné výrazu vnější funkce, tedy například pokud jsou dvě funkce na výpočet kolik litrů benzínu je možné si koupit za dané množství peněz:
+
+$$ g(x) = {x \over 30} $$
+
+kde x je množství peněz a 30 je cena benzínu.
+
+Dále kolik kilometrů je možné ujet s danou spotřebou na dané množství benzínu:
+
+$$ f(x) = {10 \cdot x} $$
+kde x je množství benzínu a 10 vyjadřuje že na jeden litr je možné ujet 10 kilometrů.
+
+Pokud by bylo třeba vypočítat kolik kilometrů je možné ujet za dané množství peněz, pak je možné buď nejprve vypočítat kolik litrů benzínu je možné si za danou sumu koupit a následně vypočítat kolik kilometrů za dané množství benzínu je možné ujet a nebo vytvořit složenou funkci, která na vstupu přijímá množství peněz a na výstupu množství ujetých kilometrů:
+
+$$ g(x) = {10 \cdot ({x \over 30})}$$
+
+Skládání funkcí se využívá zejména při vytváření programů, nebo různých často používaných funkcí, kde je třeba vytvořit optimálnější a rychlejší řešení.
+
+\Sekce{Funkce více parametrů}
+
+Nejjednodušší funkce mají pouze jeden parametr, ale občas je třeba pracovat i se složitějšími funkcemi, které přijímají více než jeden parametr. S takovými funkcemi se pracuje stejně jako s funkcemi, které přijímají pouze jeden parametr, pouze v tabulkovém výpisu funkčních hodnot je zapsáno více sloupců se vstupními hodnotami, ale zůstává pouze jeden sloupec pro výpis funkčních hodnot:
+
+
+
+\Nadpis{Posloupnosti a řady}
+
+Posloupnost je speciální případ funkce, jejíž definiční obor je množina přirozených čísel {\it N}.  Funkce jejímž definičním oborem je množina přirozených čísel {\it N}, se nazývá nekonečná číselná posloupnost. Funkce jejímž definičním oborem je množina prvních {\it n} přirozených čísel {1, 2, 3, ...} (podmnožina přirozených čísel), se nazývá konečná číselná posloupnost. Funkční hodnoty (konečné nebo nekonečné) číselné posloupnosti jsou prvky množiny reálných čísel se nazývají členy posloupnosti. Posloupnost je tedy zobrazení přirozených čísel na množinu reálných čísel: $a_n: n \rightarrow R $ Funkční hodnota posloupnosti v bodě $n \in N $ se nazývá n-tý člen posloupnosti a značí se místo {\it f(n)} zpravidla {\it $f_n$} nebo častěji  {\it $a_n$, $b_n$, ... } Hodnoty z definičního oboru zároveň určují pořadový index daného prvku posloupnosti. 
+
+Posloupnosti (nekonečná) s n-tým členem $a_n$ se zapisuje $(a_1, a_2, ..., a_n, ...)$ nebo $ (a_n)_n ^ \infty $ nebo $(a_n ; n = 1, 2, ...)$ nebo $ (a_n)_1 ^\infty $. Konečná posloupnost s n-tým členem $a_n$ a definičním oborem $\{ 1, 2, ..., k\}$ se zapisuje $(a_1, a_2, ..., a_k)$ nebo $ (a_n)_{n=1}^k$ nebo  $(a_n ; n = 1, 2, ..., k)$ nebo $(a_n)_1^k $.
+
+Je důležité, že pokud se mluví o posloupnosti, pak pokud není řečeno jinak se automaticky myslí posloupnost nekonečná. Pokud je myšlena posloupnost konečná je třeba to výslovně zdůraznit.
+
+\Sekce{Garfické značení posloupností}
+
+Posloupnosti mají odlišné grafy od běžných reálných funkcí. Posloupnosti lze graficky znázornit nejen v pravoúhlé (kartézské) soustavě souřadnic, ale také na přímce (číselné ose). Protože mají jako definiční obor přirozená čísla, jejich graf je tvořen množinou navzájem izolovaných bodů.
+
+\vskip 4mm
+%\centerline{\pdfrefximage 3}
+\vskip 4mm
+
+\end
+
+%Podívat se na značení posloupností a trochu to popsat

@@ -1,0 +1,47 @@
+\def\addr{/home/petr/MEGA/CENTRUM/texLib}
+
+\input \addr/TeXMakro
+\setAddress{\addr}
+\input \addr/KonfiguracePaperBook
+%\input \addr/KonfiguraceEBook
+%makra
+
+%Načtení obrázků
+%\pdfximage width/height \the\SirkaOdstavce mm {./Obrazky/obr}
+
+%Titulní stránka
+%\VlozitDokument{TitulniStranka}
+
+%generování obsahu
+\Obsah
+
+
+\Nadpis{Úvod}
+
+
+\Nadpis{Unit test}
+
+Unit test je druhem testu, který je zaměřený na testování jednotlivých částí zdrojového kódu jako jsou například funkce, makra, ...
+
+
+Principem Unit testu je vytvořit testovací proceduru, která je izolovaná od zbytku softwaru a žádným způsobem neovlivňuje jeho běh a má za úkol určit zda daná část zdrojových kódu funguje dle specifikace.  Nejjednodušším typem Unit testu je běžný výpis výsledků práce nějaké části zdrojových kódu a na jehož základě je možné určit zda kód funguje správně nebo ne. Nevýhodou takovýchto výpisů je po dokončení a otestování je nutné tyto výpisy odstranit nebo zakomentovat. To znamená další práci a potřebný čas. 
+
+Unit testy běží nezávisle na zbytku zdrojových kódů a mají za cíl testovat pouze danou část ne software jako celek. Při spouštění Unit testu je zavolána pouze daná funkce, jejíž funkčnost je testována a nic víc. Z tohoto důvodu se unit testy nevyskytují uvnitř zdrojových kódů, kde by mohly rušit a snižovat přehlednost, ale jsou umístěn ve vlastním souboru, který je samostatně spoušten. Způsob jejich spouštění závisí na programovacím jazyku, frameworku s unit testy a vývojovém prostředí. V principu jde ale o to, že unit testy mají buď vlastní funkci main, nebo jejich odkaz na spuštění je vložen do hlavní funkce main projektu odkud je možné je slouštět pomocí nějakého přepínače preprocesoru, nebo konfigurací překladového popřípadě interpretačního softwaru.
+
+Framework Unit testů je sadou předpřipravených funkcí (metod), které mají za úkol vypsat nějakou zprávu do konzole, nebo obecně do výstupního proudu na základě úspěšnosti vykonaného testu.
+
+I když by Unit testy neměly v žádném případě ovlivňovat chování zdrojového programu, měl by být zdrojový kód přizpůsobený (připravený) k testování pomocí Unit testů. To znamená, že podprogramy, u kterých, je předpokládáno testovat jejich funčknost by měly nějkým přístupným způsobem zprostředkovat informace o výsledku své činnosti.
+
+\Nadpis{Debugování}
+
+Debugování, nebo také ladění je proces, při kterém je v softwaru hledána chyba. 
+
+
+K debugování se využívá nástroj, který se nazývá debuber, který umožňuje nahlédnout do prgramu v průbehu jeho vykonávání. Debugování pomocí debugeru spočítáv v tom, že když program dorazí do určitého bodu,který je označen jako break point (bod přerušení běhu programu), pak se program zastaví a čeká na uživatelskou (programátorskou) akci. Touto akcí je krokování programu, při kterém je možné sledovat postup programu a jeho vykonávání s hodnotami, které jsou v daném kroku uloženy v proměnných.
+
+Existuje několik přístupů, kterými lze sledovat vnitřní vykonávání programu. 
+
+Debuger je silný a účinný nástroj na hledání chyb, ale z pohledu rozvoje programátorských schopností by měl být použit jako poslední možnost při hledání chyb v programu. Programátor by se měl v prní řadě naučit myslet jakým způsobem hledat chyby v programu bez použítý nějakých nástrojů, díky čemuž se nauží podobných chybám v budoucnosti vyhýbat.
+
+
+\end

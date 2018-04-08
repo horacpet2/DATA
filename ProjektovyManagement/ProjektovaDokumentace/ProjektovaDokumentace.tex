@@ -1,0 +1,119 @@
+%hlavička dokuentu
+
+\input Konfigurace
+\input TitulniStrana
+
+%nastavení posunutí počítání stránek (úvodní stráka se nepočítá do celkového
+% počtu stránek)
+\pageno = 1
+
+%vytvoření automaticky generovaného obsahu dokumentu
+\nonum\notoc\sec Obsah
+
+\maketoc
+
+\vfill\break
+
+%spuštění počítání stránek
+\pagenumbers
+
+%tělo dokumentu
+
+\chap Úvod
+
+Technická dokumentace je textová, obrázková, popřípadě i jiný průvodní záznam (popis) průběhu realizace složitých projektů (stavby, stroje, ...). Dokumentace projektu umožňuje popsat jak daný projekt vznikal, jak jej pro příště optimalizovat a jak naplánovat jeho realizaci (charakteristiky projektu). Jedná se o velice důležitou část každého složitého projektu, protože umožňuje udržet přehlednost projektu a zamezuje zbrklému improvizování, které vede k tvorbě zbytečných chyb a šetří prostředky potřebné k realizaci - poskytuje informace pro realizaci projektu. Části projektové dokumentace mohou mít také účel prezentační, nebo orientační.
+
+Tvorba technické dokumentace se stala v současné době nezbytnou nutností každého většího projektu. V případě složitých projektů umožňuje zachovávat pořádek při plánování a realizaci, umožňuje se k těmto projektům po čase vrátit pro účely úpravy řešení, na daném projektu následně nemusí pracovat ani sám tvůrce, ale jeho může to být jeho nástupce, kterému jeho dokumentace poslouží jako vodítko a při práci v týmu je vhodným nástrojem pro rozdělování úkolů.
+
+Každá projektová dokumentace by se měla skládat z několika částí:
+\begitems\style n
+*Projektová specifikace
+*Technická dokumentace projektu
+*Dokumentace z testování a ladění
+*Uživatelský manuál
+\enditems
+
+
+\chap Projektová specifikace
+
+Projektová specifikace je část projektové dokumentace, která obsahuje požadavky daného projektu. Specifikace projektu obsahuje důležité informace, které vstupují do procesu návrhu řešení projektu. Díky projektové specifikaci uživatelé jednoduše zjistí, co lze od výsledného produktu očekávat a co nikoli. 
+
+Autorem specifikace by měl být zároveň autor resp. vedoucí projektu. Tento dokument má napomoci všem spolupracovníkům na projektu k jeho korektnímu pochopení.
+
+\sec Obsah projektové specifikace
+
+Každá projektová specifikace musí obsahovat následující části, nejlépe v uvedeném pořadí:
+
+\begitems\style n
+
+*Název projektu
+*Popis účelu projektu a jeho použití (využití) v praxi
+*Požadavky projektu (technologické, hardwarové, softwarové, lidké zdroje, ...)
+*Časový harmonogram - rozpis realizace projektu do jednotlivých časových úseků, výsledný časové požadavky na realizaci, v případe práce v týmu je zde také rozpis kdy a kdo na čem pracuje.
+\enditems
+
+\sec Základní otázky specifikace
+
+Při tvorbě projektové specifikace je třeba si položit několik základních otázek, díky kterým lze získat představu o výsledné povaze projektu. Těmito otázkami jsou:
+\begitems\style o
+*{\bf CO?} - Tato otázka umožňuje zjistit co je cílem projektu, co bude tvořit, umožňuje stanovit přesné měřitelné cíle, které je třeba při realizaci splnit a dodržet.
+*{\bf JAK?} -  Zjištění jaké technologie a postupy je třeba použít. Celý proces je vhodné doplnit grafem ve kterém jsou zobrazeny postupné kroky výroby s použitými technologiemi a technologickými postupy.
+*{\bf KDO?} - V případě, že na projektu pracuje tým více lidí, je třeba definovat kdo bude realizovat jednotlivé části projektu. Při změnách pracovního kolektivu v průběhu tvorby projektu se to také musí dokumentovat.
+*{\bf KDY?} - datum realizace projektu je stejně klíčové jako označení začátku a konce každé na něm prováděné činnosti.
+*{\bf CENA?} - tato položka by se měla skládat z rozčlenění na jednotlivé kroky projektu v kombinaci se spotřebou práce. Také by měla čítat náklady na řízení projektu a pořizování nového SW a HW.
+\enditems
+
+\sec Jméno projektu
+
+Že každý projekt musí mít nějaké jméno je samozřejmé. Každé dobré projektové jméno ale musí splňovat určitá pravidla:
+
+\begitems\style n
+*Název musí být jednoznační - nesmí se shodovat s jiným projektem, aby nedošlo k právnímu nebo jinému konfliktu.
+*Název by měl popisovat/vystihovat funkci projektu
+*Název by měl být co nejkratší. Pokud název přesahuje délku jednoho řádku, je zřejmně něco špatně.
+*Každý systém by měl mít vedle svého oficiálního jména, které splňuje body 1 - 3, měl mít i své jednoslovný název. Může to být zkratka oficiálního názvu, nebo kódové jméno.
+\enditems
+
+Oficiální název se používá v nadpisu souvisejících dokumentů a při odkazování na projekt z jiných dokumentů. Jednoslovný název v běžné komunikaci. I když není třeba jednoslovný název definovat hned, je lepší ho ustanovit už na začátku, předejde se tak zbytečným zmatkům v budoucnu. 
+
+\sec Účel a využití projektu
+
+V této části se pojednává o účelu existence projektu a jeho možných využití. Tato část by neměla být zdlouhavým referátem na několik stran, ale stručným popisem jeho možností v praktickém nasazení. Délka této části by neměla přesahovat dva odstavce. V prvním odstavci je popsán účel existence a ve druhém praktické využití projektu.
+
+\sec Požadavky projektu
+
+Požadavky projektu umožňují zjistit co bude v průběhu realizace zapotřebí. Díky tomu je možné již předem tyto prostředky zajišťovat a ne až při realizaci, kdy dochází k časové prodlevě a ztrátě času (čas jsou peníze). Kromě toho je tak možné zjistit, zda je daný projekt v dané době, prostředí, ... v dohledném čase realizovatelný. K jednotlivým prostředkům je také připsán daný úkol na projektu, aby nedošlo v pozdější době k problémům s využitím (zapomenutí k čemu je daný prostředek zapotřebí). 
+
+\chap Technická dokumentace projektu
+
+\chap Dokumentace z testování a ladění
+
+\chap Uživatelský manuál
+
+\chap Řízení projektu
+
+Řízení projektu (někdy též projektové řízení) se zabývá řízením časově ohraničené a ucelené sady činností a procesů, jejímž cílem je zavedení, vytvoření nebo změna něčeho konkrétního. To se nazývá {\bf projektem}. Cílem řízení projektu je efektivní využití dostupných prostředků (čas, pracovní síly, technologie, ...), aby projekt přinesl předpokládaný výsledek v předpokládaném čase za předpokládané náklady. 
+
+\sec Rozpis prací
+
+Rozpis prací úmožňuje přehledně rozdělit práce na projektu mezi jednotlivé členy týmu. Ti mají přehled na čem pracují, kolik na to mají času, co má být výsledkem jejich práce, ... Rozpis prací má podobu tabulky s řádky a sloupci, kde řádky odpovídají jednotlivým členům týmu a sloupce udávají dodatečné informace o jejich úkolu.
+
+
+
+\chap Typografie dokumentu
+
+Dokumenty technického charakteru lze rozdělit do několika skupin:
+
+\begitems\style o
+*{\bf Podle obsahu} - technické, propagační, ...
+*{\bf Podle formy} - textové, obrázkové, ...
+*{\bf Podle nosiče dokumentu} - papírové, elektronické, ...
+*{\bf Podle frekvence vydávání} - periodické (noviny, edice, seriály, ...), neperiodické (knihy - více než 48 stran)
+\enditems
+
+\sec Formát dokumentu
+
+
+
+\end
+

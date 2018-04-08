@@ -1,0 +1,182 @@
+%preambule
+%\input /home/petr/bin/texLib/TeXMakro
+%\input /home/petr/bin/texLib/KonfiguracePaperBook
+%\input /home/petr/bin/texLib/KonfiguraceEBook
+
+\input D:/MEGA/CENTRUM/texLib/TeXMakro
+\input D:/MEGA/CENTRUM/texLib/KonfiguracePaperBook
+%\input C:/Users/HORACEK/Documents/MEGA/CENTRUM/texLib/KonfiguracePaperBook/KonfiguraceEBook
+
+%makra
+
+%Načtení obrázků
+%\pdfximage width/height \the\SirkaOdstavce mm {./Obrazky/obr}
+\pdfximage width \the\SirkaOdstavce mm {./Obrazky/VonNeumanovaKoncepcePocitace.png}
+\pdfximage width \the\SirkaOdstavce mm {./Obrazky/HarwardskaKoncepcePocitace.png}
+%Titulní stránka
+%\VlozitDokument{TitulniStranka}
+
+%generování obsahu
+\Obsah
+
+%Tělo dokumentu
+
+\Nadpis{Úvod} 
+
+Počítačový systém je kombinace hardwaru a softwaru, které dohromady pracuje na vykonávání předem určené úlohy - algoritmus. Počítačový systém ale tvoří komplex, které jeden bez druhého nemohou samostatně pracovat.
+
+Počítačový systém tedy dělí do dvou částí - hardware a software. Hardware jsou pevné části počítače, které vykonávají jednoduché (elementární) operace. Software je reprezentace algoritmu, které je složen z těchto jednoduchých operací.
+	
+Hardware lze rozdělit na procesor, paměti, sběrnice, a periferní zařízení. Software se pak dělí na firmware, ovladače, operační systémy a aplikační software.
+
+
+\Sekce{Počítačová platforma}
+
+Počítačová platforma označuje prostředí, které umožňuje běh nějakého druhu softwaru. Počítačová platforma se tedy dá rozdělit na:
+
+\vskip 4mm
+\bod{Hardwarová platforma}
+\bod{Softwarová platforma}
+\vskip 4mm
+
+{\bf Hardwarová platforma} označuje soustavu komponentů ze kterých je složený počítat a které více či méně podporují bezproblémový běh určitého typu softwaru. Jedná se o instrukční sadu procesoru, paměti, periferní zařízení, ... 
+
+{\bf Softwarová platforma} označuje prostředí nějakého programu, který umožňuje spouštění dalších programů - aplikační programy. Protože existují techniky pro virtualizaci hardwaru, je možné vytvořit počítačový software - virtuální stroj, který v sobě bude rovněž definovat hardwarovou platformu nějakého pro běh programů. Softwarovou platformu ale definuje také operační systém. Operační systém v sobě obsahuje různé mechanismy, a komponenty, se kterými je třeba u spouštěných programů počítat. Především to mohou být softwarové knihovny, frameworky, softwarová rozhraní, .... 
+
+\Nadpis{Druhy počítačů}
+
+Počítače lze rozdělit podle několika hledisek - použití,  architektura, technologie.
+Počítače se dělí podle použití na:
+
+\vskip 4mm
+\bod{Stolní počítač}
+\bod{Přenosný počítač}
+\bod{Síťový počítač (server)}
+\bod{Kapesní počítač}
+\vskip 4mm
+
+Počítače se dělí podle architektury na:
+
+\vskip 4mm
+\bod{Mikropočítač}
+\bod{Více jádrový počítač}
+\bod{Více procesorový počítač}
+\bod{Multipočítač - cluster}
+\vskip 4mm
+
+Počítače se dělí podle technologie na:
+
+\vskip 4mm
+\bod{Analogový počítač}
+\bod{Číslicový počítač}
+\bod{Hybridní počítač}
+\vskip 4mm
+
+\Nadpis{Paměti počítače}
+
+Elektronická paměť je součástka, zařízení nebo materiál, který umožňuje uložit obsah informace (zápis do paměti), uchovat ji po požadovanou dobu a znovu ji získat pro další použití (čtení paměti). Informace je obvykle vyjádřena jako číselná hodnota, nebo je nositelem informace modulovaný analogový signál. Pro své vlastnosti se používá binární (dvojková) číselná soustava, která má pouze dva stavy, které se snadno realizují v elektronických obvodech. Pro uchování informace tedy stačí signál (např. elektrické napětí), který má dva rozlišitelné stavy a není třeba přesně znát velikost signálu.
+Základní jednotkou ukládané informace je jeden bit (binary digit), jedna dvojková číslice. Tato číslice může nabývat dvou hodnot, které nazýváme „logická nula“ a „logická jednička“. Logická hodnota bitu může být reprezentována různými fyzikálními veličinami:
+
+\vskip 4mm
+\bod {přítomnost nebo velikost elektrického náboje}
+\bod {stav elektrického obvodu (otevřený tranzistor)}
+\bod {směr nebo přítomnost magnetického toku}
+\vskip 4mm
+
+Pro správnou funkci paměti je třeba řešit kromě vlastního principu uchování informace také lokalizaci uložených dat. Mluvíme o adrese paměťového místa, kde adresa je obvykle opět číselně vyjádřena.
+
+\Sekce {Vnitřní paměť}
+
+Jako vnitřní paměť se u počítače označuje paměť, ke které má zpravidla procesor přímý přístup. Vnitřní paměť je zpravidla volatilní (nestálá) a po vypnutí počítače se její obsah ztrácí. Vnitřní pamětí se v architektuře počítače označuje paměť určená pro uložení strojového kódu běžících procesů a pro data těmito procesy právě zpracovávaná.
+O správu obsahu vnitřní paměti, alokace paměti pro jednotlivé procesy se zpravidla stará operační systém, pro přístup do ostatních pamětí (video paměť, konfigurační registry apod.) jsou zpravidla použity ovladače zařízení.
+Jako vnitřní paměť se zpravidla označuje:
+
+\vskip 4mm
+\bod {operační paměť - RAM}
+\bod {cache paměť procesoru}
+\bod {registry procesoru}
+\bod {různé registry chipsetu (konfigurace počítače, řízení hardware, apod.)}
+\bod {video paměť}
+\vskip 4mm
+
+\Sekce {Cache paměť}
+
+Cache neboli mezipaměť je označení pro vyrovnávací paměť používanou ve výpočetní technice. Je zařazena mezi dva subsystémy s různou rychlostí a vyrovnává tak rychlost přístupu k informacím. Účelem cache je urychlit přístup k často používaným datům na „pomalých“ médiích jejich překopírováním na média rychlá. 
+
+Cache lze rozdělit do dvou skupin:
+
+\vskip 4mm
+\bod {softwarová cache, vytvořená programově, vymezením určité části operační paměti pro potřeby vyrovnávací paměti (např. disková cache v operačním systému).}
+\bod {hardwarová cache, tvořená paměťovými obvody (např. pro potřeby procesoru).}
+\vskip 4mm
+
+Cache často také slouží jako buffer a naopak. Nicméně cache pracuje na předpokladu, že z ní budou stejná data čtena vícekrát v krátkém časovém intervalu, že zapsaná data budou brzy přečtena a že je vysoká šance na spojení zapisovaných nebo čtených dat do jednoho většího bloku. Její jediný účel je redukovat počet přístupů do pomalejšího zařízení.
+
+\Sekce {Buffer}
+
+Vyrovnávací paměť anglicky buffer je v informatice část paměti, která je určena pro dočasné uchování dat před jejich přesunem na jiné místo. Typicky jsou do vyrovnávací paměti zkopírována data, která přichází ze vstupního zařízení (klávesnice, optická mechanika...) nebo jsou do něj umístěna data, která jsou určena pro výstupní zařízení . Vyrovnávací paměť může být použita i při komunikaci mezi procesy a může být implementována pomocí hardware nebo softwarově jako fronta FIFO. To znamená, že na jedné straně velkou mohou do buffferu rychle přicházet data a na druhé straně se z bufferu postupně, ale pomaleji zpracovávají. Díky tomu trvá déle než se mezipaměť zahltí a při určitém objemu dat nemusí dojít k jeho zahlcení a z pohledu uživatele je přenos dat výrazně rychlejší (data se přenesou ale na straně příjemce se teprv zpracovávají). Je nasazována pro vyrovnání rozdílu mezi rychlostí přijímáním dat a jejich zpracováním nebo v případě, že jsou tyto rychlosti variabilní (měnící se).
+
+\Sekce {Operační paměť}
+
+Operační paměť je volatilní (nestálá) vnitřní elektronická paměť číslicového počítače, určená pro dočasné uložení zpracovávaných dat a spouštěného programového kódu. Tato paměť má obvykle rychlejší přístup než vnější paměť (např. pevný disk). Tuto paměť může procesor adresovat přímo, pomocí podpory ve své instrukční síti. Strojové instrukce jsou adresovány pomocí instrukčního ukazatele a k datům se obvykle přistupuje pomocí adresace prvku paměti hodnotou uloženou v registru procesoru nebo je adresa dat součástí strojové instrukce.
+Operační paměť je určená pro uchovávání kódu programů respektive procesů spolu s mezivýsledky a výsledky jejich činnosti. Zrovna tak je v operační paměti uchováván stav dalších prostředků a základní datové struktury jádra.
+Je-li operační paměť reprezentována pamětí s přímým přístupem, označujeme adresový prostor jako fyzický adresový prostor (FAP). Velikost tohoto prostoru je omezena buď fyzickou velikostí paměťových modulů a nebo šířkou adresové sběrnice tj. adresa o velikosti n bitů umožňuje adresovat $2^n$ paměťových míst.
+
+
+
+
+
+
+
+\Nadpis{Řídící systémy}
+
+Řídící systém je definovaný jako soubor vzájemně spolupracujících hardwarových a softwarových prvků, které slouží k řízení daného objektu.
+
+\end
+
+
+Obsah 
+
+druhy počítačů a jejich koncepce
+počítačová platforma
+paměti a úložná zařízení
+sběrnice a komunikační rozhraní, vstupní zařízení
+embeded (vestavěné) systémy
+grafická karta a zobrazovací systémy
+periferní zařízení
+
+stavivé automaty
+
+procesory
+architekury procesoru load-store a registr-memory
+instrukční sada procesoru
+aritmeticko-logická jednotka
+přerušení, výjimky, obsluha přerušení
+práce s čísly v plovoucí řádové čárce
+správa paměti
+paměťová mapa
+endianita
+koprocesor
+mikropočítače
+multiprocesorové systémy - paralelní vykonávání operací
+multipočítače (spolupráce počítačů v počítačové síti) - superpočítač
+
+operační systém 
+multitasking a multitreading
+plánování procesů a přidělování prostředků
+plánování spuštění procesů (cron)
+Virtualizace a emulace
+uživatelská rozhraní
+softwarove knihovny a programova api
+souborový systém
+druhy souborů a oprávnění
+
+
+počítačová bezpečnost, počítačové viry, exploity
+
+uživatelský účet
+šifrování a kodování dat
+komunikace pocitace s okolim (komunikační protokoly)
+rizeni konunikace
+datova komprese
+teorie informace

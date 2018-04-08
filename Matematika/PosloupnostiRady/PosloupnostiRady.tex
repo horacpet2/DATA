@@ -1,0 +1,276 @@
+%preambule
+%\def\addr{D:/MEGA/CENTRUM/texLib/}
+\def\addr{/home/petr/.texLib}
+
+\input \addr/TeXMakro
+\setAddress{\addr}
+%\input \addr/KonfiguracePaperBook
+\input \addr/KonfiguraceEBook
+
+
+%Načtení obrázků
+%\pdfximage width/hight \the\SirkaOdstavce mm {./Obrazky/obr}
+\pdfximage width \the\SirkaOdstavce mm {./Obrazky/GrafPosloupnosti.png}
+\pdfximage width \the\SirkaOdstavce mm {./Obrazky/RostouciAritmetickaPosloupnost.png}
+\pdfximage width \the\SirkaOdstavce mm {./Obrazky/KlesajiciAritmetickaPosloupnost.png}
+\pdfximage width \the\SirkaOdstavce mm {./Obrazky/KonstantniAritmetickaPosloupnost.png}
+
+%Titulní stránka
+%\VlozitDokument{TitulniStranka}
+
+
+%obsah dokumentu
+\Obsah
+
+\Nadpis{Úvod}
+
+\Nadpis{Posloupnosti}
+
+Posloupnost je speciální případ funkce, jejíž definiční obor je množina přirozených čísel $\setN$, jinými slovi se jedná o uspořádanou množinu čísel u kterých lze vyjádřit pořadí.  Funkce jejímž definičním oborem je množina přirozených čísel $\setN$, se nazývá nekonečná číselná posloupnost. Funkce jejímž definičním oborem je množina prvních {\it n} přirozených čísel {1, 2, 3, ...} (podmnožina přirozených čísel), se nazývá konečná číselná posloupnost. Funkční hodnoty (konečné nebo nekonečné) číselné posloupnosti jsou prvky množiny reálných čísel se nazývají členy posloupnosti. Posloupnost je tedy zobrazení přirozených čísel na množinu reálných čísel: $a_n = k, n \in \setN, k \in \setR \Rightarrow \setN \rightarrow \setR $ Funkční hodnota posloupnosti v bodě $n \in \setN $ se nazývá n-tý člen posloupnosti a značí se místo {\it f(n)} zpravidla {\it $f_n$} nebo častěji  {\it $a_n$, $b_n$, ... } Hodnoty z definičního oboru zároveň určují pořadový index daného prvku posloupnosti. 
+
+Funkční hodnoty (konečné nebo nekonečné) číselné posloupnosti se nazývají členy posloupnosti. Funkční hodnota posloupnosti v boděse nazývá n-tý člen posloupnosti a značí se místo $f(n)$ zpravidla $f_n$ nebo častěji $a_n, b_n, …$ Hodnoty z definičního oboru zároveň určují pořadový index daného prvku posloupnosti. 
+
+
+
+Je důležité, že pokud se mluví o posloupnosti, pak pokud není řečeno jinak se automaticky myslí posloupnost nekonečná. Pokud je myšlena posloupnost konečná je třeba to výslovně zdůraznit.
+
+\Sekce{Zadání posloupnosti}
+
+\PodSekce{Zadání výpisem}
+
+Pomocí výpisu lze zadat pouze konečnou posloupnost a nebo nekonečnou posloupnost v jehož výpisu je zachycen vztah mezi jednotlivými členy. 
+
+Konečná posloupnost s n-tým členem $a_n$ a definičním oborem $D=\left\{1, 2, …, k\right\}$ se zapisuje $(a_1, a_2, …, a_k)$ nebo $(a_n)^{k}_{n=1}$ nebo  $(a_n ; n = 1, 2, …, k)$ nebo $(a_n)^{k}_{1}$.
+
+Posloupnosti (nekonečná) s n-tým členem $a_n$ se zapisuje\odradkovat $\left(a_1, a_2, …, a_n, …\right)$ nebo $(a_n)^{\infty}_{n=1}$ nebo $(a_n ; n = 1, 2, …)$ nebo $(a_n)^{\infty}_{1}$. 
+
+\PodSekce{Zadání předpise pro n-tý člen}
+
+Protože posloupnost je definována jako funkce s definičním oborem na množine přirozených čísel $\setN$, je možné funkce zadávat pomocí funkčního předpisu ve formě algebraického výrazu. V kontextu posloupností se tento způsob zadávání nazývá {\bf vzorec pro n-tý člen}:
+
+$$a_n = n $$
+
+Jedná se způsob zadání posloupností, kterým je možné získat (vypočítat) hodnotu n-tého členu.
+
+\PodSekce{Rekurentní zadání}
+
+Rekurentní způsob zadání posloupnosti je dán hodnotou prvního členu posloupnosti (něbo několika po sobě jdoucích členů) a vzorcem, kterým je možné získat (vypočítán) následující člen v posloupnosti:
+
+$$ a_{n+1} = a_n $$
+
+Nevýhodou rekurentního zadání je, že pro získání náhodného prvku z posloupnosti je nutné vypočítat hodnotu všech předcházejících prvků. To může být velmi zdlouhavé při vysokých hodnotách {\it n}. 
+
+Důvod proč se rekurentní zadání posloupnosti používá je, že některé posloupnosti ze své podstaty nelze zadat jiným způsobem než rekurentně.
+
+Rekurentní zápis se používá pro definování a vyjádření vlastností aritmetické a geometrické posloupnosti.
+
+\Sekce{Grafické znázornění posloupnosti}
+
+Posloupnosti mají odlišné grafy od běžných reálných funkcí. Protože mají jako definiční obor přirozená čísla, jejich graf je tvořen množinou navzájem izolovaných bodů:
+
+\vskip 4mm
+\centerline{\pdfrefximage 1}
+\vskip 4mm
+
+Osa {\it x} definuje indexy jednotlivých souvisejících prvků posloupnosti a na ose {\it y} se nacházejí hodnoty jednotlivých členů posloupnosti. Dalším rozdílem oproti grafu reálných funkcí je, že posloupnosti nemají nultý člen a proto se na ose {x} nenachází hodnota nula a záporná část souřadné soustavy.
+
+\Sekce{Vlastnosti posloupností}
+
+Protože posloupnosti jsou druhem funkce na množině přirozench čísel, vyznačuje se podobnými vlastnosti. U posloupností má cenu zkoumat {\bf omezenost} a {\bf monotonii}.
+
+Monotonie zkoumá vývoj hodnot jednotlivých členů posloupnosti.
+
+
+
+\Sekce{Převod mezi rekuretním zadáním a zadáním pro n-tý člen}
+
+Protože rekurentní zadání i zadání pro n-tý člen je tvořen nějakým algebraickým výrazem je možné rekurentní předpis převést na předpis pro n-tý člen a naopak. Převod ale nelze provést u všech posloupností, protože některé posloupnosti lze vyjádřit pouze v rekurentním zadání.
+
+Pro převod mezi způsoby zadání se využívají rovnice a jejich ekvivalentní úpravy. Principem převodu ze zadání pro n-tý člen na rekrurentní zadání je naléz rovnici pro $n+1$ člen.
+
+\Nadpis{Aritmetická posloupnost}
+
+Aritmetická posloupnost je takový druh posloupnosti, kde libovolné dva po sobě jdoucí členy se vzájemně liší právě o stejnou hodnotu. Hodnota, o kterou se libovolné dva po sobě jdoucí členy posloupnosti vzájemně liší se nazývá {\bf diference}. Typickým příkladem aritmetické posloupnosti je množina přirozených čísel:
+
+$$ (a_n)_{n=1}^{\infty} = 1, 2, 3, ..., n $$
+
+Aritmetická posloupnost je důležitá například v teoretické artimetice při definování číselných oborů a jejich podmnožin.
+
+\Sekce{Zadání aritmetické posloupnosti}
+
+Z vlastností aritmetických posloupností má obecný rekurentní zápis tvar:
+
+$$ a_{n+1} = a_n + D $$ 
+
+kde {\it D} je hodnota diference, $a_n$ je hodnota aktuálního prvku a $a_{n+1}$ je prvek následující. Z rekurentního zadání aritmetické polsoupnosti lze vyjádřit vzorec pro n-tý člen. Aritmetická posloupnost je typem lineární závislosti (členy aritmetické posloupnosti leží v grafu posloupnosti na přímce), proto lze říct, že:
+
+$$ a_1 =k \Rightarrow a_2 = a_1+ D \Rightarrow a_3 = a_2 +D = a_1 + D+D \Rightarrow ... $$
+
+
+Z toho lze vyvodit, že libovolný  n-tý prvek z aritmetické posloupnosti lze získat jako součet hodnoty prvního členu a {\it n} diferencí:
+
+$$ a_n = a_1 + (n -1)\cdot D $$
+
+Pro tento vztah je ale potřeba vědět hodnotu prvního členu a diference. Pro získání libovolné hodnoty prvku ze znalosti hodnnoty libovolného jiného prvku a diference platí:
+
+$$ a_x = a_y + (x - y) \cdot D $$
+
+Je pouze potřeba kolik diferencí je třeba přičíst k hodnotě $a_y$ tak aby byla získána hodnota $a_{x}$.
+
+Na základě vlastností aritmetické posloupnosti je hodnota diference spočítána z hodnoty dvou členů:
+
+$$ a_x = a_y + (x - y) \cdot D $$
+
+$$ a_x - a_y = (x-y)\cdot D $$
+
+$$ {(a_x -a_y)\over (x-y)} = D $$
+ 
+\Sekce{Součet n prvů aritmetické posloupnosti}
+
+Na odvození vztahu pro součen {\it n} prvků aritmetické posloupnosti je možné nahlížet jako na součet dvou stejných, ale opačně seřazených sposloupností:
+
+$$
+\matrix{
+1  & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10\cr
+10 & 9 & 8 & 7 & 6 & 5 & 4 & 3 & 2 & 1\cr
+\overline{11} & \overline{11} & \overline{11} & \overline{11} & \overline{11} & \overline{11} & \overline{11} & \overline{11} & \overline{11} & \overline{11}\cr
+}
+$$
+
+Důležitou vlastností takto uspořádaných posloupností je, že při součtu libovolných dvou členů posloupností na stejné pozici vrátí vždy stejnou hodnotu, která je rovna hodnotě $$ a_1 + a_n$$
+
+Jestliže je takovýchto součtů v dané posloupností přesně {\it n}, pak je na základě vlastnosti operace součín již jednoduché vypočítat hodnotu součtu všech členů obou posloupností:
+
+$$ (a_1 + a_n)\cdot n $$
+
+To je ale přesně dvojnásobek než je hodnota součtu členů dané posloupnosti, proto pro součet {\it n} členů dané posloupnosti platí vztah:
+
+$$ S_n =  {(a_1 +a_n)\over 2} \cdot n $$
+
+\Sekce{Vlastnosti aritmetické posloupnosti}
+
+Vlastnosti aritmetické posloupnosti silně závisí na hodnotě diference. Hodnotu diference aritmetické posloupnosti lze rozdělit do jedné ze tří skupin:
+
+$$ D > 0 $$
+
+$$ D = 0 $$
+
+$$ D < 0 $$
+
+\PodSekce{Vlastnosti aritmetické posloupnosti s $D > 1$ }
+
+V případě, že je hodnota diference větší než nula, lze s určitostí říct, že aritmetická posloupnost je {\bf rostoucí} - každý následující člen je větší než předchozí.
+
+\vskip 4mm
+\centerline{\pdfrefximage 3}
+\vskip 4mm
+
+Z toho lze odvodit, že daná posloupnost je {\bf zdola omezená}, protože existuje nějaká hodnota, kterou nabývá první člen $a_1$ kterou daná posloupnost nikdy nepřekročí - žádný člen posloupnosti nebude menší než člen $a_1$.
+
+\PodSekce{Vlastnosti aritmetické posloupnosti s $D < 1$ }
+
+V případě, zeje diference menší než nula, pak je daná aritmetická posloupnost {\bf klesající} - každá následující člen je menší než předchozí.
+
+\vskip 4mm
+\centerline{\pdfrefximage 4}
+\vskip 4mm
+
+Aritmetická posloupnost se záporným diferencem je {\bf shora omezená}, protože žádný člen posloupnosti nebude větší než hodnota členu $a_1$.
+
+\PodSekce{Vlastnosti aritmetické posloupnosti s $D = 0$ }
+
+Podkud je hodnota rovna nule, pak je hodnota libovolných sousedících členů aritmetické posloupnosti vždy stejná. To znamá, že daná aritmetická posloupnosti je {\bf konstatní}.
+
+\vskip 4mm
+\centerline{\pdfrefximage 5}
+\vskip 4mm
+
+U konstatní posloupnosti s diferencí $ D = 0$ platí:
+
+$$ a_n = a_1 $$
+
+Konstatní posloupnost je neroustoucí a neklesající a zároveň je {\bf zhora} i {\bf zdola omezená}.
+
+\Nadpis{Geometrická posloupnost}
+
+Geometrická posloupnost je taková posloupnost, jejíž libovolný člen je {\it q-krát} větší (menší) než člen předcházející.
+
+$$ (a_n)_{n=1}^{\infty} = 1, 2, 4, 8, 16, 32, ...  $$
+
+Hodnota {\it q} udávající kolikrát je každý následující člen větší než člen  předcházející se nazývá {\bf quocient}. Geoemtrická posloupnost je typem exponenciální závislosti. V případě, že se $q = 0$, nebo $a_1 = 0$, anzývá se taková posloupnost triviální, protože každý následující člen posloupnosti je z definice násobení nulou vždy roven nule a taková posloupnost nemá pro praktické použití význam (konstantní nulová posloupnost):
+
+$$ a_1 = 0 \vee q=0 \Rightarrow (a_n)_{n=1}^{\infty} = 0, 0, 0,... $$
+
+Geometrická posloupnost má velké využití v biologii například mikrobiální růst, kdy každý mikrob rozdělí vždy na dva, pak se jedná o geometrickou posloupnost s quocientem rovným dvě. Geometrická posloupnost je důležitá také pro ekonomiku kde lze zkoumat vývoj třních cen, hypoték, ...
+
+\Sekce{Zadání geometrické posloupnosti}
+
+Z vlastnosti geometrické posloupnosti má rekurentní zadání geometrické polsoupnosti tvar:
+
+$$ a_{n+1} = a_n \cdot q $$
+
+Stejně jako v případě aritmetické posloupnosti lze odvodit vztah pro výpočet n-tého členu poslopnosti na základě vzájemného vztahu jednotlivých členů:
+
+$$a_1 = k \Rightarrow a_2 = a_1 \cdot q \Rightarrow a_3 = a_2 \cdot q = a_1 \cdot q \cdot q \Rightarrow ... $$
+
+Z toho lze odvodit vztah pro výpočet n-tého členu:
+
+$$ a_n = a_1 \cdot q^{n-1} $$
+
+Pro výpočet n-tého členu geometrické posloupnosti na zákldě znalosti quocientu a libovolného členu posloupnosti je možné definovat vztah:
+
+$$ a_x = a_y \cdot q^{x-y} $$
+
+Díky exponenciální závislosti geoemtrické posloupnosti je nutné pouze zjistit kolikrát je ještě teřba danou hodnotu $a_n$ násobit hodnotou quocientu než je získána hodnota $a_x$.
+
+
+Ze vztahů pro geometrickou posloupnost lze pak odvodit z libovolných dvou členů posloupnosti hodnotu quocientu pomocí vztahu:
+
+$$ a_x = a_y \cdot q^{x-y} $$
+
+$$ {a_x \over a_y} = q^{x-y} $$
+
+Tím vznikne rize kvadratická rovnice, protože nelze celou rovnici odmocnit - odmocnina je neekvivalentní úprava, která může změnit výsledek, respektive jeho polaritu. Odmocnit celou rovnici lze pouze v případě, že {\it x} nebo {\it y} je sudý, protože hodnota sudého členu musí být buď záporná se záporným quocientem a nebo kladná s kladným quocientem.
+
+\Sekce{Součet n členů geoemtrické posloupnosti}
+
+Vzorec pro součet n členů geometrické posloupnosti vychází ze vztahu:
+
+$$ S_n = a_1 + a_2 + ... + a_n $$
+
+Základem je převést zápis na součet násobků $a_1$ a quocientů:
+
+$$ S_n =  a_1 + a_1 \cdot q + a_1 \cdot q^2 + ... + a_1\cdot q^{n-1} $$
+
+Postupnými algebraickými úpravami lze tento zápis převést na obecný vzorec:
+
+$$ S_n \cdot q = a_1 \cdot q + a_1 \cdot q^2 + a_1 \cdot q^3 + ... + a_1 \cdot q^n / -S_n$$
+
+Po odečtení mnohočlenu $S_n$ je získán vztah:
+
+$$ S_n \cdot q - S_n = -a_1 + a_1\cdot q^n $$
+
+$$ S_n \cdot (q - 1) = a_1 \cdot q^n - a_1 $$
+
+$$ S_n =  {{a_1 \cdot q^n - a_1}\over (q-1) } $$
+
+$$ S_n =  {{a_1 \cdot (q^n -1)} \over (q-1)}  $$
+
+Tento vztah platí pro všechna $q \not = 1$. V případě, že by byl $q=1$, pak by vnikla ve zlomku nula. Pro součet geometrické posloupnosti s quocientem $q=1$ platí vztah:
+
+$$ S_n = a_1 + a_2 + ... a_n $$
+
+kde $a_n = a_1$, tedy všechny čelny posloupnosti jsou rovni prvku $a_1$. Z toho důvodu lze celý součet přepsat na tvar:
+
+$$ S_n = \underbrace{a_1+a_1+...+a_1}_n = a_1 \cdot n $$
+
+
+\Sekce{Vlastnosti geometrické posloupnosti}
+
+
+\Nadpis{Limita posloupnosti}
+
+Limita posloupnosti souvisí s omezeností posloupností.
+
+
+\end

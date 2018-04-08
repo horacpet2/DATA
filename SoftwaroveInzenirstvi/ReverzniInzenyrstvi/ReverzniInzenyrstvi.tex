@@ -1,0 +1,65 @@
+%preambule
+\input /home/petr/bin/TeXMakro
+\input /home/petr/bin/KonfiguracePaperBook
+%\input /home/petr/bin/KonfiguraceEBook
+
+%Načtení obrázků
+%\pdfximage width/height \the\SirkaOdstavce mm {./Obrazky/obr}
+
+
+%Titulní stránka
+%\VlozitDokument{TitulniStranka}
+
+%generování obsahu
+%\Obsah
+
+\Nadpis{Úvod}
+
+Reverzní inženýrství je sada metod, které jsou využívány k pochopení fungování ne jen softwarových projektů, ale obecně jakéhokili stroje. Cílem je pochopení vnější (viditělné) i vnitřní (na pohled neviditelné, skryté) činnosti objektu zájmu, na úroveň jeho tvúrce (tvůrců). 
+
+To je využíváno k mnoha různým účelům od akademických účelům, které slouží k výuce a získávání nových znalostí až po nelegální činnost kdy je cílem nějak poškodit, nebo upravid objekt zájmu tak, aby dělal něco k čemu nebyl úvodně navržen (backdoor, poškození dat, ...). Mezi reverzní inženýrství by se dal řadit i výzkum lidského těla, kdy se získané znalosti využívají při léčbě a výzkumu léků.
+
+\Nadpis{Náhled do nitra}
+
+Ať už se jedná o reverzní inženýrství zaměřené na stroje, elektroniku, nebo softwarové projekty, vždy je nutný pohled do útrob. V případě reverzního inženýrství zaměřeného na software jsou dvě různé možnosti jak přístupovat k vnitřnímu fungování:
+
+\vskip 4mm
+\bod{Zdrojové kódy v daném programovacím jazyce}
+\bod{Spustitelný soubor}
+\vskip 4mm
+
+V některých případěch jsou možné obě možnosti a v jiných pouze jedna. V případě interpretovaných jazyků například skripty, může být zdrojový kód a spustitelný soubor jedno a to samé.
+
+\Sekce{Zdrojové kódy}
+
+Snazší variantou reverzní analýzy je softwarový projekt, prezentovaný pomocí zdrojových kódů v nějakém programovacím jazyce. Programovací jazyky byly totiž navrženy, aby překlenuly propast mezi strojovým kódem, který není čitelný pro lidi a lidským jazykem, který není srozumitelný počítači.
+
+\Sekce{Spustitelný soubor}
+
+Těžší varianta reverzní analýzy je softwarový projekt prezentovaný pomocí spustitelného souboru, u kterého nejsou k dispozici zdrojové kódy v nějakém programovací jazyce. Takový soubor je prezentován pomocí strojových instrukcí ve formě binárních čísel, které definují příkazy a data pro počítač. To je pro člověka velmi nečitelné a proto je nutné spustitelný soubor převést do čitelnější formy. Je velmi obtížné převést spusitelný soubor do nějakého vysokoúrovňového programovacího jazyka, ale je celkem jednoduché převést spustitelný soubor do jazyka symbolických instrukcí. 
+
+Rozsáhlý softwarový projekt prezentovaný jako jeden velký zdrojový soubor obsahující symbolické instrukce je velice nepřehledný, ale je již pro člověka čitelnější než ve formě jedniček a nul.
+
+Dalším rozdílem oproti reverzní analýze softwarového projektu prezentovaného pomocí zdrojovéhých kódů v určitém programovacím jazyce je platformní závislost. Zdrojové kódy v daném programovacím jazyce mohou být přeloženy do spustitelného souboru na různé hardwarové i softwarové platformy, ale při analýze spusitelného souboru je tento program již (většinou kromě interpretovaných jazyků prezentovaných ve formě zdrojových kódů nebo předkompilovaných byte kódů) vázán na danou hardwarovou platformu. Proto pro účely reverzní analýzy spustitelného souboru je nutná znalost dané hardwarové platformy.
+
+\Nadpis {Analýza zdrojových kódů}
+
+Každý softwarový projekt je jedinečný a to již kvůli tomu, že každý programátor nebo programátorský tým používá jiné konvence programování, každý programovací jazyk využívá jiné přístupy k řešení daného problému, každý softwarový projekt řeší jinou problematiku a jeho tvůrci k ní mohou přistupovat různými způsoby. Neexistuje univerzální přístup k tomu jakým způsobem analyzovat zdrojové kódy. Je možné ale využít několik postupů, kterými je možné se alespoň zorientovat, usnadnit a urychlit celý proces.
+
+Při reverzní analýze zdrojových kódů je dobré nejprve určit jejich rozsah, aby bylo možné odhadnout časovou náročnost a složitost celého projektu. To znamená:
+
+\vskip 4mm
+\bod{Druh programovacího jazyka}
+\bod{Počet zdrojových souborů tvořící zdrojové kódy}
+\bod{Adresářová struktura do které jsou zdrojvé soubory rozděleny}
+\bod{Počet logických řádků celého projektu}
+\vskip 4mm
+
+Zdrojové kódy v každém programovacím jazyce ať už je to nízkoúrovňový nebo vysokoúrovňový programovací jazyk musí vždy obsahovat míst ve kterém se začíná program vykonávat. Toto místo je v různých jazycích označováno různě ale obecně se jedná o vstupní bod programu označovaný jako {\bf main}. Prvním krokem při analýze je najít toto místo. Vstupní bod main se zpravidla nachází v hlavním soubrou, který je opět pojmenován buď jako {\it main} (například main.c, main.cpp, main.java, ...), nebo stejnojmenným názvem projektu. 
+
+Jako další krok je analzovat vzájemné propojení zdrojových souborů, kdy výchozým místem je právě hlavní zdrojový soubor main. Je vhodné vytvořit grafické znázornění vzájemných vstahů zdrojových souborů pomocí relačních grafů.
+
+\Nadpis{Analýza spustitelného souboru}
+
+
+\end

@@ -1,0 +1,616 @@
+%preambule
+%\input /home/petr/bin/texLib/TeXMakro
+%\input /home/petr/bin/texLib/KonfiguracePaperBook
+%\input /home/petr/bin/texLib/KonfiguraceEBook
+
+\input D:/MEGA/CENTRUM/texLib/TeXMakro
+\input D:/MEGA/CENTRUM/texLib/KonfiguracePaperBook
+
+%makra
+
+%Načtení obrázků
+%\pdfximage width/height \the\SirkaOdstavce mm {./Obrazky/obr}
+\pdfximage width \the\SirkaOdstavce mm {./Obrazky/VztaznaSoustava.png}
+\pdfximage width \the\SirkaOdstavce mm {./Obrazky/TrajektorieDraha.png}
+\pdfximage width \the\SirkaOdstavce mm {./Obrazky/primocaryPohybPosunuti.png}
+\pdfximage width \the\SirkaOdstavce mm {./Obrazky/KrivocaryPohybPosunuti.png}
+\pdfximage width \the\SirkaOdstavce mm {./Obrazky/SlozenePosunuti.png}
+\pdfximage width \the\SirkaOdstavce mm {./Obrazky/SlozenePosunutiSoucet1.png}
+\pdfximage width \the\SirkaOdstavce mm {./Obrazky/SlozenePosunutiSoucet2.png}
+\pdfximage width \the\SirkaOdstavce mm {./Obrazky/SlozenePosunutiSoucet3.png}
+\pdfximage width \the\SirkaOdstavce mm {./Obrazky/OkamzitaRychlost.png}
+\pdfximage width \the\SirkaOdstavce mm {./Obrazky/GrafRychlostCasDraha.png}
+\pdfximage width \the\SirkaOdstavce mm {./Obrazky/GrafDrahaCas.png}
+\pdfximage width \the\SirkaOdstavce mm {./Obrazky/grafRZPRychlost1.png}
+\pdfximage width \the\SirkaOdstavce mm {./Obrazky/grafRZPRychlost2.png}
+\pdfximage width \the\SirkaOdstavce mm {./Obrazky/GrafRovnomerneZpomalenyPohyb.png}
+\pdfximage width \the\SirkaOdstavce mm {./Obrazky/grafRZPRychlost3.png}
+\pdfximage width \the\SirkaOdstavce mm {./Obrazky/GrafDrahaRZP.png}
+\pdfximage width \the\SirkaOdstavce mm {./Obrazky/drahaRovnomerneZpomalenyPohyb.png}
+\pdfximage width \the\SirkaOdstavce mm {./Obrazky/vektorZpomaleni.png}
+\pdfximage width \the\SirkaOdstavce mm {./Obrazky/PohybPoKruznici.png}
+\pdfximage width \the\SirkaOdstavce mm {./Obrazky/PohybPoKruzniciVektorRychlosti.png}
+\pdfximage width \the\SirkaOdstavce mm {./Obrazky/dostrediveZrychleni.png}
+\pdfximage width \the\SirkaOdstavce mm {./Obrazky/zmenaRychlostiDrahaPohybPoKruznici.png}
+
+
+%Titulní stránka
+\VlozitDokument{TitulniStranka}
+
+%generování obsahu
+\Obsah
+
+\Nadpis{Úvod}
+
+Fyzika je vědní obor, který se zabývá zkoumáním, vysvětlením a popisem přírodních dějů. Při jejím vývoji se začala kvůli přehlednosti dělit na jednotlivé podobory (zaměření). Mezi nejdůležitější obory dnes patří mechanika, molekulová fyzika, optika, elektřina a magnetismus, astrofyzika, ...
+
+Podle způsobu používání se fyzika dělí na {\bf experimentální} a {\bf teoretickou}.
+
+{\bf Experimentální fyzika} se zabývá pozorováním jevů, které samovolně probíhají v přírodě, nebo jsou záměrně vyvolány v podobě plánovaného a řízeného pokusu. Měřením fyzikálních veličin se zjišťují vztahy mezi těmito veličinami a to umožňuje matematicky formulovat fyzikální zákony.
+
+{\bf Teoretická fyzika} hledá obecné zákony a z nich se snaží vyvodit nové poznatky. Užívá k tomuto účelu různé myšlenkové konstrukce a matematické nástroje. Teoretická a experimentální fyzika nemůže být jedna bez druhé, protože se vzájemně doplňují (předpovídají a ověřují nové údaje).
+
+\Sekce{Fyzikální veličiny a jednotky}
+
+Každý objekt má nějaké měřitelné vlastnosti a stavy nebo změny v průběhu času. Tyto údaje lze číselně ohodnotit. Fyzikální vlastnosti a stavy, které lze změřit se nazývají {\bf fyzikální veličiny}. Typickým příkladem fyzikálních veličin jsou hustota nebo rychlost. Fyzikální veličina umožňuje kvantifikovat (konkretizovat) daný fyzikální jev. Měření fyzikálních veličin spočívá v tom, že se naměřená hodnota veličiny předepsaným způsobem porovnává s jinou veličinou téhož druhu. K tomuto měření se používá vždy stejná srovnávací hodnota veličiny, která se nazývá {\bf srovnávací jednotka} (například kilogram, metr, ...). Získaná číselná hodnota (údaj) udává, kolikrát je hodnota měřené veličiny větší než měřící jednotka. Díky tomu lze znázornit vztah mezi hodnotou fyzikální veličiny $X$, její měřící jednotkou $[X]$ a číselnou hodnotou $\{X\}$ vyjadřující výsledek fyzikálního měření jako:
+
+$$ X = \{X\} [X] $$
+
+Samotná číselná hodnota nedává smysl, protože je možné používat různé měřící jednotky (například stupně Celsia a Fahrenheita). Je tedy potřeba udat při jaké měřicí jednotce byla číselná hodnota získána.
+
+\Sekce{Jednotky SI}
+
+Měřící jednotky lze volit libovolně, ale aby si každý dokázal představit kvantitu daného údaje, bylo standardizováno {\bf 7 základních jednotky} - {\bf SI}. Jednotky všech ostatních fyzikálních veličin jsou odvozeny z těchto sedmi základních. Všechny ostatní jednotky se nazývají {\bf odvozené jednotky}. Tyto vztahy mezi základními jednotkami a odvozenými jednotkami se nazývají {\bf veličinové rovnice} (vztahy) a vyjadřují {\bf fyzikální rozměr veličiny}.
+
+\vskip 4mm
+
+\leftline{{\bf Délka}\hbox{\hskip 40mm L}\hskip 20mm   {metr}\hskip 20mm  {m}}\odradkovat
+\leftline{{\bf Hmotnost}\hskip 32mm {m}\hskip 20mm  {kilogram} \hskip 11mm  {Kg}}\odradkovat
+\leftline{{\bf Čas}\hskip 44mm {t}\hskip 21mm  {sekunda} \hskip 14mm  {s}}\odradkovat
+\leftline{{\bf Elektrický proud}\hskip 21mm {I}\hskip 20mm  {Ampér} \hskip 16mm  {A}}\odradkovat
+\leftline{{\bf Termodynamická teplota}\hskip 6mm {T}\hskip 20mm  {Kelvin} \hskip 16mm  {K}}\odradkovat
+\leftline{{\bf Látkové množství}\hskip 20mm {n}\hskip 20mm  {mol} \hskip 20mm  {mol}}\odradkovat
+\leftline{{\bf Svítivost}\hskip 36mm {I}\hskip 20mm  {kandela} \hskip 15mm  {cd}}\odradkovat
+
+\vskip 4mm
+
+Odvozené jednotky jsou odvozeny z definičních vztahů ze základních nebo již dříve odvozených jednotek a slouží k popisu všech ostatních fyzikálních veličin. Některé jednotky mají ale své vlastní názvy a značky. Typickým příkladem je Newton, jehož jednotka se značí {\it N} ($m \cdot s \cdot t^{-2} $).
+
+Aby se zamezilo používání příliš malých nebo naopak příliš velkých hodnot, používají se dekadické násobky a díly jednotek. Ty jsou značeny pomocí předpon.
+
+Aby se nemusely odvozené jednotky zapisovat pomocí zlomkové čáry, je využita vlastnost mocnin. Jmenovatel zlomku je převeden na svou inverzní hodnotu v operaci dělení a s pomocí záporného exponentu je převeden na operaci násobení:
+
+$$ {m \over s} = m \cdot s^{-1}$$
+
+S těmito veličinami se následně při výpočtech pracuje jako s mocninami.
+
+\Sekce{Fyzikální rozměr veličiny}
+
+Fyzikální rozměr veličiny je formální vyjádření závislosti měřené fyzikální veličiny na veličinách základních 
+
+
+\Sekce{Bezrozměrná veličina}
+
+Bezrozměrná veličina je taková veličina, která nemá v dané soustavě jednotek specifický rozměr (má rozměr jedna). Příkladem jednotky bezrozměrné veličiny je procento nebo radián. 
+
+Bezrozměrná veličina je definována jako součin, nebo podíl veličin, které sice mají rozměry, ale ve výsledku se vzájemně pokrátí (vyruší). Bezrozměrná veličina ve fyzikálních vzorcích vystupuje jako pouhá číselná hodnota.
+
+\Sekce{Rozměrová analýza}
+
+
+\Sekce{Skalární a vektorové veličiny}
+
+Fyzikální veličiny lze rozdělit do dvou skupin:
+
+\bod{Skalární veličiny}
+\bod{Vektorové veličiny}
+
+{\bf Skaláry} jsou fyzikální veličiny, které jsou zcela určeny číselnou hodnotou a měřící jednotkou. Mezi skaláry patří například hmotnost, čas nebo teplota. Slovo skalár pochází z latinského slova scalae - stupnice. Hodnota skaláru je znázorněna bodem na číselné stupnici. Pro označení skaláru se používají písmena, nebo dohodnuté značky příslušné veličiny.
+
+{\bf Vektorové fyzikální veličiny} jsou veličiny, k jejichž úplnému vyjádření je třeba znát ne jen číselnou hodnotu a měrnou jednotku, ale také směr (orientaci). Příkladem vektorových fyzikálních veličin jsou rychlost, síla nebo zrychlení. Vektory se značí šipkou nad názvem veličiny:
+
+$$ \overrightarrow{V}, \overrightarrow{F}, ... $$
+
+Graficky je vektor vyjádřen orientovanou úsečko, která vyjadřuje směr působení dané fyzikální veličiny a jejíž délka znázorňuje velikost daného vektoru. Přímka vyjadřující daný vektor se nazývá {\bf vektorová úsečka}.
+
+U vektorových veličin je třeba rozlišovat veličinu jako takovou a její velikost. V případě vektorových veličin vyjadřuje číselná hodnota velikost daného vektoru (délku vektorové úsečky), proto je z fyzikálního hlediska správně ne rychlost hmotného bodu, ale velikost rychlosti hmotného bodu.
+
+Ve fyzikálních zápisech je nutné rozlišovat mezi vektorovou veličinou a její velikostí. Vektorová veličina je určena dvěma hodnotami tvořící souřadnice ve vztažné soustavě souřadnic, které popisují směr a velikost působení vektoru dané vektorové fyzikální veličiny. Naproti tomu velikost vektorové veličiny určuje délku orientované úsečky, tvořící daný vektor. Velikost vektorové veličiny je tedy skalár, protože je popsán pouze jedinou číselnou hodnotou. Velikost vektorové veličiny se značí jako vektor uzavřený mezi dvě svislé čáry, nebo kurzivou tištěný symbol dané veličiny:
+
+$$ x =  |\overrightarrow{X}|$$
+
+Fyzikální veličiny mohou být i záporné a to i takové u kterých to není běžné. Zvláště u vektorů má znaménko mínus jiný význam, než v běžné matematice. Záporná hodnota vektorové veličiny vyjadřuje opačný směr jeho působení, než bylo předpokládáno. Při následném měření příslušným směrem je získán vektor kladný. 
+
+\Sekce {Měření fyzikálních veličin}
+Fyzikální měření je vždy zatíženo určitými chybami $\rightarrow$ měření dané fyzikální veličiny se provádí s určitou přesností. 
+
+{\bf Přesnost měření} je ovlivňována mnoha faktory, například použitými měřícími přístroji, metodami mření, okolními vlivy při kterých měření probíhalo, ... Takto vzniklým chybám se říká {\bf systematické chyby}. Systematické chyby lze omezit použitím přesnějších měřících přístrojů a metod měření, odstraněním (omezením) rušivých okolních vlivů, ...
+
+Při měření mohou také vznikat {\bf chyby hrubé}, které vznikají chybou pozorovatele (osobou provádějící měření). V případě, že se v naměřených číselných hodnotách objeví hodnota, která se od ostatních nápadně liší, je třeba být ostražitý a měření zopakovat, aby se objevila případná chyba. Měření tedy třeba provádět tak, aby k hrubým chybám nedocházelo.
+
+Další možnou chybou je {\bf chyba náhodná}. Náhodné chyby jsou následkem kolísajících rušivých vlivů. Tyto chyby se neobjevují pravidelně a projevují se v tom, že při opakovaném měření dané veličiny při zachování stejných podmínek není získán stejný výsledek. V takovém případě se měření provádí několikrát (čím vícekrát je měření provedeno, tím je výsledek přesnější) a výsledná hodnota je aritmetický průměr naměřených hodnot. Taková hodnota se pak nazývá {\bf průměrná hodnota}.
+
+\Sekce{Převody jednotek}
+
+Protože jsou fyzikální veličiny mnohdy vyjádřeny v násobcích nebo dílech, je třeba pro funkční použití ve fyzikálních vzorcích převést na správný násobek. Fyzikální vzorce předpokládají, že jsou pro jejich výpočty použity jednotky v základním tvar, například metry, Newtony, ... V každém fyzikálním výpočtu je tedy třeba převést hodnoty fyzikálních veličin na správný tvar.
+
+Trochu jinak je tomu v případě časových údajů (doba trvání dané fyzikální veličiny). Pro měření času se používají různé číselné soustavy například šedesátková pro vteřiny a minuty, čtyřiadvacítková pro hodnoty, ... Časové údaje se často zapisují do výsledné jednotky, například jako změna rychlosti za minutu. V takovém případě stačí použitý násobek času pouze správně zapsat do měrné jednotky. V některých případech je jednotka fyzikální veličiny přesně definována s konkrétním časovým násobkem (například Newton). V takovém případě je třeba časové hodnoty vždy převést na danou jednotku. 
+
+Použití hodnot veličin ve špatném násobku jednotky je nejčastější příčina vzniku chyb při výpočtech. Při hledání chyb je dobré začít kontrolou správně použitých násobků jednotek.
+
+\Sekce{Postup řešení fyzikálních úloh}
+
+Každý fyzikální problém vyžaduje odlišný přístup k jeho řešení. Obecně lze ale v každém přístupu nalézt některé stejné části. Mezi tyto společné části patří:
+\bod{Fyzikální analýza problému}
+\bod{Náčrt fyzikální situace}
+\bod{Obecné řešení problému}
+\bod{Rozměrová zkouška - má za cíl ověřit platnost výsledných formulí}
+\bod{Číselný výpočet, kontrola (ověření) výsledku}
+\bod{Slovní odpověď, vědecká zpráva - stručně popisuje výsledek řešení problému, složitější problémy vyžadují i to co bylo získáno}
+
+\PodSekce{Fyzikální analýza problému}
+
+Fyzikální analýza problému zahrnuje cíle řešení (co je třeba udělat, ale není řečeno jak), ovlivňující faktory (fyzikální proměnné) a další podstatná fakta pro daný problém. V závěru fyzikální analýzy jsou vypsány známé veličiny pod sebou (s jednotkami) a hledané jsou odděleny vodorovnou čárou.
+
+\PodSekce{Náčrt fyzikální situace}
+
+Pro zjednodušení rozboru problému a pochopení situace jsou zakreslovány přehledné schématické obrázky vyjadřující vztahy známých a neznámých fyzikálních veličin daného problému. Údaje jsou zakreslovány pouze schématicky bez konkrétních hodnot (aby byly schémata obecné a mohly být použity i při změně hodnot fyzikálních proměnných). Pokud je při řešení použit souřadný systém, je nutné specifikovat orientace os a jeho počátek.
+
+\PodSekce{Obecné řešení problému}
+
+Sestavení obecného řešení spočívá v úvahách o probíhajících dějích - za jakých podmínek probíhá. Výsledkem obecného řešení je soupis odpovídajících zákonů a vztahů, které pro daný děj platí. Z toho je sestavena obecně platná formule řešící daný problém (bez konkrétních hodnot). Jedná se o rovnice v nichž na levé straně leží značka hledané veličiny a na pravé straně značky veličin vztahující se k řešení daného problému. 
+
+Výhodou tohoto řešení je možné zkrácení a zjednodušení výpočtu.
+
+\Sekce {Metody výzkumu ve fyzice}
+
+Metody výzkumu ve fyzice jsou provázány s experimenty, pozorováním a měřením fyzikálních veličin. Na základě pozorování a naměřených dat jsou vyvozovány fyzikální teorie, které jsou porovnány s teoretickými matematickými modely popisující přesné fungování daného jevu.
+
+Každý výzkum má svou cyklicky se opakující strukturu skládající se z experimentální a teoretické části. Při zkoumání daného jevu se provádí pozorování daných veličin buď v {\bf přirozených} nebo v {\bf řízených podmínkách}. 
+
+Následuje teoretická část, kdy je z naměřených hodnot sestaven matematický model. Následně se opět provede pozorování a měření a ověří platnost sestaveného modelu. V případě, že se výsledky měření nehodují s předpovězenými výsledky modelu, je třeba model dalšími cykli měření (experimenty) upravit.
+
+Nedílnou součástí fyzikálního výzkumu jsou hypotézy, které je nutno dokázat pomocí přesvědčivých dat z experimentu, která byla pomocí dané hypotézy předpovězena. Experimenty umožňují zjistit jaké parametry ovlivňují výsledek daného jevu a jakým způsobem. Z těchto naměřených dat se teoretici snaží vytvořit nějaké souvislosti (vztahy, vzorce).
+
+\Sekce {Shrnutí}
+
+
+\Nadpis{Kinetika}
+
+Kinetika je část mechaniky, která zkoumá vlastnosti pohybu - polohy bodů a jejich změny v čase. Zajímá se jak se tělesa pohybují ale nezabývá se otázkou proč se pohybují. 
+
+\Sekce {Hmotný bod a vztažná soustava}
+
+Jestliže rozměry tělesa vzhledem k ostatním tělesům jsou velmi malé, jsou zanedbány a nahrazují se bodem. Většinou ale nelze zanedbat jeho hmotnost a proto je zaveden pojem {\bf hmotný bod}. Jedná se o myšlenkový model, který reprezentuje zkoumané vlastnosti pozorovaného tělesa. 
+
+Aby bylo možné popsat pohyb nějakého hmotného bodu je třeba určit, vůči kterému jinému tělesu bude jeho poloha vztahována. Takové orientační těleso se nazývá {\bf vztažné těleso}. Na vztažném tělese se zvolí bod {\it O}, který se nazývá {\bf vztažný bod} (většinou v přesném středu tělesa) a soustava souřadnic, která umožňuje zaznamenat a měřit polohu hmotného bodu. Je třeba zvolit také okamžik ve kterém je zahájeno měření polohy hmotného bodu. Spojením vztažného tělesa se zvoleným bodem {\it O}, soustavou souřadnic a určením měření času vznikne {\bf vztažná soustava}. Bod {\it O} je středem soustavy souřadnic. Vztažná soustava umožňuje určit polohu tělesa a jeho změny v čase.
+
+\vskip 4mm
+\centerline{\pdfrefximage 1}
+\vskip 4mm
+
+\Sekce {Poloha hmotného bodu a polohový vektor}
+
+Poloha hmotného bodu je v souřadném systému určena pomocí souřadnic. Nejčastěji se pro tento účel používá pravoúhlá soustava souřadnic, která se skládá z os x, y, z. Někdy stačí použít pouze osy x a y pro určení polohy v ploše. {\bf Poloha hmotného bodu} je dána číselnými souřadnicemi x, y, z, které tvoří uspořádanou trojici hodnot.
+
+Polohu hmotného bodu lze určit také pomocí {\bf polohového vektoru}. Polohový vektor je vektor, jehož počáteční bod je v počátku soustavy souřadnic a koncový bod je určen polohou hmotného bodu. Souřadnice polohového vektoru jsou v dané soustavě souřadnic dány polohou hmotného bodu. {\bf Velikost polohového vektoru} je rovna {\bf vzdálenosti hmotného bodu od počátku soustavy souřadnic}:
+
+$$ r = \sqrt{x^2 + y^2 + z^2} $$
+
+Vektor tvoří s osami souřadné soustavy pravoúhlý trojúhelník. Směr polohového vektoru lze určit pomocí úhlů $\alpha, \beta, \gamma$, které polohový vektor svírá s osami souřadné soustavy.
+
+%obrázek polohového vektoru
+
+\Sekce{Pohyb}
+
+Při pozorování mechanického pohybu je sledována změna polohy tělesa v čase vzhledem ke vztažnému tělesu. Za vztažné těleso lze zvolit kterékoli těleso. Vztažná tělesa se ale mohou také pohybovat přičemž se mohou pohybovat navzájem různou rychlostí a různým směrem. Proto při měření je možné získat různé výsledky na základě zvoleného vztažného bodu. Tomu se říká {\bf relativita klidu a pohybu}. To znamená, že absolutní klid {\it neexistuje}! Popis pohybu závisí na volbě vztažné soustavy. 
+
+Množina všech bodů po kterých se hmotný bod pohybovat se nazývá {\bf trajektorie hmotného bodu}. Je to křivka, kterou hmotný bod při svém pohybu opisuje. 
+
+Hmotný bod koná {\bf přímočarý pohyb} v případě, že tvar jeho trajektorie tvoří přímka. V ostatních případech se pohyb nazývá {\bf pohyb křivočarý}. 
+
+Pro kvantitativní popis pohybu slouží veličina {\bf dráha}. Dráha je délka trajektorie, po které se hmotný bod pohyboval. 
+
+{\bf Pohyb} vyjadřuje vztah mezi rychlostí hmotného bodu, dráhou trajektorie, kterou při svém pohybu urazí a času, po který daný hmotný bod pohyb vykonává. Rychlost hmotného bodu se značí písmenem {\bf v} a její jednotky jsou {\bf metry za sekundu}, které se značí $m\cdot s^{-1}$, popřípadě v některých z jejich násobků.
+
+{\it Pohyb je definován jako velikost posunutí hmotného bodu (změně polohy) za danou jednotku času}. Protože posunutí je vektorová veličina, je i pohyb vektorovou veličinou a záleží jakým směrem k posunutí při pohybu dochází.
+
+Důležité je, že pohyb není rychlost, jedná se pouze o vlastnost pohybu. 
+
+
+\PodSekce{Druhy pohybů}
+Pohyby lze ve fyzice respektive v Kinematice podle daných kritérií rozdělit do několika skupin.
+\vskip 4mm
+\noindent {\bf Podle trajektorie:}
+\bod{Přímočarý - právě když trajektorii hmotného bodu tvoří část přímky.}
+\bod{Křivočarý - všechny ostatní případy, kdy pohyb není přímočarý.}
+\bod{Pohyb po kružnici - speciální případ křivočarého pohybu.}
+\vskip 4mm
+
+\noindent {\bf Podle změny rychlosti:}
+\bod{Rovnoměrný pohyb - pohyb se neměnnou rychlostí}
+\bod{Rovnoměrně zrychlení - rychlost se rovnoměrně zvětšuje}
+\bod{Nerovnoměrně zrychlený - rychlost se zvětšuje nerovnoměrně}
+\bod{Nerovnoměrný - rychlost hmotného bodu se při pohybu se zvětšuje a klesá}
+\vskip 4mm
+
+\noindent {\bf Kombinace trajektorie a změny rychlosti:}
+\bod{Pohyb rovnoměrný přímočarý}
+\bod{Pohyb rovnoměrný křivočarý}
+\bod{Rovnoměrně zrychlený přímočarý pohyb}
+\bod{Rovnoměrně rychlený křivočarý pohyb}
+\bod{Nerovnoměrně zrychlený přímočarý pohyb}
+\bod{Nerovnoměrně zrychlený křivočarý pohyb}
+\bod{Nerovnoměrný přímočarý pohyb}
+\bod{Nerovnoměrný křivočarý pohyb}
+\vskip 4mm
+
+\Sekce{Posunutí}
+
+Pro určení polohy hmotného bodu nestačí znát jen dráhu a jeho trajektorii trajektorii. Pro určení polohy při pohybu hmotného bodu používá veličina {\bf posunutí}. Jedná se o vektorovou fyzikální veličinu, která udává velikost a směr změny polohy hmotného bodu. Posunutí se ve fyzice značí malým písmenem {\bf d}. Dvě různé trajektorie o stejné dráze mohou mít počátek ve stejném bodě, ale mohou končit v různých koncových bodech. 
+
+\centerline{\pdfrefximage 3}
+
+Posunutí je definováno jako změna polohy hmotného bodu z bodu {\it A} do bodu {\it B}. Změna polohy hmotného bodu ve fyzice určena orientovanou úsečkou, určující směr posunutí, spojující počáteční a koncový bod zobrazující polohu hmotného bodu ve vztažné soustavě. 
+
+V případě přímočarého posunutí platí $ s = d $, dráha pohybu rovna velikosti posunutí:
+
+\vskip 4mm
+\centerline{\pdfrefximage 4}
+\vskip 4mm
+
+V případě křivočarého pohybu platí $ s > d $, dráha vždy větší (delší) než velikost posunutí:
+
+\vskip 4mm
+\centerline{\pdfrefximage 5}
+\vskip 4mm
+
+\PodSekce{Skládání posunutí}
+
+V jistých situacích se může pohyb skládat z více než jednoho posunutí. V takovém případě se pohyb skládá z více dílčích posunutí a takové posunutí se nazývá {\bf složené posunutí}. Na trajektorii pohybu tvořící složené posunutí se nacházejí {\it referenční body}, které určují počáteční a koncové body jednotlivých dílčích posunutí. 
+
+\vskip 4mm
+\centerline{\pdfrefximage 6}
+\vskip 4mm
+
+Skládat (sečíst) dvě (nebo více) po sobě jdoucí posunutí znamená vytvořit posunutí nové, jehož počátečním bodem je počáteční bod prvního posunutí a koncovým bodem je koncový bod druhého zobrazení. 
+
+V případě, že posunutí neleží na jedné přímce platí (délka libovolné strany trojúhelníka je menší než součet délek zbývajících dvou stran):
+
+$$ d < d_1+d_2 $$
+
+Tuto platnost lze rozšířit obecně na libovolný počet dílčích posunutí:
+
+$$ d < d_1+d_2 + ... + d_n$$
+
+Při výpočtu velikosti nového posunutí se rozlišují dva případy. V případě, že se posunutí nacházejí na stejné přímce, pak se jednotlivé dílčí posunutí sčítají, nebo odčítají v případě, že směřují směrem od sebe:
+
+\vskip 4mm
+\centerline{\pdfrefximage 7}
+\vskip 4mm
+
+$$ d = d_1 + d_2 $$
+
+V případě, že posunutí mají opačný směr, došlo nejprve k posunutí jedním směrem a následně k posunutí opačným směrem a proto velikost jednoho z těchto posunutí má záporný směr a je od velikosti druhého posunutí odčítáno:
+
+
+\vskip 4mm
+\centerline{\pdfrefximage 8}
+\vskip 4mm
+
+$$ d = d_2 - d_1 $$
+
+V případě, že se posunutí nenacházejí na stejné přímce, tvoří výsledné posunutí přeponu pravoúhlého trojúhelníka. Jeho velikost lze tedy vypočítat pomocí Pythagorovy věty:
+
+\vskip 4mm
+\centerline{\pdfrefximage 9}
+\vskip 4mm
+
+%dodělat vzorec pro výpočet různostranného posunutí a pravoúhlého posunutí a dodělat a opravit obrázky
+
+\Sekce{Rovnoměrný a nerovnoměrný pohyb hmotného bodu}
+
+{\bf Rovnoměrný pohyb} je takový pohyb, při kterém hmotný bod urazí v libovolných, ale stejně dlouhých časových intervalech stejné úseky dráhy. V ostatních případech je pohyb {\bf nerovnoměrný}. To znamená, že v různých časových úsecích má hmotný bod různou rychlost (zrychluje, nebo zpomaluje, nebo postupně obojí) a tím ve stejně dlouhých časových intervalech urazí různé úseky dráhy.
+
+Pro rovnoměrný pohyb má cenu zavést veličinu {\bf okamžitá rychlost}. Okamžitá rychlost je taková rychlost, kterou má hmotný bod v přesně daném časovém úseku. Okamžitá rychlost hmotného bodu při rovnoměrném pohybu se vypočítá poměrem dráhy a času za který danou dráhu urazil:
+
+$$ v_o = {\Delta s \over \Delta t} = {{s_2 - s_1} \over {t_2 - t_1}}= {s \over t} $$
+
+Řecké písmeno $\Delta$ (delta) vyjadřuje ve fyzice a matematice nějakou změnu veličiny. To znamená, že daná veličina měla na počátku nějakou hodnotu a na konci měla hodnotu jinou. Přidáním písmene $\Delta$ před symbol dané veličiny je udávána velikost této změny: $x_2 - x_1$.
+
+U nerovnoměrného pohybu nelze jednoznačně určit velikost rychlosti hmotného bodu, protože v každém časovém úseku může mít velikost rychlosti  jinou. Je ale možné určit velikost průměrné rychlosti. {\bf Průměrná rychlost nerovnoměrného pohybu} je rovna velikosti rychlosti rovnoměrného pohybu, při kterém by hmotný bod urazil tutéž dráhu za tutéž dobu jako při nerovnoměrném pohybu.
+
+$$ v_p = {s \over t} $$
+
+Protože je rychlost rovnoměrného pohybu na celé dráze všude stejná, platí, že okamžitá rychlost rovnoměrného pohybu je shodna s průměrnou rychlostí rovnoměrného pohybu:
+
+$$ v_o = v_p $$
+
+Okamžitá rychlost nerovnoměrného pohybu je v různých úsecích trajektorie různá, proto okamžitá rychlost nerovnoměrného pohybu je definována jako průměrná rychlost rovnoměrného pohybu ve velmi malém časovém intervalu na velmi malém úseku trajektorie. Tím se nezíská přesná hodnota okamžité rychlosti nerovnoměrného pohybu, ale je tím získána pouze přibližná hodnota okamžité rychlosti. Přesnost výsledku závisí na zvolené velikosti dráhy $\Delta s$ a času $\Delta t$. Platí, že v čím menším časovém intervalu je okamžitá rychlost měřena tím přesnější je výsledek. V nekonečně malém časovém intervalu $\Delta t$ (téměř nulový) bude výsledek nekonečně přesný. Okamžitá rychlost nerovnoměrného pohybu na daném úseku trajektorie je dána jako limita okamžité rychlosti rovnoměrného pohybu:
+
+$$ v_o = \lim_{\Delta t \rightarrow 0} {\Delta s \over \Delta t} $$
+
+Nejjednodušším druhem rovnoměrného pohybu je {\bf rovnoměrný pohyb přímočarý}.	Jedná se o pohyb jehož trajektorii tvoří přímka (nemění směr) a jeho rychlost je po celou dobu stálá.
+
+U pohybu rovnoměrného křivočarého se zachovává pouze velikost rychlosti a jeho směr se neustále mění.
+
+Dráha rovnoměrného pohybu je dána....
+
+
+Ke zkoumání pohybu se využívají různé matematické nástroje. Mezi nejpoužívanější patří tabulka s výpisem naměřených hodnot a dob, ve kterých byly tyto hodnoty naměřeny. Hodnoty v tabulky je možné následně graficky zobrazit pomocí grafu v podobě křivky.
+
+Rovnoměrný a nerovnoměrný pohyb může být popsán dvěma grafy:
+
+\vskip 4mm
+\bod{Graf závislosti dráhy na čase}
+\bod{Graf závislosti velikosti rychlosti na čase}
+\vskip 4mm
+
+Tabulka naměřených hodnot rovnoměrného pohybu:
+
+$$ 
+\left[
+\matrix{
+t & 0 & 1 & 2\cr
+s & 0 & 2 & 4\cr 
+} 
+\right]
+$$
+
+
+Pro libovolný pohyb platí, že obsah plochy vymezený křivkou grafu závislosti velikosti rychlosti pohybu na čase a osou {\it x} je roven dráze pohybu.
+
+\centerline{\pdfrefximage 11}
+
+Graf závislosti dráhy na čase pro rovnoměrný pohyb tvoří polopřímka, která prochází (vychází) počátkem souřadné soustavy (pouze v případě, že v čase $t_1 = 0s$ se nachází hmotný bod na dráze $s_1 = 0m$).
+
+\centerline{\pdfrefximage 12}
+
+% to znamená že tam je nějaký vztah mezi grafy závislosti velikosti rychlosti pohybu a velikosti dráhy 
+
+\Sekce{Vektor rychlosti}
+
+Rychlost (rovnoměrného i nerovnoměrného) pohybu je vektorová veličina, která má ne jen svou velikost, ale také směr. Směr vektoru pohybu závisí na druhu měřené rychlosti. Obecně lze říct, že vektor rychlosti má směr pohybu hmotného bodu. V případě křivočarého pohybu se ale směr pohybu v každém časovém úseku mění a je proto nestálý. Z tohoto důvodu se liší směr vektoru průměrné rychlosti a směr vektoru okamžité rychlosti. 
+
+V případě průměrné rychlosti má vektor rychlosti stejný směr jako posunutí hmotného bodu nezávisle na tvaru trajektorie, kterou hmotný bod při svém pohybu opisuje. 
+
+\vskip 4mm
+\centerline{\pdfrefximage 5}
+\vskip 4mm
+
+
+Okamžitá rychlost má vždy směr tečny k trajektorii hmotného bodu v daném bodě trajektorie. Při přímočarém pohybu platí, že jeho dráha je rovna vektoru posunutí, kdy je hmotný bod přemístěn z bodu {\it A} do bodu {\it B}.
+
+\vskip 4mm
+\centerline{\pdfrefximage 10}
+\vskip 4mm
+
+\Sekce{Rovnoměrně zrychlený pohyb hmotného bodu}
+
+Rovnoměrně zrychlený pohyb je takový pohyb, jehož velikost se v pravidelných, stejně velkých časových intervalech rovnoměrně zvyšuje - zrychluje. 
+
+Pohyb pro který platí, že velikost jeho okamžité rychlosti je rostoucí lineární funkce času se nazývá {\bf rovnoměrně zrychlený pohyb}. V opačném případě (kromě pohybu jehož velikost okamžité rychlosti je konstantní funkce času - rovnoměrný pohyb) se nazývá {\bf nerovnoměrně zrychlený pohyb}.
+
+{\bf Okamžitá rychlost rovnoměrně zrychleného pohybu} v určitém časovém okamžiku rovna rychlosti, kterou by se hmotný bod pohyboval od daného okamžiku rovnoměrnou rychlostí.
+
+Rovnoměrně zrychlený pohyb s nulovou počáteční rychlostí je definován jako změna rychlosti za jednotku času krát čas po kterou k této změně docházelo:
+
+$$ v_o = a\cdot t $$
+
+kde {\it a} je {\bf zrychlení} rovnoměrně zrychleného pohybu.
+
+Grafem závislosti rychlosti rovnoměrně zrychleného pohybu na čase je přímka, která prochází počátkem souřadné soustavy.
+
+\vskip 4mm
+\centerline{\pdfrefximage 13}
+\vskip 4mm
+
+
+V případě, že v čase $t_1$ je rychlost {\bf nenulová}, pak polopřímka tvořící graf protíná osu {\it y} v bodě $v_0$.
+
+\vskip 4mm
+\centerline{\pdfrefximage 14}
+\vskip 4mm
+
+Pro takový pohyb platí:
+
+$$ v_o = v_0 + a \cdot t $$
+
+kde $v_0$ je {\bf počáteční rychlosti} rovnoměrně zrychleného pohybu.
+
+
+V případě, že je hodnota zrychlení záporná, má vektor zrychlení opačný směr než vektor okamžité rychlosti a nazývá se {\bf pohyb rovnoměrně zpomalený}. 
+
+\vskip 4mm
+\centerline{\pdfrefximage 19}
+\vskip 4mm
+
+Okamžitá rychlost rovnoměrně zpomaleného pohybu se v čase rovnoměrně zmenšuje. Má-li rovnoměrně zpomalený pohyb již počáteční rychlost $v_0$, pak až do okamžiku zastavení platí pro výpočet okamžité rychlosti:
+
+$$ v_o = v_0 - a\cdot t $$
+
+Grafem rovnoměrně zpomaleného pohybu je přímka, která klesá směrem k ose {\it x}.
+
+\vskip 4mm
+\centerline{\pdfrefximage 15}
+\vskip 4mm
+
+\Sekce{Zrychlení rovnoměrně zrychleného pohybu}
+
+Zrychlení je definováno jako změna okamžité rychlosti $\Delta v = v_2 - v_1$ za daný časový interval $\Delta t = t_2 - t_1$, při pohybu z bodu {\it A} do bodu {\it B}, kdy v okamžiku $t_1$ měl hmotný bod okamžitou rychlost $v_1$ a v okamžiku $t_2$ měl hmotný bod okamžitou rychlost $v_2$. Zrychlení se označuje malým písmenem {\it a} (od slova {\it acceleration}):
+
+$$a = {\Delta v \over \Delta t }  = {{v_2 - v_2} \over {t_2 - t_1}}$$
+
+Jednotkou zrychlení je $m\cdot s^{-2} $. Zrychlení je vektorová veličina, protože má svůj směr působení a svou velikost. Vektor zrychlení má stejný směr (leží na stejné přímce) jako vektor posunutí a vektor okamžité rychlosti. 
+
+
+\Sekce{Dráha rovnoměrně zrychleného pohybu}
+
+Protože platí, že obsah plochy mezi grafem rovnoměrně zrychleného pohybu  a osou {\it x}, respektive časové osy je roven dráze, kterou hmotný bod při svém pohybu urazil. 
+
+\vskip 4mm
+\centerline{\pdfrefximage 16}
+\vskip 4mm
+
+Graf rovnoměrně zrychleného pohybu spolu s osou {\it x} a {\it y} tvoří pravoúhlý trojúhelník, jehož obsah je vypočítán pomocí vzorce:
+
+$$ O = {x\cdot y} \over 2 $$ 
+
+Protože {\it x} udává čas {\it t} a {\it y} udává rychlost {\it v}, lze tento vzorec upravit pro výpočet dráhy rovnoměrně zrychleného pohybu:
+
+$$ s = {1 \over 2} \cdot v \cdot t = {1 \over 2} \cdot a \cdot t \cdot t = {1 \over 2} \cdot a \cdot t^2 $$
+
+
+Grafem dráhy rovnoměrně zrychleného pohybu je část křivky, která se nazývá parabola $\rightarrow$ čím déle daný pohyb trvá tím má větší velikost okamžité rychlosti a tím větší úsek urazí za daný čas.
+
+\vskip 4mm
+\centerline{\pdfrefximage 17}
+\vskip 4mm
+
+V případě, že na počátku rovnoměrně zrychleného pohybu měl hmotný bod již počáteční rychlost $v_0$ a byla uražena dráha $s_0$, platí, pro celkovou dráhu vztah:
+
+$$s = s_0 + (v_0 \cdot t) + ({1\over 2} a\cdot t^2) $$
+
+Jestliže je uvažován pohyb rovnoměrně zrychlený přímočarý jedním směrem, je dráha pohybu rovna velikosti posunutí:
+
+$$ s = d $$
+
+Pro velikost posunutí hmotného bodu při pohybu rovnoměrně zrychleném po přímce lze napsat:
+
+$$ d = {1\over 2} \cdot a \cdot t^2 $$
+
+Pro výpočet dráhy rovnoměrně zpomaleného pohybu platí:
+
+$$s = v_0 \cdot t - {1\over 2} \cdot a \cdot t^2$$
+
+Část vzorce $v_0\cdot t$ vyjadřuje dráhu rovnoměrného pohybu hmotného bodu, který je ale postupem času nižší, protože i rychlost hmotného bodu je nižší. Grafem rovnoměrně zpomaleného pohybu je převrácený graf rovnoměrně zrychleného pohybu.
+
+\vskip 4mm
+\centerline{\pdfrefximage 18}
+\vskip 4mm
+
+\Sekce{Volný pád}
+
+{\bf Volný pád} se nazývá pád volně puštěných těles (bez počáteční rychlosti) na zemi ve vakuu. {\bf Platí, že ve vakuu, kde není žádný odpor způsobený okolním plynem, padají všechna tělesa stejně rychle bez ohledu na jejich hmotnost}. 
+
+Protože bylo dokázáno, že volný pád je rovnoměrně zrychlený pohyb, je možné pro výpočet okamžité rychlosti a dráhy volného pádu použít vzorce pro rovnoměrně zrychlený pohyb. Zrychlení volného pádu je vždy stejně velké - konstantní. Zrychlení volného pádu se nazývá {\bf tíhové zrychlení}. Tíhové zrychlení není ve zkutečnosti všude na zemi stejně velké, ale jedná se o průměrnou hodnotu s dostatečnou přesností pro běžné aplikace, kterou je možné využít kdekoli na zemi.
+
+Normálové nebo také tíhové zrychlení se značí malým písmenem {\it g} a jeho hodnota je:
+
+$$ g = 9,80665 = 9,81 m\cdot s^{-2}$$
+
+Protože platí, že $a = g$, lze upravit vzorce pro výpočty rovnoměrně zrychleného pohybu:
+
+$$ v_o = g \cdot t $$
+
+$$ d = {1\over 2}g\cdot t^2 $$
+
+$$ s = {1\over 2}g\cdot t^2 $$
+
+Vektor normálového zrychlení vždy směruje ke středu země.
+
+\Sekce{Rovnoměrný pohyb po kružnici}
+
+{\bf Pohyb hmotného bodu po kružnici} je speciálním případem křivočarého pohybu, který se cyklicky opakuje - je tedy možné odhadnout a vypočítat směr a dráhu pohybu.
+
+Opíše-li hmotný bod při svém pohybu po kružnici se středem v bodu {\it O} vztažné soustavy oblouk o délce $\Delta s$ mezi body {\it A} a {\it B}, odpovídá mu orientovaný úhel sevřený polopřímkami $A_O$ a $B_O$ jehož velikost se značí~$\Delta \varphi $
+
+\vskip 4mm
+\centerline{\pdfrefximage 20}
+\vskip 4mm
+
+Rovnoměrně zrychlený pohyb po kružnici koná hmotný bod jestliže ve stejných libovolně zvolených dobách $\Delta t$ opíše stejně dlouhé oblouky kružnice $\Delta s$, které přísluší také stejné velikosti úhlu $\Delta \varphi$.
+
+Pro velikost rychlosti pohybu po kružnici platí stejně jako pro křivočarý pohyb vztah:
+
+$$ v = {{\Delta s}\over {\Delta t} }$$
+
+Velikost okamžité rychlosti je stálá, ale její směr je v každém okamžiku jiný. Vektor okamžité rychlosti hmotného bodu při pohybu po kružnici má směr tečny kružnice v příslušném bodu trajektorie $\rightarrow$ kolmice ke směru poloměru v daném místě.
+
+\vskip 4mm
+\centerline{\pdfrefximage 21}
+\vskip 4mm
+
+Jevy, které se pravidelně opakují se nazývají {\bf cyklické}, nebo také {\bf periodické}. Rovnoměrný pohyb hmotného bodu po kružnici v dané rovině {\bf je periodický pohyb}. Doba {\it t}, za kterou se pohyb hmotného bodu při pohybu po kružnici opakuje se nazývá {\bf perioda}, {\bf cyklus}, nebo {\bf doba oběhu}. Perioda se značí velkým písmenem {\it T}.
+
+Převrácená (inverzní) hodnota periody se nazývá {\bf frekvence} a značí se malým písmenem {\it f}. Frekvence vyjadřuje kolik period proběhne za jednu sekundu:
+
+$$ f = {1 \over T} $$
+
+Jednotkou frekvence je {\bf Herz} - $[Hz] = s^{-1}$
+
+Při rovnoměrném pohybu po kružnici o poloměru {\it r} hmotný bod opíše dráhu $2 \pi r$ za dobu {\it T}. Pro velikost průměrné rychlosti platí:
+
+$$ v = {{2\pi r}\over T} = 2 \pi r f [m\cdot s^{-1}]$$
+
+Velikost obloukového úhlu je dána poměrem délky oblouku {\it s} a poloměru~{\it r}:
+
+$$ \varphi = {s \over r}~[rad] $$
+
+Plnný úhel má velikost $ {{2 \pi r}\over r} = 2 \pi~rad $ 
+
+Úhlová rychlost $\omega$ vyjadřuje jak rychle hmotný bod při pohybu po kružnici urazí daný obloukový úhel:
+
+$$ \omega = {\Delta\varphi \over \Delta t} [rad\cdot s^{-1}] $$
+
+Je-li známa perioda {\it T} hmotného bodu, platí pro pohyb hmotného bodu po kružnici:
+
+$$ \omega = {2\pi \over T} = 2\pi f [rad\cdot s^{-1}] \rightarrow v = {2\pi r\over T} = \omega\cdot r [m\cdot s^{-1}] $$
+
+\PodSekce{Dostředivé zrychlení}
+
+Při pohybu po kružnici má hmotný bod vůči středu kružnice určité zrychlení, které působí směrem do středu. Dostředivé zryclení je způsobeno faktem, že velikost rychlosti hmotného bodu při pohybu po kružnici je v každém bodě stejně velká (vektor rychlosti má stále stejnou velikost), ale mění se jejich směr (v každém bodě trajektorie vektor rychlosti směřuje jiným směrem). 
+
+Pro odvození dostředívého zrychlení slouží definice zrychlení:
+
+$$ a = {\Delta v \over \Delta t } = {{v_2 - v_1}\over \Delta t}$$
+
+Hmotný bod za dobu {\it t} úhel $\Delta \varphi$ a oblouk $\Delta s$. Zároveň se posune z bodu {\it A} do bodu {\it B}. Vektory $v_1$ a $v_2$ znázorňují velikost (ta je stejná) a směr (ten je v každém bodě jiný) vektoru rychlosti hmotného bodu. 
+
+Změna rychlosti $\Delta v$ je získána rozdílem vektorů rychlosti $v_1$ a $v_2$. Velikost rychlosti se při pohybu po kružnici v polární soustavě nemění, ale mění se při pohybu vůči středu kružnice v kartézské soustavě souřadnic. Tato změna velikosti rychlosti vůči středu kružnice je způsobena změnou směru věktoru rychlosti. Změnu velikosti rychlosti je možné graficky znázornit přesunutím vektoru $v_1$ do působiště vektoru $v_2$ (do bodu {\it B}). Vzdálenost mezi koncovými body vektorů rychlosti $v_1$ a $v_2$ vyjadřuje velikost změny rychlosti $\Delta v$.
+
+\vskip 4mm
+\centerline{\pdfrefximage 22}
+\vskip 4mm
+
+Platí, že při posunutí hmotného podu po kružnici o úhel $\varphi$ z bodu {\it A} do bodu {\it B}, pak vektory rychlosti $v_1$ a $v_2$, které jsou vždy kolmé k poloměru kružnice také vzájemně svírají úhel $\varphi$. To je důležitá vlastnot díky které lze říci, že při velmi malé hodnotě úhlu $\varphi$ lze oblouk o délce $\Delta s$, kterou hmotný bod urazil lze považovat za rovnou přímku a platí rovnost:
+
+$$ \lim_{\varphi \rightarrow 0}  \Rightarrow \Delta s = \Delta v $$
+
+\vskip 4mm
+\centerline{\pdfrefximage 23}
+\vskip 4mm
+
+Jestliže platí rovnost poměrů:
+
+$$ {{\Delta v }\over  {\Delta s}} = {v\over r} $$
+
+lze vyjádřit změnu rychlosti:
+
+$$ \Delta v = \Delta s \cdot {v \over r} $$
+
+
+
+Pro dokázání této rovnosti jsou využity vlastnosti pravoúhlého trojúhelníků. Pro $\Delta v$ a $\Delta s$ platí:
+
+$$ \Delta v = 2\cdot cos(90-{1\over 2} \varphi)\cdot v $$
+$$ \Delta s = 2\cdot cos(90-{1\over 2} \varphi)\cdot r $$
+
+Na základě toho lze vytvořit rovnost:
+
+$$ {{2\cdot cos(90-{1\over 2} \varphi)\cdot v } \over {2\cdot cos(90-{1\over 2} \varphi)\cdot r }} = {v\over r} $$
+
+Z rovnice je již patrná platnost rovnosti, protože výrazy $2\cdot cos(90-{1\over 2} \varphi)$ v čitateli i jmenovateli zlomku se vyruší.
+
+Pro velikost dostředivého zrychlení poté platí vztah:
+
+$$ a_d = {\Delta v\over \Delta t} = {{\Delta s \cdot {v \over r}}\over {\Delta t}} = {{\Delta S}\over{\Delta t}}\cdot {v\over r} = v \cdot {v\over r} = {v^2 \over r} $$
+ 
+$$ a_d = {v^2\over r } = {(\omega \cdot r)^2 \over r} = {{\omega ^2 \cdot r^2} \over r} = \omega^2 \cdot r$$
+
+Vektor dostředivého zrychlení zdánlivě nesměruje do středu kružnice. To je způsobeno relativní nepřesností zobrazovaného grafického řešení, ve kterém byla zvolena velká hodnota úhlu $\Delta\varphi$. Se změnou velikosti úhlu $\Delta \varphi$ by se měnil i směr působení výsledného vektoru dostředivého zrychlení. Platí, že čím menší velikost úhlu $\Delta\varphi$, tím přesnější výsledek výpočtu, který způsobí postupné konvergování směru dostředivého zrychlení směrem do středu kružnice.
+
+\Sekce{Shrnutí}
+
+
+\end

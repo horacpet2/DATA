@@ -1,0 +1,184 @@
+\def\ddr{C:/texLib/}
+
+\input \ddr/TeXMakro
+\setAddress{\ddr}
+\input \ddr/KonfiguracePaperBook
+
+%Načtení obrázků
+%\pdfximage width \the\SirkaOdstavce mm {./Obrazky/obr}
+
+
+%Titulní stránka
+%\VlozitDokument{TitulniStranka}
+
+%generování obsahu
+%\Obsah
+
+\Nadpis{Úvod}
+
+GTK je multiplatformní knihovna pro tvorbu grafického uživatelského prostředí napsaná v jazyce C. Jeho použití je ale možné i v jiných jazycích jako například C++, Python, PHP, ... V současné době je aktuální 3. verze knihovny. Jedná se o jednu z nejpopulárnějších knihoven pro tvorbu GUI aplikací v operačních systémech Linux. Programy vytvořené v této knihovně jsou vyhlášeny svou rychlostí (na rozdíl od Qt, ...).
+
+Samotné GTK závisí na knihovnách:
+
+
+\bod{Glib}
+\bod{Pango}
+\bod{ATK}
+\bod{GDK}
+\bod{GdkPixbuf}
+\bod{Cairo}
+
+Knihovna {\bf Glib} poskytuje všeobecně užitečné nástroje a datové typy používané v GTK. {\bf Pango} knihovna umožňuje internacionalizaci programovaných aplikací. {\bf ATK} je knihovna, která pracuje s přístupy. Poskytuje nástroje, které umožňují fyzicky měnit způsob jak lidé pracují s počítači. Knihovna {\bf GDK} pracuje s nízkoúrovňovým systémem vykreslování, a tvorby grafických oken zobrazovacím systémem počítače. Knihovna {\bf GdkPixbuf} zajišťuje vkládání a práci s obrázky. Nakonec knihovna {\bf Cairo} poskytuje nástroje s 2D grafikou.
+
+Hlavní nevýhodou GTK je jeho omezená možnost objektového fungování, protože je napsán v jazyce C, které není objektově orientované. Naopak je díky tomu velice rychlé.
+
+\Nadpis{Základní práce s okny v GTK}
+
+Pro práci s GTK je nutné na začátku programu nejprve vložit hlavičkový soubor {\it gtk.h}:
+
+\vskip 4mm
+{
+\verbatim
+\hskip 4mm \#include$<$gtk/gtk.h$>$
+}
+\vskip 4mm
+
+
+Před zahájením práce s grafickými objekty je třeba inicializovat gtk knihovnu pomocí funkce gtk\_init, která přijímá jako parametry odkaz na argumenty příkazové řádky z funkce main:
+
+\vskip 4mm
+{
+\verbatim
+\odradkovat
+\hskip 4mm int main(int argv, char**argc)\odradkovat
+\hskip 4mm...\odradkovat
+\hskip 4mm gtk\_init(\&argv, \&argc);\odradkovat
+\hskip 4mm...\odradkovat
+}
+\vskip 4mm
+
+Základní třídou, která slouží pro práci s grafickými widgety je třídy {\it GtkWidget}. Ostatní grafické widgety jsou odvozeny z této třídy. Nové okno se vytvoří pomocí funkce:
+
+\vskip 4mm
+{
+\verbatim
+\odradkovat
+
+\odradkovat
+\hskip 4mm GtkWidget* widget= gtk\_window\_new(GTK\_WINDOW\_TOPLEVEL);\odradkovat
+}
+\vskip 4mm
+
+Funkce vnitřně volá funkci {\it malloc()}, která zajistí vytvoření nového objektu. Funkce přijímá parametr výčtového typu {\bf GtkWindowType}, který definuje typ nového okna.
+
+Pro zobrazení nově vytvořeného okna slouží funkce gtk\_widget\_show, která přijímá odkaz na objekt okna:
+
+\vskip 4mm
+{
+\verbatim
+\odradkovat
+
+\odradkovat
+\hskip 4mm gtk\_window\_show(window);\odradkovat
+}
+\vskip 4mm
+
+Nakonec je nutné zavolat funkci {\it gtk\_main}, která způsobí, že program vstoupí do pasivní smyčky a čeká na uživatelskou interakci. Funkce nepřijímá žádné parametry. Bez této funkce by se program okamžitě ukončil.
+
+Všechny funkce pracující s oknem (nastavují jeho parametry) se nacházejí v hlavičkovém souboru {\it gtkwindow.h}.
+
+Je důležité, že zavření okna ve výchozím nastavení neukončí daný proces. To je nutné nastavit pomocí obslužných funkcí: signál-slot.
+
+
+\Sekce{Nastavení okna}
+
+funkce GTK\_WINDOW(window) nastaví fullscreen  okna.
+
+funkce gtk\_window\_set\_titel(GtkWindow * window, gcahar* str) nastaví titulek okna
+funkce gtk\_window\_set\_default\_size(GtkWindow *window, gint width, gint height) nastaví rozměry grafického okna
+
+!!! nikdy nevolat objekty grafického rozhraní GTK z jiného vlákna než ve kterém byly vytvořeny, jinak dojde k vyvolání běhové chyby při přístupu k xlib knihovně!!!
+
+\Nadpis{Třída GtkWidget}
+
+Třída GtkWidget je bázovu třídou pro všechny grafické widget, se kterými knihovnaa GTK pracuje. 
+
+\vskip 4mm
+{\verbatim void  gtk\_widget\_set\_size\_request(GtkWidget* widget, gint width, gint height)}
+\vskip 4mm
+
+Funkce nastaví minimální rozměry daného widgetu (tlačítka, okna, popisku, ...).
+
+\Nadpis{Kontejner}
+
+GTK uživatelské rozhraní je postaveno tak, že ostatní widgety jsou vloženy do jiných widgetů. Kontejnerové widgety jsou vnitřní uzly výsledného stromu widgetů, které obsahují ostatní widgety. Kontejner, který obsahuje, tedy obaluje, další prvky se nazývá rodič a prvek který je uvnitř nějakého prvku, tedy je obalen, se nazývá potomek.
+
+Existují dva hlavní kontejnerové widgety, které jsou oba odvozené od základní třídy {\it GtkContainer}.
+
+První typ kontejneru může obsahovat pouze jednoho potomka (widget) a je odvozen z třídy {\it GtkBin}. Tyto kontejnery jsou dekorace, které přidávají novou funkčnosti do widgetru potomka. Typickým příkladem widgetu, který může obsahovat pouze jednoho potomka je okno (GtkWindow). Aby mohlo okno obsahovat více než jeden widget, musí obsahovat widget kontejneru druhého typu.
+
+Druhý typ kontejneru mohou obsahovat více než jeden widget. Jejich účelem je spravovat rozvržení jednotlivých prvků v grafickém okně. Typickým příkladem je {\it GtkFixed}.
+
+\Sekce{GtkStack}
+
+GtkStack je kontejner, který umožňuje uchovávat více než jeden widget, ale viditelný je v danou chvíli pouze jeden. Mezi zobrazovanými widgety je možné přepínat. Díky tomu lze definovat stránky jednoho okna. 
+
+\Sekce{GtkEventBox}
+
+GtkEventBox je typ kontejneru, který umožňuje uchovávat jeden dceřinný widget. Využívá se v situacích, kdy je třeba přidat události grafickému widgetu, který dané události neposkytuje.
+
+\vskip 4mm
+{\verbatim GtkWidget* gtk\_event\_box\_new(void)} - vytvoří nový objekt třídy GtkEventBox
+\vskip 4mm
+
+\vskip 4mm
+{\verbatim void gtk\_widget\_set\_events(GtkWidget* widget, gint events)} - přiřadí dané události k danému widgetu
+\vskip 4mm
+
+
+
+\Nadpis{Správci rozvržení}
+
+Správci rozvržení jsou druhem kontejnerů, které umožňují uložit více než jeden widget a manipulovat s jejich polohou v okně programu.
+
+\Sekce{GtkGrid}
+
+GtkGrid je kontejnerový správce rozložení, který umožňuje uchovávat více než jeden widget a strukturuje uložené widgety v okně do mřížky. Objekt třídy GtkGrid se vytvoří pomocí funkce:
+
+\vskip 4mm
+{\verbatim  GtkWidget* gtk\_grid\_new(void)}
+\vskip 4mm
+
+Do mřížky v okně se widgety vloží pomocí funkce:
+
+\vskip 4mm
+{\verbatim void gtk\_grid\_attach(GtkGrid* grid, GtkWidget* child, gint left, gint right, gint width, gint height)}
+\vskip 4mm
+
+\Nadpis{Systém slot-callback}
+
+Gtk je událostmi řízený způsob programování programu. Principem je, že daná akce grafického rozhraní (widgetu) emituje, vyšle signál, že nastala nějaká událost. V programu je k této události daného wydgetu připojena obslužná (callback) funkce, která má za úkol vykonat nějakou obsluhu. Funkce pro práci se signály se nacházejí v souboru gsignal.h. 
+
+Pro připojení callback funkce k určitému signálu daného widgetu slouží funkce:
+
+\vskip 4mm
+{\verbatim gulong g\_singal\_connect(gpointer *object, const char* name, GCallback func, gpointer data)}
+\vskip 4mm
+
+Prvním argumentem je ukazatel na widget, který vyslal daný signál, druhý parametr je název signálu, který má být zachycen, třetí parametr je název funkce, která se má zavolat v případě zachycení daného signálu, posledním paramtrem je ukazatel na data, která se předávají do volané funkce při zachycení signálu.
+
+Formát obslužné funkce má obecný formát:
+
+\vskip 4mm
+{\verbatim void fce\_name(GtkWidget* widget, gpointer data)}
+\vskip 4mm
+
+kde prvním argumentem je ukazatel na widget, který vyslal daný signál a posledním argumentem je ukazatel na data, předávané do funkce při jejím volání. Jedná se ale pouze o obecný formát, který se může u některých widgetů lišit v závislosti na parmetrech, které vyžadují předat emitované signály. Například u signálu {\it button\_press\_event} je zapotřebí, aby callback funkce  měla formát:
+
+\vskip 4mm
+{\verbatim void fce\_name(GtkWidget* widget, GdkEventButton *event, gpointer data)}
+\vskip 4mm
+
+Pokud má callback funkce špatný tvar pro daný signál nastane problém při vkládání parametrů, kdy se argumenty nevloží do správného parametrů a při pokusu o zápis může dojít k pádu aplikace.
+
+\end

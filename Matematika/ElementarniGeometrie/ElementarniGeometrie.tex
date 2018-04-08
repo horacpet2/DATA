@@ -1,0 +1,769 @@
+%\def\addr{D:/MEGA/CENTRUM/texLib}
+\def\addr{/home/petr/.texLib}
+
+\input \addr/TeXMakro
+\setAddress{\addr}
+%\input \addr/KonfiguracePaperBook
+\input \addr/KonfiguraceEBook
+%makra
+
+%Načtení obrázků
+%\pdfximage width/height \the\SirkaOdstavce mm {./Obrazky/obr}
+\pdfximage width \the\SirkaOdstavce mm {./Obrazky/Body.png}
+\pdfximage width \the\SirkaOdstavce mm {./Obrazky/Usecka.png}
+\pdfximage width \the\SirkaOdstavce mm {./Obrazky/Primky.png}
+\pdfximage width \the\SirkaOdstavce mm {./Obrazky/PrimkyTotozne.png}
+\pdfximage width \the\SirkaOdstavce mm {./Obrazky/PrimkyRuznobezne.png}
+\pdfximage width \the\SirkaOdstavce mm {./Obrazky/PrimkyRovnobezne.png}
+\pdfximage width \the\SirkaOdstavce mm {./Obrazky/KonvexniMnozina.png}
+\pdfximage width \the\SirkaOdstavce mm {./Obrazky/Uhel.png}
+\pdfximage width \the\SirkaOdstavce mm {./Obrazky/KonvexniUhel.png}
+\pdfximage width \the\SirkaOdstavce mm {./Obrazky/PrimyUhel.png}
+\pdfximage width \the\SirkaOdstavce mm {./Obrazky/VelikostUhlu.png}
+\pdfximage width \the\SirkaOdstavce mm {./Obrazky/radian.png}
+\pdfximage width \the\SirkaOdstavce mm {./Obrazky/OrientaceUhlu.png}
+\pdfximage width \the\SirkaOdstavce mm {./Obrazky/TrojuhelnikABC.png}
+\pdfximage width \the\SirkaOdstavce mm {./Obrazky/TrojuhelnikSinusKosinus.png}
+\pdfximage width \the\SirkaOdstavce mm {./Obrazky/TrojuhelnikSinusKosinus2.png}
+\pdfximage width \the\SirkaOdstavce mm {./Obrazky/rovina.png}
+\pdfximage width \the\SirkaOdstavce mm {./Obrazky/Polorovina.png}
+\pdfximage width \the\SirkaOdstavce mm {./Obrazky/OsaUhlu.png}
+\pdfximage width \the\SirkaOdstavce mm {./Obrazky/obsah.png}
+\pdfximage width \the\SirkaOdstavce mm {./Obrazky/obvod.png}
+\pdfximage width \the\SirkaOdstavce mm {./Obrazky/objem.jpg}
+\pdfximage width \the\SirkaOdstavce mm {./Obrazky/SoucetVnitrnichUhluTrojuhelnika.png}
+\pdfximage width \the\SirkaOdstavce mm {./Obrazky/TrojuhelnikovaNerovnost.png}
+\pdfximage width \the\SirkaOdstavce mm {./Obrazky/TrojuhelnikovaNerovnost_2.png}
+\pdfximage width \the\SirkaOdstavce mm {./Obrazky/RovnostrannyTrojuhelnik.png}
+\pdfximage width \the\SirkaOdstavce mm {./Obrazky/RovnoramennyTrojuhelnik.png}
+\pdfximage width \the\SirkaOdstavce mm {./Obrazky/TupouhlyTrojuhelnik.png}
+\pdfximage width \the\SirkaOdstavce mm {./Obrazky/OstrouhlyTrojuhelnik.png}
+\pdfximage width \the\SirkaOdstavce mm {./Obrazky/PravouhlyTrojuhelnik.png}
+\pdfximage width \the\SirkaOdstavce mm {./Obrazky/pi.png}
+\pdfximage width \the\SirkaOdstavce mm {./Obrazky/VrcholoveUhly.png}
+\pdfximage width \the\SirkaOdstavce mm {./Obrazky/VedlejsiUhly.png}
+\pdfximage width \the\SirkaOdstavce mm {./Obrazky/SouhlasneUhly.png}
+\pdfximage width \the\SirkaOdstavce mm {./Obrazky/PlnnyUhel.png}
+\pdfximage width \the\SirkaOdstavce mm {./Obrazky/ObecnyTrojuhelnik.png}
+\pdfximage width \the\SirkaOdstavce mm {./Obrazky/pi_2.png}
+\pdfximage width \the\SirkaOdstavce mm {./Obrazky/pi_3.png}
+\pdfximage width \the\SirkaOdstavce mm {./Obrazky/Kruznice.png}
+\pdfximage width \the\SirkaOdstavce mm {./Obrazky/ObsahKruznice_1.png}
+\pdfximage width \the\SirkaOdstavce mm {./Obrazky/ObsahKruznice_2.png}
+\pdfximage width \the\SirkaOdstavce mm {./Obrazky/ObsahKruznice_3.png}
+\pdfximage width \the\SirkaOdstavce mm {./Obrazky/GoniometrickeFce.png}
+\pdfximage width \the\SirkaOdstavce mm {./Obrazky/Nekonvexni_mnozina.png}
+
+
+%Titulní stránka
+%\VlozitDokument{TitulniStranka}
+
+%generování obsahu
+\Obsah
+
+
+\Nadpis{Úvod}
+
+Elementární geometrie je obor matematiky zabývající se popisem vlastností a vzájemných vztahů plošných a prostorových útvarů. Vlastnosti geometrických útvarů se rozumějí délky stran, obvod, obsah, objem, ...
+
+Elementární geometrie se dá rozdělit na plošnou (rovinnou) geometrii - planimetrie a prostorovou geometrii - stereometrie. Zvláštní částí geometrie je goniometrie, která se zabývá goniometrickými funkcemi (rovnicemi). Speciální oblastí goniometrie je trigonometrie, která se zabývá řešením úloh s trojúhelníky.
+
+Elementární geometrie má obrovský význam při řešení konstrukčních úloh, fyzikálních rovnic, počítačové grafiky a mnoho dalších oborů lidské činnosti.
+
+\Nadpis{Základní pojmy planimetrie}
+
+Základní pojmy elementární geometrie jsou {\bf bod}, {\bf přímka} a {\bf rovina}. Pomocí těchto pojmů (axiomů, geometrických objektů) lze vytvořit libovolný geometrický útvar a budovat tak teorii geometrie.
+
+\Sekce{Bod}
+
+Bod je bezrozměrný geometrický útvar, pomocí kterého se definují ostatní geometrické objekty. Bod je vyjádření pozice v rovině nebo v prostoru. Algebraicky je bod vyjádřen {\it n} souřadnicemi, kde {\it n} je rozměr prostoru ve kterém se daný bod nachází. V dvojrozměrném prostoru (rovině) je bod reprezentován dvěma číselnými hodnotami - šířka a délka. V trojrozměrném prostoru je bod reprezentován třemi číselnými hodnotami - šířka, délka a výška. Jedná se o uspořádanou n-tici číselných hodnot. Souřadnice bodu se zapisují do hranatých závorek - $[x, y, .. z]$ a značí se pomocí velkého tiskacího písmene abecedy - {\it A}, {\it B},~... Ve výkresech se body kromě jeho jména zapisují také křížkem, který přesně říká kde daný bod leží vůči ostatním bodům (objektům). Všechny geometrické útvary jsou definovány jako množina bodů.
+
+\vskip 4mm
+\centerline{\pdfrefximage 1}
+\vskip 4mm
+
+Nejkratším spojením dvou různých bodů v rovině se říká  {\bf úsečka}. Jedná se o část přímky mezi dvěma body. Tyto body se nazývají {\bf krajní body úsečky}. Úsečka se v nákresech znázorňuje pomocí rovné čáry propojující oba krajní body a v zápisech se značí pomocí jmen jejích krajních bodů. Jestliže má tedy daná úsečka krajní body {\it A} a {\it B}, pak je v zápisech označována jako {\it úsečka AB}. U úsečky má cenu měřit její délku, tedy vzdálenost jejích krajních bodů. Délka úsečky se v zápisech zapisuje pomocí názvu dané úsečky uzavřené mezi dvěma svislými čarami (podobně jako absolutní hodnota reálného čísla). V případě úsečky {\it AB} je její délka zapisována $|AB|=x$. {\bf Střed úsečky} je bod, který leží na dané úsečce a jehož vzdálenost je přesně stejná od obou krajních bodů. Středový bod úsečky je speciálním bode, který se označuje písmenem {\it S}. Jestliže je v nákresu úseček více, je pro přehlednost středovému bodu přidán dolní index s názvem úsečky na které se nachází: $S_{AB}$.
+
+\vskip 4mm
+\centerline{\pdfrefximage 3}
+\vskip 4mm
+
+Bod lze také považovat za úsečku, jejíž délka je rovna nule.
+
+\Sekce{Přímka}
+
+{\bf Přímka} je po bodech a úsečkách nejjednodušší jednorozměrný geometrický útvar. Přímku lze definovat jako nekonečně dlouhou, nekonečně tenkou a dokonale rovnou čáru (křivku), která nemá ani konec ani začátek. Přímka je v zápisech označována malými tiskacími písmeny abecedy, například {\it a}, {\it b}, {\it c}, ... Přímka se zadává pomocí dvou bodů, protože každými dvěma body lze vést právě jednu přímku. Jeden bod slouží k určení polohy přímky v rovině a dva body společně definují její směr. Dohromady tedy určují její umístění a směr v rovině (prostoru).
+
+\vskip 4mm
+\centerline{\pdfrefximage 4}
+\vskip 4mm
+
+Speciálním případem přímky je {\bf polopřímka}. Jedná se o přímku, která má počátek v definovaném bodě, ale stejně jako přímka stále nemá konec. Typickým případem polopřímky jsou ramena úhlů. Bod {\it P} ležící na přímce {\it p} tuto přímku rozděluje na dvě polopřímky. Bod {\it P} se nazývá {\bf počáteční bod polopřímky}. Tyto dvě polopřímky jsou {\bf navzájem opačné}.
+
+Jestliže je možné přímku vyjádřit jako nekonečnou množinu bodů roviny, pak bod ležící na dané přímce je tedy prvkem množiny bodů tvořící přímku. Tato zkutečnost se zapisuje $A \in p$, to znamená, že bod {\it A} leží na přímce {\it p}. Jestliže daný bod neleží na přímce, tato zkutečnost se zapisuje $A \notin p$. To samé platí i v případě úseček, nebo složitějších geometrických útvarů. Pro množinu bodů (bodová množina) se v geometrii užívá pojem {\bf geometrický útvar}.
+
+\Sekce{Osa}
+
+Osa je přímka, popřípadě v některých případech úsečka, která je kolmá k danému geometrickému útvar a půlí jej na dvě symetrické (stejné) části. 
+
+\Sekce{Vzájemná poloha přímek}
+
+Dvě přímky v rovině mohou mít několik různých vzájemných poloh. 
+
+Jestliže jsou dvě přímky, které leží na sobě a splývají v jednu, protínají se ve všech bodech, nazývají se {\bf přímky totožné}:
+
+\vskip 4mm
+\centerline{\pdfrefximage 5}
+\vskip 4mm
+
+Pokud se přímky protínají v jediném bodě, nazývají se {\bf přímky různoběžné (různoběžky)}. Bod ve kterém se obě přímky protínají se nazývá {\bf průsečík přímek}. Speciálním případem různoběžných přímek jsou {\bf kolmé přímky (kolmice)}. Dvě navzájem kolmé přímky mezi sebou svírají úhel $90^\circ$.
+
+\vskip 4mm
+\centerline{\pdfrefximage 6}
+\vskip 4mm
+
+Pokud se přímky neprotínají v žádném bodě, nazývají se {\bf přímky rovnoběžné}:
+
+\vskip 4mm
+\centerline{\pdfrefximage 7}
+\vskip 4mm
+
+\Sekce{Rovina}
+
+Rovinu si lze představit jako dvourozměrnou neomezenou dokonale rovnou plochu. Algebraicky si lze rovinu představit jako množinu bodu, které jsou reprezentované uspořádanou dvojicí hodnot {\it [x,y]}. Jedná se tedy o množinu kartézského součinu jednorozměrné souřadnicové množiny.
+
+$$ R^2 = R \times R $$
+
+kde {\it R} je množina souřadnic tvořící jednorozměrný prostor. Jedná se tedy o rozšíření jednorozměrného prostoru (přímky, číselné osy). 
+
+Rovina může být určena třemi různými body a nebo přímkou a bodem, který leží mimo tuto přímku. První bod tvoří počátek (výchozí bod) druhý bod šířku a třetí bod délku roviny:
+
+\vskip 4mm
+\centerline{\pdfrefximage 18}
+\vskip 4mm
+
+Rovina je buď plocha, na kterou se kreslí geometrický výkres a nebo se znázorňuje nějakým geometrickým útvarem pomocí některého geometrického promítání. Rovina se v zápisech označuje pomocí malého řeckého písmene. Rovina je množina bodů prostoru, které vyhovují rovnici roviny.
+
+\PodSekce{Polorovina}
+
+Libovolná přímka {\it p}, která leží v rovině $\rho$ rozděluje tuto rovinu na dvě části, z nichž každá včetně přímky {\it p} se nazývá {\bf polorovina}. Přímce {\it p} se říká {\bf hraniční přímka poloroviny}. Každý bod {\it X}, který neleží na hraniční přímce poloroviny se nazývá {\bf vnitřní bod poloroviny}. Množina všech vnitřních bodů poloroviny se nazývá {\bf vnitřek poloroviny}:
+
+\vskip 4mm
+\centerline{\pdfrefximage 19}
+\vskip 4mm
+
+
+\Nadpis{Úhel}
+
+{\bf Úhel} je plocha (část roviny) vymezená dvěma polopřímkami s počátkem ve společném bodě. Polopřímky, které vymezují úhel {\it ABC} v rovině se nazývají {\bf ramena úhlu} (polopřímky {\it AB} a {\it BC}) a společný bod polopřímek se nazývá {\bf vrchol úhlu} (bod {\it B}). Je důležité, že úhel nejsou jen ramena, ale také celá plocha, celá rovina včetně všech bodů, kterou tato dvě ramena svírají (množina všech bodů které jsou vymezeny rameny úhlu, jedná se tedy o podmnožinu množiny definující rovinu). Každý bod úhlu {\it ABC}, který neleží na žádné z polopřímek se nazývá {\bf vnitřní bod úhlu}. Množina všech bodů úhlu se nazývá {\bf vnitřek úhlu}. Množina všech bodů roviny, které nepatří do úhlu, se nazývá {\bf vnějšek úhlu}. Úhly se značí malými řeckými písmeny.
+
+\vskip 4mm
+\centerline{\pdfrefximage 9}
+\vskip 4mm
+
+Dvě polopřímky ale rozdělí rovinu na dvě části, přičemž se obě tyto části nazývají úhel - {\bf konvexní} a {\bf nekonvexní} ({\bf konkávní}). Proto by se mělo v zápisech rozlišovat zda se jedná o úhel konvexní, tedy úhel menší než $180^\circ$, nebo nekonvexní, tedy úhel větší než $180^\circ$.
+
+\vskip 4mm
+\centerline{\pdfrefximage 10}
+\vskip 4mm
+
+\Sekce{Velikost úhlu}
+
+Každému konvexnímu i nekonvexnímu úhlu lze přiřadit právě jedno nezáporné číslo, které se nazývá {\bf velikost úhlu} tak že platí, že každé dva úhly, které jsou si rovny jsou vyjádřeny stejnou hodnotou a tedy mají stejnou velikost úhlu.
+
+Rozdělením jednoho přímého úhlu na dva shodné úhly vzniknou dva shodné konvexní úhly, které svírají úhel $90^\circ$. Konvexní úhel, který svírá $90^\circ$ se nazývá {\bf pravý úhel}. Úhel který je menší než pravý úhel se nazývá {\bf ostrý úhel}. Konvexní úhel, který je větší než pravý úhel se nazývá {\bf tupý úhel}. 
+
+
+\vskip 4mm
+\centerline{\pdfrefximage 12}
+\vskip 4mm
+
+Navzájem opačné polopřímky {\it AB} a {\it BC} rozdělují rovinu v níž leží na dvě poloroviny se společnou hraniční přímkou {\it AB}. Každé z těchto polorovin se říká přímí úhel {\it ABC}. Přímí úhel má tedy přesně  $180^\circ$. Je to tedy polorovina, na jejíž hraniční přímce je vyznačen vrchol {\it B} úhlu.
+
+\vskip 4mm
+\centerline{\pdfrefximage 11}
+\vskip 4mm
+
+Dvě splývající polopřímky {\it AB} a {\it BC} v dané rovině tvoří úhel, který svírá $360^\circ$ a nazývá se {\bf plný úhel} a nebo $0^\circ$ a nazývá se {\bf nulový úhel}. V případě plného úhlu tvoří vnitřek úhlu všechny body dané roviny. Nulový úhel žádný vnitřek nemá. 
+
+\vskip 4mm
+\centerline{\pdfrefximage 36}
+\vskip 4mm
+
+\Sekce{Osa úhlu}
+
+Osa úhlu je přímka, která prochází vrcholem daného úhlu a půlí ho na dvě stejně velké části. Osa úhlu je v každém svém bodě stejně vzdálená od prvního i druhého ramene úhlu. Tím lze odvodit, že osu úhlu lze vytvořit u jakéhokoli nenulového úhlu. Osa úhlu se obvykle značí malým písmenem {\it o}, popřípadě s dolním indexem s názve úhlu.
+
+Jestliže je na ose úhlu {\it ABC} zvolen libovolný bod {\it F}, pak úhly {\it ABF} a {\it FBC} jsou stejně velké.
+
+\vskip 4mm
+\centerline{\pdfrefximage 20}
+\vskip 4mm
+
+\Sekce{Úhlové míry}
+
+Velikosti úhlů se zapisují dvojím způsobem, respektive ve dvou různých jednotách (formách). Jednou z nich je {\bf stupňová míra} a druhou je {\bf oblouková míra}. Obě jednotky mají svá specifická využití a jsou navzájem konvertibilní, tedy úhly ve stupňové míře lze převést na úhly v obloukové míře a naopak. To je dáno tím, že obě metody ve zkutečnosti měří stejnou veličinu - úhel, který má stále stejné vlastnosti.
+
+\PodSekce{Oblouková míra úhlů}
+
+V rovině {\it ABC} je sestrojena kružnice {\it k} se středem v bodě {\it B} a o poloměru $r=1$. Taková kružnice se nazývá {\bf jednotková kružnice}. Dva průsečíky kružnice, které tvoří polopřímky {\it AB} a {\it BC} s počátkem v bodě {\it B} definují oblouk s hraničními body {\it A}, {\it C}. Velikost úhlu {\it ABC} v obloukové míře se nazývá délka tohoto oblouku {\it A}, {\it C} jednotkové kružnice {\it k}, který leží v úhlu {\it ABC}. 
+
+Jednotkový úhel obloukové míry se nazývá {\bf radián}. V zápisech se označuje značkou rad. Jeden radián je takový úhel, který na jednotkové kružnici se středem ve vrcholu úhlu vytíná oblouk o délce 1. Obecně lze říci, že hodnota jednoho radiánu odpovídá délce oblouku jehož délka je rovna poloměru {\it r} kružnice {\it k} (poloměr = oblouk). Jestliže obvod kružnice je dán vzorcem, tak počet radiánů na jednu kružnici je roven:
+
+$$ {{2\pi r}\over{r}} = 2\pi$$
+
+Tento vztah se využívá při převodech mezi hodnotami obloukové míry a hodnotamy stupňové míry, nebo při výpočtech kruhové výseče.
+
+\vskip 4mm
+\centerline{\pdfrefximage 13}
+\vskip 4mm
+
+\PodSekce{Stupňová míra úhlu}
+
+Velikostí úhlu {\it ABC} ve {\bf stupňové míře} se nazývá nezáporné číslo, které vyjadřuje, kolikrát je úhel {\it ABC} větší (popřípadě menší) než je velikost jednoho úhlového stupně. Jednotkový úhel stupňové míry se nazývá {\bf úhlový stupeň} (krátce jen stupeň s označením $^\circ$) a je roven $1\over 360$ plného úhlu. Ve stupňové míře se také využívá menších jednotek, které se užívají k vyjádření úhlů menších než je velikost jednoho stupně a nebo jeho necelé části. {\bf Úhlová minuta} (krátce jen minuta s označením ') se rovná $1\over 60$ stupně. {\bf Úhlová vteřina} (krátce jen vteřina s označením '' ) se rovná $1\over 60$ minuty. Platí tedy:
+
+$$ 1^{\circ} =60^{'} = 360^{''}  $$
+
+\PodSekce{Převody mezi úhlovým a obloukovým úhlem}
+
+V praxi mnoho zařízení pracuje s úhly v jednotkách radiánů, tedy v obloukové míře. Ale pro lepší představu o tom jak velký úhel je danou hodnotou vyjádřen slouží stupňová míra. Díky tomu je často potřeba metoda pro převod mezi stupňovou a obloukovou mírou úhlu.
+
+Při převodu úhlových stupňů na radiány je nejprve třeba zjistit kolika stupňům odpovídá jeden radián, neboli kolik stupňů se vejde do jednoho radiánu. Jestliže platí, že plný úhel odpovídá $360^\circ$ a $2\pi$ radiánů, pak je třeba zjistit, kolikrát se hodnota plného úhlu v radiánech vejde do hodnoty plného úhlu ve stupních, tedy:
+
+$$ 1Rad = {{360}\over {2\pi}}={180\over\pi}\circeq 57,296...$$
+
+Protože radián je definován pomocí iracionální konstanty $\pi$, je jeho vyjádření ve stupňové míře také iracionální hodnota, kterou nelze celou vyčíslit. Pro převod ze stupňů na radiany je třeba zjistit kolikrát se hodnota 57,296... vejde do hodnoty vyjadřující úhel ve stupních:
+
+$$ Rad = {{x^\circ}\over{180\over \pi}} = x^\circ \cdot {\pi \over 180}$$
+
+Při převodu z radiánů na stupně se naopak počet radiánů vyjadřující úhel vynásobí hodnotou vyjadřující počet stupňů jednoho radiánu:
+
+$$ x^\circ = Rad \cdot {180\over\pi} $$
+
+K tomuto vztahu lze jednoduše dojít, také úpravou vzorce pro převod ze stupňů na radiány, vyjádřením proměnné $x^\circ$:
+
+$$ Rad = x^\circ \cdot {\pi \over 180} \Rightarrow x^\circ ={ Rad\over {180\over \pi}} \Rightarrow x^\circ = Rad \cdot {180\over\pi}$$
+
+Některé důležité stupně, které se používají například u goniometrických funkcí:
+
+$$
+\matrix{
+Stupně & 0 & 30 & 45 & 60 & 90 & 180 & 270 & 360 \cr
+Radiány & 0 & \pi\over 6 & \pi\over 4 & \pi\over 3 & \pi\over 2 & \pi & {2\over 3}\pi & 2\pi\cr
+}
+$$
+
+\Sekce{Orientovaný úhel}
+
+Při práci s úhly a při jejich vkládání do soustavy souřadnic je důležité kromě jejich velikosti také směr odečítání úhlu. Je třeba zvolit jedno rameno úhlu jako počáteční (v kartézské soustavě souřadnic je to většinou kladná poloosa x) a druhé rameno jako konečné. V případě orientovaného úhlu se postupuje od počátečního ramene ke konečnému:
+
+\vskip 4mm
+\bod{{\bf Protisměru hodinových ručiček} - kladný směr}
+\bod{{\bf Po směru hodinových ručiček} - záporný směr}
+\vskip 4mm
+
+\vskip 4mm
+\centerline{\pdfrefximage 14}
+\vskip 4mm
+
+Toto pravidlo nevychází z žádné matematické definice, jedná se pouze o nepsanou dohodu. Z toho vyplývá, že polarita úhlů může být i opačná, ale je třeba to v zápise uvést. Nastane-li situace, že je záporný úhel odečítán od kladného a zároveň absolutní hodnota záporného úhlu je větší než hodnota kladného úhlu, výsledný úhel bude záporný. To znamená, že došlo ke změně úhlu v záporném směru. 
+
+Orientovaný úhel jako takový je uspořádaná dvojice polopřímek se společným počátečním bodem, které tvoří hranice úhlu. V závislosti na tom, která polopřímka je uvedena jako první je definován směr orientace daného úhlu. Orientovaný úhel lze tedy zapisovat jako uspořádanou dvojici polopřímek:
+
+$$ \left[  \overrightarrow{AV}, \overrightarrow{BV} \right] $$
+
+{\bf Základní velikost orientovaného úhlu} je délka o jakou se úhel pootočí v kladném směru (proti směru hodinových ručiček) od počátečního ramene ke koncovému. Velikost základního úhlu je tedy vždy v intervalu $\left< 0:360 \right)$ nebo v obloukové míře $ \left<0 : 2\pi\right)$. Tento interval je zprava otevřený, protože úhel $0^\circ$ splývá s úhlem $360^\circ$ respektive $2\pi$ a daný úhel nemůže mít velikost $0^\circ$ a zároveň $360^\circ$ respektive $2\pi$, protože by to dělalo zmatky v zápisech. 
+
+Kromě základní velikosti orientovaného úhlu je tu ještě pouze velikost orientovaného úhlu. Ta může být větší než je velikost základního úhlu, tedy $360^\circ$ respektive $2\pi$. Jestliže se daný úhel pootočí okolo své osy (nebo vícekrát) je tato zkutečnost vyjádřena tak, že velikost úhlu je větší než $360^\circ$ respektive $2\pi$. Počet těchto otočení je zjištěn vydělením daného úhlu hodnotou 360, popřípadě $2\pi$. Například:
+
+$$ 420^\circ \% 360 = 60^\circ$$
+
+$$ 420 \div 360 = 1 $$ 
+
+došlo k jednomu úplnnému otočení kolem své osy a nyní se nachází v úhlu $60^\circ$. 
+
+\Sekce{Dvojice úhlů}
+
+Dva různé úhly v daném uspořádání mohou navzájem vykazovat určité vlastnost, které se využívají při praktickém používání geometrie. Mezy taková uspořádání patří:
+
+\vskip 4mm
+\bod{Vrcholové úhly}
+\bod{Vedlejší úhly}
+\bod{Souhlasné úhly}
+\bod{Střídavé úhly}
+\vskip 4mm
+
+Existují ještě další typy úhlů, ale už jsou to pouze pozice, které se dají odvodit na základě těchto tří výše popsaných umístění.
+
+\PodSekce{Vrcholové úhly}
+
+Vrcholové úhly jsou takové úhly, které mají společný vrchol a jejich ramena tvoří opačné polopřímky. Vrcholové úhly jsou vždy shodné, mají stejnou velikost.
+
+\vskip 4mm
+\centerline{\pdfrefximage 33}
+\vskip 4mm
+
+\PodSekce{Vedlejší úhly}
+
+Vedlejší úhly jsou takové úhly, které mají jedno rameno společné a druhá ramena jsou opačné polopřímky. Součet vedlejších úhlů je vždy roven $180^\circ$, přímému úhlu.
+
+\vskip 4mm
+\centerline{\pdfrefximage 34}
+\vskip 4mm
+
+
+\PodSekce{Souhlasné úhly}
+
+Souhlasné úhly jsou úhly, jejichž první ramena jsou rovnoběžná a druhá leží na jedné přímce. Musí také platit, že úhly mají stejnou orientaci. Souhlasné úhly jsou shodné. 
+
+\vskip 4mm
+\centerline{\pdfrefximage 35}
+\vskip 4mm
+
+\Nadpis{Vlastnosti geometrických objektů}
+
+Geometrické objekty ať už plošné nebo prostorové tvoří množinu bodů. To je ale abstraktní a v praxi ne moc dobře využitelných pojem. V praktickém použití je třeba využít určitých vlastností, které charakterizují daný objekt. Všechny plošné, či prostorové objekty mají určité vlastnosti, kterými se vyznačují, které jsou pro jejich aplikaci důležité a které závisí na jejich tvaru. Tyto vlastnosti jsou obsah, obvod, povrch a objem. Jednotlivé vlastnosti jsou navzájem provázány a změna jedné vlastnosti ovlivní také zbylé ostatní.
+
+\Sekce{Obsah geometrického objektu}
+
+Obsah je vlastností plošných objektů a vyjadřuje velikost plochy, kterou tento objekt zabírá v rovině. Obsah se označuje velkým písmenem {\bf S}. Měří se většinou v metrech čtverečných - $m^2$, nebo jiných odvozených jednotkách - $cm^2$, $mm^2$, ... Index nad jednotkou vyjadřuje počet rozměrů (dimenzí), které obsah vyjadřuje. Obsah se měří ve čtverečných jednotka, protože hodnota obsahu vyjadřuje počet čtverců o hraně jeden metr (popřípadě jiných délkových jednotkách), které se vejdou do vnitřní plochy daného plošného objektu.
+
+\vskip 4mm
+\centerline{\pdfrefximage 21}
+\vskip 4mm
+
+\Sekce{Obvod geometrického objektu}
+
+Obvod je vlastností plošných geometrických objektů, která vyjadřuje součet délek jeho jednotlivých stran. Obvod se značí velkým písmenem O. Protože obvod je pouze jednorozměrná veličina, měří se v metrech, popřípadě v jeho odvozených jednotkách délky. 
+
+\vskip 4mm
+\centerline{\pdfrefximage 22}
+\vskip 4mm
+
+\Sekce{Povrch}
+
+Povrch je vlastnost prostorových geometrických objektů, která je vyjádřena součtem obsahů všech jeho plošných stěn. Jedná se tedy o zobecnění obsahu na prostorové objekty. Povrch se značí stejně jako obsah velkým písmenem {\bf S} a stejně jako u obsahu je měřen v metrech čtverečných - $m^2$, popřípadě jeho odvozenou délkovou jednotkou ($cm^2$, $mm^2$, ...).
+
+\Sekce{Objem}
+
+Objem je vlastností prostorových objektů, která vyjadřuje velikost vnitřního prostoru, který daný objekt vyplňuje v prostoru. Objem se značí velkým písmenem {\bf  V} a měří se v krychlových metrech - $m^3$, popřípadě v jeho dovozených jednotkách ($cm^3$, $mm^3$, ...). Index nad jednotkou vyjadřuje počet dimenzí, které objem vyjadřuje. Objem se měří ve čtverečných jednotkách, protože vyjadřuje kolik krychlí o délce hrany jeden metr (popřípadě jiných délkových jednotkách) se vejde do vnitřního prostoru daného objektu.
+
+\vskip 4mm
+\centerline{\pdfrefximage 23}
+\vskip 4mm
+
+\Nadpis{Planimetrie}
+
+{\bf Planimetrie} je část geometrie, zabývající se vlastnostmi a vztahy plošných geometrických útvarů. Tyto dvourozměrné útvary pak slouží jako základ pro budování prostorových geometrických oběktů, jejich vlastností a vztahů mezi nimi. 
+
+Speciálními oblastmi planimetrie jsou {\bf trigonometrie} a {\bf goniometrie}, které se zabývají vlastnostmi trojúhelníků a jejich vnitřních úhlů.
+
+Mezi plošné geometrické objekty patří:
+
+\vskip 4mm
+\bod{Trojúhelník}
+\bod{Obdélník}
+\bod{Kosočtverec}
+\bod{Kosodélník}
+\bod{Lichoběžník}
+\bod{Deltoid}
+\bod{Kruh a kružnice}
+\bod{Kuželosečky}
+\bod{N-úhelník}
+\vskip 4mm
+
+
+\Sekce{Číslo pí}
+
+Číslo pí je nejdůležitější matematická konstanta v geometrii a v celé matematice. Číslo pí je značeno pomocí symbolu řeckého písmene $\pi$ a vyjadřuje poměr mezi obvodem kruhu a jeho průměru, který je u libovolně velkého kruhu vždy stejný:
+
+$$ \pi = {O \over d} $$
+
+\vskip 4mm
+\centerline{\pdfrefximage 32}
+\vskip 4mm
+
+Číslo pí je iracionální číslo, které nikdy nelze přesně vyjádřit. Z toho  Lze vyjádřit pouze jeho desetinnou aproximaci s určitým počtem desetinných míst, která je rovna:
+
+$$ \pi = 3.14159... $$
+
+V praxi se používají aproximace ve tvaru zlomku přirozených čísel, které vyjadřují číslo pí s přesností na daný počet desetinných míst. Příkladem jsou:
+
+$$ {355 \over 113} = 3,1415929203539823008849557522124 $$
+nebo 
+$$ {22 \over 7} = 3,1428571428571428571428571428571 $$
+
+Definice iracionálního čísla je, že jej nelze vyjádřit pomocí zlomku, ale současně definicí zlomku je, že čitatel a jmenovatel je celé číslo. Z toho vyplývá, že obvod a průměr kruhu není přirozené číslo. To znamená, že nelze najít takový kruh, jehož délka obvodu a průměru by byla celé (přirozené) číslo. Vždy může být celé číslo pouze jedna veličina.
+
+I když číslo pí je iracionální číslo, které nelze nikdy přesně vyčíslit, tedy najít jeho přesnou hodnotu, pro praktické použití postačí jeho jeho vyjádření s určitým početem desetinných míst. Většina měřících zařízení a strojů totiž dokáže pracovat pouze s omezenou přesností a proto je desetinná aproximace čísla pí dostatečná. Nemá tak cenu počítat s číslem pí s vyšším početem desetinných míst, tedy s vyšší přesností než s jakou dokáže daný stroj provádět měření. 
+
+\PodSekce{Výpočet hodnoty $\pi$}
+
+Přesnou hodnotu čísla pí ze jeho podstaty nelze nikdy přesně vypočítat, ale existují matematické metoddy, kterými lze jeho hodnotu s určitou přesností vypočítat. Číslo pi je transcendentní číslo, to znamená, že není kořenem žádné algebraické rovnice. Z tohoto důvodu nelze sestavit žádnou rovnici, kterou by bylo možné jednoduše vypočítat přesně hodnotu čísla pi. 
+
+Nejjednodušší způsob jak vypočítat přibližnou hodnotu čísla pi je pomocí pravidelného mnohoúhelníku o {\it n} stranách. Platí, že čím více hran mnohoúhelník má, tím více připomíná dokonalý kruh. Proto lze říci, že kruh je mnohoúhelník o nekonečně mnoha hranách. K přibližnému výpočetu čísla pí je potřeba jen vypočátat obvod mnohoúhelníku a podělit jej jeho průměrem.
+
+\vskip 4mm
+\centerline{\pdfrefximage 38}
+\vskip 4mm
+
+Mnohoúhelník oproti dokonalému kruhu disponuje určitou nepřesností danou velikostí {\it n} kruhových vrchlíků, kde {\it n} je počet hran mnohoúhelníku. Platí, že čím veští je {\it n} tím menší je kruhový vrchlík. Na druhou stranu je těchto vrchlíků v kruhu stále více a proto s rostoucím počtem hran mnohoúhelníku klesá rychlost snižování jeho nepřesnosti. Lze ale dokázat, že limitně se v nekonečnu (při nekonečném množství hran) tato nepřesnost rovná nule. To je zároveň základ pro důkaz pro výpočet hodnoty čísla pi.
+
+Mnohoúhelník lze rozdělit na {\it n} rovnoramenných trojúhelníků, které lze rozdělit na dva stejné pravoúhlé trojúhelníky. Díky tomu lze použít k výpočtu goniometrické funkce.
+
+\vskip 4mm
+\centerline{\pdfrefximage 39}
+\vskip 4mm
+
+Kruhový vrchlík je nulový v případě, že hrana mnohoúhelníku bude nulová. Pomocí limity, lze dokázat, že při nekonečně mnoha hranách je délka jedné hrany rovna nule a tak se mnohoúhelník stává dokonalým kruhem. Délka hrany se vypočítá pomocí vztahu:
+
+$$ 2\cdot sin({360\over 2n}) \cdot r $$
+
+kde {\it n} je počet hran a {\it r} je poloměr mnohoúhelníku.
+
+$$ \lim_{n\rightarrow \infty} {2\cdot sin({360\over 2n}) \cdot r} $$
+
+
+Zde je nutné vypočítat limitu výrazu $360\over 2n$:
+
+$$ \lim_{n \rightarrow \infty} {360\over 2n} = 0 $$
+
+
+Na základě toho lze říct, že hodnota sinu v bodě nula je rovněž nula a cokoli krát nula je vždy nula. Proto platí:
+
+$$ \lim_{n\rightarrow \infty} {2\cdot sin({360\over 2n}) \cdot r}  = 0$$
+
+Z toho lze odvodit vzorec na výpočet obvodu mnohoúhelníku, kdy se pouze posčítají délky jednotlivých hran:
+
+$$ O = (2\cdot sin({360\over 2n}) \cdot r)\cdot n $$
+
+Protože se ale délka hrany mnohoúhelníka při nekonečně mnoha hranách rovná nule, nezle získat přesné číslo, respektive výsledek by byl roven nule, ale platí, že čím vyšší počet hran mnohoúhelníka tím přesnější hodnota čísla pi. Poté co je obvod podělen jeho průměrem je možné získat přibližnou hodnotu čísla pi:
+
+$$ \pi = \lim_{n\rightarrow \infty} {((2\cdot sin({360\over 2n}) \cdot r)\cdot n) \over 2r} $$
+
+Po úpravě lze získat rovnici ve tvaru:
+
+$$ \pi = \lim_{n \rightarrow \infty} {sin({360\over 2n}) \cdot n} $$
+
+Po úpravě ze vztahu vypadl poloměr {\it r}. To dokazuje, že hodnota čísla pi nezávisí poloměru kružnice. Obecně lze tedy napsat, že číslo pí je limitně rovno poměru n-hranného mnohoúhelníka s jeho průměrem:
+
+$$ \pi = \lim_{n\rightarrow \infty} {O_n \over d }$$
+
+\Sekce{Kruh a kružnice}
+
+Kružnice je speciálním případem křivky, pro kterou platí, že všechny body ležicí na dané kružnici jsou stejně vzdáleny od jednoho bodu, který se nazývá {\bf střed kružnice}. Této vzdálenosti se říká {\bf poloměr kružnice} a značí se písmenem {\it r}. Střed kružnice se zpravidla označuje velkým písmenem {\it S} popřípadě s s dolním indexem zančící název dané kružnice. Kružnice se značí libovolným malým písmenem napřímlad {\it p}, {\it o}, {\it k }, ... popřípadě nějakým speciálním názvem.
+
+{\bf Vnitřní oblast} kružnice je množina bodů, které mají vzdálenost od středu menší než poloměr kružnice. Vnější oblast kružnice je množina bodů, které mají vzdálenost od středu větší než poloměr kružnice. Sjednocením kržunice, respektive množiny bodů tvořící danou kružnici a množinu bodu tvořící její vnitřní oblast je získán {\bf kruh}.
+
+
+\vskip 4mm
+\centerline{\pdfrefximage 40}
+\vskip 4mm
+
+\PodSekce{Obvod kružnice}
+
+\PodSekce{Obsah kružnice}
+
+Pro odvození vzorce pro výpočet obsahu kružnice existuje několik metod. 
+
+První způsob rozdělí celou kružnici na {\it x} výsečí:
+
+\vskip 4mm
+\centerline{\pdfrefximage 41}
+\vskip 4mm
+
+Tyto výseče jsou následně graficky přeskupeny:
+
+\vskip 4mm
+\centerline{\pdfrefximage 42}
+\vskip 4mm
+
+
+Následně platí, že na čím více kruhových výsečí je kružnice rozdělena tím menší oblouk vznikne. Při nekonečně velkém množství kruhových výsečí začně uspořádání kruhových výsečí přecházet v dokonalý obdélník jehož obsah je vypočítán pomocí vztahu: $O = a \cdot b$. Boční hrany obdélníku tvoří poloměr kružnice a součet délekspodní a vrchní hrany tvoří obvod kružnice:
+
+\vskip 4mm
+\centerline{\pdfrefximage 43}
+\vskip 4mm
+
+Z toho lze odvodit vzorec pro výpočet obsahu kružnice:
+
+$$ 0 = r \cdot \pi \cdot r = \pi \cdot r^2 $$
+
+Druhý způsob odvození vztahu pro výpočet obsahu kružnice předpokládá, že křužnice je speciálním typem mnohoúhelníku o nekonečně mnoha hranách. Obsah kruhu je pak shodný s obsahem daného mnohoúhelníku:
+
+\vskip 4mm
+\centerline{\pdfrefximage 39}
+\vskip 4mm
+
+Daný n-úhelník tvoří {\it n} rovnoramenných trojúhelníků, které lze rozdělit na $2n$ pravoúhlých trojúhelníků. Obsah jednoho rovnoramenného trojúhelníku je vypočítán pomocí vztahu:
+
+$$ S_t = sin({360\over 2n})\cdot cos({360\over2n}) $$
+
+kde {\it n} je počet hran n-úhelníku. Obsah daného n-úhelníku je pak součet jednotlivých obsahů rovnoramenných trojúhelníků:
+
+$$ S_m = n\cdot (sin({360\over 2n})\cdot cos({360\over 2n})) $$
+
+\PodSekce{Vzájemná poloha dvou kružnic}
+
+\Sekce{Mnohoúhelníky}
+
+Mezi mnohoúhelníky se řadí široká (nekonečně velká) skupina plošných objektů. Mezi nejdůležitější typy mnohoúhelníků patří {\bf čtyřúhelníky}. Mezi čtyřúhelníky patří:
+
+\vskip 4mm
+\bod{různoběžníky}
+\bod{rovnoběžníky}
+\bod{lichoběžníky}
+\vskip 4mm
+
+\Sekce{Geometrická zobrazení}
+
+\Nadpis{Trigonometrie}
+
+Trojúhelník je speciálním případem mnohoúhelníku, který má přesně tři strany (vrcholy). Trojúhelník je tedy geometrický útvar určený třemi body, které neleží na jedné přímce. Tyto body jsou pak spojeny pomocí úseček, kterým se říká {\bf spojnice vrcholů trojúhelníka}. Tyto úsečky tvoří {\bf stěny trojúhelníka}. Jedná se o základní plošný geometrický útvar, který se používá jako nástroj, kterým lze odvodit vztahy mnohoúhelníků o {\it n} stranách (vrcholech). Tyto strany se označují malými písmeny abecedy - {\it a}, {\it b}, {\it c}. V případě, že je v nákresu trojúhelníků více, každý z nich by měl mít pro přehlednost vlastní pojmenování stran. Trojúhelník má také tři hrany - vrcholy trojúhelníka, které se značí stejnými písmeny jako jeho strany, ale tiskacími - {\it A}, {\it B}, {\it C}. Strana {\it a} pak odpovídá úsečce {\it BC}, strana {\it b} pak odpovídá úsečce {\it AC} a strana {\it c} odpovídá úsečce {\it AB}. To znamená, že daná strana se v trojúhelníku nachází vždy naproti jeho vrcholu. 
+
+Sjednocení všech stran trojúhelníku se nazývá {\bf hranice trojúhelníku}. Všechny body, které leží na hranici trojúhelníku se nazývají {\bf hraniční body trojúhelníku}. Všechny ostatní body trojúhelníka se nazývají {\bf vnitřní body trojúhelníku}. Množina všech vnitřních bodů trojúhelníku se nazývá {\bf vnitřek trojúhelníka}.
+
+Trojúhelník má také tři {\bf vnitřní úhly}, které se většinou označují malými řeckými písmeny alfa $\alpha$, beta $\beta$ a gama $\gamma$. Trojúhelník tvoří průnik tří polorovin, které tvoří přímky {\it AB}, {\it BC} a {\it AC}, to znamená množina všech bodů, které leží na spojnicích (strany trojúhelníka) a všechny body, které leží zároveň ve všech třech polorovinách (vnitřek trojúhelníka).
+
+\vskip 4mm
+\centerline{\pdfrefximage 15}
+\vskip 4mm
+
+\Sekce{Vlastnosti trojúhelníků}
+
+Každý trojúhelník se vyznačuje určitýmy vlastnostmi, které jsou důležité pro práci s nimi. Díky nim lze definovat řadu vzorců pro technické vypočty.
+
+\PodSekce{Trojúhelníková nerovnost}
+
+Trojúhelníková nerovnost je vztah mezi délkami jednotlivých ramen trojúhelníků, který se v praxi používá při kontrole existence určitého trojúhelníku. Platí, že součet délek dvou libovolných stran je vždy větší než délka třetí, zbývající strany:
+
+$$ |A| + |B| > |C| $$
+
+$$ |A| + |C| > |B| $$
+
+$$ |B| + |C| > |A| $$
+
+Pokud by platilo, že jedna strana je delší než zbývající dvě v součtu, nemohl by trojúhelník vzniknout, protože tyto dvě strany budou příliš krátké a {\it nedosáhnou na sebe}:
+
+\vskip 4mm
+\centerline{\pdfrefximage 25}
+\vskip 4mm
+
+Pokud by platila rovnost součtu délek dvou stran, tedy dvě strany by byly v součtu stejně dlouhé jako třetí strana, pak by při pokusu narýsovat trojúhelník všechny body ležely na jedné přímce: 
+
+\vskip 4mm
+\centerline{\pdfrefximage 26}
+\vskip 4mm
+
+\PodSekce{Shodnost trojúhelníků}
+
+
+\PodSekce{Součet vnitřních úhlů}
+
+Nejdůležitější vlastností všech typů trojúhelníků je, že součet vnitřních úhlů je vždy roven $180^\circ$ respektive $\pi$ radiánů. Tuto vlastnost lze jednoduše dokázat. Předpoklad je:
+
+$$ \alpha + \beta + \gamma = 180^\circ $$
+
+Nejjednodušší je důkaz prezentovat na pravoúhlém trojúhelníku, který má vždy jeden úhel pravý, tedy $90^\circ$. Důkaz lze následně zobecnit na libovolný trojúhelník, protože z libovolného různostranného trojúhelníka lze vytvořit dva pravoúhlé trojúhelníky. Další známí předpoklad je velikost plného úhelu, který má $180^\circ$, respektive $\pi$ radianů, skrze který je možné distribuovat všechny úhly v trojúhelníku:
+
+\vskip 4mm
+\centerline{\pdfrefximage 24}
+\vskip 4mm
+
+
+Z obrázku je patrné, že libovolný plnný úhel lze prezentovat jako součet úhlů $\alpha$ a $\beta$ bez ohledu na jejich velikost a pravého úhlu. Protože platí, že $\gamma = 90^\circ$, platí tedy součet:
+
+$$ \alpha + \beta + \gamma = 180^\circ $$
+
+\Sekce{Klasifikace trojúhelníků}
+
+Jakýkoli trojúhelník lze klasifikovat, zařadit podle stran a podle úhlů do určité skupiny. 
+
+Trojúhelníky lze podle délek stran na:
+
+\vskip 4mm
+\bod{Rovnostranný trojúhelník}
+\bod{Rovnoramenný trojúhelník}
+\bod{Různostranný trojúhelník}
+\vskip 4mm
+
+Trojúhelníky lze podle úhlů rozdělit na:
+
+\vskip 4mm
+\bod{Ostroúhlý trojúhelník}
+\bod{Tupoúhlý trojúhelník}
+\bod{Pravoúhlý trojúhelník}	
+\vskip 4mm
+
+\PodSekce{Rovnostranný trojúhelník}
+
+Rovnostranný trojúhelník má všechny strany stejně dlouhé. A protože má všechny strany stejně dlouhé má stejně velké i všechny vnitřní úhly, které mají hodnotu:
+
+$$ 180 \div 3 = 60 $$
+
+\vskip 4mm
+\centerline{\pdfrefximage 27}
+\vskip 4mm
+
+\PodSekce{Rovnoramenný trojúhelník}
+
+Rovnoramenný (rovnostranný) trojúhelník má přesně dvě strany stejně dlouhé. Těm stranám, které jsou stejně dlouhé, se říká {\bf ramena trojúhelníku}, třetí straně se říká {\bf základna trojúhelníku}. Protože jsou ramena rovnostranného trojúhelníku stejně velké, obě svírají stejný úhel se základnou:
+
+\vskip 4mm
+\centerline{\pdfrefximage 28}
+\vskip 4mm
+
+\PodSekce{Různostranný trojúhelník}
+
+Různostranný trojúhelník nemá žádné dvě strany stejně velké. Z toho vyplývá, že ani žádné dva vnitřní úhly nejsou stejně velké:
+
+\vskip 4mm
+\centerline{\pdfrefximage 15}
+\vskip 4mm
+
+\PodSekce{Tupoúhlý trojúhelník}
+
+Tupoúhlý trojúhelník má právě jeden vnitřní úhel větší než $90^\circ$ a protože trojúhelník nemůže mít dva pravé úhly, zbývající dva vnitřní úhly musejí být ostré, tedy menší než $90^\circ$:
+
+\vskip 4mm
+\centerline{\pdfrefximage 29}
+\vskip 4mm
+
+\PodSekce{Ostroúhlý trojúhelník}
+
+Ostroúhlý trojúhelník je takový trojúhelník, který má všechny vnitřní úhly ostré, to je menší než $90^\circ$:
+
+\vskip 4mm
+\centerline{\pdfrefximage 30}
+\vskip 4mm
+
+\PodSekce{Pravoúhlý trojúhelník}
+
+Pro technickou praxi nejdůležitější je pravoúhlý trojúhelník. Pravoúhlý trojúhelník je takový trojúhelník, který má právě jeden pravýúhel. Trojúhelník nemůže mít více než jeden pravý úhel, protože součet úhlů trojúhelníku je vždy $180^\circ$. To znamená, že zbylé dva úhly musejí být menší než $90^\circ$. V pravoúhlém trojúhelníku se nejdelší strana nazývá {\bf přepona} a zbývající strany se nazývají {\bf odvěsny}: 
+
+\vskip 4mm
+\centerline{\pdfrefximage 31}
+\vskip 4mm
+
+Pravoúhlý trojúhelník se vyznačuje některými pro praxi velice důležitými vlastnostmi. Zejména se jedná po vztah mezi velikostmi vnitřních úhlů a délek stran. Tím se zabývá speciální odvětví geometrie, které se nazývá {\bf goniometrie}. Pomocí vlastností pravoúhlého trojúhelníku jsou definovány vzorce pro výpočet vlastností různých plošnýchi prostorových objektů.
+
+\Nadpis{Goniometrie}
+
+Goniometrie je část trigonometrie, která se zabývá vlastnostmi vnitřních úhlů a délek stran v pravoúhlém trojúhelníku. Goniometrické funkce lze používat i v případě ostatních trojúhelníků, protože z každého trojúhelníku lze vytvořit dva pravoúhlé trojúhelníky. 
+
+Goniometrické funkce (rovnice) vyjadřují vztah mezi délkami stran pravoúhlého trojúhelníka a jejich vnitřních úhlů, především úhlu $\alpha$. To má velký význam v konstrukční geometrii, počítačové grafice, astronomii a všech ostatních oborech kde se pracuje s vizuálními objekty.
+
+\Sekce{Definice goniometrických funkcí sinus a kosinus}
+
+
+
+\vskip 4mm
+\centerline{\pdfrefximage 44}
+\vskip 4mm
+
+O číslech $x_M$, $y_M$ se říká, že jsou {\bf první} a {\bf druhou souřadnicí bodu {\it M}} a zapisují se:
+
+$$ M[x_M, y_M] $$
+
+Druhá souřadnice bodu {\it M} jednotkové kružnice na koncovém rameni orientovaného  úhlu $\alpha$ v základní poloze se nazývá {\bf sinus $\alpha$} a jeho první souřadnice se nazývá {\bf kosinus $\alpha$} a značí se jako {\bf sin $\alpha$} a {\bf cos $\alpha$}:
+
+$$ sin \alpha = y_M , cos \alpha = x_M : \forall \alpha \in \setR $$
+
+Uvedenými vztahy je každému číslu $x \in \setR$ přiřazeno právě jedno reálné číslo $sin x$ a právě jedno reálné číslo $cos x$, tyto vztahy udávají funkční předpisy funkce sinus:
+
+$$ f :x = sin x, D_f = \setR $$
+
+a funkce kosinus:
+
+$$ f :x = cos x, D_f = \setR $$
+
+Důležitá vlastnost goniometrických funkcí je, že nezáleží na délkách jednotlivých ramen pravoúhlého trojúhelníka. Pokud je daný úhel $\alpha$ stejný, pak je poměr mezi danými dvěma stranami trojúhelníka vždy stejný. Díky tomu lze vypočítat hodnotu sinu a kosinu pro libovolný pravoúhlý trojúhelník. Protože jsou goniometrické funkce definovány na jednotkové kružnici s pravoúhlým trojúhelníkem, který má díky tomu délku přepony přesně jedna stačí pokrátit délky stran délkou přepony. Funkce sinus a kosinus jsou tedy zobecněny pro libovolný pravoúhlý trojúhelník pomocí poměru jedné z odvěsen a přepony: 
+
+$$ sin = {a \over c }$$
+
+$$ cos = {b \over c }$$
+
+Goniometrické funkce bohužel nejsou algebraické, což znamená, že nelze vytvořit rovnici, kterou by bylo možné vypočítat poměr daných dvou stran trojúhelníka pro danou velikost úhlu $\alpha$. V praxi jsou používány dva způsoby jak převést poměr tento poměr daných dvou stran trojúhelníka na stupňovou popřípadě obloukovou míru úhlu. Buď převodové tabulky, které obsahují pro každý stupeň přibližnou danou poměru daných dvou stran pravoúhlého trojúhelníka a nebo pomocí numerických metod, které jsou schopné vypočítat přibližnou velikost daného úhlu pro daný poměr dvou stran pravoúhlého trojúhelníka.
+
+Grafy funkcí sinus a kosinus argumentu {\it x} jsou sestrojeny na základě jejich definice pomocí souřadnic bodů M jednotkové kružnice k se středem v počátku O kartézské soustavy souřadnic. Podle definice stačí sestrojit grafy v intervalu $\left< 0;2\pi \right)$, respektive $\left< 0;360 \right)$ a pak průběh funkcí periodicky prodloužit. Graf funkce sinus se nazývá {\bf sinusoida} a graf funkce kosinus se nazývá {\bf kosinusoida}. Přitom kosinusoida je posunutá o $\pi \over 2$ respektive $90^\circ$ ve směru záporné poloosy x.
+
+\Sekce{Rovnost goniometrických funkcí sinus a kosinus}
+
+Goniometrické funkce sinus a kosinus mají v pravoúhlém trojúhelíku jednu vlastnost. Sinus a kosinus jsou si vždy rovny v případě, že platí:
+
+$$ sin(\alpha) = cos(\beta) \wedge sin(\beta) = cos (\alpha)$$
+
+Tato vlastnosti vyplývá z definice pravoúhlého trohúhelníku a vlastnosti součtu úhlů v trojúhelníku. Sinus je definován jako velikost protilehlé odvěsny pravoúhlého trojúhelníku s délou přepony 1. Kosinus je pak definován jako velikost přilehlé odvěsny pravoúhlého trojúhelníka s délkou přepony 1:
+
+\vskip 4mm
+\centerline{\pdfrefximage 16}
+\vskip 4mm
+
+
+Goniometrické funkce jsou orientovány podle úhlu, který se v pravoúhlém trojúhelníku nachází naproti pravému úhlu - uhel $\alpha$. V případě, že je trojúhelník otočen o $90^\circ$ doleva, pak se úhly v trojúhelníku prohodí a naproti pravému úhlu se nachází úhel $\beta$.  Celá situace pak vypadá takto:
+
+\vskip 4mm
+\centerline{\pdfrefximage 17}
+\vskip 4mm
+
+Z toho lze vyvodit, že platí vztahy:
+
+$$ sin(\alpha) = cos(90-\alpha) $$
+
+$$ cos (\alpha) = sin(90-\alpha)$$
+
+\Sekce{Sinová věta}
+
+Sinová věta je rozšíření funkce sinus na obecný trojúhelník (trojúhelník bez pravého úhlu). Základem Sinové věty je možnost rozdělit libovolný obecný trojúhelník na dva pravoúhlé trojúhelníky ve kterých je již využít goniometrické funkce. Díky Sinové větě je možné snadno vypočíta hodnoty vnitřních úhlů na základě znalostí velikostí stran trojúhelníka a nebo velikosti stran trojúhleníka na základě znalosti velikostí vnistrních úhlů. Zároveň tak lze jednoduše odvozovat i složitější vzorce pro práci s obecnými trojúhelníky.
+
+\vskip 4mm
+\centerline{\pdfrefximage 37}
+\vskip 4mm
+
+Díky tomu lze odvodit, že délka strany $|CP|$ (výška trojúhelníka) je rovna:
+
+$$ |CP| = sin(\alpha)\cdot b $$
+
+nebo
+
+$$ |CP| = sin(\beta)\cdot a $$
+
+Z toho vyplývá, že tyto výrazi si musejí být rovny:
+
+$$ sin(\alpha)\cdot b = sin(\beta)\cdot a $$
+
+Tuto rovnici lze upravit do tvaru:
+
+$$ {sin(\alpha)\cdot b \over a\cdot b} = {sin(\beta)\cdot a \over a\cdot b}$$
+
+$$ {sin(\alpha) \over a } = {sin{\beta}\over b}$$
+
+Tyto rovnice říkají, že výšku trojúhelníku lze vypočítat pomicí velikosti jednoho z úhlů a délky protilehlé strany.
+
+\Nadpis{Stereometrie}
+
+\Nadpis{Konvexní geometrický útvar}
+
+{\bf Konvexní geometrický útvar (množina)}, respektive množina jeho bodů je taková množina, která je podmnožinou množiny bodů roviny, ve které body ležící na úsečce {\it XY} jsou součástí daného geometrického útvaru:
+
+$$XY \subseteq M $$
+
+
+\vskip 4mm
+\centerline{\pdfrefximage 8}
+\vskip 4mm
+
+
+Jestliže daný geometrický útvar, respektive množina jeho bodů není konvexní (nekonvexní), pak platí, že existuje alespoň jeden bod, který není součástí množiny bodů daného geometrického útvaru:
+
+$$XY \not\subseteq M $$
+
+To znamená, že daný geometrický útvar se nenachází celou svou plochou v dané rovině a určitými svými částmi z ní vyčnívá.
+
+
+
+\vskip 4mm
+\centerline{\pdfrefximage 45}
+\vskip 4mm
+
+\end

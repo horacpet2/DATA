@@ -1,0 +1,121 @@
+%preambule
+\input /home/petr/bin/TeXMakro
+\input /home/petr/bin/KonfiguracePaperBook
+%\input /home/petr/bin/KonfiguraceEBook
+
+%Načtení obrázků
+%\pdfximage width/height \the\SirkaOdstavce mm {./Obrazky/obr}
+
+
+%Titulní stránka
+%\VlozitDokument{TitulniStranka}
+
+%generování obsahu
+%\Obsah
+
+\Nadpis{Úvod}
+
+
+\Nadpis{Práce s disky}
+
+Paměťová média pro trvalé uložení dat se skládají z několika logických vrstev. Jako vše v linuxu jsou i disky reprezentovány soubory v adresáři {\it /dev/}. V závislosti na sběrnici na kterou jsou disky napojeny jsou disky nejčastěji pojmenovány {\it /dev/sdx}, od slova "SCSI subsystem disk", kde písmeno {\it x} označuje jméno disku. Disky bývají většinou označovány písmeny a-z, například sda, sdb, ... 
+
+Jednotlivé disky se je možné rozdělit do více diskových oddílů (partition). Diskový oddíl je logické rozdělení fyzického disku na virtuální disky, které se chovají jako samostatné fyzické disky zapojené v počítači. Jednotlivé diskové oddíly na daném disku jsou označovány číslenými indexy 1-n, například sda1, sda2, ... Diskové oddíly jsou na disku popsány v malé oblasti, která se nazývá tabulka oddílů (partition table). Je běžné rozdělit disk na logické oddíly, které slouží ke specifickému účelu, například oddíl pro uložení dat, pro uchování jádra systému, ...
+
+Další logická vrstva je souborový systém, databáze souborů a adresářů, které slouží pro logické uspořádání uživatelských dat. Pro přístup ke konkrétním datům je tedy nejprve nutné přejít do diskového oddílu kde jsou data uložena a poté vyhledat fyzické umístění dat na disku v databázi souborového systému.
+
+\Sekce{Rozdělení disku na oddíly}
+
+Projekt GNU poskytuje několik nástrojů pro správu oddílů na diskovém médiu:
+
+\vskip 4mm
+\bod{fdisk}
+\bod{gdisk}
+\bod{parted}
+\bod{gparted}
+\vskip 4mm
+
+Existuje několik standardů pro zápis tabulky oddílů na disk. Prvním je MBR - master boot recor a druhý novější je GPT. Program fdisk a jeho grafická nadstavba gdisk podporují pouze MBR, ale program parted a jeho grafická nadstavba podporují oboje, jak MBR, tak GPT.
+
+Pro zobrazení výpis obsahu tabulky oddílů jednotlivých disků je možné použít program parted, kterému je předán parametr {\it -l}:
+\vskip 4mm
+{\verbatim
+# parted -l
+}
+\vskip 4mm
+
+Následně jsou vypsány jednotlivé připojené disky a k nim související diskové oddíly, které jsou zapsány v jejich tabulce oddílů.
+
+\Sekce{Souborový systém}
+
+Souborový systém je způsob jakým jsou data fyzicky uspořádána da paměťovém médiu. Souborový systém tak určuje jakým způsobem se data ukládají, čtou a jakým způsobem se s nimi pracuje. Jedná se odatovou strukturu, která je používána jako nástroj pro správu uložených dat.
+
+VFS - virtuální souborový systém je způsob jakým je možné přistupovat k různým druhům souborových systémů jednotným způsobem. VFS definuje standardní komunikační rozhraní a po dodání speciálního ovladače daného souborového systému je možné přes toto rozhraní komunikovat.
+
+Linuxové systémy používají souborový systém {\bf ext}. V současné době je jeho nejaktuálnější verze {\bf ext3}.
+
+\Sekce{Vytvoření souborového systému}
+
+Poté co je pomocí některého z programů vytvořen diskový oddíl je nutné na něm definovat souborový systém. Souborový systém se na diskový oddíl vytvoří pomocí procesou {\bf formátování}, který zajšťuje sada programů mkfs.fs, kde {\it fs} je název souborového systému. Jako vstupní parametr program přijímá odkaz na daný diskový oddíl. Pro formátování diskového oddílu na souborový systém FAT je použit příkaz:
+
+\vskip 4mm
+{\verbatim
+# mkfs.vfat /dev/sdb1
+}
+\vskip 4mm
+
+Jestliže je tento příkaz použit na diskový oddíl s daty, dojde k přepsání FAT - file allocation table tabulky a ke ztrátě dat.
+
+\Sekce{Zavedení souborového systému}
+
+Na UNIXových operačních systémech se proces připojování diskových oddílů do souborového systému nazývá {\bf mounting}. Poté co je operační systém nabootován, přečte konfigurační data a zavede kořenový oddíl na základě přečtené konfigurace.
+
+{\bf Mount point}, neboli místo připojení je místo v adresářové struktuře souborového systému, většinou adresář, kam se má připojit další diskový oddíl.
+
+Pro zavedení diskového oddílu do souborového systému slouží program mount. Pro zobrazení aktuálně připojených souborových systémů stačí zadat příkaz mount bez vstupních parametrů:
+
+\vskip 4mm
+{\verbatim
+# mount
+}
+\vskip 4mm
+
+Pro zavedení diskového oddílu do souborového systému program mount přijímá několik vstupních parametrů. Prvním je typ soubrového systému na připojovaném oddílu (VFS), Dalším je odkaz na diskový oddíl v adresáři /dev. Posledním je bod připojení (mount point), cesta v adresářové struktuře k adresáři do kterého se má daný oddíl namapovat:
+
+
+\vskip 4mm
+{\verbatim
+# mount -t type device mountPoint
+}
+\vskip 4mm
+
+Pro následné odpojení diskového oddílu ze souborového systému slouží příkaz {\bf umount}. Příkaz umount přijímá jako vstupní argument buď adresu odpojovaného diskového oddílu v adresáři /dev/ a nebo adresu bodu připojení.
+
+\Sekce{UUID}
+
+Způsob zavádění diskových oddílů závisí na jejich pojmenování jádrem linuxu. Toto pojmenování ale závisí na pořadí v jakém byly objeveny jádrem. Proto bylo zavedeno UUID - Universally Unique Identifier (nebo také  globally unique identifiers (GUID)), který jednoznačně identifikuje daný diskový oddíl pomocí 128 bitového identifikátoru. Jedná se o jakési sériové číslo, které je pro každý diskový oddíl jedinečný. Toto sériové číslo generují programi, které formátují jejich souborový systém (mkfs). 
+
+Při zavádění diskových oddílů při procesu zavádění operačního systému by bez UUID nebylo možné určit bod připojení daného diskového oddílu, protože by jej nebylo možné nijak identifikovat. Pro automatické připojování diskových oddílů při bootování systému a v průběhu jeho chodu slouží konfigurační soubor {\bf fstab} (filesystem table), který určuje kam se mají automaticky namapovat připojené oddíly. Tento soubor se nachází v adresáři /etc/fstab.
+
+\Sekce{MBR}
+
+Master boot record (MBR) je hlavní spouštěcí záznam, je umístěn v prvním sektoru pevného disku. Jeho velikost je 512 bajtů a je v něm uložen zavaděč operačního systému, tabulka rozdělení disku a číselný identifikátor disku. 
+
+\Sekce{GPT} 
+
+GUID Partition Table (GPT) je tandard pro rozvržení tabulky oddílu (partition tabel) na paměťových mědiích, který nahrazuje zastaralý MBR. Oproti MBR umožňuje GPT pracovat s disky, které mají kapacitu více než 2TiB.
+
+\Nadpis{Instalace Arch Linuxu}
+
+Archlinux je distribuce operačního systému GNU Linux, která je založená na myšlence jednoduchosti a konfigurovatelnosti. Při instalaci je vytvořen pouze základní systém a vše ostatní je třeba ručně doinstalovat. Výhodou tohoto řešení je, že si každý uživatel může vytvořit systém na míru svých potřeb. Nevýhodou je nutnost hlubších znalostí co vše je třeba instalovat pro funkční systém.
+
+\Sekce{Příprava systému}
+
+\Sekce{Příprava pevného disku}
+
+\Sekce{Poinstalační procedůry}
+
+\Sekce{Balíčkovací systém}
+
+\end
+

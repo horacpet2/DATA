@@ -1,0 +1,197 @@
+%preambule
+%\input /home/petr/bin/TeXMakro
+%\input /home/petr/bin/KonfiguracePaperBook
+%\input /home/petr/bin/KonfiguraceEBook
+
+\input D:/MEGA/CENTRUM/texLib/TeXMakro
+\input D:/MEGA/CENTRUM/texLib/KonfiguracePaperBook
+%\input D:/MEGA/CENTRUM/texLib/KonfiguraceEBook
+%Načtení obrázků
+%\pdfximage width \the\SirkaOdstavce mm {./Obrazky/obr}
+
+
+%Titulní stránka
+\VlozitDokument{TitulniStranka}
+
+%generování obsahu
+\Obsah
+
+\Nadpis{Úvod}
+
+Teorie algoritmů je obor související s matematikou a informatikou, který se zabývá vlastnostmi a popisem algoritmů. Díky pochopení způsobu fungování algoritmu je možné dané algoritmy zkoumat, porovnávat s různými druhy stejného algoritmu, optimalizovat a popsat jej.
+
+Teorie algoritmů je důležitou součástí softwarového inženýrství, které se zabývá navrhováním a sestavováním algoritmů a převádění do specifického programovacího jazyka. 
+
+\Nadpis{Algoritmus}
+
+{\bf Algoritmus} je přesný popis postupu, kterým lze vykonat nějakou přesně definovanou činnost (úlohu), který je prováděn pomocí konečného počtu přesně definovaných kroků. Jako jistý druh algoritmu lze chápat například recept na přípravu jídla. V softwarovém inženýrství se algoritmus používá pro popis funkce výsledného programu.
+V prostředí teorie algoritmů pojem {\bf procesor} označuje objekt (fyzický nebo i virtuální), který vykonává daný algoritmus. Procesor může být nějaký jednoúčelový robot, cnc soustruh, nebo dokonce člověk. V případě počítačů je za procesor považován integrovaný obvod (CPU), který umožňuje vykonávat elementární operace, ze kterých je daný algoritmus sestaven. 
+
+Základem algoritmu je {\bf příkaz}, který popisuje elementární operaci, kterou může procesor vykonat. Elementární operace je pro daný procesor jiná a proto nelze porovnávat konkrétní algoritmus mezi různými procesory. Ale lze pomocí jednoho algoritmu porovnávat efektivitu více různých procesorů. Vedle základních příkazů procesor zpravidla disponuje i řídícími příkazy, které umožňují vytvářet složitější příkazy, zkrátit výsledný algoritmus a umožnit jeho větší univerzálnost.
+
+\Sekce{Vlastnosti algoritmu}
+
+Algoritmus se vyznačuje určitými vlastnostmi, které musí splňovat k tomu, aby byl v praxi proveditelný. Pokud by danému algoritmu scházela některá z jeho vlastností, došlo by při jeho vykonávání v počítači k nežádoucím výsledkům (zatuhnutí programu, chybné výsledky, ...).
+
+\PodSekce{Začátek a konec algoritmu}
+
+Každý algoritmus musí někde začínat, tedy musí mít přesně definované místo, kde začíná, jinak by mohl začít od libovolné své části, což by způsobilo, že by se některé jeho části neprovedly. Tyto části mohou být důležité pro správný výsledek algoritmu. V programovacích jazycích je toto místo označeno nějakých speciálním identifikátorem (funkce main), který procesoru říká odkud daný algoritmus začíná.
+Algoritmus musí mít také konec, jinak by nikdy neskončil. To by mohlo způsobit zablokování procesoru. V případě, že je potřeba daný algoritmus vykonat pouze jednou by po jeho skončení procesor přešel opět na jeho začátek a pokračoval dále. Tím by došlo k zacyklení procesoru a vykonávání algoritmu by bylo potřeba přerušit vnějším zásahem. Algoritmus musí vždy skončnit s konečným počte kroků. Takový algoritmus se nazývá {\bf konečný algoritmus}.
+
+\PodSekce{Elementárnost}
+
+Algoritmus se skládá z konečného množství jednoduchých (elementárních) a snadno srozumitelných kroků. Díky tomu je možné porovnávat efektivnost různých algoritmů, které podávají na základě stejných vstupních dat i stejné výstupy. Algoritmus, který se skládá z menšího počtu kroků, je pro danou aplikaci efektivnější (rychlejší).
+
+\PodSekce{Determinovanost}
+
+Deterministický (jednoznačný) algoritmus musí vždy za stejných vstupních podmínek svým vykonáváním vytvořit vždy stejné výsledky (je předvídatelný). V každém kroku musí jít jednoznačně určit zda daný algoritmus již zkončil a pokud ne, musí jít určit jaký krok následuje. 
+
+V případě deterministického algoritmu nesmí nastat situace, kdy algotitmus neví co má dělat. To může nastat v případě, kdy není dostatečně ošetřen proti nepovoleným vstupům. Jedná se o nejčastější chybu při tvorbě programů. Při návrhu algoritmu je nutné dopodrobna promyslet jaké stavy mohou při jeho vykonávání nastat a vhodným způsobem je ošetřit aby nemohlo dijít k zakázaným stavům (dělení nulou, ...). Pokud nejsou všechny eventuality algoritmu vhodným způsobem ošetřeny, může nastat jeho zablokování, nebo může dojít k nějakému nevyžádanému stavu programu, který bude ovlivňovat jeho další vykonávání. Hledáním těchto neošetřených stavů se zabývá {\bf testování algoritmů} (softwaru). 
+
+Opakem deterministického algoritmu jsou {\bf nedeterministické algoritmy}, kterné nemusejí mít vždy určen následující krok (může záležet na situaci). Takový algotimus může například volit z několika různých možností, mezi kterými vybírá na základě různých kritérií. Nedeterministické algoritmy jsou takové algoritmy, které se projevují určitým typem vlastní inteligence rozhodování - jsou základem inteligentních algoritmů.
+
+\PodSekce{Věcná správnost}
+
+{\bf Věcná správnost} (korektnost) algoritmu říká, že daný algoritmus zkutečně dělá to co se po něm chce. Porušení věcné správnosti algoritmu může být způsobená například zvolením špatného vzorce pro daný výpočet, nebo syntaktickou chybou v zápise. Princip fungování algoritmu může být sice správný, ale při jeho sestavování došlo k nějaké chybě. 
+Porušení věcné správnosti se projeví tak, že algoritmus nemusí vůbec fungovat a nebo vrací špatné (nepředpokládané) výsledky.
+
+\PodSekce{Obecnost}
+
+Obecný algoritmu je takový algoritmus, který neřeší jeden konkrétní problém, ale lze ho využít pro řešení dané třídy problému. Každý algoritmus musí být co nejobecnější, aby bylo možné pomocí něj řešit co nejširší množství úloh stejného druhu. Díky tomu lze daný algoritmus využívat jako menší součást různých větších algoritmů. To zrychluje vývoj nových algoritmů a zvětšuje jejich použitelnost. Typickým příkladem je součet dvou čísel. Pokud je zapotřebí sečíst nějaká dvě konkrétní čísla například $1+3$, je lepší daný algoritmus zobecnit na libovolná dvě čísla $A+B$, protože je možné, že v budoucnu bude potřeba sestavit stejný  algoritmus pro jiná dvě čísla.
+
+Obecnost algoritmu umožňuje vstup parametrů (parametrizace algoritmu) do algoritmu. To znamená, že do programu lze vložit hodnoty, které jej ovlivní. Na základě vstupních parametrů je pak vytvořen žádaný výstup. 
+
+
+\PodSekce{Opakovatelnost}
+
+Základní podmínkou pro správný algoritmus je, že je možné jej kdykoli zopakovat a za stejných okolností se bude chovat vždy stejně. To znamená, že při zadání stejných vstupních dat algoritmus dospěje vždy ke stejným výsledkům. 
+
+Takové chyby jsou většinou způsobeny chybou při implementaci algoritmu. Algoritmus sám je navržen správně, ale je špatně fyzicky sestaven. 
+
+\PodSekce{Výstup}
+
+Algoritmus musí mít vždy alespoň jeden výstup, veličinu, která je v požadovaném vztahu k zadaným vstupům, a tím tvoří odpověď na problém, který algoritmus řeší (algoritmus vede od zpracování hodnot k výstupu). To algoritmu umožňuje komunikovat s okolím.
+
+\PodSekce{Srozumitelnost}
+
+Algoritmus je nutné určitým způsobem zaznamenat. Způsobů jak algoritmus zaznamenat je více, ale obecně musejí splňovat podmínku srozumitelnosti. Zaznamenanému algoritmu musí porozumět ne jen programátor, který podle něj vytváří daný program, ale i jeho tvůrce, který může daný algoritmus v budoucnosti nějak upravovat. Každý způsob se využívá v jiných situacích (kontextu použití) a k různým účelům. Způsoby zaznamenávání algoritmů lze rozdělit na textové a grafické.
+
+Pro zápis algoritmů se nejčastěji používají tyto metody:
+
+\vskip 4mm
+\bod{Slovní vyjádření}
+\bod{Matematický zápis}
+\bod{Rozhodovací tabulky}
+\bod{Vývojové diagramy}x
+\bod{UML - jednotný modelovací jazyk}
+\bod{Počítačové programy}
+\vskip 4mm
+
+{\bf Slovní vyjádření algoritmu} je dostatečně srozumitelný a přesný popis nějaké činnosti pomocí slov z běžného života. Typickým příkladem jsou různé návody a příručky. Výhodou slovního vyjádření je jeho jednoduchost a srozumitelnost. Nevýhoda je ale jeho nízká přehlednost. Při složitějších a rozsáhlejších algoritmech je těžké se v něm orientovat a uhlídat podmínku jednoznačnosti. Slovní vyjádření algoritmů se používá například jako část dokumentace softwarového projektu.
+V případě vývoje softwaru se jako doplněk vývojových diagramů používají slova, která připomínají operace v programu. Jedná se tedy o postup popisu algoritmů složený z textové i grafické formy. Pro slovní vyjádření algoritmů pro potřeby vývoje programů se používá kódový jazyk, který se nazývá {\bf pseudokód}. Jedná se seznam slov, které připomínají výrazy a příkazy z programovacích jazyků vyšších úrovní.
+
+{\bf Matematický zápis} je formou vyjádření algoritmu, kterou je vhodné použít všude tam, kde je možné danou problematiku popsat matematicky. Výhodou matematického zápisu je jednoznačnost, podle rovnice jsou přesně definovány výstupy algoritmu. Nevýhodou je ale, že bývá méně podrobný a nelze ho přímo zadat do počítače. Navíc je po přepsání do počítačového jazyka ještě potřeba ošetřit zakázané hodnoty (dělení nulou, …). 
+
+{\bf Rozhodovací tabulky} jsou vhodné v případech kdy se v algoritmu vyskytuje několik možností a vlastní řešení je pro každou možnost jednoznačně popsatelné. Příkladem je {\bf tabulka pravdivostních hodnot}, která se skládá z {\it n} sloupců a $2^n$ řádků. Tabulka je horizontálně rozdělena na dvě části, kde v jedné části se nacházejí vstupní hodnoty a v druhé části výstupy jejichž hodnoty závisejí na vstupních hodnotách. Výhodou je naprostá jednoznačnost, jednoduchost a přehlednost. Nevýhodou je ale, že se nehodí pro všechny typy úloh. U některých úloh by tabulka byla příliš rozsáhlá a ztratila by svou přehlednost.
+
+{\bf Vývojové diagramy} jsou typem symbolického (grafického) algoritmického jazyka, který se používá pro názorné zobrazení algoritmů. Jedná se o jednu z nejdokonalejších forem zápisu algoritmu, ale většinou bývá pro úplnost doplněn ještě některými jinými formami zápisu. Vývojové diagramy se skládají z jednotlivých grafických symbolů, které jsou mezi sebou spojeny orientovanými hranami - čárami které jsou doplněny šipkou vyjadřující směr postupu algoritmu. Obecný postup psaní algoritmů je od shora dolů a zleva doprava. To může být v určitých případech porušeno - cykly, skoky v algoritmu, ...  
+
+{\bf UML} je zkratka pro {\bf jednotný modelovací jazyk}. Jedná se o grafický jazyk, který obsahuje symboly pro tvorbu několika typů diagramů, které slouží ke znázornění algoritmů přičemž každý druh UML diagramu je vhodný pro jiný typ algoritmu.
+
+\Nadpis{Řídící struktury}
+
+Programová (algoritmická) konstrukce je algoritmus, který plní nějaký předem daný úkol. Každou programovou konstrukci lze rozložit na jednodušší programové konstrukce až se dojde k takovým, které nelze dále dělit. Tyto základní programové konstrukce tvoří konstrukční axiomy všech algoritmů a lze s jejich pomocí vytvořit libovolnou programovou konstrukci – algoritmus. Řídící konstrukce nebo také strukturovaný příkaz je určitá programová konstrukce, která umožňuje vytvořit určitou dynamiku v programovém kódu. Jinak řečeno řídící struktury umožňují řídit běh programu. 
+
+Základní programové konstrukce jsou:
+
+\vskip 4mm
+\bod{sekvence}
+\bod{selekce}
+\bod{iterace}
+\vskip 4mm
+
+
+\Sekce{Sekvence}
+Sekvence je nejjednodušší programová konstrukce, která se skládá z posloupnosti jednotlivých kroků algoritmu. Sekvencí lze jen těžko vytvářet složité algoritmy, ale jsou součástí všech druhů algoritmů. Během sekvence nesmí docházet k větvení algoritmu ani ke skokům mezi různými částmi algoritmu. Jedná se o základní princip von Neumanovi architektury počítače, jejíž program byl sestaven se sekvence základních instrukcí.
+
+\Sekce{Selekce}
+Při vykonávání programu může někdy nastat situace, kdy je třeba rozhodnout jak se máš algoritmu v daných podmínkách chovat. Selekce, nebo také větvení algoritmu (programu) umožňuje v programu vytvářet paralelní větve, mezi kterými je možné při vykonávání algoritmu vybírat a vytvářet tak univerzálnější (přizpůsobivější) algoritmus. Je možné vytvořit algoritmus, který umí reagovat na různé situace. Typickým příkladem může být situace, kdy je třeba ošetřit výskyt nežádoucích vnitřních stavů. Jedná se o základní strukturu pro řízení toku programu.
+
+Daná paralelní algoritmická větev se vykoná na základě splnění dané podmínky. Pokud podmínka platí, vykoná se jedná část algoritmu, pokud podmínka neplatí, tak vykonej jinou část algoritmu.
+
+V praxi se rozlišuje mezi jednoduchým větvením a mnohonásobným větvením. Při jednoduchém větvení je určitá část algoritmu provedena pouze při splnění dané podmínky a v opačném případě je pouze přeskočena a algoritmus pokračuje dál ve vykonávání následujících operací. V případě mnohonásobného větvení je možné na základě stavu nějaké proměnné (veličiny) vykonat jednu z mnoha (nebo žádnou) paralelních větví algoritmu. 
+
+Dále je možnost vykonat nějakou část algoritmu pouze v případě, že daná podmínka (popřípadě více podmínek v případě vícenásobného větvení) nebyla splněna. Tím je dána možnost obsloužit (ošetřit) kromě známých situací i všechny ty situace, které nelze předem předvídat.
+
+Existuje také varianta nepodmíněného větvení programu. V případě nepodmíněného větvení programu se vykonávání daného programu přesune do paralelní větve bez ohledu na stav algoritmu (vždy). To se využívá například při skocích do podprogramu1 nebo při definici programové smyčky (iterace), nebo při skocích v programu.
+Jednotlivé podmínky se mohou do sebe navzájem vnořovat. V takovém případě se mluví o vnořeném větvení programu. V paralelní větvi dané podmínky je definováno jiné větvení. To následně může tvořit stromovou strukturu, kdy záleží na platnosti jednotlivých podmínek, které určují kterými větvemi se daný algoritmus bude ubírat. Jedná se o větvení uvnitř větvení. Počet těchto vnoření není nijak omezen. 
+
+\Sekce{Iterace}
+Iterace, cyklus nebo smyčka je řídící programová struktura, která umožňuje opakovaně vykonávat posloupnost příkazů (určitou část algoritmu), která je definovaná v určitém úseku. Opakování i ukončení cyklu je řízeno nějakou podmínkou, lze tedy říci, že se se jedná o spojení podmíněného a nepodmíněného větvení programu. Cykly jsou využívány v případech kdy se v programu vyskytuje několik stejných sekvencí příkazů po sobě. Kdyby neexistovaly cykly, výsledný zdrojový kód programu (velikost spustitelného programu) by byl příliš rozsáhlý a nepřehledný.
+Existuje několik druhů cyklů:
+
+\vskip 4mm
+\bod{Cyklus s pevným počtem opakování}
+\bod{Cyklus řízený podmínkou s podmínkou na začátku}
+\bod{Cyklus řízený podmínkou s podmínkou na konci}
+\bod{Nekonečný cyklus}
+\bod{Vnořený cyklus}
+\vskip 4mm
+
+{\bf Cyklus s pevným počtem opakování} se využívá v případech kdy je předem znám počet iteračních cyklů. To se velice často využívá například při práci s poli1, kdy je tímto způsobem procházena jedna proměnná po druhé. Cyklus s pevným počtem opakování je definován podmínkou ve které se nachází nějaká řídící proměnná, jejíž hodnota se při každém vykonání cyklu změní o nějakou hodnotu a při vstupu do těla cyklu je testováno zda již nedosáhla určité hodnoty.
+
+{\bf Cyklus s podmínkou na začátku} testuje podmínku před samotným vykonáváním sekvence příkazů, které se nacházejí v jeho těle. Díky tomu je možné, že v určitých situacích tento cyklus nemusí proběhnout ani jednou. Pokud podmínka není splněna před vstupem do těla cyklu, tak se kód v těle cyklu přeskočí a úplně ignoruje a vykonávání algoritmu pokračuje prvním příkazem za tělem cyklu. Cyklus se používá v případech, kdy není předem jasné kolik iterací dané části algoritmu  proběhne. Ukončovací podmínka cyklu tedy závisí na nějaké akci (příkaz) uvnitř těla cyklu.
+
+{\bf Cyklus s podmínkou na konci} se používá v případech, kdy je potřeba, aby sekvence příkazů uvnitř těla cyklu proběhla alespoň jednou, přičemž není předem známo kolikrát se bude opakovat (iterovat). Při vykonávání takového cyklu se nejprve provedou příkazy uvnitř těla cyklu a až poté se otestuje podmínka, která určuje zda cyklus bude pokračovat v iterování. Pokud je tato podmínka splněna, program se vrací na začátek těla cyklu a ten se opakuje. V opačném případě je cyklus ukončen.
+
+{\bf Nekonečný cyklus} je cyklus, který se opakuje (iteruje) neustále dokola. Nejčastěji je to způsobeno následkem programátorské chyby, kdy programátor zapomene napsat ukončovací podmínku cyklu nebo napíše v podmínce chybu, kvůli které nebude nikdy splněna. Často se v programování používají zdánlivě nekonečné cykly, tedy cykly, jejichž podmínka je vždy splněna, ale někde uprostřed cyklu je podmíněné opuštění cyklu.
+
+{\bf Vnořený cyklus je cyklus}, který se nachází v těle nějakého jiného cyklu. Počet vnoření cyklu, tedy cyklů, které se nacházejí v nadřazených cyklech není nijak omezen. Cyklus který se nachází uvnitř těla jiného cyklu se nazývá vnitřní cyklus a cyklus, který v těle obsahuje nějaký jiný cyklus se nazývá vnější cyklus. Vykonávání vnořených cyklů probíhá tak, že po otestování podmínky se vstoupí nejprve do vnějšího cyklu a následně do vnitřního cyklu, který se vykonává dokud platí jeho podmínka, poté co se vystoupí z vnitřního cyklu se přejde opět na začátek vnějšího cyklu a celý proces se opět opakuje. Tím je dán počet celkových iterací vztahem:
+
+$$ N = i \cdot j $$
+
+kde {\it N} je počet celkových iterací, {\it i} je počet cyklů {\bf vnějšího cyklu} a {\it j} je počet cyklů {\bf vnitřního cyklu}. Obdobný vztah platí i pro vícenásobná vnoření:
+
+$$ N = i \cdot j \cdot ... \cdot k $$
+
+V těle vnějšího cyklu se může kromě vnitřního cyklu nacházet i nějaký jiný kód, který se vykonává při každé iteraci.
+
+\Nadpis{Dělení algoritmů}
+Algoritmy lze podle způsobu vykonávání rozdělit na:
+
+\vskip 4mm
+\bod{Algoritmus řízený událostmy}
+\bod{Stavový algoritmus}
+\bod{Rekurzivní algoritmus}
+\bod{Funkcionální algoritmus}
+\vskip 4mm
+
+\PodSekce{Algoritmus řízený událostmy}
+
+V případě algoritmů řízených událostmy algoritmus nic nedělá a pouze čeká až nastane určitá událost na kterou algoritmus reaguje vyvoláním obslužné části algoritmu.
+
+Událost je vstup, akce nebo přerušení algoritmu a obsluha je podprogram, nebo část algoritmu, které se vyvolají pouze jednou v případě, že nastane daná událost.
+
+\PodSekce{Statový algoritmus}
+
+Stavový algoritmus je založen na konečném počtu vnitřních stavů ve kterém se daný algoritmus nachází. Principem stavového algoritmu je cyclické (opakovaném) vykonávání ve kterém dochází vlivem vstupů algoritmu ke změně vnitřního stavu. V každém stavu je pak vykonávána pouze určitá část algoritmu.
+
+Stavové algoritmy se dělá na algoritmy s konečným počtem průchodů (algoritmus se celý vykoná v konečném počtu průchodů) a na algoritmy s nekonečným počtem průchodů (algoritmus nemá konec a tím nikdy nezkončí nehledě na počet průchodů). Dále je možné stavové algoritmy rozdělit na algoritmy s předem známím počtem průchodů a na algoritmy s předem neznámím počtem průchodů kdy nelze předem odhadnout kolik průchodů je třeba na celé jeho vykonání.
+
+Stavové algoritmy jsou speciálním typem iterace.
+
+\PodSekce{Rekurzivní algoritmus}
+Rekurzivní algoritmus je založen na principu volání sebe sama, přičemž problém který daný algoritmus řeší se musí s každým vnořením zjednodušit, jinak dojde k zacyklení algoritmu a časem jsou spotřebovány prostředky procesoru.
+
+\PodSekce{Funkcionální algoritmus}
+
+
+
+
+\Nadpis{Analýza algoritmů}
+
+\Sekce{Asymptotická složitost}
+
+Asymptotická složitost je nástroj, který umožňuje určit výkon algoritmů a porovnávat je vzájemně mezi sebou. 
+
+\end

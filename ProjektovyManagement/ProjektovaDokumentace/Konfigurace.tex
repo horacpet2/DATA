@@ -1,0 +1,21 @@
+%české dělení slov
+\chyph  % use format csplain
+
+%zavedení maker
+\input opmac
+
+\input lmfonts
+
+%nastavení rozměrů a okrajů stránky
+\margins/1 (144,200) (15,10,20,20)mm
+
+%nastavení velikosti fontu a řádkování
+\typosize[10/15]
+
+%makro pro opětovné zapnutí číslování stran
+\def\pagenumbers{\footline{\hss\tenrm\folio\hss}}
+
+
+%přepínače pro nastavení fontů pro různé účely
+\font\nadpis=csssdc10  at30pt
+\font\telo=csssdc10  at24pt

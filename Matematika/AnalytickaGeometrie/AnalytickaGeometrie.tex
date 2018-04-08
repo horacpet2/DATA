@@ -1,0 +1,160 @@
+
+%\def\addr{D:/MEGA/CENTRUM/texLib}
+\def\addr{/home/petr/.texLib}
+
+\input \addr/TeXMakro
+\setAddress{\addr}
+%\input \addr/KonfiguracePaperBook
+\input \addr/KonfiguraceEBook
+%makra
+
+
+%Načtení obrázků
+%\pdfximage width/height \the\SirkaOdstavce mm {./Obrazky/obr}
+\pdfximage width \the\SirkaOdstavce mm {./Obrazky/CiselnaOsa.png}
+\pdfximage width \the\SirkaOdstavce mm {./Obrazky/PolarniSoustavaSouradnic.png}
+\pdfximage width \the\SirkaOdstavce mm {./Obrazky/kvadrantyKartezskySouradnySystem.png}
+\pdfximage width \the\SirkaOdstavce mm {./Obrazky/KartezskysouradnySystemProstor.png}
+\pdfximage width \the\SirkaOdstavce mm {./Obrazky/KartezPolar.png}
+
+%Titulní stránka
+%\VlozitDokument{TitulniStranka}
+
+%generování obsahu
+\Obsah
+
+
+\Nadpis{Úvod}
+
+Analytická geometrie je část geometrie, která se zabývá popisem geometrických útvarů pomocí algebraických metod {\bf vektorové algebry} a {\bf metody souřadnic}. Těmto metodám se souhrnně říká analytické a z toho následně plyne název {\bf analytická geometrie}. Podstatou této matematické disciplíny je převedení geometrické úlohy na algebraickou, často na {\it soustavu rovnic}.
+
+{\bf Analytickým vyjádřením geometrického útvaru} se nazývá {\bf vztah} (relace), který splňují právě jen souřadnice bodů tohoto útvaru a žádný jiný. Výrok „útvar definovaný množinou bodů {\it U} má analytické vyjádření {\it V} (předpis, ze kterého je možné získat množinu bodů daného geometrického útvaru U)“ tedy znamená:
+
+{\it Bod $X \in U \Rightarrow$ souřadnice bodu {\bf X} splňují vztah {\bf V} (bod X je bodem daného geometrického objektu právě když splňuje vlastnost V), platí tedy konjunkce mezi těmito výroky:}
+
+\vskip 4mm
+\bod {Souřadnice každého bodu {\it X} útvaru {\it U} splňují analytické vyjádření {\it V}.}
+
+\bod {Každý bod {\it X} splňující analytické vyjádření {\it V} je bodem útvaru {\it U}.}
+
+\vskip 4mm
+
+Analytické vyjádření útvaru {\it U} má nejčastěji podobu rovnice nebo nerovnice, respektive jejich soustav s případnými doplňkovými podmínkami. Proměnnými v analytickém vyjádření útvaru jsou hodnoty na souřadnicových osách souřadnicového systému ve kterém se daný útvar {\it U} nachází (x, y, z, …).
+
+Analytická geometrie má velký význam pro celou matematiku, ale ne jen pro ni. Analytická geometrie umožňuje rozvíjet různé matematické metody, jako například matematická analýza, ale má také velký význam v počítačové grafice a fyzice především v mechanice. Obecně lze říci, že analytická geometrie je důležitá pro všechny obory, které se určitým způsobem zabývají prostorovými objekty, nebo je nepřímo používají.
+
+\Nadpis {Souřadnicové soustavy a body}
+
+{\bf Soustava souřadnic} (též {\bf souřadnicová soustava} či {\bf systém souřadnic}) umožňuje jednoznačně popsat polohu bodu pomocí čísel jakožto souřadnic čili {\bf koordinát}. Geometrické úlohy je pak možno řešit matematickými (analytickými) prostředky, což je základ analytické geometrie. Polohu bodu na přímce určuje jedno (reálné) číslo, v rovině dvě, v prostoru tři čísla atd. Obecně je k určení polohy bodu v n-rozměrném prostoru třeba {\it n} čísel, která tvoří uspořádané n-tice (čti entice), neboť na jejich pořadí záleží.
+
+Druh souřadné soustavy, tedy její uspořádání a způsob popisu pohlohy také určuje způsob matematického popisu gemetrických objektů - matematický tvar vzorců.
+
+Protože každý geometrický útvar je reprezentován nějakou množinou bodů, které mají vůči sobě určité vzdálenosti, je třeba definovat nějaký jeden bod, který bude mít vždy stejnou polohu a díky kterému je možné vztahovat polohu všech bodů. Tento bod se nazývá {\bf počátek}, nebo {\bf střed} souřadnicové soustavy. Každý bod reprezentující daný geometrický útvar má určitou vzdálenost a směr od tohoto počátečního bodu. Způsob jakým tuto vzdálenost a směr vyjádřit je pomocí souřadnic bodu a tomu je třeba zavést souřadnicovou soustavu. Souřadnicová soustava je dohodnutý systém „adresování“ jednotlivých bodů v daném prostředí (dané prostředí může mít různé množství dimenzí - rozměrů).
+
+Soustavu souřadnic tvoří:
+
+\vskip 4mm
+\bod{příslušný počet {\bf souřadnicových os}, které se zpravidla označují malými písmeny v abecedním pořadí: x, y, z, také lze např. i, j, k, l, m, n, nebo a, b, c, d, ...}
+\bod{{\bf počátek}, kde se všechny osy protínají, mají společný bod a zároveň hodnoty všech souřadnic jsou nulové}
+\bod{délková (a případně úhlová) {\bf jednotka}, která se v jednotlivých souřadnicích používá}
+\vskip 4mm
+
+Existuje mnoho různých souřadných systémů, kde každý má své praktické využití v určité, své výhody i nevýhody. Souřadné systémy je možné rozdělit podle několika kritérií. Prvním kritériem je {\it počet os}:
+
+\vskip 4mm
+\bod {Jedno-osé}
+\bod {Dvou-osé}
+\bod {Tří-osé}
+\bod {Více-osé}
+\vskip 4mm
+
+Další možností jakým je možné rozdělit souřadné systémy je podle způsoby pozicování:
+
+\vskip 4mm
+\bod {Kartézský systém}
+\bod {Polární systém}
+\vskip 4mm
+
+\Sekce{Dimenze souřadného systému}
+
+
+\PodSekce{Jednorozměrná souřadnicová soustava}
+
+Nejjednodušší používaná souřadnicová soustava je {\bf číselná osa}, jejíž počáteční bod je {\it bod nula}. Jedná se o jednorozměrný souřadnicový systém, který splňuje podmínku, že každému bodu udává vzdálenost a směr od jeho počátku - daný bod se nachází v určité vzdálenosti buď v kladném nebo záporném směru od počátku. Protože se jedná o jednorozměrný souřadnicový systém, poloha každého bodu na číselné ose je  určena pouze jednou reálnou hodnotou (kladnou nebo zápornou). V případě, že je daná číselná osa použita jako souřadnicová soustava popřípadě její část, pak je nazývána jako {\bf souřadnicová osa}.
+
+\vskip 4mm
+\centerline{ \pdfrefximage 1}
+\vskip 4mm
+
+\PodSekce {Dvourozměrná souřadnicová soustava}
+
+Pro většinu praktických aplikací jednorozměrná souřadnicová soustava nedostačuje, protože nedokáže vyjádřit žádný jiný geometrický objekt než je bod (popřípadě vzdálenost mezi body - délku úsečky). Číselná osa ale slouží pro zavedení plošné souřadnicové soustavy, díky které lze popisovat (zakreslovat) body tvořící množinu nějakého plošného geometrického objektu (čtverec, trojúhelník, ...).
+
+\Sekce{Kartézský souřadný systém}
+
+Kartézská soustava souřadnic je takový souřadný systém, který je tvořen navzájem kolmými souřadnými (číselnými) osami, které se protínají v bodě, označovaném jako {\it počátek soustavy souřadnic O}, který je zároveň počátkem pro každou z těchto souřadných os. Měřítko se obvykle volí na všech osách stejně velký, nebo je v definici kartézského souřadného systému udán poměr v jakém jsou měřítka jednotlivých os zobrazovány V případě, že je jsou zvoleny různá měřítka na souřadných osách, je výsledný zobrazovaný útvar v kartézské soustavě deformován poměrem měřítek jednotlivých os. Jednotlivé hodnoty souřadnic mohou být i záporné (reálné). Absolutní hodnota dané souřadnice udává vzdálenost od počátku soustavy souřadnic na příslušné ose.
+
+Jednotlivé souřadnice daného bodu tvoří uspořádanou n-tici (záleží na jejich pořadí pro správné propojení se souřadnými osami), kde {\it n} je počet dimenzí (os) kartézského systému, které jsou na základě množinové teorie zapisovány ve tvaru $[x,y,z, ...]$
+
+Při kreslení grafu pomocí kartézského souřadného systému, je nutné dodržovat určitá pravidla, která pomáhají zpřehlednit výsledný zápis. Mezi tato pravidla patří:
+
+\bod{Pojmenování os - osy x, y popřípadě z je třeba pojmenovat zapsáním daného písmenka k dané ose}
+\bod{Vyznačit počátek - počátek se značí znakem O a nachází se v místě střetu všech souřadných os}
+\bod{Vyznačit měřítko - měřítko se vyznačuje zapsáním souřadnice 1 na všech osách v kartézském souřadném systému}
+\bod{Udání poměru měřítek - v případě, že na všech osách nejsou použity stejná měřítka, je nutné udat v jakém poměru jsou měřítka na jednotlivých osách}
+
+\PodSekce{Kartézský souřadný systém v ploše}
+
+Kartézský souřadný systém v ploše je tvořena dvěma navzájem kolmými souřadnými osami. Díky plošnému souřadnému systému je možné zobrazovat dvojrozměrné objekty jako je trojúhelník nebo čtverec. V {\it ploše} je vodorovná osa značena písmenem {\it x} a svislá osa písmenem {\it y}. Na těchto osách jsou vyznačovány x-ové a y-nové souřadnice jednotlivých bodů, přičemž je nutné brát v ohledu jednotky jednotlivých souřadných os.
+
+Celá kartézská soustava souřadnic se dělí do čtyř částí - {\it kvadranty soustavy souřadnic}. Každý kvadrant představuje jednu čtvrtinu roviny souřadnic a je ohraničen příslušnými částmi souřadnicových os.
+
+\vskip 4mm
+\centerline{\pdfrefximage 3}
+\vskip 4mm
+
+\PodSekce {Kartézský souřadný systém v prostoru}
+
+Kartézský souřadný systém v prostoru je rozšířením Kartézský souřadný systém v rovině o další rozměr (dimenzi), která je reprezentována souřadnou osou. Díky prostorovému souřadnému systému je možné zobrazit trojrozměrné objekty jako válec nebo kvádr. Kromě os x a y se v souřadném systému nachází ještě osa z, která udává výšku daného prostorového objektu. Jednotlivé body v prostoru jsou definovány pomocí tří čísel - souřadnic $[x,y,z]$
+
+\vskip 4mm
+\centerline{\pdfrefximage 4}
+\vskip 4mm
+
+\Sekce{Polární soustava souřadnic}
+
+Polární soustava souřadnic je taková soustava souřadnic v rovině ve které jedna souřadnice udává vzdálenost od středu (poloměr r) souřadného systému a druhá souřadnice (označovaná $\varphi$) označuje úhel spojnice tohoto bodu a počátku souřadného systému od zvolené osy ležící v rovině (nejčastěji odpovídá ose {\it x} v kartézském souřadném systému). Každý bod je tedy stejně jako v kartézské soustavě souřadnic definovaný pomocí dvou čísel - vzdálenost bodu od počátku a úhel, který svírá spojnice bodu a počátku soustavy souřadnic. Úhly se v tomto případě měří dohodnutým způsobem proti směru hodinových ručiček. Pro označení vzdálenosti bodu se obvykle používá značka {\it r} a pro úhel písmeno řecké abecedy $\varphi$.
+
+Polární souřadný systém se využívá v případech, kdy se nějaký bod pohybuje po kružnici a mění pouze vzdálenost (poloměr) tohoto pohybu od středu kružnice. Příkladem použití může být nějaký obráběcí stroj s radiálním pohybem, nebo jiné aplikace s krokovým motorem.
+
+\vskip 4mm
+\centerline{\pdfrefximage 2}
+\vskip 4mm
+
+\PodSekce{Převod mezi kartézskými a polárními souřadnicemi}
+
+Souřadnice v polárním souřadném systému lze jednoduše převést na souřadnice kartézského souřadného systému a naopak. Bod je v polárním systému souřadnic určen vzdáleností od středu a úhlem, který svírá spojnice středu s bodem a kladnou poloosou x. Ty tvoří v kartézské soustavě souřadnic pravoúhlý trojúhelník, jehož strany lze popsat pomocí goniometrických funkcí {\it sinus} a {\it cosinus}.
+
+\vskip 4mm
+\centerline{\pdfrefximage 5}
+\vskip 4mm
+
+Na základě vztahů pravoúhlého trojúhelníku je možné převést kartézské souřadnice na polární pomocí vztahu:
+
+$$ \varphi = atan({y \over x}) $$
+$$ r = \sqrt{x^2+y^2} $$
+
+Z polárních souřadnic do kartézských souřadnic je možné převést pomocí vztahu:
+
+$$ x = cos(\varphi)\cdot r $$
+$$ y = sin(\varphi)\cdot r $$
+
+\Sekce {Shrnutí}
+
+\Sekce{Vzdálenost dvou bodů v kartézské soustavě}
+
+
+
+
+
+\end

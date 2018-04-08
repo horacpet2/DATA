@@ -1,0 +1,31 @@
+%vypnutí výpisu číslování stran
+\nopagenumbers 
+ 
+ %definice maker pro nastavení barvy písma
+\def\prepghook{\pdfliteral{q \bgcolor\space k -0.996264 0 0 0.996264 -72 72 cm
+  \nopt{\hoffset} \nopt{\voffset} -\nopt{\pdfpagewidth} -\nopt{\pdfpageheight} re f Q}}
+\def\nopt#1{\expandafter\ignorept\the#1}
+ 
+ %definice makre pro nastavení barvy pozadí stránky
+\def\setbasecolor#1{#1\expandafter\setbasecolorA#1\pdfblackcolor}
+\def\setbgcolor#1{\expandafter\setbasecolorA#1\bgcolor}
+\def\setbasecolorA#1#2#3{\def#3{#2}}
+
+%nastavení barvy písma
+\setbasecolor\White
+
+%nastavení bravy pozadí stránky
+\setbgcolor\Black
+
+%nastavení odsazení od horní hrany stránky
+\voffset 5cm
+
+{\nadpis \centerline {Komplexní čísla}}
+
+%odřádkování na novou stránku
+\vfill\break
+
+%nastavení původních hodnot
+\voffset 0cm
+\setbasecolor\Black
+\setbgcolor\White

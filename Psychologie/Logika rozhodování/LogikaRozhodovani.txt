@@ -1,0 +1,5 @@
+Rozhodování je proces volby řešení nějakého druhu problému. Výsledkem rozhování je řešení. Obvykle se vyskytuje pro daný problém více než jedno řešení, která přinášejí různá pozitiva nebo negativa. 
+
+Volba řešení by měla být logicky odůvodněna. Logika odůvodnění ale závisí na úhlu pohledu na daný problém. To co se jeví jako logické řešení daného problému s již při jiném pohledu na daný problém nemusí jevit tak logické. Logiku rozhodování ovlivňují preference toho kdo se rozhoduje. Proto může nastat situace, že dané řešení se může dvěma pozorovatelům jevit odlišně, protože se jejich preference pro daný problém liší. 
+
+Při hledání řešení je nejprve nutné najít ovlivňující faktory a žádný výsledek. Dále je třeba zjistit co je třeba k dosažení daného cíle spolu s faktory které výsledek mohou ovlivnit. Z množiny řešení je nutné vyškrtnout tak, která nejsou reálná a ze zbytku vybrat to, které přináší největší přínos. 

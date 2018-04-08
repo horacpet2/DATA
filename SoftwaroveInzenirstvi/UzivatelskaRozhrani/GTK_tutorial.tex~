@@ -1,0 +1,60 @@
+\def\ddr{C:/texLib/}
+
+\input \ddr/TeXMakro
+\setAddress{\ddr}
+\input \ddr/KonfiguracePaperBook
+
+%Načtení obrázků
+%\pdfximage width \the\SirkaOdstavce mm {./Obrazky/obr}
+
+
+%Titulní stránka
+%\VlozitDokument{TitulniStranka}
+
+%generování obsahu
+%\Obsah
+
+\Nadpis{Úvod}
+
+
+
+\Nadpis{Design zaměřený na člověka}
+
+HUMAN CENTERED DESIGN, neboli design zaměřený na člověka je sada postupů, pro vytváření služeb a produktů zaměřených na určitou cílovou skupinu lidí. Podstatou je zapojování uživatelů do procesu návrhu a to ať potenciálních nebo zkutečných již v raném průběhu projektu. Díky tomu lze snáze pochopit problémy a požadavky uživatelů a tím lépe navrhnout výsledný produkt.
+
+\Sekce{Fáze HCD}
+
+HCD probíhá v několika krocích:
+
+\vskip 4mm
+\bod{Výzkum - snaha zjistit více o prostředí pro které je produkt navrhován}
+\bod{Cíle a požadavky - po zjištění odpovědí na základní otázky jsou tyto informace zpracovány a díky nim je možné sestavi seznam cílů a požadavků na navrhované řešení}
+\bod{Koncept - zjištění cílů a požadavků na cílový produkt je možné sestavit počáteční koncept, který demostruje základní myšlenku produktu, jedná se o sadu možných řešení ze kterých je teprve vybíráno to nejvhodnější pro realizaci}
+\bod{Prototypy - na základě konceptu myšlenek jsou vybrány ty, které jsou realizovatelné a na jejich základě se vytvoří počáteční skici, makety, funkční prototypy, ... toho jak by výsledné řešení mohlo vypadat}
+\bod{Testování - hotové prototypy jsou pomocí zkušební skupiny uživatelů testovány a zkoumány a na základě výsledků testování prototypů jsou vyvozeny nové závěry, které fungují jako vklad do dalšího vývoje. Cel proces se tak opakuje v cyklech, přičemž každým cyklem se návrh zpřesňuje a vylepšuje.}
+\vskip 4mm
+
+\Sekce{Výzkum}
+
+Výzkum může mít mnoho forem o jednoduchého dotazníku po pár otázek u polední pauzy, až po hromadné konzultace cílové skupiny uživatelů. Prvním krokem výzkumu je {\bf definice otázek}, které mají za cíl zjistit neznámé údaje. Dalším krokem je {\bf výběr výzkumné metody} (dotazníky, rozhovory, ...). Následuje {\bf plán výkumu a příprava materiálu}. Čtvrtým krokem je výběr a pozvání respondentů. Následuje samotné {\bf provedení výzkumu} s cílovou skupinou uživatelů. Po provedení výzkumu je nutné {\bf analyzovat data získané z výzkumu}.
+
+Výzkum lze rozdělit na {\bf kvantitativní} a {kvalivativní}. Tyto dvě kategorie výzkumu se liší především charakterem dat, které jsou při výzkumu získány. 
+
+Kvantitativní výzkum je zaměřen na získávání dat (kolik, jak často, s čím, ...). Díky tomu je možné získat číselné údaje, které je možné použít do analýzy činností.
+
+Kvalitativní výzkum je zaměřena to co, proč a jak kdo co dělá. Odpovědi odhalí motivace uživatelů potřeby a důvody různých činností.
+
+V praxi se většinou používá kombinace obou metod výzkumu.
+
+Při výzkumu jsou důležité určité vlastnosti psychologie lidí. Jejich postoje a chování lidí většinou protichůdné. Lidé si něco přejí, věří že je to dobré, ale stejně to ve výsledku nedělají.
+
+\PodSekce{Metody výzkumu}
+
+Podstatou výzkumných metod je získávání infrormací, dat o uživatelých a o prostředí daného produktu. Pro získávání informací se používá několik postupu:
+
+{\bf Experiment} - uměle navozená situace, která by mohla v daném prostředí nastat. Následným pozorováním jsou získány informace o chování daného systému. Experiemnt by měl být opakovatelný.
+
+{\bf Pozorování - }
+
+
+\end
