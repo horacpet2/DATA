@@ -89,11 +89,11 @@ Algebraický výraz je základní pojem algebry, díky kterému je možné defin
 
 {\bf Definiční obor výrazu} je množina hodnot, ze které je možné dosazovat konkrétní hodnoty za proměnné výrazu. Například množina reálných čísel, celých čísel, interval {\it (0:100)}, ... Pokud není předem určen definiční obor výrazu, je automaticky brán ten nejobecnější, tedy množina reálných čísel.
 
-{\bf Definiční obor proměnné} je podmnožina definičního oboru výrazu a je určen aritmetickou operací ve které se daná proměnná ve výrazu vyskytuje (respektive všemi operacemi ve kterých se daná proměnná vyskytuje). V definičním oboru proměnné se nesmějí nacházet hodnoty, které nejsou pro danou aritmetickou operaci, ve které se nachází daná proměnná definovány. Jedná se tedy o jakousi pojistku, která zabrání zadávání neplatných hodnot do výrazu. Definiční obor výrazu slouží jako nosnou množina, ze které je vytvořen definiční obor proměnné.
+{\bf Definiční obor proměnné} je podmnožina definičního oboru výrazu ve kterém je více než jedna proměnná a je určen aritmetickou operací ve které se daná proměnná ve výrazu vyskytuje (respektive všemi operacemi ve kterých se daná proměnná vyskytuje).  V definičním oboru proměnné se nesmějí nacházet hodnoty, které nejsou pro danou aritmetickou operaci, ve které se nachází daná proměnná definovány. Jedná se tedy o jakousi pojistku, která zabrání zadávání neplatných hodnot do výrazu. Definiční obor výrazu slouží jako nosnou množina, ze které je vytvořen definiční obor proměnné.
 
 $$ V(a,b,c) =( a \cdot {b \over c}) \rightarrow a, b \in R, c \in R \setminus \left\{0\right\}  $$
 
-Tento zápis vyjadřuje, že proměnné {\it a, b} jsou definovány na množině reálných čísel a proměnná {\it c} je definovaná na množině reálných čísel kromě nuly. Výsledný definiční obor pak tvoří průnik všech definičních oboru proměnných. jako argument operace, ale může vystupovat i celý výraz a proto je potřeba vypočítat za jakých okolností (hodnot proměnných ve výrazu) může nabývat nepovolených hodnot pro danou operaci a tyto hodnoty pak vyjmout z definičního oboru výrazu.
+Tento zápis vyjadřuje, že proměnné {\it a, b} jsou definovány na množině reálných čísel a proměnná {\it c} je definovaná na množině reálných čísel kromě nuly. Definiční obor výrazu definuje základní množinu ze které definiční podmínky vytvářející definiční obor pro jednotlivé proměnné definují, které proměnné je možné za danou proměnnou dosadit, aby výrazy s nimi dávaly smysl. Jako argument operace, ale může vystupovat i celý výraz a proto je potřeba vypočítat za jakých okolností (hodnot proměnných ve výrazu) může nabývat nepovolených hodnot pro danou operaci a tyto hodnoty pak vyjmout z definičního oboru výrazu.
 
 Jestliže je ve výrazu {\it V} proměnných více $ V(x_1, x_2 , ... , x_n)$, pak jejich definiční obory tvoří uspořádanou množinu n-tic, jejíž prvky tvoří uspořádání hodnot, které mohou být dosazeny za jednotlivé hodnoty:
 
@@ -172,7 +172,7 @@ Iracionální výrazy
 
 \Nadpis{Mnohočleny}
 
-{\bf Mnohočlen} nebo také {\bf polynom} je speciálním případem (tvarem) racionálního složeného výrazu, který obsahuje standardní aritmetické operace, konstanty a proměnné s n-tou mocninou. Platí, že každý mnohočlen je výraz, ale ne každý výraz je mnohočlen. Definice mnohočlenu zní: nechť je {\it n} přirozené číslo nebo nula, $ a_0, a_1, ..., a_n$ reálná čísla (konstanty) a {\it x} proměnná, pak součet:
+{\bf Mnohočlen} nebo také {\bf polynom} je speciálním případem (tvarem) složeného výrazu, který obsahuje standardní aritmetické operace, konstanty a proměnné s n-tou mocninou. Platí, že každý mnohočlen je výraz, ale ne každý výraz je mnohočlen. Definice mnohočlenu zní - nechť je {\it n} přirozené číslo nebo nula, $ a_0, a_1, ..., a_n$ reálná čísla (konstanty) a {\it x} proměnná, pak součet:
 
 $$ a_n \cdot x^n + a_{n-1} \cdot x^{n-1} + ... + a_1 \cdot x^1 + a_0 \cdot x^0  $$
 
@@ -186,7 +186,11 @@ kde {\it x}, {\it y}, ..., {\it z} jsou proměnné mnohočlenu a součet jejich 
 
 Dva mnohočleny se stejnými proměnnými jsou si {\bf rovny}, právě když se sobě rovnají všechny koeficienty odpovídajících si členů obou mnohočlenů (členů obsahující stejné mocniny proměnných). To vyplývá z vlastnosti rovnosti algebraických výrazů. Jestliže jednotlivé členy tvoří dílčí algberaické výrazy, pak jsou si dva členy rovny právě tehdy, když mají stejný definiční obor a na něm stejný obor hodnot. To je možné pouze v případě, žeobsahují stejnou proměnnou, exponent a koeficient. 
 
+Speciálně lze říct, že každý výraz lze rozložit na mnohočleny o jedné či více proměnných, které jsou vzájemně v určité aritmetické operaci, například:
 
+$$ (2x+5y) * (5x-3y) $$
+
+je součin dvou mnohočlenů o proměnných {\it x} a {\it y}.
 
 
 \Sekce{Operace s mnohočleny}
@@ -246,6 +250,10 @@ $$ a\cdot a = a^2 $$
 Podíl výrazu a proměnné znamená podělit každý člen výrazu danou proměnnou:
 
 $$ (a_{n}x^{n}+...+a_0x^{0}) \div (ax^{k}) = {{a_nx^{n}}\over{ax^{k}}}+...+{{a_{0}x^{0}}\over{ax^{k}}} $$
+
+To vyplývá z vlastnosti operace děleno, kterou lze převést na operaci násobení převedení na opačnou hodnotu pro danou aritmetickou operaci:
+
+$$(a_{n}x^{n}+...+a_0x^{0}) \div (ax^{k}) = (a_{n}x^{n}+...+a_0x^{0}) \cdot ({1} over {ax^{k}}) = ...  $$
 
 \PodSekce{Podíl výrazu výrazem}
 
