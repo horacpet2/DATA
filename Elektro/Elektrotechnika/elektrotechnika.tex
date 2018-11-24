@@ -1,9 +1,9 @@
-\def\ddr{/home/petr/MEGA/CENTRUM/texLib}
+\def\ddr{/home/petr/.texLib}
 
 \input \ddr/TeXMakro
 \setAddress{\ddr}
-\input \ddr/KonfiguracePaperBook
-%\input \ddr/KonfiguraceEBook
+%\input \ddr/KonfiguracePaperBook
+\input \ddr/KonfiguraceEBook
 %makra
 
 %Načtení obrázků
@@ -20,6 +20,27 @@
 
 Elektrotechnika je vědní obor, který se zabývá spotřebou elektrické energie a zařízeními, které se pro tento účel používají. Elektrotechnika se dělí na silnoproudou a slaboproudou. {\bf Silnoproudá elektrotechnika} se zabývá výrobou a rozvodem elektrické energie v elektrárnách. {\bf Slaboproudá elektrotechnika} se zabývá komunikačními, výpočetními a řídícími zařízeními, které pracují na nízkém napětí a při nízkém proudu.
 
+\Nadpis {Elektronová teorie}
+
+\Sekce{Elektrický náboj}
+
+Látky obsahují elektricky nabité částice - protony a elektrony. Tyto částice nesou elektrický náboj, který se označuje v jednotkách SI písmenem {\it Q}. Jednotku elektrického náboje je {\it Coulumb} {\it kůlumb} označovaný písmenem {\it C}.
+
+Částice díky svým nábojům na sebe navzájem působí elektrickými silami. Náboj pronotnu a elektronu je nejmenší náboje, které mohou existovat. Nazývají se {\bf elementární náboje} a jsou rovny hodnotě:
+
+$$ e = 1,6 \cdot 10^{-19}$$
+
+Jeho hodnota se nemění vnějšími vlivy a nelze jej oddělit od částic, které jej nesou. Náboj protonu a elektronu je sice stejný, ale vzájemně inverzní. Proto je-li počet protonů a elektronů v daném tělese stejný a jsou-li rovnoměrně rozloženy, nejsou pozorovány žádné elektrické síly kolem tělesa. O takovém tělese se říká, že je {\bf elektricky neutrální}.
+
+
+\Sekce{Elektrické napětí}
+
+\Sekce{Elektrický proud}
+
+\Sekce{Elektrická vodivost}
+
+
+
 \Nadpis{Rozdělení látek podle elektrické vodivosti}
 
 Látky mají různou vnitřní strukturu a chemické složení a tím i různou schopnost vést elektrický proud. Podle schopnosti vést elektrický proud se látky rozdělují do několika skupin:
@@ -30,8 +51,66 @@ Látky mají různou vnitřní strukturu a chemické složení a tím i různou 
 \bod{Izolanty}
 \vskip 4mm
 
+%todo podrobnější popis vodiče a izolantu (nevodič)
+
 \Sekce{Vodiče}
 
-Vodiče jsou materiály, které dobře vedou elektrický proud.
+Materiály, které dobře vedou elektrický proud se nazývají {\bf vodiče}. V elektrotechnice se nejčastěji používají měď a hliník. 
+
+V kapalinách nejsou nosiči náboje elektrony, ale ionty (nabitý atom nebo molekula). Kapalné vodiče se označují společným názvem {\bf elektrolyty}. 
+
+Atomy pevných vodivých materiálů mají ve valenční vrstvě elektron, který se může uvolnit do valenční vrstvy sousedního atomu. Tyto elektrony jsou označovány jako {\bf volné elektrony}. 
+
+\Sekce{Izolanty}
+Pevné látky, které nevedou elektrický proud se označují jako {\bf izolanty}. Elektrony ve valenční vrstvě atomů izolantů jsou silně vázány a nemohou tak přeskočit do vrstvy valenční sousedního atomu. Tyto elektrony se nazývají {\bf vázané elektrony}. Izolanty tak neobsahují žádné částice, které by sprostředkovaly průchod proudu. Mezy izolanty patří sklo, keramika nebo plasty. Dokonalé izolanty ale neexistují. Látky většinou obsahují vady a nečistoty, které (příměsy), které mohou vést k tzv. {\bf průrazu izolantu}. To znamená, že se v izolantu vytvoří vodivý kanál, kterým může proud procházet.
+
+
+\Sekce{Hustota elektrického proudu}
+
+\Nadpis{Elektrický obvod}
+Elektrický obvod je uzavřená vodivá smyčka, která se skládá ze zdroje napětí, spotřebiče, elektrického vedení a případně dalších součástek.
+
+{\bf Spotřebič} je každé elektrické zařízení ve kterém se účelně mění elektrická energie v jinou požadovanou energii. Každý spotřebič je kontruován na určité napětí. Toto napětí se nazývá {\bf jmenovité napětí} a označuje se písmenem $U_n$. Při překročení jmenovitého napětí se spotřebič poškodí a při nižším napětí zase nepracuje správně (a může se také poškodit). 
+
+Vedení elektronů a tedy elektrického proudu mezi zdrojem napětí a spotřebičem obstarávají vodiče. Vodiče mají většinou kruhový tvar, ale mohou mít také tvar obdélníku a speciální případem je pak plošný spoj na elektronické desce.
+
+Elektrický obvod je {\bf uzavřený} právě tehdy když všechny součásti obvodu jsou spojeny tak aby jimi mohl protékat proud. V obvodu stejnosměrného proudu vystupují elektrony ze záporné svodky zdroje napětí do vodiče, procházejí vodiček do spotřebiče a vystupují ze spotřebiče opět do vodiče, který je vede na kladnou svorku zdroje napětí. kl, 
+
+
+\Sekce{Ohmův zákon}
+
+\Nadpis{Kirchhofovy zákony}
+
+\Nadpis{Zdroj napětí a proudu}
+
+
+\Nadpis{Rezistor}
+
+
+\Nadpis{Kondenzátor}
+
+\Nadpis{Cívka}
+
+
+\Nadpis{Analýza lineárních elektrických obvodů} 
+
+
+
+
+\Nadpis{Polovodiče}
+
+\Nadpis{Dioda}
+
+\Nadpis{Tranzistor}
+
+
+\Nadpis{Střídavý proud}
+
+
+\Nadpis{Indukce}
+
+\Nadpis{Transformátor}
 
 \end
+
+

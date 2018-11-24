@@ -1,0 +1,1108 @@
+%preambule
+%\def\addr{D:/MEGA/CENTRUM/texLib/}
+\def\addr{/home/petr/.texLib/}
+
+\input \addr TeXMakro
+\setAddress{\addr}
+%\input \addr KonfiguracePaperBook
+\input \addr KonfiguraceEBook
+
+
+
+
+
+
+
+%vkládání obrázků
+%\pdfximage width \the\SirkaOdstavce mm {./Obrazky/obr}
+\pdfximage width \the\SirkaOdstavce mm {./Obrazky/MnozinovaInkluze.png}
+\pdfximage width \the\SirkaOdstavce mm {./Obrazky/VenuvDiagram.png}
+\pdfximage width \the\SirkaOdstavce mm {./Obrazky/PravdivostMnozinovychDiagramu.png}
+\pdfximage width \the\SirkaOdstavce mm {./Obrazky/SjednoceniMnozin.png}
+\pdfximage width \the\SirkaOdstavce mm {./Obrazky/PrunikMnozin.png}
+
+
+\Obsah
+
+\Nadpis{Úvod}
+
+Matematika je vědní disciplína, která se zabývá kvantitou (množstvím), a která byla vytvořena pro účely popisu přírodních zákonitostí a jevů. Jedná se o vědní obor, který je nezbytnou součástí většiny ostatních vědeckých oborů jako je fyzika, ekonomie, chemie, ...
+
+Vznik matematiky byl zapříčiněn především potřebou řešit praktické úlo-hy, jako například vyměřování a dělení pozemků, stavebnictví, měření času,~...
+
+Matematika jako věda se dělí do mnoha odvětví v závislosti na oboru ve kterém je využívána, například geometrie, statistika, algebra, ...
+
+Aplikovaná matematika je odvětví matematiky, zabývající konkrétním, praktickým použitím matematiky v určitých oborech.
+
+Celou matematiku lze rozdělit na několik částí. První část obsahuje metody, které umožňují popsat různé matematické algoritmy. Druhá část obsahuje popis aritmetických operací s čísly a čísla jako taková. Zbylé části tvoří různé metody, a matematické nástroje, které umožňují řešit konkrétní problémy nebo slouží k usnadnění řešení jiných matematických metod. Určitá skupina matematických nástrojů, metod a pojmů, které slouží k řešení určité problematiky se nazývá matematický obor. 
+
+\Nadpis{Matematická logika}
+
+Matematická logika je vyjadřovací (popisující, dokazující) prostředek matematiky, který slouží k popisu matematických vět. Charakterizuje metody a způsoby, jak odvozovat určité závěry $\rightarrow$ matematické zdůvodnění, že dané závěry jsou správné a všeobecně platné. To znamená, že matematická logika umožňuje ne jed budování matematických vět, ale také definuje podmínky za jakých jsou tyto věty platné. Logika je věda o správném uvažování. Protože téměř celá matematika je konstruovaná pomocí množin, je možné říct, že se jedná o vyjadřovací jazyk pro práci s množinami a dokazování platnosti usuzování. 
+
+Každá definice, neboli zavádění pojmů by měla být pochopitelná a redukovatelná na pojmy (definice) jednodušší tak dlouho, až se dojde k axiomatice (tvrzení, která se nedokazují a jsou brána jako fakt). Matematika je budována od jednodušších pojmů ke složitějším.
+
+\Nadpis{Výroková logika}
+
+Výroková logika je část matematické logiky, která pracuje s atomickými výroky, které jsou spojovány pomocí logických operací do složených výroků, které jsou reprezentovány výrokovými proměnnými ve výrokových formulích a jejich pravdivostí či nepravdivostí. Zkoumá co se děje s pravdivostí výroků při takovém spojování.
+
+Pro popis a tvorbu výroků je třeba vybudovat jazyk (jazyk výrokové logiky). K tomu je potřeba definovat nejdříve abecedu - souhrn symbolů, sloužících k označení výroků a logických spojek, dále syntax, popisující vytváření určitých slov v abecedě - formulí a v poslední řadě sémantiku, která určuje pravdivostní  hodnotu formulí. Abeceda výrokové logiky je tvořena výrokovými proměnnými, symboly výrokových spojek a pomocnými symboly (pravá a levá kulatá závorka).
+
+Definuje konkrétní vyjadřující systém matematických vět na rozdíl od predikátové logiky, pracující s množinami.
+
+\Sekce{Výrok}
+
+Za výrok je považováno jakékoli tvrzení, oznamovací věta, u které má smysl zabývat se otázkou zda je či není pravdivé a může nastat pouze jedna z těchto možností. Podle toho je pak výrok nazýván pravdivým nebo nepravdivým. Jedná se o oznamovací věty, které se zabývají pouze konkrétními informacemi. Příklad:
+
+\vskip 4mm
+{\verbatim Pes jde po chodníku.}
+\vskip 4mm
+
+Nejedná se o výrok, protože není řečeno jaký pes jde po kterém chodníku. To je hlavní rozdíl oproti běžné řeči. V běžné řeči tyto nekonkrétní informace vyplynou z kontextu situace. Příklad výroku:
+
+\vskip 4mm
+{\verbatim Pan Novák má na sobě modrý svetr.}
+\vskip 4mm
+
+Mezi výroky se řadí i taková sdělení, o jejichž pravdivosti nelze v dané chvíli rozhodnout, ale principiálně musí právě platit jedna z možností - pravda, nepravda.
+
+\Sekce{Věty}
+
+\vskip 4mm
+\bod{{\bf Otázka} - nikdy není výrok, protože otázka si vždy žádá nějakou otázku a proto nelze rozhodnout zda je či není pravdivá.}
+\bod{{\bf Rozkaz} - také nikdy nemůže být výrok, protože je to věta, která nutí k nějaké činnosti a proto nemá cenu ptát se zda je či není pravdivý.}
+\bod{{\bf Názvy} - také nikdy sami nejsou výroky, protože vyjadřují pojmenování předmětů, v matematice objektů množin a nemá cenu se zabývat jejich pravdivostí.}
+\bod{{\bf Subjektivní názory} - také nejsou výroky. Jedná se sice o oznamovací větu u které je možné se zabývat pravdivostí, ale pro každého člověka tato pravdivost může být jiná, podle jeho subjektivního pohledu na věc.}
+\bod{{\bf Výrazy s proměnnou} také nejsou výroky, i když se také jedná o oznamovací větu, ale v závislosti na hodnotě proměnné se může pravdivost daného výroku měnit. Za určitých případů se ale výraz s proměnnou může stát právoplatným výrokem - kvantifikace výroků.}
+\bod{{\bf Hypotéza} (domněnka) je speciální případ výroku. Jedná se o výrok u kterého nelze v danou chvíli rozhodnout zda je pravdivý nebo nepravdivý. Hypotéza je výrok, u kterého je třeba něco vykonat, aby o něm bylo možné rozhodnout zda je pravdivý nebo ne. Typickým příkladem je výrok směrovaný do budoucna, kdy nezbývá nic jiného, než počkat do doby, kdy je zjištěn závěr tvrzení.}
+\vskip 4mm
+
+\Sekce{Symboly, konstanty a proměnné}
+
+Užití matematických symbolů (znaků) v matematice umožňuje vytvářet symbolické zápisy, které snadno a rychle vyjadřují a popisují matematické poznatky.
+ 
+V matematických zápisech se kromě jména objektu (nějaký dříve definovaný údaj) zapisuje také symbol, který ho reprezentuje. Symbol objektu, který ho reprezentuje může být dvojího druhu:
+
+\vskip 4mm
+\bod{{\bf Konstanta} - symbol, který označuje konkrétní objekt z dané množiny objektů, například 4 (označuje číslo čtyři).}
+\bod{{\bf Proměnná} - symbol, který označuje kterýkoli objekt z dané množiny objektů. Množina konstant, která je zastoupena proměnnou se nazývá obor proměnné. Množina obsahuje všechny hodnoty, kterých může daná proměnná nabývat. Prvky oboru proměnné se nazývají hodnoty proměnné. Proměnná $P=M$ kde $M\{p_1, p_2, ..., p_n\}$}
+\vskip 4mm
+
+\Sekce{Výroková proměnná}
+
+Výroková proměnná je znakový identifikátor, který obecně označuje neurčitý výrok. Jedná se o nějaký výrok z množiny výroků. To umožňuje zobecnit platnost složených výroků. 
+
+\Sekce{Pravdivostní ohodnocení výroku}
+
+Pravdivostní ohodnocení výroku říká, zda je daný výrok pravdivý či nepravdivý. Pokud je daný výrok pravdivý říká se že platí, pokud je nepravdivý říká se že neplatí. Pro zkrácení zápisu se používá číselné vyjádření pravdivostního ohodnocení, číslo 1 pro pravda a číslo 0 pro nepravda.
+Pravdivostní ohodnocení se v zápisu značí malým písmenem v:
+\vskip 4mm
+{\verbatim v(A) = 1 - pravdivostní ohodnocení výroku A je pravda.}
+\vskip 4mm
+
+\Sekce{ Pravdivostní tabulka}
+
+Pravdivostní tabulka je nejběžnějším nástrojem pro popisu logických funkcí. Popisuje zcela přesně chování logické funkce. Jedná se o model chování logického systému. Na pravdivostní tabulku lze nahlížet jako na zobrazení, které každé n-tici obsahující nuly a jedničky přiřazuje jednoznačnou hodnotu 0 nebo 1. Obsahuje výčet všech kombinací vstupních proměnných a jim odpovídajících výstupů logické funkce. Má-li logická funkce {\it n} nezávislých proměnných (výrokových proměnných), bude mít pravdivostní tabulka $2^n$ řádků.
+
+$$\left[ \matrix{a&b&c\cr 0&0&0\cr 0&1&0 \cr 1&0&0 \cr 1&1&1} \right]$$
+
+\Sekce{Shrnutí}
+
+{\bf Výroková logika} část matematické logiky, která pracuje s výroky. 
+
+{\bf Výrok} je tvrzení u kterého je možné posoudit zda je pravdivé či nepravdivé - pravdivostní ohodnocení výroku (0, 1).
+
+{\bf Atomický výrok} je výrok, který nelze rozdělit na další dílčí výroky.
+
+{\bf Složený výrok} je výrok, který je složen z atomických výroků pomocí logických spojek (operací). 
+
+{\bf Konstanta} je symbol, který označuje konkrétní objekt z množiny nějakých objektů.
+
+{\bf Proměnná} je symbol, který označuje kterýkoli objekt z množiny nějakých objektů.
+
+{\bf Výroková proměnná} je slovní či znakové pojmenování neurčitého výroku - libovolného výroku z množiny výroků.
+
+{\bf Pravdivostní tabulka} (tabulka pravdivostního ohodnocení) je mate\-maticko-logický nástroj, který umožňuje zkoumat pravdivostní ohodnocení výroků (složených i atomických).
+
+\Nadpis{Logické spojky}
+
+Stejně jako běžná řeč spojuje krátká slovní spojení do celých vět tak i jazyk matematiky umožňuje skládat jednotlivé výrazy do větších složitějších celků. Logické spojky jsou jazykové částice (spojky) jimiž se v matematické logice vytvářejí z atomických výroků složené výroky. Výrok, který vznikl spojením více jiných výroků pomocí logických spojek se nazývá složený výrok.
+
+Protože výroky mohou být buď pravdivé nebo nepravdivé, je možné najít konečný počet elementárních logických spojek (operací) mezi dvěma výroky. Konkrétně se jedná o 16 logických operací (kombinací) mezi dvěma logickými proměnnými, které jsou dány vztahem $2^{2^{2}} = 2^4 = 16$. Tyto logické operace definují pravdivostní ohodnocení výsledného složeného výroku.
+
+Tento vztah udává veškeré možné kombinace čtyř možných výstupních kombinací dvou logických proměnných, tedy pravdivostní ohodnocení dvou výroků. V matematické logice a matematice mají praktický význam ovšem jen některé z nich. 
+
+$$
+\left[
+\matrix{\cr
+{\bf A} & 0 & 0 & 1 & 1 & \cr
+{\bf B} & 0 & 1 & 0 & 1 & \cr
+f_0 & 0 & 0 & 0 & 0 & Triviální identita f = 0 \cr
+f_1 & 0 & 0 & 0 & 1 & logický součin (AND) - f = A \cdot B \cr
+f_2 & 0 & 0 & 1 & 0 & Přímá inhibice - f = A \cdot  \overline B \cr
+f_3 & 0 & 0 & 1 & 1 & Funkce identická f = A \cr
+f_4 & 0 & 1 & 0 & 0 & Zpětná inhibice - f = \overline A \cdot B \cr
+f_5 & 0 & 1 & 0 & 1 & Funkce identická - f = B \cr
+f_6 & 0 & 1 & 1 & 0 & Nonekvivalence (XOR) - f = A \oplus B \cr
+f_7 & 0 & 1 & 1 & 1 & Logický součet (OR) - f = A + B \cr
+f_8 & 1 & 0 & 0 & 0 & Negovaný logický součet (NOR)- f = \overline {A + B} \cr
+f_9 & 1 & 0 & 0 & 1 & Ekvivalence (XNOR) - f = \overline {A\oplus B} \cr
+f_{10} & 1 & 0 & 1 & 0 & Negace (NOT)- f = \overline B \cr
+f_{11} & 1 & 0 & 1 & 1 & Zpětná implikace - f = A +  \overline B \cr
+f_{12} & 1 & 1 & 0 & 0 & Negace (NOT)- f = \overline A \cr
+f_{13} & 1 & 1 & 0 & 1 & Přímá implikace - f = \overline A + B \cr
+f_{14} & 1 & 1 & 1 & 0 & Negovaný logický součin (NAND) - f = \overline {A \cdot B} \cr
+f_{15} & 1 & 1 & 1 & 1 & Triviální identita - f = 1 \cr
+}\right]
+$$
+
+Spojením více dílčích výroků do složeného výroku je výsledné pravdivostní ohodnocení závislé na pravdivostním ohodnocení jednotlivých dílčích výroků a použitých logických spojkách.
+
+\Sekce{Negace výroku}
+
+Negací výroku se rozumí takový výrok, který popírá pravdivost výroku původního. Pravdivostní ohodnocení negovaného výroku musí být vždy opačné než pravdivostní ohodnocení původního výroku. Negace výroku A se značí značí pomocí symbolu:
+
+$$\neg A $$
+
+Pravdivostní tabulka funkce negace:
+
+$$
+\left[
+\matrix{\cr
+A & \neg A \cr
+0 & 1 \cr
+1 & 0 \cr
+	}
+\right]
+$$
+
+Nejjednodušší způsob jak z výroku vytvořit jeho negaci je přidat na začátek daného výroku formulaci: „není pravda, že“. Další možností je vytvořit nový výrok, s opačnou pravdivostí. Pokud je vytvořena negace výroku, říká se, že je výrok negován. 
+
+Například:
+
+\vskip 4mm
+{\verbatim
+Číslo 1 je záporné.\par
+"Není pravda, že" číslo 1 je záporné.\par
+Číslo 1 "není" záporné.\par
+}
+\vskip 4mm
+
+\Sekce{Konjunkce}
+
+Pod pojmem konjunkce nebo-li logický součin (AND) je možné si představit obdobu spojky „a“, která se vyskytuje v běžné řeči. Konjunkce je pravdivá právě tehdy, když jsou pravdivé oba spojované výroky. Ke značení logické spojky konjunkce mezi výroky A a B se v zápise používá symbol:
+
+$$ A \wedge B $$
+
+Pravdivostní tabulka konjunkce:
+
+$$
+\left[
+\matrix{
+A & B & A \wedge B \cr
+0 & 0 & 0 \cr
+0 & 1 & 0 \cr
+1 & 0 & 0 \cr
+1 & 1 & 1 \cr
+	}
+\right]
+$$
+
+Například:
+
+\vskip 4mm
+{\verbatim Číslo 1 je větší než nula "a" je kladné.}
+\vskip 4mm
+
+\Sekce{Disjunkce}
+
+Disjunkce je obdobou spojky "nebo" v běžné řeči. V běžné řeči se spojka nebo používá ve způsobu vylučovacím, tedy že platí buď jedno a nebo druhé, ale disjunkce připouští i možnost, že nastanou obě varianty současně. 
+
+Disjunkce je pravdivá tehdy, když pravdivý alespoň jeden ze spojovaných výroků. Disjunkce výroků A a B je značena symbolem:
+
+$$ A \vee B $$
+
+Pravdivostní tabulka disjunkce:
+
+$$
+\left[ 
+\matrix{
+A & B & A \vee B \cr
+0 & 0 & 0 \cr
+0 & 1 & 1 \cr
+1 & 0 & 1 \cr
+1 & 1 & 1 \cr
+	}
+\right]
+$$
+
+Například:
+
+\vskip 4mm
+{\verbatim Číslo nula je kladné, "nebo" záporné.}
+\vskip 4mm
+
+\Sekce{Nonekvivalence}
+
+Nonekvivalence je podobná disjunkci, ale s tím rozdílem, že nepřipouští, že by mohly nastat obě varianty současně. Nonekvivalence je pravdivá pouze v případě, že je jeden ze spojovaných výroků pravdivý a druhý nepravdivý, přičemž nezáleží na pořadí. Jedná se o obdobu slovního spojení z běžné řeči "buď … a nebo". Disjunkce výroků A a B je značena symbolem:
+
+$$ A \underline \vee B $$
+
+Pravdivostní tabulka nonekvivalence:
+
+$$
+\left[
+\matrix{
+A & B & A \underline\vee B \cr
+0 & 0 & 0 \cr
+0 & 1 & 1 \cr
+1 & 0 & 1 \cr
+1 & 1 & 0 \cr
+	}
+\right]
+$$
+
+Například:
+
+\vskip 4mm
+{\verbatim Slunce svítí buď na východě a nebo na západě.}
+\vskip 4mm
+
+\Sekce{Implikace}
+
+Ke spojení dvou výroků pomocí implikace se v běžné řeči využívá slovního spojení "jestliže …, pak …" Implikace není komutativní operace, to znamená, že pravdivostní ohodnocení výsledného složeného výroku závisí na pořadí dílčích výroků. Implikace je pravdivá právě tehdy, když jsou oba spojené výroky pravdivé nebo když je druhý výrok nepravdivý. Implikace výroků A a B je značena pomocí symbolu:
+
+$$ A \Rightarrow B$$
+
+Pravdivostní tabulka implikace:
+
+$$
+\left[
+\matrix{
+A & B & A \Rightarrow B \cr
+0 & 0 & 1 \cr
+0 & 1 & 1 \cr
+1 & 0 & 0 \cr
+1 & 1 & 1 \cr
+	}
+\right]
+$$
+
+Implikace je v matematické logice velice důležitá funkce, protože slouží vyvozování závěrů a dokazování. Výroku A se říká předpoklad a výroku B se říká závěr. Pokud platí předpoklad musí platit i závěr, ale pokud předpoklad neplatí na závěru nezáleží, protože  může platit i z jiných důvodů. 
+
+Příklad:  
+
+\vskip 4mm
+{\verbatim Jestliže zaspím, pak přijdu pozdě do školy.}
+\vskip 4mm
+
+Implikace $B \Rightarrow A$ se nazývá {\bf obrácená implikace} k implikaci $A \Rightarrow B$ (obrácená implikace mívá naprosto jiný smysl).
+
+{\bf Obměna implikace} umožňuje změnit pořadí jednotlivých výrokových proměnných v implikaci bez změny její platnosti. 
+
+$$
+\left[
+\matrix{\cr
+A & B & \neg A & \neg B & A \Rightarrow B & B \Rightarrow A & \neg B \Rightarrow \neg A\cr
+0 & 0 & 1 & 1 & 1 & 1 & 1\cr
+0 & 1 & 1 & 0 & 1 & 0 & 1\cr
+1 & 0 & 0 & 0 & 0 & 1 & 0\cr
+1 & 1 & 0 & 0 & 1 & 1 & 1\cr
+	}
+\right]
+$$
+
+\Sekce{Ekvivalence}
+
+Ke spojení dvou výroků pomocí ekvivalence se používá v běžné řeči slovní spojení "…, právě když…," a nebo výrok "A je ekvivalentní s výrokem B".  V zápisu matematických vět se ekvivalence zapisuje pomocí symbolu:
+
+$$ A \Leftrightarrow B $$
+
+Pravdivostní tabulka ekvivalence:
+
+$$
+\left[
+\matrix{\cr
+A & B & A \Leftrightarrow B \cr
+0 & 0 & 1 \cr
+0 & 1 & 0 \cr
+1 & 0 & 0 \cr
+1 & 1 & 1 \cr
+	}
+\right]
+$$
+
+Dva výroky jsou vzájemně ekvivalentní v případě že jsou stejné a nebo, že jejich důsledek je stejný.
+
+Příklad:
+
+\vskip 4mm
+{\verbatim Na nebi svítí hvězdy, právě když slunce zapadlo.}
+\vskip 4mm
+
+\Sekce{Priorita logických spojek}
+
+Nejvyšší prioritu má operace negace. Žádná operace by nevyšla správně, pokud by se před tím neznegovaly hodnoty dílčích výroků. Jako další jsou na řadě operace, které jsou uzavřeny v kulatých závorkách. Pokud jich je v zápisu více, jsou vyhodnocovány v pořadí jak jsou za sebou. Následují  konjunkce, implikace, nonekvivalence, ekvivalence. Jako poslední je disjunkce, která umožňuje sloučit (sečíst) jednotlivé mezivýsledky do jednoho.
+
+\Sekce{Výroková formule}
+
+Výrazy, vytvořené z konečného počtu výrokových proměnných, logických spojek, popřípadě závorek se nazývají výrokové formule. Rozdíl mezi výrokovou formulí a složeným výrokem je ten, že výroková formule obsahuje pouze výrokové proměnné reprezentující dané výroky a složené výroky obsahují nezkrácené výroky. Jedná se tedy o zobecnění na libovolné výroky. Výroková formule je výraz obsahující proměnné, za které po dosazení přípustných konstant je získán výrok.
+
+\PodSekce{Druhy výrokových formulí}
+
+Podle pravdivostního ohodnocení lze rozlišit tři různé výrokové formule:
+
+\vskip 4mm
+\bod{{\bf Někdy pravdivé výrokové formule} - výroková formule, která pro některé pravdivostní hodnoty výrokových proměnných nabývá pravdivostní hodnoty 1 a pro některé 0. Většina výrokových formulí.}
+
+\bod{{\bf Tautologicky pravdivé výrokové formule} - tautologie jsou takové výrokové formule, které pro libovolné pravdivostní hodnoty výrokových proměnných nabývají pravdivostní hodnoty 1. Důležité formule při dokazování vět.}
+
+\bod{{\bf Kontradiktoricky nepravdivé výrokové formule} - kontradikce jsou takové formule,  které pro libovolné pravdivostní hodnoty výrokových proměnných nabývají pravdivostní ohodnocení 0. Kontradikce je negace tautologie.}
+\vskip 4mm
+
+\PodSekce{Tautologie}
+
+Mnoho důležitých tautologií má tvar ekvivalence $V_1 \Leftrightarrow V_2 $ kde V1 a V2 jsou výrokové formule se stejnými výrokovými proměnnými.
+Každé dvě výrokové formule V1 a V2, které používají stejné výrokové proměnné a které mají stejné pravdivostní ohodnocení, tudíž jejich ekvivalence je tautologií se nazývají logicky ekvivalentní výrokové formule.
+
+Každé dva složené výroky, v1 a v2, které se získají dosazením konstantních výroků za výrokové proměnné do logicky ekvivalentních výrokových formulí V1 a V2 se nazývají logicky ekvivalentní složené výroky. Oba výroky v1 a v2 mají sice různý tvar, ale jinak vyjadřují naprosto totéž. Tento typ výroků je v matematice a matematické logice velmi důležitý, protože umožňuje odvozovat nové poznatky z poznatků již ověřených.
+
+Příklad tautologie:
+
+$$ A \Rightarrow (B \Rightarrow A) $$
+
+Její pravdivostní tabulka má tvar:
+
+$$
+\left[
+\matrix{
+A & B & B \Rightarrow A  &  A \Rightarrow (B \Rightarrow A) \cr
+0 & 0 & 1 & 1\cr
+0 & 1 & 0 & 1\cr
+1 & 0 & 1 & 1\cr
+1 & 1 & 1 & 1\cr
+	}
+\right]
+$$
+
+\Sekce{Negace jednoduchých a složených výroků}
+
+Jestliže výrok p vyjadřuje, že nastane několik (jedna nebo více) možných případů, pak jeho negace $\neg p$ musí vyjadřovat, že nastanou všechny ostatní možné případy a žádné jiné.
+
+Každý výrok p lze negovat užitím slovního spojení „není pravda, že p“. Prakticky se ale tento postup používá pouze u negování elementárních (atomických) výroků. Spojením dvou nebo více atomických výroků vznikne výrok nový (složený) a ten se chová stejně jako atomický výrok. To znamená, že jej lze použít v další logické operaci a negovat jej. Složené výroky se při negování převádějí na logicky ekvivalentní výroky, které jsou z gramatického hlediska vhodnější.
+
+S využitím pravidel logické algebry lze vyjádřit vztahy (tautologicky ekvivalentní tvary) mezi jednotlivými logickými spojkami a převést tak negaci jedné logické operace na jinou operaci jinou:
+
+$$
+\left[
+\matrix{
+{\bf Výroková formule} & {\bf Ekvivalentní forma} & {\bf Tautologie} \cr
+\neg (\neg p) & p & \neg (\neg p) \Leftrightarrow p \cr
+\neg (A \wedge B) & \neg A \vee \neg B & \neg (A \wedge B) \Leftrightarrow (\neg A \vee \neg B) \cr
+\neg (A \vee B) & \neg A \wedge \neg B & \neg (A \vee B) \Leftrightarrow (\neg A \wedge \neg B) \cr
+\neg (A \underline \vee B) & A \Leftrightarrow B & \neg (A \underline \vee B) \Leftrightarrow (A \Leftrightarrow B) \cr
+\neg (A \Rightarrow B) & A \wedge \neg B & \neg (A \Rightarrow B) \Leftrightarrow (A \wedge \neg B) \cr
+\neg (A \Leftrightarrow B) & A \underline \vee B & \neg (A \Leftrightarrow B) \Leftrightarrow (A \underline \vee B) \cr
+	}
+\right]
+$$
+
+\Sekce{Tabulková metoda}
+
+Tabulková metoda je způsob vyhodnocování složitějších formulí. Tabulková metoda spočívá v tom, že se do prvních sloupců pravdivostní tabulky zapíše {\it n} výrokových proměnných se kterými formule pracuje a všechny kombinace jejich ohodnocení. Do dalších řádků se umístí postupně dílčí „podformule“, které tvoří danou formuli. Následně se tyto formule vyhodnotí a jejich pravdivostní hodnoty doplní do určených řádků pravdivostní tabulky.
+
+Například formule $(A \wedge B) \Rightarrow (A \vee B)$ se rozdělí do tabulky:
+
+$$
+\left[
+\matrix{
+A & B & A \wedge B & A \vee B & (A \wedge B) \Rightarrow (A \vee B) \cr
+0 & 0 & 0 & 0 & 1 \cr
+0 & 1 & 0 & 1 & 1 \cr
+1 & 0 & 0 & 1 & 1 \cr
+1 & 1 & 1 & 1 & 1 \cr
+	}
+\right]
+$$
+
+O formulích nelze říct, zda jsou pravdivé či nepravdivé. Takové tvrzení nemá smysl, protože aby bylo možné rozhodnou zda je daná formule pravdivá či nepravdivá, je třeba nejprve určit v jakém ohodnocení dílčích výrokových proměnných. Jediným případem, kdy je možné říct, že formule je pravdivá je, pokud je pravdivá ve všech možných ohodnoceních, tedy pokud je formule tautologií.
+
+\Sekce{Shrnutí}
+
+{\bf Logická spojka} je jazyková část fungující podobně jako slovní spojky, které se v matematické logice používají pro spojování dvou dílčích výroků. Logická spojka ovlivňuje podle své definice pravdivostní ohodnocení výsledného složeného výroku.
+
+{\bf Negace} (NOT) je logická spojka, která invertuje (otočí) pravdivostní ohodnocení daného výroku. Slovní ekvivalent negace je "není pravda že ..." nebo se vytvoří vhodnější jazyková konstrukce. Jestliže nějaký výrok vyjadřuje, že nastane několik možných případů, pak jeho negace vyjadřuje, že nastanou všechny ostatní možné případy a žádné jiné.
+
+{\bf Logický součin} (AND) je logická spojka, která spojuje dva dílčí výroky. Výsledný složený výrok je pravdivý v případě, že oba výroky jsou také pravdivé. Slovní ekvivalent logického součinu je spojka "a".
+
+{\bf Logický součet} (OR) je logická spojka, která spojuje dva dílčí výroky. Výsledný složený výrok je pravdivý v případě, že alespoň jeden ze spojovaných výroků je pravdivý. Slovní ekvivalent logického součtu je spojka "nebo".
+
+{\bf Nonekvivalence} je logická spojka, která spojuje dva dílčí výroky. Výsledný složený výrok je pravdivý v případě, že je pravdivý pouze jeden z dílčích výroků. Slovní ekvivalent nonekvivalence je "... a nebo ...".
+
+{\bf Implikace} je logická spojka, která spojuje dva dílčí výroky. Výrok A se jmenuje předpoklad a výrok B se jmenuje závěr. Výsledný složený výrok je nepravdivý v případě, že je předpoklad pravdivý, ale závěr nepravdivý. Pokud platí předpoklad musí platit i závěr, ale pokud předpoklad
+neplatí na závěru nezáleží, protože může platit i z jiných důvodů. Slovní ekvivalent implikace je "Jestliže ..., pak ...". Důležitá spojka při dokazování platnosti důkazů.
+
+{\bf Ekvivalence} je logická spojka, která spojuje dva dílčí výroky. Výsledný složený výrok je pravdivý pouze v případě, že oba dílčí výroky jsou buď pravdivé nebo nepravdivé. Slovní ekvivalent ekvivalence je "... právě když ...".
+
+{\bf Výroková formule} - jedná se o spojení dílčích výroků pomocí logických spojek, výrokových proměnných, závorek,... Po dosazení konkrétních výroků za výrokové proměnné vznikne složený výrok.
+
+{\bf Tautologie} - jedná se o důležitou výrokovou formuli, která je vždy pravdivá bez ohledu na pravdivostní ohodnocení dílčích výroků.
+
+{\bf Tabulková metoda} je metoda postupného vyhodnocování výrokových formulí, kdy jsou do pravdivostní tabulky nejprve vypsány všechny možné kombinace logických hodnot pro vstupní proměnné. Do dalších sloupků jsou následně zapsány všechny dílčí podformule, které tvoří danou formuli a jejich pravdivostní ohodnocení pro jednotlivé vstupní kombinace. Výsledkem by mělo být pravdivostní ohodnocení konečné výrokové formule.
+
+\Nadpis{Predikátová logika}
+
+{\bf Výroková forma}, nebo také {\bf predikát} je jazykový výraz, který obsahuje jednu nebo více objektových proměnných {\it x}, {\it y}, … a který po dosazení konstant tedy určitých objektů za proměnné se stává výrokem - pravdivým nebo nepravdivý (Výroková forma je výraz obsahující proměnné za které když se dosadí přípustné konstanty je získán výrok).
+
+{\bf
+Rozdíl mezi výrokovou formulí a výrokovou formou je ten, že výroková formule obsahuje výrokové proměnné, které reprezentují atomické výroky, popřípadě složené výroky a výroková forma obsahuje objektové proměnné, které reprezentují libovolný objekt dané množiny.
+}
+
+Výroková forma o jedné neznámé se značí {\it v(x)}, {\it p(x)}, ... Vyjadřují se tím vlastnosti prvku {\it x} dané množiny {\it M}. Obecně výroková forma o {\it n} proměnných   $x_1$,  $x_2$, ... $x_n$ se značí $v(x_1, x_2, ... x_n)$. Výrokové formy o více proměnných vyjadřují vztahy mezi prvky jedné nebo více množin. 
+
+Při zadávání výrokové formy jedné nebo více proměnných je třeba stanovit množiny, ze kterých lze dosazovat konstanty za proměnné (hodnoty proměnných) do výrokové formy {\it v(x)}. Tyto množiny se nazývají {\bf obory proměnných}. V případě výrokové formy jedné proměnné {\it x} se množina všech přípustných hodnot proměnné {\it x} nazývá {\bf obor hodnot proměnné x} a značí se {\bf D}.
+
+Množina všech hodnot proměnné {\it x}, jejichž dosazením za, proměnnou {\it x} ve výrokové formu {\it v(x)} je získán pravdivý výrok se nazývá {\bf obor pravdivosti výrokové formy} a značí se {\bf P}. Tyto dva pojmy lze definovat i pro výrokové formy více proměnných.
+
+\odstrankovat
+
+Příklad výrokové formy:
+\vskip 4mm
+{\verbatim v(x): Osoba x je český spisovatel}
+\vskip 4mm
+
+(proměnná x je reprezentuje libovolného člověka z množiny Čechů)
+
+\Sekce{Složené výrokové formy}
+
+Stejně jako lze pomocí logických operací spojovat výroky, lze také spojovat výrokové formy se {\bf stejným oborem hodnot proměnných}. Jedná se o logické operace s výrokovými formami jejichž výsledkem jsou složené výrokové formy.
+
+$$
+\left[
+\matrix{
+{\bf Výroková forma} \cr
+\neg v(x) \cr
+p(x)\wedge q(x) \cr
+p(x)\vee q(x) \cr
+p(x)\underline \vee q(x) \cr
+p(x) \Rightarrow q(x) \cr
+p(x) \Leftrightarrow q(x)\cr
+	}
+\right]
+$$
+
+\Sekce{Kvantifikátory a kvantifikované výroky}
+
+Kvantifikátory jsou jazykové výrazy, kterými se vymezují počty (kvanta) uvažovaných objektů, obvykle celá konkrétní číselná množina, nebo podmnožina dané číseln množiny a nebo jen vybrané prvky jedné nebo více množin. Slouží pro vyjadřování míry přítomnosti dané vlastnosti (predikátu) v jisté třídě objektů.
+
+Základní slovní kvantifikátory:
+
+$$
+\left[
+\matrix{
+Každý objekt & Libovolný objekt z dané množiny \cr
+Alespoň jeden objekt & Jeden nebo více objektů \cr
+Nejvýše jeden objekt & Jeden nebo žádný objekt \cr
+Právě jeden objekt & Jeden a pouze jeden objekt \cr
+Alespoň {\bf n} objektů (n \in N , n>1) & {\bf n} nebo více objektů \cr
+Nejvýše {\bf n} objektů (n \in N, n>1) & {\bf n} nebo méně objektů \cr
+Právě {\bf n} objektů (n \in N, n>1) &  {\bf n} objektů a ani méně a ani více \cr
+Žádný objekt & 0 objektů \cr
+	}
+\right]
+$$
+
+
+Speciálně v matematice a matematické logice se uplatňují tzv. základní kvantifikátory. Pomocí nich a negace lze pokrýt libovolný počet prvků dané množiny:
+
+$$
+\left[
+\matrix{
+Obecný kvantifikátor & \forall & Pro každý prvek... \cr
+Existenční kvantifikátor & \exists & Existuje alespoň jeden prvek... \cr
+Kvantifikátor jednoznačné existence & \exists! & Existuje právě jeden... \cr
+	}
+\right]
+$$
+
+Výroky, ve kterých se vyskytují kvantifikátory se nazývají kvantifikované výroky. 
+V matematické logice a matematice se kvantifikované výroky vytvářejí z výrokových forem kvantifikováním proměnných = vymezení počtu hodnot proměnných (z oboru proměnných), pro které daná výroková forma platí (jejich dosazením do výrokové formy je získán pravdivý výrok). Existují dva způsoby jak z výrokové formy vytvořit výrok:
+
+\vskip 4mm
+\bod{Dosazením konstant (hodnot proměnných) za všechny proměnné z oboru proměnných do výrokové formy = {\bf individuální výroky}}
+\bod{Kvantifikací všech proměnných ve výrokové formě = {\bf kvantifikované výroky}.}
+\vskip 4mm
+
+Užitím základních kvantifikátorů ke kvantifikaci proměnné x dané výrokové formy v(x) se získají základní kvantifikované výroky:
+
+$$
+\left[
+\matrix{
+{\bf Název výroku} & {\bf Slovní vyjádření} & {\bf Symbolický zápis} \cr
+Obecný výrok & Pro každé x\in D platí v(x) & \forall x \in D: v(x) \cr
+Existenční výrok & Pro alespoň jedno x\in D platí v(x) & \exists x \in D: v(x) \cr
+Výrok o unicitě & Pro právě jedno x\in D platí v(x) & \exists ! x \in D: v(x)\cr
+	}
+\right]
+$$
+
+Do kvantifikovaných výroků nelze dosazovat za kvantifikované proměnné jejich hodnoty - proměnná je vázána kvantifikátorem, který vymezuje všechny přípustné hodnoty. Zapsáním určité hodnoty do kvantifikované proměnné by se popřela kvantifikace.
+
+\Sekce{Negování kvantifikovaných výroků}
+
+Jestliže platnost kvantifikovaného výroku {\it p} vyjadřuje, že jistý počet objektů má danou vlastnost {\it v(x)}, pak jeho negace $\neg p$ musí být vyslovena jako takový kvantifikovaný výrok, jehož platnost zahrnuje všechny možné případy, kdy výrok {\bf p} neplatí.
+
+Při negaci jakéhokoli kvantifikovaného výroku je třeba zjistit za jakých okolností daný kvantifikátor neplatí.
+
+\PodSekce{Negace obecného výroku}
+
+U kvantifikovaných výroků s obecným kvantifikátorem platí, že pokud je za proměnnou zadán libovolný prvek z oboru proměnné je získán vždy pravdivý výrok - pro každý prvek množiny platí daná vlastnost. Při negaci obecného výroku platí, přesný opak. Pokud existuje alespoň jeden prvek z oboru proměnné, pro který daná vlastnost neplatí a je získán nepravdivý výrok. Z toho vyplývá, že negací obecného kvantifikátoru je získán existenční kvantifikátor:
+
+$$ \neg(\forall x \in M: v(x)) \Leftrightarrow \exists x \in M : \neg v(x)  $$
+
+\PodSekce{Negace Existenčního kvantifikátoru}
+
+Kvantifikovaný výrok s existenčním kvantifikátorem je pravdiví právě tehdy, když existuje alespoň jeden (nebo více, ale nikoli všechny) prvek z oboru proměnné, pro který platí daná vlastnost. Jestliže ale daná vlastnost platí pro všechny prvky oboru proměnné, pak již nesplňuje definici existenčního kvantifikátoru a výrok je nepravdivý. Z toho vyplývá, že obecný kvantifikátor a existenční kvantifikátor jsou navzájem inverzní:
+
+$$\neg (\exists x \in M: v(x)) \Leftrightarrow \forall x \in M: \neg v(x) $$
+
+\Sekce{Shrnutí}
+
+{\bf Výrokový forma, predikát} - jazyková konstrukce, která obsahuje jednu nebo více objektových proměnných (proměnná, která zastupuje všechny prvky dané množiny). Díky tomu daný výrok zobecňuje na celou množinu objektů. Výroková forma pro proměnné {\it x}, {\it y}, ... {\it z} se značí $v(x,y, ... z)$.
+
+{\bf Obor proměnné} je množina, která se znační {\it D}, ze které lze dosazovat za danou proměnnou ve výrokové formě. Tuto množinu je třeba vždy uvést, protože každá proměnná ve výrokové formě může mít svůj vlastní obor.
+
+{\bf Obor pravdivosti výrokové formy} je množina hodnot, která se značí {\it P }, pro které platí, že po dosazení do výrokové formy je získán pravdivý výrok. Tyto hodnoty patří do oboru proměnné, a z toho vyplývá, že obor pravdivosti výrokové formy je podmnožinou oboru proměnné. V případě, že výroková forma obsahuje více než jednu proměnnou, pak obor pravdivosti výrokové formy tvoří množinu uspořádaných hodnot (skupiny hodnot, které po dosazení za proměnné výrokové formy dají pravdivý výrok).
+
+{\bf Kvantifikátory} jsou jazykové výrazy, kterými se vymezují počty (kvanta) uvažovaných objektů. Kvantifikátory umožňují definovat pro které prvky dané množiny platí daný výrok (vlastnost). 
+
+{\bf Obecný kvantifikátor} říká, že daná vlastnost platí pro všechny prvky dané množiny. Je definován symbolem $\forall$. Obecný kvantifikátor a existenční kvantifikátor jsou vzájemně inverzní.
+
+{\bf Existenční kvantifikátor} říká, že daná vlastnost platí pro jeden, nebo více prvek dané množiny. Je definován symbolem $\exists$.
+
+{\bf Kvantifikátor jednoznačné existence} říká, že daná vlastnosti platí pro právě jeden konkrétní prvek dané množiny. Je definován symbolem $\exists!$.
+
+
+\Nadpis{Logická výstavba matematicky}
+
+Hlavním rysem matematiky je axiomatická výstavba matematických teorií v jednotlivých jejích disciplínách. Jejich základem jsou {\bf axiomy} (postuláty) - výchozí matematické výroky, které se prohlásí za pravdivé bez dokazování, protože se považují za všeobecné známé a platné. Obsahují základní pojmy, které se nedefinují, ale pokládají se za zavedené (úplně charakterizované). V každé teorii je alespoň jeden počáteční axiom, který tvoří základ pro logickou výstavbu dalších pojmů. Tyto axiomy tvoří soustavu axiomů. Od nichž se požaduje, aby byly vnitřně bezesporné a nezávislé, tzn. aby daná skupina axiomů neobsahovala dva vzájemně si protiřečící axiomy a současně, aby nebylo možné odvodit některý z axiomů z ostatních (nebyl by to axiom). Tato metoda vytváření matematických teorií se označuje jako axiomatická a takto vytvořené teorie jako teorii formální. 
+
+Další matematické pojmy se zavádějí pomocí definic. {\bf Definice} je vymezení pojmu, se kterým je následně manipulováno. Jakožto každé vymezení pojmu, by každá definice měla obsahovat dvě části:
+
+\vskip 4mm
+\bod{{\bf Název zaváděného pojmu} - neměl kolidovat s již existujícími pojmy a měl by vystihovat zaváděný pojem.}
+\bod{{\bf Charakteristickou vlastnost zaváděného pojmu} - měla by být naprosto přesně popsána. Definice se v matematice používají především pro to, aby se mohlo se zaváděným pojmem dále pracovat (to může být velmi obtížné bez dostatečné popsané vlastnosti definice).}
+\vskip 4mm
+
+Své výsledky matematická teorie formuluje v tzv. matematických větách. {\bf Matematická věta} (poučka, teorém) je pravdivý matematický výrok, který má význam v matematické teorii nebo její aplikaci a dá se dokázat a odvodit z předem daných axiomů, definic a dříve dokázaných vět. Věty, které obsahují návod k provedení výpočtu, nebo konstrukce se nazývají {\bf pravidla}.
+
+\Sekce{Druhy matematických vět}
+
+Matematické věty mohou být ve tvaru:
+
+\vskip 4mm
+\bod{{\bf Věty ve tvaru individuálního výroku} lze z hlediska jejich stavby rozdělit na jednoduché výroky a složené výroky, které jsou zpravidla ve tvaru implikace nebo ekvivalence. Tyto věty mají svou platnost pouze pro konkrétní prvky množin (situace).}
+
+\bod{{\bf Věty ve tvaru kvantifikovaného výroku} jsou v matematice nejvýznamnější. Tyto věty umožňují zobecnit platnost dané vlastnost pro celou množinu (podmnožinu) prvků. Použití takové věty je tak mnohem širší.}
+\vskip 4mm
+
+$$
+\left[
+	\matrix{
+	{\bf Druhy vět} & {\bf Slovní vyjádření} & {\bf Symbolický zápis}\cr
+    Věta tvaru obecného kvantifikátoru & Pro každé x \in D platí {\it v(x)} & \forall x \in D : v(x) \cr
+	Věta tvaru implikace & Pro každé x\in D platí, jestliže {\it p(x)} pak {\it q(x)} & \forall x\in D : p(x) \Rightarrow q(x)\cr
+	Věta tvaru ekvivalence & Pro každé x\in D platí, {\it p(x)} právě když {\it q(x)} & \forall x\in D: p(x)\Leftrightarrow q(x)\cr
+	Věta tvaru existenčního kvantifikátoru & Existuje alespoň jedno x \in D pro které platí {\it v(x)} & \exists x \in D :v(x)\cr
+	Věta tvaru jednoznačné existence & Existuje právě jedno x \in D pro které platí {\it v(x)} & \exists ! x \in D : v(x) \cr
+	}
+\right]
+$$
+
+\Sekce{Shrnutí}
+
+{\bf Axiom} je výrok, který je všeobecně známí, a platný a dále se nedokazuje.
+
+{\bf Soustava axiomů} je určitá množina axiomů, které slouží k budování matematických (fyzikálních, chemických, ...) teorií, vět a definic.
+
+{\bf Matematická věta} je pravdivý a dokázaný výrok, který shrnuje určité výsledky matematického (fyzikálního, chemického, ...) bádání. Tento výrok je dokázán pomocí matematické logiky a složen ze základních axiomů a jiných vět a definic.
+
+\Nadpis{Důkazy}
+
+V matematice slouží důkazy k dokázání pravdivosti určitých tvrzení a tím potvrzují jejich všeobecnou platnost. Jedná se o velice důležitou součást matematiky, protože bez jejich existence by si nikdo nemohl být na 100\% jistý, že je v matematice něco zkutečně všeobecně platné. 
+
+Tvrzení říkají, že je něco pravda, nebo naopak že něco pravda není a postihují tak celou množinu případů, kdy tento výrok je pravdivý. Cílem je zjistit (dokázat), zda množina případů kdy daný výrok pravdivý není je prázdná, tedy že neexistuje případ kdy by daný výrok neplatil. To znamená, že je třeba přijít s nějakým řešením, důkazem, které postihuje všechny případy, které mohou nastat a dokázat tak platnost výroku. K vytvoření matematického důkazu daného tvrzení se využívají matematické nástroje a pro jeho vyjádření jazyk matematické logiky. Matematické důkazy tak spojují matematickou logiku a matematické nástroje a tvoří tak nerozlučný celek pro budování nových poznatků ne jen matematice, ale také v jiných technických vědách (fyzika, ekonomie, ...).
+
+V matematice se tvoří formule (tvrzení) o kterých v dané chvíli nelze na první pohled říct zda jsou či nejsou pravdivé (nelze hned určit jejich pravdivostní ohodnocení). U složitějších formulí je třeba pomocí jiných matematických nástrojů a matematických vět dokázat zda jsou či nejsou pravdivé. Tomuto procesu kdy je ověřována platnost se říká {\bf dokazování} a k dokázání platnosti věty slouží {\bf matematické důkazy}. Důkaz je matematický nástroj, který slouží k potvrzení platnosti dané matematické věty (teorie) z určitých předpokladů (axiomů) nebo jiných již dříve dokázaných tvrzení. Matematika staví své poznatky na principu {\bf věta důkaz}.  Formule (tvrzení), ke které je znám matematický důkaz, se nazývá {\bf matematická věta}.
+
+Dokazovaná věta může být (kvantifikovaný i nekvantifikovaný) jednoduchý výrok nebo (kvantifikovaný i nekvantifikovaný) výrok složený. Způsob dokazování se podle toho liší.
+
+Při dokazování je snaha z tvrzení přijatých za správné dokázat tvrzení jiná. Obecně lze úsudek charakterizovat jako množinu pravdivých výroků \par\noindent $\{ V_1, V_2, …, V_n\}$, které byly dedukcí odvozeny z výroku (axiomu) {\it A}. Pokud je pravdivý výrok {\it A} a od něj odvozené výroky $V_1, V_2, …, V_n$ je pravdivý i výrok {\it V}. Výrokům  $V_1, V_2, …, V_n$ se říká premisy výroku {\it V}. Obecně se tento postup dedukce zapisuje jako: $V_1 \Rightarrow V_2 \Rightarrow ... \Rightarrow V$. Není ale pravidlem, že se dokazují jen složené výrazy, občas je třeba dokázat i samotný atomický výraz. Ten je ale třeba převést na složený výraz typu implikace, kdy je dokazován prostřednictvím jeho závěru.
+
+K dokazování nějakého výroku se používá několik postupů. Každý postup má své uplatnění v určité situaci. V každém postupu je ale třeba nejprve vyjádřit co vlastně znamená to co je dokazováno, aby mohly být na tyto vylastnosti aplykovány matematické postupy, vlastnosti operací, úpravy a pomocí logických kroků dojít k pravdivosti nebo nepravdivosti daného tvrzení. 
+
+\Sekce{Triviální důkazy}
+
+Triviální důkazy jsou nějaké důkazy, které typicky vyplývají z nějaké definice v jednom triviálním kroku. Triviální důkazy obvykle opravdu triviální bývají, ale jen pokud je znám okolní kontext tvrzení. Triviální důkazy se tak nevyznačují ani tím, že jsou jednoduché, jako spíš tím, že jsou krátké a vyplývají jednoduše z nějakého (libovolně těžkého) kontextu. 
+
+Příklad triviálního důkazu může být dokázat, že zlomek ${p \over q}: p,q \in N$ je platným zlomkem, tedy, že se nenajde žádné takové číslo pro které by daný zlomek neměl smysl. Nejprve je třeba zjistit, kdy zlomek nemá smysl. Zlomek nemá smysl pouze v případě, že je čitatel roven nule. Je tedy třeba dokázat, že $q \neq 0$ pro všechny možné hodnoty, které {\bf q} může nabývat. Protože množina přirozených čísel je definována jako $N = {1, 2, 3, ...}$, pak je možné s jistotou říci, že hodnoty {q} budou vždy různé od nula.
+
+$$\forall q\in N : q \neq 0$$
+
+Tím je celý důkaz hotový
+
+\Sekce{Důkaz protipříkladem}
+
+V případě důkazu protipříkladem je hledán takový prvek (prvky) množiny pro který daný výrok je {\bf nepravdivý}, protože vyjmenováním prvků množiny, pro které výrok platí může být zdlouhavý. Důkaz protipříkladem je vhodné použít v případě, kdy je známo, nebo je podezření, že existují nějaké příklady, pro které dokazovaný výrok neplatí. Tím, že nejsou žádné takové příklady nalezeny, je možné daný výrok pokládat za dokázaný. 
+
+Typickým příkladem důkazu protipříkladem je důkaz výroku:\par\noindent $\forall x \in Z: (x>10)$ 
+
+V případě, že by se vyjmenovávala všechna čísla, která jsou větší než číslo 10, by nebylo možné, protože množina přirozených čísel je nekonečná. Ale pokud lze říci, že existuje alespoň jedno číslo, které je menší než číslo 10, pak lze s určitostí říci, že výrok  $\forall x \in Z: x>10$  je nepravdivý. V tomoto případě jsou menší než 10 všechna čísla v intervalu $<1:9>$. Závěrem důkazu protipříkladem vyvrácení platnosti daného výroku: $\exists y \in <1:9> : (y<x)$ 
+
+
+\Sekce{Přímí důkaz}
+
+Přímí důkaz je základním typem dokazování, který se v matematice používá. Jeho základem je logická spojka implikace, která umožňuje definovat důkaz v jeho základní, logické a srozumitelné podobě $V_1 \Rightarrow V_2 \Rightarrow ... \Rightarrow V$. V implikace $A \Rightarrow B$ je výrok {\it A} předpoklad a výrok {\it B} závěr. Přímí důkaz se ale používá dvojím způsobem. Buď je znám výrok {\it A} a postupnými logickými kroky je tento výrok obohacován a logickou cestou z něj vznikne výrok {\it B} a nebo je znám výrok {\it B} a je třeba jej dokázat, tedy najít jeho předpoklad, který jej vyvozuje.
+
+První případ se využívá ve výzkumných případech, kdy jsou ze známích faktů (výroků) postupnými kroky vytvářeny nové závěry, které opět mohou sloužit jako předpoklady pro další tvrzení. Druhý případ slouží jako potvrzení platnosti nějakého závěru, na který byl objeven, ale o kterém se neví zda je platný ve všech případech. Důležité je, že přímí důkaz dokazuje vždy nějaký výrok ve tvaru implikace.
+
+Příkladem přímého důkazu je dokázání výroku o porovnávání velikosti mocnin: $a,b\in R \wedge a,b>0 \Rightarrow (a+b)^2 > a^2 +b^2 $
+
+Důkaz:
+
+$$ (a+b)^2 = a^2 +2ab +b^2 $$
+
+$$ a^2 + 2ab + b^2 = a^2 + b^2 \Rightarrow 2ab > 0$$
+
+\Sekce{Důkaz nepřímí}
+
+Důkaz nepřímí se opět snaží dokázat tvrzení ve tvaru implikace: $A \Rightarrow B$. Rozdíl mezi přímím důkazem a nepřímím důkazem je, že toto tvrzení je převedeno na obrácenou implikaci: $\neg B \Rightarrow \neg A $. Nepřímí důkaz tedy využívá tautologie (ekvivalence) implikace:
+$$A \Rightarrow B \Leftrightarrow \neg B \Rightarrow \neg A $$
+Obě tato tvrzení jsou naprosto stejná, májí sice jiný tvar, ale vyjadřují naprosto stejnou věc. Nepřímí důkaz se využívá v situacích kdy je předpoklad mnohem složitější než je jeho závěr. Z toho vyplývá, že když se dokáže jednodušší závěr, pak je automaticky dokázán i složitější předpoklad. Tím se celé dokazování vírazně zjednoduší.
+
+Například nepřímí důkaz pro tvrzení:
+$$\forall a,b \in Z: a - b = 0 \Rightarrow a = b$$
+Důkaz:
+
+Po převodu na obrácenou implikaci vypadá výrok takto: 
+$$\forall a,b \in Z:a \not = b \Rightarrow a - b \not = 0$$
+Jestliže dvě čísla si nejsou rovna, pak je možné najít číslo $x \in Z$, které udává jak daleko se tato čísla od sebe nacházejí na číselné ose, tedy:
+$$a \not = a+ x \Rightarrow a - (a+x) \not = 0$$
+Poté co jsou všechny proměnné převedeny na správnou stranu je získán výrok: 
+$$0 \not = x \Rightarrow 0 \not = x$$
+Z toho vyplývá, že aby si dvě čísla nebyla rovna, musí být číslo $x \not =0$ (nenulové). Výsledkem je platnost původního výroku:
+$$ \forall a,b \in Z: a-b=0 \Rightarrow a = b $$
+
+\Sekce{Důkaz sporem}
+
+V případě důkazu sporem je tvrzení dokazováno tak, že se dané tvrzení považuje za pravdivé a pak se zneguje:
+
+$$A\Rightarrow B \rightarrow A \wedge \neg B $$
+
+Pomocí matematických postupů je snahou dojít k nějakému sporu s tímto tvrzením, někdy se také říká pro {\it spor s původním výrazem}. V případě, že je získán spor s negovaným tvrzením je možné původní tvrzení považovat za pravdivé. Jedná se o velice často používaný postup při dokazování matematických tvrzení, protože je možné pomocí relativně jednoduchých postupů a pravidel rychle dojít ke sporným výsledkům.
+
+Například důkaz pro tvrzení, které říká že $\sqrt {2}$ je iracionální číslo.
+
+Důkaz:
+
+Nejprve se dané tvrzení zneguje, je předpokládáno, že (pro spor) $\sqrt {2}$ je racionální číslo ve tvaru zlomku v základním tvaru:
+
+$$\sqrt {2} = {p\over q}$$
+
+kde $p,q \in Z$, $q \not\mid p$ a $q > 0$
+
+$$ \sqrt{2} \cdot q = p $$
+
+$$ 2 q^2 = p^2 $$
+
+
+Niní lze jednoznačně říci, že pokud je možné $p^2$ vyjádřit jako dvojnásobek nějakého jiného čísla, pak je $p^2$ sudé číslo. Protože platí, že druhá mocnina sudého čísla je opět sudé číslo, je také možné říct, že číslo {\it p} je také sudé číslo. Protože sudé číslo lze obecně napsat jako $p=2k$ je možné napsat:
+
+$$ 2 q^2 = (2k)^2$$
+
+$$ 2 q^2 = 4k^2$$
+
+$$q^2 = 2k^2  $$
+
+$$ q = 2k $$
+
+Z toho nutné vyplývá, že číslo {\it q} je nutně také sudé číslo. To ale znamená, že jsou vzájemně soudělná, což odporuje předpokladu, že $\sqrt{2} ={p\over q}$ kde $q \not\mid p$. Díky tomu je dokázáno, že $\sqrt{2} \not = {p\over q}$, tedy není racionální číslo a opakem racionálního čísla je číslo iracionální.  
+
+
+
+\Sekce{Důkaz matematickou indukcí}
+
+Důkaz pomocí matematické indukce je důležitý při práci s přirozenými čísly, s posloupnostmi a řadami. Ať už se jedná o množinu přirozených čísel nebo o nějaký jiný druh posloupnosti, je většinou třeba dokázat že nějaký výrok {\it V} platí pro všechny prvky této posloupnosti. Tím ale vzniká stejné množstvý dílčích výroků, které je třeba dokázat, kolik je prvků dané posloupnosti:
+
+$$ V_1, V_2, ... V_n, V_{n+1}, V_{n+2}, ... $$
+
+V případě nekonečné posloupnosti je těchto výroků nekonečně mnoho a je nesmyslné je dokazovat jednu po druhé. Podstatou důkazu matematickou indukcí je implikace ve tvaru:
+
+$$ V_n \Rightarrow V_{n+1} $$
+
+To znamená, že pokud je dokázáno že daný výrok platí pro člen {\it n-tý} posloupnosti, pak platí i pro člen {\it n+1}. Díkytomu pak zle říct, že pokud platí pro prvek {\it n+1} pak musí platit i pro prvek {\it n+2}. Tím je daný výrok dokázán i pro všechny ostatní členy dané posloupnosti. 
+
+Například důkaz pro tvrzení, že:
+
+$$ S_n = \sum^n_{i=0} (2i+1) = 1 + 3 + 5 + ... + n = n^2 $$ 
+
+tedy součet n lichých čísel je roven $n^2$
+
+Důkaz:
+
+Je třeba dokázat, že platí vztah:
+
+$$ S_n = n^2 \Rightarrow S_{n+1} = (n+1)^2 $$
+
+\Sekce{ Shrnutí}
+
+{\bf Důkaz} 
+
+\Nadpis{Teorie množin}
+
+Množina je soubor libovolných navzájem různých neopakujících se entit (objektů), které jsou ve vzájemném vztahu (spojuje je nějaká vlastnost), který je chápán jako jeden celek (i množina objektů, které nejsou navzájem ve vztahu jsou ve zkutečnosti ve vztahu, čímž vzniká paradox, který toto pravidlo potvrzuje). Každý z objektů, který patří do množiny se nazývá {\bf prvek množiny}.  Množiny obsahují nějaký soubor libovolných prvků: čísla, písmena, jména nebo i jiné množiny. V matematice se nejčastěji pracuje s číselnými množinami, tedy s množinami, jejichž prvky jsou čísla. Jednotlivé prvky v zápisu množiny jsou navzájem odděleny pomocí středníku, aby nedošlo ke konfliktu s desetinnými čisly.
+
+Množiny jsou jedním z nejdůležitějších pojmů matematiky, protože je na nich postavena veškerá její logika. Z tohoto důvodu je v matematice možné téměř vše chápat jako určitou formu množiny. Celá matematika je chápána v souvislosti s množinami jako soubor nějakých prvků (čísel, vektorů, bodů, ...) které jsou pomocí matematických operací uváděny do nějakých vzájemných vztahů - relace. Relace umožňují vytvářet matematické operace, které vytvářejí vztahy mezi prvky jedné nebo více množin a vytvářejí tak uspořádané n-tice prvků. To umožňuje na základě vstupů dávat popisovat okolní jevy, vytvářet geometrické konstrukce, ... Celá matematika je o práci s prvky různých množin a operacemi mezi nimi - $\{1; 2; 3 \}$
+
+K označení množin se zpravidla používají velká písmena abecedy - A, B, C, ... a k označení jejich prvků malá písmena abecedy: a, b, c, ... Podmínkou pro existenci dané množiny je různost (rozlišitelnost) všech objektů. Množina $\{1; 1; 2; 3; 3\}$ je tedy jen tříprvková množina.
+
+Množiny lze rozdělit na {\bf množiny uspořádané} a {\bf množiny neuspořádané}. Uspořádaná množina je taková množina, u které záleží na pořadí prvků. Prvky uspořádané množiny se zapisují do hranatých závorek: $M = [m_1; m_2; ...; m_n ]$. To znamená, že platí $[a; b] \neq [b;a]$. Dvě uspořádané množiny jsou si rovny právě v případě, že platí: $[a; b] = [b; a] \Rightarrow a = b$. Neuspořádaná množina je taková množina, u které {\bf nezáleží} na pořadí zapisovaných prvků. Prvky neuspořádané množiny se zapisují do složených závorek: $M = \{m_1; m_2; ...; m_n\}$. To znamená, že platí $\{a; b\} = \{b; a\}$.
+
+Patří-li daný objekt a do množiny A, je tento fakt vyjádřen zápisem:
+
+$$ a \in A $$
+
+Tento zápis se čte: {\it a} je prvkem množiny {\it A}.
+
+Nepatří-li daný {\it a} objekt do množiny {\it A}, je tento fakt vyjádřen zápisem:
+
+$$ a \notin A $$
+
+Tento zápis se čte: {\it a} není prvkem množiny {\it A}.
+
+Obsahuje-li daná množina {\it A} prvek {\it a}, je tento fakt vyjádřen zápisem:
+
+$$ A \ni a $$
+
+Tento zápis se čte jako: Množina A obsahuje prvek a.
+
+Jestliže množina obsahuje alespoň jeden prvek, nazývá se {\bf neprázdná množina}. 
+Množina, která neobsahuje žádné množiny se nazývá {\bf prázdná množina} a označuje se symbolem:
+
+$$ A=\{ \oslash \}$$
+
+Množina, která má konečný počet prvků (buď je prázdná a nebo počet jejich prvků $|M|$ je dán přirozeným číslem), se nazývá {\bf konečná množina}. 
+Každá množina, která není konečná, se nazývá {\bf nekonečná množina}.
+
+\Sekce{ Vlastnosti množin}
+
+\PodSekce{ Dobře uspořádaná množina}
+
+Množina {\it M} se nazývá {\bf dobře uspořádanou množinou}, pokud má každá neprázdná podmnožina uspořádané množiny {\it M} nejmenší prvek. To znamená, že podmnožina dobře uspořádané množiny má definovanou hodnotu nejmenšího prvku. Příkladem je množina přirozených čísel. Uspořádání na množina {\it M} se pak nazývá {\bf dobré uspořádání}.
+
+\PodSekce{ Způsoby zápisu množin}
+
+Množiny lze zapisovat dvěma způsoby:
+
+\vskip 4mm
+\bod{{\bf Výčtem prvků} - uvedením všech prvkům množiny, to je ale možné pouze pro konečné množiny. Zápis množiny {\it M} výčtem prvků: 
+ $$ M = \{ m_1 ; m_2 ; ... ; m_n\}$$}
+\bod{{\bf Charakteristickou vlastností} - charakteristická vlastnost {\it v(x)} prvků dané množiny je vlastnost, kterou mají všechny prvky dané množiny a kterou nemají objekty, které do této množiny nepatří. Zjišťování uvažované vlastnosti se provádí v základní (universální) množině {\it U}, která obsahuje všechny objekty, které jsou v dané situaci potřeba. Zápis zadání množiny {\it M} charakteristickou vlastností:}
+
+$$ M=\{ (x\in U: v(x)) \} $$
+
+Do množiny {\it M} patří všechny prvky množiny {\it U}, které mají danou vlastnost {\it v(x)}.
+\vskip 4mm
+
+\PodSekce{ Rovnost množin}
+
+Nechť $M_1$ a $M_2$ jsou dvě neprázdné množiny, $M_1$ a $M_2$ jsou si navzájem rovné, právě když každý prvek množiny $M_1$ je zároveň prvkem $M_2$ a naopak každý prvek množiny $M_2$ je zároveň prvkem množiny $M_1$. To se píše:
+
+$$ M_1 = M_2 $$
+
+Matematická definice má tvar:
+
+$$ M1 = M2 \Leftrightarrow M1 \subset M2 \wedge  M2 \subset M1  $$
+
+To vyjadřuje, že $x \in M_1 \Leftrightarrow x \in M_2$. Prázdné množiny se navzájem rovnají. Nejsou-li množiny $M_1$ a $M_2$ rovné, píše se:
+
+$$ M_1 \neq M_2 $$
+
+Vztah (relace) rovnosti pro libovolné tři množiny $M_1$, $M_2$ a $M_3$ má následující vlastnosti:
+
+\vskip 4mm
+\bod{Každá množina je rovna sama sobě - $M_1 = M_1$}
+\bod{Z rovnosti $M_1 = M_2$ plyne $M_2 = M_1$}
+\bod{Z rovnosti $M_1=M_2$ a $M_2 = M_3$ plyne $M_1 = M_3 $}
+\vskip 4mm
+
+Množina, která obsahuje pouze jeden prvek se nazývá {\bf jednotková množina}. Lze říct, že existuje nekonečně mnoho jednotkových množin, ale existuje pouze jedna prázdná množina. 
+
+\PodSekce{Množinová inkluze - podmnožina}
+
+Množina {\it M1} je podmnožinou množiny {\it M2}, právě když pro každé {\it x} ze základní množiny {\it U} platí vlastnost, jestliže {\it x} patří do množiny  {\it M1}, pak patří také do množiny {\it M2}. Tento vztah se matematicky zapisuje:
+
+$$ M1 \subseteq M2 \Leftrightarrow (\forall x \in U: x \in M1 \Rightarrow x \in M2) $$
+
+O množině {\it M2} lze analogicky říct že je to nadmnožina množiny {\it M1}:
+
+$$ M2 \supseteq M1 $$
+
+Symbolický zápis $M1 \subseteq M2$ říká, že obě množiny si mohou být rovny (stejné) $M1 = M2$ a přesto bude daný vztah platit. Díky tomu je možné, aby libovolná množina {\it M} byla podmnožinou sama sebe.
+
+Ostrá varianta (ostrá množinová inkluze), kdy množina {\it M2} (nadmnožina) musí být větší než množina {\it M1} (podmnožina) se značí zápisem $M1 \subset M2$. V takovém případě musí množina {\it M2} obsahovat alespoň jeden prvek, který množina {\it M1} neobsahuje. V takovém případě se říká, že množina {\it M1} je vlastní podmnožina množiny {\it M2}. 
+
+Matematický zápis vlastní podmnožiny:
+
+$$ M1 \subset M2 \Leftrightarrow ((\forall x \in U: x \in M1 \wedge x \in M2) \wedge (\exists x \in U: x \in M2 \wedge x \notin M1)) $$
+
+
+(pro každé {\it x} z množiny u platí že patří do množiny {\it M1} a zároveň do množiny {\it M2} a zároveň existuje alespoň jedno {\it x}, které patří do množiny {\it M2} a zároveň nepatří do množiny {\it M1})
+
+
+\vskip 4mm
+\centerline{\pdfrefximage 1}
+\vskip 4mm
+
+
+
+Prázdná množina je podmnožinou libovolné množiny {\it M}, protože neexistuje žádný prvek v $\oslash$, který by nebyl v množině {\it M}. Každá množina je zároveň svojí nevlastní podmnožinou. Pokud dvě množiny nejsou ve vztahu nadmnožina a podmnožina znamená to, že pro každý prvek {\it x} z množiny {\it U} platí vlastnost, jestliže patří buď do množiny {\it M1} tak nepatří do množiny {\it M2} a nebo naopak. Matematický zápis:
+
+$$ M1 \subsetneq M2 \Leftrightarrow  (\forall x \in U: x \in M1 \wedge x \notin M2) $$
+
+\PodSekce{Potenční množina}
+
+{\bf Potenční množina} je množina, která obsahuje všechny možné podmnožiny dané množiny {\it M}. Potenční množina množiny {\it M} se značí {\bf P(M)}:
+
+$$P(M) = \{ X : X \subseteq M  \} $$ 
+
+Pro potenční množinu {\it P(M)} n-prvkové konečné množiny {\it M} platí, že počet jejich prvků je roven právě $2^n$. Jedná se o kombinatorické pravidlo, které vyjadřuje počet všech možných kombinací prvků ve výsledných podmnožinách. Pro libovolnou množinu {\it M} jsou $\oslash$ a {\it M} prvky potenční množiny {\it P(M)}, z toho vyplývá, že potenční množina není nikdy prázdná a vždy obsahuje prázdnou množinu. V případě, že $M = \oslash$, pak potenční množina {\it P(M)} obsahuje pouze jeden prvek. 
+
+\Sekce{Grafické znázornění množin}
+
+Množinové vztahy a operace s množinami je možné velice přehledně demonstrovat pomocí {\bf množinových diagramů}. Množinové diagramy zobrazují libovolné množiny - {\it A}, {\it B}, ..., které obsahují některé prvky z uvažované základní množiny {\it U}. Základní množinu představuje obdélník, uvnitř kterého jsou kruhové, oválné nebo jiné útvary, definující  množiny {\it A}, {\it B}, ... protínající se právě ve dvou bodech.
+
+\vskip 4mm
+\centerline{\pdfrefximage 3}
+\vskip 4mm
+
+Množinové diagramy lze kreslit pro libovolný počet {\it n} množin, přičemž obdélník představující základní množinu {\it U} je jím rozdělen na $2^n$ částí. Pro $ n > 3 $ je třeba použít kromě kruhů použít i jiné geometrické útvary.
+
+Vlastnosti, která říká, zda prvek {\it x} patří, nebo nepatří do množiny {\it M}, je možné považovat za logickou funkci. Ta říká, že v jednu chvíli daný prvek buď patří do dané množiny, nebo nepatří, ale ne oboje současně. Díky tomu lze na množinové diagramy aplikovat logickou analýzu. 
+
+
+\vskip 4mm
+\centerline{\pdfrefximage 4}
+\vskip 4mm
+
+Vyjádření přítomnosti prvků pomocí pravdivostní tabulky:
+
+$$
+\left[
+\matrix{
+{\bf A} & {\bf B} & {\bf Přítomnost prvků} \cr
+0 & 0 & Ani prvky množiny A ani prvky množiny B \cr
+0 & 1 & Pouze prvky množiny B \cr
+1 & 0 & Pouze prvky množiny A \cr
+1 & 1 & Prvky množiny A i množiny B \cr
+	}
+\right]
+$$
+
+Díky tomu lze snadněji popsat a pochopit množinové operace.
+
+
+\Sekce{Množinové operace}
+
+
+\PodSekce{Sjednocení množin}
+
+Sjednocením množiny A a B vznikne nová množina, která obsahuje všechny prvky ze základní množiny U, které patří alespoň do jedné z množiny A nebo B, přičemž žádný prvek se v ní nevyskytuje dvakrát. Matematický zápis této operace:
+
+$$ A \cup B = \{\forall x \in U : x \in A \vee x \in B \} $$
+
+Zobrazení pomocí množinového diagramu:
+
+
+\vskip 4mm
+\centerline{\pdfrefximage 5}
+\vskip 4mm
+
+Analýza pomocí pravdivostní tabulky:
+
+$$
+\left[
+\matrix{
+{\bf A} & {\bf B} &  A \cup B \cr
+0 & 0 & 0 \cr
+0 & 1 & 1 \cr
+1 & 0 & 1 \cr
+1 & 1 & 1 \cr
+	}
+\right]
+$$
+
+Vlastnosti operace sjednocení:
+
+\vskip 4mm
+\bod{$A \cup A = A$ - sjednocením dvou stejných množin vznikne opět původní množina (žádný prvek se v nové množině nesmí vyskytovat vícekrát).}
+\bod{$A \cup \oslash = A$ - sjednocením dvou množin, z nichž je jedna nulová, vznikne opět původní množina (žádný nový prvek, který by se v nové množině mohl vyskytovat).}
+\bod{$A \cup B = B \cup A$ - množinové sjednocení je komutativní.}
+\bod{$A \cup (B \cup C) = (A \cup B)\cup C$ u množinové sjednocení je asociativní.}
+\bod{$(A \wedge B) \cup C = (A \cup C) \wedge (B \cup C) $  - množinové sjednocení je distributivní.} % u tohohle si nejsem jistej... ověřit
+\vskip 4mm
+
+\PodSekce{ Průnik množin}
+
+Průnikem množin A a B vznikne množina nová, která obsahuje prvky základní množiny U, které patří do množiny A a zároveň do množiny B (mají tyto prvky společné). Matematický  zápis této operace:
+
+$$ A \cap B = { \forall x \in U: x \in A \wedge x \in B} $$
+
+Zobrazení pomocí množinového diagramu:
+
+
+
+\vskip 4mm
+\centerline{\pdfrefximage 6}
+\vskip 4mm
+
+Analýza pomocí pravdivostní tabulky:
+
+$$
+\left[
+\matrix{
+{ A} & { B} & A \cap B\cr
+0 & 0 & 0 \cr
+0 & 1 & 0 \cr
+1 & 0 & 0 \cr
+1 & 1 & 1 \cr
+	}
+\right]
+$$
+
+Vlastnosti operace průnik
+
+\vskip 4mm
+\bod{$A \cap A = A$ - průnikem dvou stejných množin vznikne opět původní množina (nová množina obsahuje společné prvky proniklých množin, ale pokud jsou tyto dvě množiny shodné, mají společné prvky všechny).}
+\bod{$A \cap \oslash = \oslash$ - při průniku dvou množin z nichž jedna z nich je nulová vznikne nulová množina, protože nemají ani jeden prvek společný.}
+\bod{$A \cap B = B  \cap A$ - operace průnik je komutativní}
+\bod{$A \cap (B \cap C) = (A \cap B) \cap C $ - operace průnik je asociativní}
+\bod{$ (A \cup B) \cap C = (A \cap C) \cup (B \cap C)$ - distributivita průniku ke sjednocení.}
+\bod{{\bf Disjunktní množiny} jsou každé dvě množiny, které nemají žádný společný prvek. Dvě množiny A a B jsou disjunktní právě tehdy, když jejich průnik je prázdná množina - $A \cap B = \oslash$}
+\vskip 4mm
+
+\PodSekce{ Rozdíl množin}
+
+\Sekce{Mohutnost množin}
+
+Pojem {\bf mohutnost (velikost) množin} vyjadřuje počet prvků dané množiny. Například pro zjištění mohutnosti množiny $A = \{1; 2; 3\}$ se jednoduše spočítá počet prvků v zápisu množiny. V tomto případě je mohutnost rovna 3, protože množina obsahuje přesně 3 prvky. Mohutnost množiny {\it A} se značí pomocí dvou svislých čárek mezi které je uzavřen (vepsán) počet prvků množiny - $A = |3| $. 
+
+\PodSekce{Vlastnosti mohutnosti množin}
+
+U mohutnosti množin je ale velice důležitá vlastnost neopakovatelnost prvků v množině. To znamená, že i když je v zápisu množin několik stejných prvků, v případě mohutnosti se jedná pouze o jeden prvek. Například u množiny $A = {1;1;1;2;3}$ je její mohutnost stále rovna $A=|3|$.
+
+Další důležitá vlastnosti mohutnosti množin je, že prvky množin mohou být i jiné množiny. To se ale na mohutnosti množin nijak neprojevuje, protože nedochází ke vnoření do množin, které vystupují jako prvky jiné množiny. Množiny, které jsou prvky jiné množiny se tedy počítají vždy jako jeden prvek. Například v případě množiny $A = \{1; 2; B={3;4}; 5$ je mohutnost rovna $A=|4|$.
+
+\PodSekce{ Mohutnost nekonečných množin}
+
+
+
+\Sekce{ Systémy množin}
+
+Jsou-li prvky množiny opět množiny, je taková množina nazývána {\bf systémem množin} (množina množin). Přitom se vylučuje případ množiny, která by obsahovala jako prvek samu sebe a případ množiny všech množin (žádná množina nemůže obsahovat všechny množiny aniž by neobsahovala sama sebe).
+
+
+\Sekce{Kartézský součin}
+
+{\bf N-tice} je speciální případ konečné n-prvkové podmnožiny jedné nebo více množin (sjednocení podmnožin), kde {\it n} vyjadřuje počet prvků n-tice, pro které platí: $n \in Z, n \geq 2$.  Hlavním rozdílem oproti klasické množině je, že se neignoruje duplicita. To znamená, že v dané n-tici se může vedle sebe nacházet více stejných prvků $\forall a \in A, b \in B: [a;b] \wedge a = b $. Stejně jako v případě množin se rozlišují {\bf uspořádané n-tice} a  {\bf neuspořádané n-tice}. Uspořádané n-tice hrají důležitou roli u kartézského součinu, při definici souřadnic v souřadném systému, ... Určitým příkladem uspořádané dvojice může být zlomek dvou přirozených čísel.
+
+{\bf Kartézský součin} je množinová operace, respektive operace na množinovém systému mezi množinami $M_1, M_2, ..., M_n$, jejíž výsledkem je množina uspořádaných n-tic prvků, přičemž první prvek uspořádané n-tice bude z množiny $M_1$, druhý prve bude z množiny $M_2$ a obecně lze říci, že prvek uspořádané n-tice bude z množiny $M_n$. Matematická definice kartézského součinu je:
+
+$$ M_1 \times M_2 \times ... \times M_n = C\{[m_{i} \in M_1; m_{i}\in M_2 ;... ; m_{i} \in M_n] \} $$
+
+Kde {\it i} je index prvků jednotlivých množin. 
+
+Speciálním případem kartézského součinu je případ, kdy $M_1 = M_2 = ... = M_n$. V takovém případe se mluví o kartézské mocnině, tedy kartézském součinu nad jednou množinou. Kartézská mocnina nad množinou M se značí stejně jako klasická mocnina pomocí horního indexu nad názvem mocniny:
+
+$$\underbrace{M \times M \times ... \times M}_n  =\prod^{n}_{i=1} M_i=  M^n $$
+
+kde $n \in Z$ je řád kartézské mocniny.
+
+\Sekce{Vlastnosti kartézského součinu}
+
+Kartézský součin nad množinami není komutativní, tedy $M_1 \times M_2 \neq M_2 \times M_1$. To vyplývá z definice kartézského součinu, tedy že pořadí prvků v uspořádané n-tici je dáno pořadím množin v kartézském součinu. Změnou pořadí množin v kartézském součinu se tedy změní také pořadí prvků v uspořádané n-tici.
+
+Další důležitou vlastností kartézského součinu je kartézský součin s prázdnou množinou - $M \times \oslash = \oslash$.
+
+\Sekce{ Rozklad množiny na třídy}
+
+
+
+
+\Sekce{Shrnutí}
+
+{\bf Množina} je libovolný soubor nějakých entit, které jsou vždy ve vzájemném vztahu - relaci (také entity, které nejsou v žádném vzájemném vztahu jsou ve zkutečnosti ve vztahu - paradox). Množiny se značí velkým písmenem. Množiny lze zapisovat dvěma způsoby - {\bf výčtem prvků dané množiny} a {\bf charakteristickou vlastností prvků dané množiny}
+
+{\bf Prvek množiny} je objekt, který patří do dané množiny. Prvky množiny se značí malými písmeny. Patří-li daný objekt do množiny se zapisuje $a \in A$ (prvek a je členem množiny A) nebo $A \ni a$ (množina A obsahuje prvek a). Nepatří-li daný objekt do množiny se zapisuje $a \notin A$ (prvek a není členem množiny A).
+
+{\bf Disjunktivní množiny} jsou každé dvě množiny, které nemají společný ani jeden prvek - $A \cap B = \oslash$
+
+{\bf Dobře uspořádaná množina} je množina, jejíž prvky lze určitým způsobem bodově ohodnotit a má definovaný prvek s nejmenší hodnotou. To znamená, že její prvky lze srovnat podle jejich bodového ohodnocení.
+
+{\bf Uspořádaná množina} je množina prvků, u kterých záleží na jejich pořadí v zápisech. Prvky uspořádané množiny se zapisují do hranatých závorek - $[a, b] \ne [b, a]$.
+
+{\bf Neuspořádaná množina} je množina, které nezáleží na pořadí jejich prvků v zápisech. Prvky neuspořádané množiny se zapisují do složených závorek - $\{a; b\} = \{b; a\}$.  
+
+{\bf Podmnožina množiny M} je množina, která obsahuje některé prvky z množiny M (nadmnožiny). Rozlišuje se {\bf vlastní podmnožina} a {\bf nevlastní podmnožina}. V případě nevlastní podmnožiny může nastat případ kdy jsou si nadmnožina a podmnožina rovny ($\subseteq$). V případě vlastní podmnožiny musí existovat alespoň jeden prvek, které se nachází v nadmnožině a zároveň se nenachází v podmnožině ($\subset$).
+
+{\bf Množinové diagramy} jsou grafické znázornění množin, které slouží k jejich popisu a analýze. 
+
+{\bf Sjednocení množin} je množinová operace mezi dvěma množinami, jejíž výsledkem je nová množina, která obsahuje všechny prvky, které obsahovaly sjednocené množiny- $ A \cup B = \{\forall x \in U : x \in A \vee x \in B \} $
+
+{\bf Průnik množin} 
+
+{\bf Systémy množin} je množina, jejíž prvky jsou opět množiny.
+
+{\bf Uspořádaná n-tice} je speciální případ n-prvkové množiny. Jedná se o sjednocení podmnožin jedné nebo více množin, u které se ignoruje duplicita prvků. Rozlišují se uspořádané a neuspořádané n-tice.
+
+{\bf Kartézský součin} je množinová operace nad množinovým systémem, jehož výsledkem je uspořádaná n-tice, kde n vyjadřuje počet množin kartézského součinu. Speciální případ kartézského součinu je když platí $M_1 = M_2 = ... = M_n$. V takovém případě je řeč o kartézské mocnině.
+
+{\bf Mohutnost množin} je vyjádření kolik neopakujících se prvků daná množina obsahuje. Mohutnost množiny $A$ se značí pomocí dvou svislích čárek mezi které je napsán počet prvků - $A = |n|$.
+
+\Nadpis{ Relace}
+
+
+
+
+\Sekce{ Množinové zobrazení}
+
+\Sekce{ Shrnutí}
+
+
+
+\Nadpis{ Matematický model}
+
+Matematický model je nástroj, který matematicky popsuje fungování nějakého systému. Je tak vytvořena sada proměnných a rovnic, které určují vztahy mezi nimi. Tyto Vztahy jsou prezentovány ve formě dokázaných matematických vět. To následně umožňuje dokonale pochopit jeho fungování a využít jej v praxi. 
+
+Matematické modelování tak zastřešuje celou matematickou logiku, matematické důkazy a matematiku jako celek. K vytváření a popisu matematických modelů jsou využívány veškeré matematické nástroje, pomocí matematických důkazů jsou tyto rovnice dokázány a pomocí matematické logiky jsou tyto závěry stručně zapsány pomocí jazyka matematiky. Matematické nástroje, matematická logika a důkazy společně umožňují vytvářet a popisovat složité celky, které se nazývají {\bf matematické modely}.
+
+\Sekce{ Systém}
+
+{\bf Systém} je uspořádání jednodušších dílčích celků (komponentů) do složitějších struktur. Tyto komponenty v systému vzájemně interagují a tím vykazují určité výsledné vlastnosti. Tyto dílčí celky tvoří {\bf proměnné} v matematickém modelu. Jejich interakci pak popisují {\bf funkční rovnice}. 
+
+
+\Sekce{ Požadavky na matematický model}
+
+\vskip 4mm
+
+\bod{Matematický model musí jasně popisovat (vypovídat) fungování daného systému. }
+\bod{Matematický model nesmí být neúplný, to znamená, nesmí být opomenuta žádná eventualita, která by mohla v daném systému nastat. Matematický model musí být ošetřený vůči nečekaným situacím, které by mohly nastat.}
+\bod{Jednotlivé části matematického modelu si nesmí odporovat, aby v případě aplikace do praxe nemohlo dojít k nesrovnalostem}
+\vskip 4mm
+
+
+
+
+\Sekce{Shrnutí}
+
+\end

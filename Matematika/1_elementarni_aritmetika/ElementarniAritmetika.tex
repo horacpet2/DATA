@@ -1,0 +1,1650 @@
+%preambule
+%\def\addr{D:/MEGA/CENTRUM/texLib/}
+\def\addr{/home/petr/.texLib/}
+
+\input \addr TeXMakro
+\setAddress{\addr}
+%\input \addr KonfiguracePaperBook
+\input \addr KonfiguraceEBook
+
+%Načtení obrázků
+%\pdfximage width \the\SirkaOdstavce mm {./Obrazky/obr}
+\pdfximage width \the\SirkaOdstavce mm {./Obrazky/CiselnaOsa.png}
+\pdfximage width \the\SirkaOdstavce mm {./Obrazky/CiselnaOsaSoucet1.png}
+\pdfximage width \the\SirkaOdstavce mm {./Obrazky/CiselnaOsaSoucet2.png}
+\pdfximage width 80 mm {./Obrazky/ObdelnikNasobeni1.png}
+\pdfximage width 80 mm {./Obrazky/ObdelnikNasobeni2.png}
+\pdfximage width 80 mm {./Obrazky/ObdelnikNasobeniNulou.png}
+\pdfximage width 80 mm {./Obrazky/CiselnaOsaRozdil1.png}
+\pdfximage width 80 mm {./Obrazky/CiselnaOsaRozdil2.png}
+\pdfximage width 80 mm {./Obrazky/kruhovyGrafProcenta.png}
+\pdfximage width \the\SirkaOdstavce mm {./Obrazky/GrafickeDeleni.png}
+\pdfximage width \the\SirkaOdstavce mm {./Obrazky/CiselnaOsaRacionalniCislo.png}
+\pdfximage width \the\SirkaOdstavce mm {./Obrazky/Zaokrouhlovani1.png}
+\pdfximage width \the\SirkaOdstavce mm {./Obrazky/Zaokrouhlovani2.png}
+\pdfximage width 50 mm {./Obrazky/OtevrenyInterval.png}
+\pdfximage width 50 mm {./Obrazky/UzavrenyInterval.png}
+\pdfximage width 50 mm {./Obrazky/NaPulUzavrenyIntervalZleva.png}
+\pdfximage width 50 mm {./Obrazky/NaPulUzavrenyIntervalZprava.png}
+\pdfximage width 50 mm {./Obrazky/ZlevaOtevrenyInterval.png}
+\pdfximage width 50 mm {./Obrazky/ZlevaUzavrenyInterval.png}
+\pdfximage width 50 mm {./Obrazky/ZpravaOterenyInterval.png}
+\pdfximage width 50 mm {./Obrazky/ZpravaUzavrenyInterval.png}
+\pdfximage width 50 mm {./Obrazky/IntervalOboustranneNeomezeny.png}
+\pdfximage width 100 mm {./Obrazky/IntervalNaCiselneOse.png}
+\pdfximage width \the\SirkaOdstavce mm {./Obrazky/SjednoceniIntervalu.png}
+\pdfximage width \the\SirkaOdstavce mm {./Obrazky/PrunikIntervalu.png}
+\pdfximage width \the\SirkaOdstavce mm {./Obrazky/RozdilIntervalu.png}
+\pdfximage width \the\SirkaOdstavce mm {./Obrazky/DoplnekIntervalu.png}
+\pdfximage width \the\SirkaOdstavce mm {./Obrazky/TrojclenkaPrimaUmera.png}
+\pdfximage width \the\SirkaOdstavce mm {./Obrazky/TrojclenkaNeprimaUmera.png}
+\pdfximage width \the\SirkaOdstavce mm {./Obrazky/AbsolutniHodnotaRealnehoCisla.png}
+\pdfximage width \the\SirkaOdstavce mm {./Obrazky/GrafAbsolutniHodnotaRealnehoCisla.png}
+
+
+
+%generování obsahu
+\Obsah
+
+
+\Nadpis{Úvod}
+
+Základem celé matematiky je aritmetika a teorie čísel (teoretická aritmetika). Ty udávají pravidla pro všechna ostatní odvětví matematiky. Klíčové součásti aritmetiky jsou čísla, jejich množiny a operace s nimi. Dalo by se říct, že zbytek matematiky jsou pouze postupy pro hledání, popis a dokazování platností vlastností čísel a aritmetických operací. Tyto vlastnosti pak mají různá uplatnění v praktických aplikacích jako například v kryptografii.
+
+Elementární aritmetika je matematická disciplína zabývající se popisem a vlastnostmi elementárních matematických operací s čísly. Těmito operacemi jsou součet, součin a mocnina a jejich inverzní protějšky rozdíl, podíl a odmocnina.
+
+Matematika obecně je jazyk jako kterýkoli jiný, ale nelze se s ním jako s běžným jazykem dorozumívat. Jazyk matematiky slouží k popisu algoritmů, postupů, které přesně vyjadřují jak se co děje. Jedná se ale o velmi přesný jazyk, který nedává prostor pro žádný kontext, takže jeho pochopení bývá občas složitější. Z tohoto důvodu bývají matematické zápisy doplněny dodatečným komentářem, který přiblíží obsah matematického zápisu a usnadní jeho pochopení.
+
+\Nadpis{Elementární aritmetické operace}
+
+Celá matematika těží z algebraické vlastnosti, že libovolnou operaci, respektive algebraický výraz s daným definičním oborem lze vytvořit pomocí kombinace několika základních aritmetických operací. Díky tomu není třeba zavádět kvanta nejrůznějších operací, které by jinak šlo rozložit na jednodušší operace. Mezi nejzákladnější aritmetické operace se řadí součet, součin a mocnina. Tyto operace lze dále rozšířit o jejich inverzní protějšky.  Těmi jsou pak rozdíl, podíl a odmocnina.
+
+Aritmetické operace nejsou aplikovány pouze na čísla. Pomocí algebry a algebraických struktur jsou zobecněny na libovolnou strukturu
+
+\Sekce{Operace součet}
+
+Operace sčítání je základní aritmetická operace pro práci s čísly, pomocí které jsou definovány všechny ostatní operace. Sčítání je definováno jako rozšíření hodnoty operandu {\bf a}, který se nazývá sčítanec, o hodnotu operandu {\bf b}, který se nazývá sčítatel, jehož výsledkem je hodnota {\bf c}, která se nazývá součet. Operace součet se zapisuje pomocí symbolu křížek $„+“$. Matematický zápis operace součet:
+
+$$\forall a,b,c \in U: a + b = c $$
+
+kde {\it U} je nosná množina do které patří čísla {\it a}, {\it b} a {\it c}.
+
+Součet dvou přirozených čísel vyjadřuje počet prvků sjednocení dvou množin, které nemají žádný společný prvek:
+
+$$ a + b = c \rightarrow A \cup B = C $$
+
+\PodSekce{Grafické znázornění operace součet}
+
+Sčítání lze graficky vyjádřit na číselné ose. Číselná osa je přímka, na které jsou vyznačena všechna čísla:
+
+\vskip 4mm
+\centerline{\pdfrefximage 1}
+\vskip 4mm
+
+Pro znázornění součtu čísel $3 + 4$ by postup vypadal následovně. Číslo nula je výchozí bod prvního kroku operace, proto se na číselné ose nejprve vyznačí postup od čísla nula na číslo tři, tedy o tři body doprava:
+
+\vskip 4mm
+\centerline{\pdfrefximage 2}
+\vskip 4mm
+
+V následujícím kroku je vyznačen přechod od čísla 3 o 4 body směrem doprava.
+
+\vskip 4mm
+\centerline{\pdfrefximage 3}
+\vskip 4mm
+
+Bod, ve kterém druhá, zelená, úsečka skončila představuje konečný výsledek:
+
+$$ 3+4=7 $$
+
+\PodSekce{Popis operace součet}
+
+Při součtu velkých čísel se používají různé postupy, ale nejpoužívajnější a nejnázornější je postup pomocí postupného součtu číslic na jednotlivých číselných řádech. Za použití tohoto postupu se napíší sčítaná čísla pod sebe. Pod oběma čísli se udělá vodorovná čára, která odděluje matematický výraz a výsledek operace.
+
+Při součtu dvou čísel větších než deset, se postupuje postupným součtem číslic na stejnolehlých číselných řádech směrem od nejnižšího k nejvyššímu. Pokud je výsledek součtu dvou číslic na daném řádu vetší než deset, došlo k řádovému přetečení (viz. řádové přetečení - teoretická aritmetika) a je nutné přičíst jedničku k následujícímu číselnému řádu.
+
+$$ {{3892 \atop +493} \over 4385} = {{3000 + 800 + 90 + 2}\atop{400 + 90 + 3 }} = (3000+1000)+(200+100)+80+5 = 4385$$
+
+\PodSekce{Sumace}
+
+{\bf Sumace} je označení pro součet množiny, řady  (posloupnosti) čísel, které mají mezi sebou nějaký aritmetický vztah. Výsledek operace sumace je označován jako {\bf suma}. Pro malý počet operandů lze sumaci zapsat jako součet jednotlivých prvků:
+
+$$ x_m + x_{m+1} + x_{m+2} + ... + x_n = součet $$
+
+V případě, že by bylo potřeba navzájem sečíst větší množství posloupných, prvků je snazší a přehlednější používat symbolu sumace, která je odvozena z operace součtu. Sumační znak je reprezentován řeckým písmenem sigma $\Sigma$. Sumaci si lze představit jako stále se opakující cyklus, který provádí součet výrazu ve svém těle a je omezen na určitý počet opakování. Matematický zápis sumace:
+
+$$\sum^n_{i=m} x_i = x_m + x_{m+1} + x_{m+2}+...+x_{n-1}+n_n $$
+
+kde:
+
+\vskip 4mm
+\bod{index {\bf i} se nazývá {\it sumační index}, který jednoznačně identifikuje prvek sumace.}
+\bod{index {\bf m} je spodní hranice sumace}
+\bod{index {\bf n} je horní hranice sumace}
+\vskip 4mm
+
+Sumační index může definovat buď index sčítaných prvků patřících do nějaké množiny a nebo přímo sčítané prvky, může také sloužit jako iterační index, který je v každém kroku o nějakou hodnotu větší a je přičítán k nějakému počátečnímu číslu. Někdy je také potřeba definovat do jaké množiny sumační index patří, aby mohly být podle daného algoritmu vhodně vybrány určité prvky z dané množiny. Důležité je že sumační index při každém sumačním cyklu inkrementuje, nebo lépe řečeno přeskočí na následující hodnotu prvku množiny do které sumační index patří. Jedná se v podstatě o cyklus sčítající určitou posloupnost čísel.
+
+\PodSekce{Vlastnosti operace součet}
+
+Neutrální prvek v operaci součet je číslo nula (neutralita nuly), při součtu nuly s libovolným jiným číslem je výsledkem hodnota druhého operandu:
+
+$$ a + 0 = a $$
+
+Inverzním prvkem k prvku {\it A} je v operaci součet jeho {\bf záporná (opač\-ná) hodnota} {\it -A}, obě hodnoty se vyruší, tím vzniká základ pro inverzní operaci operaci rozdíl:
+
+$$ a + (-a) = 0 $$
+
+Operace součet je komutativní a nezáleží tedy na pořadí jejich operandů:
+
+$$ a+b = b+a $$
+
+Operace součet je také asociativní:
+
+$$ a+(b+c) = (a+b)+c $$
+
+\Sekce{Operace součin}
+
+Operace součin je odvozená od operace součtu, která vzniká opakovaným rozšířením jednoho operandu. To bylo zavedeno ke zkrácení zápisu opakovaného sčítání stejného čísla. Pro označení operace součin se používá symbol $\cdot$ tečka popřípadě natočený $\times$ křížek. Matematický zápis operace násobení:
+
+$$\underbrace {b + b + ... +b}_a = \sum^a_{i=1} b_i = a \cdot b $$
+
+Operandy {\it a} a {\it b} se nazývají {\bf činitelé} a výsledný operand {\it c} se nazývá {\bf součin}. Operand {\it a} se ještě někdy nazývá {\bf násobitel} a operand {\it b} {\bf násobenec}.
+
+\PodSekce{Grafické znázornění operace součin}
+
+Grafické znázornění a popis operace součin lze demonstrovat na obsahu obdélníku. Grafický popis násobení tvoří obdélník, který má jednu stranu  o délce operandu {\it a} a druhou stranu o délce operandu {\it b}. Například při násobení čísel 4 a 6 daný obdélník vypadá takto:
+
+\vskip 4mm
+\centerline{\pdfrefximage 4}
+\vskip 4mm
+
+Následně se počítá obsah tohoto obdélníku, což znamená, zjištění (spočítání) počtu čtverečků, které se uvnitř obdélníku nacházejí.
+
+\vskip 4mm
+\centerline{\pdfrefximage 5}
+\vskip 4mm
+
+Z obrázku je patrné, že se uvnitř obdélníku nachází 24 čtverečků. Je tomu tak proto, že jsou tam 4 řady po 6 čtverečcích, tedy:
+
+$$6+6+6+6 = 4\cdot 6 = 24$$
+
+\PodSekce{Násobení nulou}
+
+Pokud je jakékoliv číslo vynásobeno nulou, výsledkem bude opět nula. Zdůvodnění je jednoduché. Pokud je třeba číslo nula zvýšit x-krát, tak x-krát větší nula je stále jen nula, protože převedeno na sčítání je násobení nulou následující:
+
+$$ \underbrace{0+0+...+0}_a = a\cdot 0 = 0 $$
+
+Lze to ukázat i graficky. Při násobení $5 \cdot 0$ vypadá grafické znázornění takto:
+
+\vskip 4mm
+\centerline{\pdfrefximage 6}
+\vskip 4mm
+
+
+Protože druhý činitel má hodnotu nula, má i jedna strana obdélníku délku nula, čímž se z obdélníku stává jednorozměrná úsečka, která nemá žádný obsah.
+
+Součin nuly platí i v  případě prohození operandů, tedy je-li nula-krát přičtena hodnota {\it a} k výsledku, je výsledek zákonitě roven nule:
+
+$$0 \cdot a = \underbrace {...}_0 = 0$$
+
+\PodSekce{Popis operace součin}
+
+Při násobení dvou velkých čísel je třeba každý řád jednoho čísla vynásobit každým řádem druhého čísla a výsledné dílčí násobky se následně sečtou:
+
+$$ 321 \cdot 35 = (300 + 20 + 1) \cdot (30 + 5) = 9000 + 600 + 30 + 1500 + 100 + 5 = 11235 $$
+
+Platnost tohoto postupu lze dokázat pomocí definice násobení:
+
+$$ \underbrace{b + b + ... + b}_a = a \cdot b \Leftrightarrow \underbrace{b+b+...b}_k + \underbrace{b+b+...+b}_n  = k\cdot b + n \cdot b  $$
+
+kde $k+n = a$
+
+Díky tomu lze celý postup výpočtu rozepsat:
+
+$$ 321 \cdot 35 = (300\cdot 30) + (20 \cdot 30) + (1\cdot 30) + (300\cdot 5) + (20\cdot 5) + (1\cdot 5)$$
+
+Tato definice je velice důležitá v algebře, kde je díky tomu možné roznásobit výrazy s proměnnými.
+
+\PodSekce{Priorita násobení}
+
+Priorita násobení říká, že pokud se ve složeném výrazu vyskytne operace součinu vedle operace součtu, má vždy násobení přednost před sčítáním. To znamená, že se nejprve vypočítá součin a až poté se vypočítá součet. Obecně lze tedy napsat že ve výrazu $a+b\cdot c$ se nejprve vypočítá $b \cdot c = k$ a až pak $a + k$.
+
+Pokud by se nejprve vypočítal součet a až poté součin, výsledek by byl jiný - {\bf chybný}. Například $2+3 \cdot 6$ se nejprve spočítá $3\cdot 6 = 18$a až pak $2+18 = 20$. Pokud by se nejprve vypočítal součet výsledek by byl: $2+3 \cdot 6 = 5 \cdot 6 = 30$.
+
+Důkaz:
+
+Priorita operace násobení vychází z toho, že se jedná pouze o postupné rozšiřování (sčítání) jednoho čísla. Proto když je celý výraz převeden na součet, platí priorita postupného součtu, kde je jedno, který součet je vypočítán jako první (operace součet je komutativní):
+
+$$ a + b \cdot c = a + \underbrace{c + c + ... + c}_b = d $$
+
+V případě, že by došlo nejprve k součtu čísla a k libovolnému operandu operace součin došlo by ke změně jednotlivých operandů, která je zřetelná v rozepsaném stavu:
+
+
+$$ a + b \cdot c = \underbrace{c + c + ... + c}_{b+a} = m $$
+
+nebo
+
+$$ a + b \cdot c = \underbrace{(c+a) + (c+a) + ... + (c+a)}_{b} = n $$
+
+\PodSekce{Malá násobilka}
+
+Malá násobilka je pomůcka pro výuku a pochopení násobení. Jedná se o přehled násobků všech čísel od jedničky do desítky, kdy je dané číslo násobeno hodnotou jedna až deset.
+
+\vskip 4mm
+$$
+\left[
+\matrix{
+1\cdot 1 = 1 & 1\cdot 2 = 2 & 1\cdot 3 = 3 & 1\cdot 4 = 4 & 1\cdot 5 = 5\cr
+2\cdot 1 = 2 & 2\cdot 2 = 4 & 2\cdot 3 = 6 & 2\cdot 4 = 8 & 2\cdot 5 = 10\cr
+3\cdot 1 = 3 & 3\cdot 2 = 6 & 3\cdot 3 = 9 & 3\cdot 4 = 12 & 3\cdot 5 = 15\cr
+4\cdot 1 = 4 & 4\cdot 2 = 8 & 4\cdot 3 = 12 & 4\cdot 4 = 16 & 4\cdot 5 = 20\cr
+5\cdot 1 = 5 & 5\cdot 2 = 10 & 5\cdot 3 = 15 & 5\cdot 4 = 20 & 5\cdot 5 = 25\cr
+6\cdot 1 = 6 & 6\cdot 2 = 12 & 6\cdot 3 = 18 & 6\cdot 4 = 24 & 6\cdot 5 = 30\cr
+7\cdot 1 = 7 & 7\cdot 2 = 14 & 7\cdot 3 = 21 & 7\cdot 4 = 28 & 7\cdot 5 = 35\cr
+8\cdot 1 = 8 & 8\cdot 2 = 16 & 8\cdot 3 = 24 & 8\cdot 4 = 32 & 8\cdot 5 = 40\cr
+9\cdot 1 = 9 & 9\cdot 2 = 18 & 9\cdot 3 = 27 & 9\cdot 4 = 36 & 9\cdot 5 = 45\cr
+10\cdot 1 = 10 & 10\cdot 2 = 20 & 10\cdot 3 = 30 & 10\cdot 4 = 40 & 10\cdot 5 = 50\cr
+}
+\right]
+$$
+
+\vskip 4mm
+
+$$
+\left[
+\matrix{
+1\cdot 6 = 6 & 1\cdot 7 = 7 & 1\cdot 8 = 8 & 1\cdot 9 = 9 & 1\cdot 10 = 10\cr
+2\cdot 6 = 12 & 2\cdot 7 = 14 & 2\cdot 8 = 16 & 2\cdot 9 = 18 & 2\cdot 10 = 20\cr
+3\cdot 6 = 18 & 3\cdot 7 = 21 & 3\cdot 8 = 24 & 3\cdot 9 = 27 & 3\cdot 10 = 30\cr
+4\cdot 6 = 24 & 4\cdot 7 = 28 & 4\cdot 8 = 32 & 4\cdot 9 = 36 & 4\cdot 10 = 40\cr
+5\cdot 6 = 30 & 5\cdot 7 = 35 & 5\cdot 8 = 40 & 5\cdot 9 = 45 & 5\cdot 10 = 50\cr
+6\cdot 6 = 36 & 6\cdot 7 = 42 & 6\cdot 8 = 48 & 6\cdot 9 = 54 & 6\cdot 10 = 60\cr
+7\cdot 6 = 42 & 7\cdot 7 = 49 & 7\cdot 8 = 56 & 7\cdot 9 = 63 & 7\cdot 10 = 70\cr
+8\cdot 6 = 48 & 8\cdot 7 = 56 & 8\cdot 8 = 64 & 8\cdot 9 = 72 & 8\cdot 10 = 80\cr
+9\cdot 6 = 54 & 9\cdot 7 = 63 & 9\cdot 8 = 72 & 9\cdot 9 = 81 & 9\cdot 10 = 90\cr
+10\cdot 6 = 60 & 10\cdot 7 = 70 & 10\cdot 8 = 80 & 10\cdot 9 = 90 & 10\cdot 10 = 100\cr
+}
+\right]
+$$
+\vskip 4mm
+
+\PodSekce{Násobení záporných čísel}
+
+Záporná čísla v operaci násobení mají význam lineárního nárůstu záporné hodnoty (zmenšování hodnoty). Nicméně se v různých situacích chovají odlišně. V operaci násobení mohou nastat čtyři různé situace:
+
+\vskip 4mm
+\bod{Násobení kladného čísla kladným: $a \cdot b = c$}
+\bod{Násobení kladného čísla záporným: $-a \cdot b = -c$}
+\bod{Násobení záporného čísla kladným: $a \cdot (-b) = -c$}
+\bod{Násobení záporného čísla záporným: $-a \cdot (-b) = c$}
+\vskip 4mm
+
+Při dokazování platnosti těchto vztahů je třeba uvažovat, že platí předpoklady:
+
+$$ -(-a) = a $$ (viz záporná čísla)
+
+$$ \underbrace {b + b + ... b }_a = a \cdot b  $$
+
+Díky tomu lze dokázat, že platí:
+
+$$ a \cdot (-b) = \underbrace {-b -b - ... -b}_a = -c $$
+
+$$ -a \cdot b = \underbrace{-(b + b + ... +b)}_a = \underbrace {-b -b - ... -b }_a = -c $$
+
+$$-a \cdot -b = \underbrace{-(-b-b-...-b)}_a = \underbrace {b+b+...+b}_a = c$$
+
+\PodSekce{Vícenásobné násobení záporných čísel}
+
+Vícenásobné násobení záporných (ale i spolu s kladnými) čísel má tvar:
+
+$$ (\pm a) \cdot (\pm b) \cdot ... \cdot (\pm n) $$
+
+Protože operace součin je komutativní, nezáleží na pořadí násobených operandů. Ale při výpočtu platí pravidlo postupného výpočtu (násobení), kdy jsou jednotlivé mezivýsledky přivedeny jako operand následujícího součinu:
+
+$$[...[[(\pm a) \cdot (\pm b)] \cdot (\pm c)] \cdot ...\cdot (\pm n)]$$
+
+Důležité ale je zda výsledek bude kladná nebo záporná hodnota. Platí, že pokud je v daném výrazu sudý počet záporných znamének v operaci násobení, pak bude podle definice záporných čísel výsledek vždy kladný:
+
+$$ (-) \cdot (-) = + $$
+
+Jestliže je ale ve výrazu lichý počet mínusů v operaci součin, bude výsledek vždy záporný:
+
+$$ (-) \cdot (-) \cdot (- ) = (-)$$
+
+\PodSekce{Opakované násobení}
+
+Pro zkrácení zápisu opakovaného násobení se podobně jako u operace sumace používá symbol řeckého písmene Pí - $\Pi$. Matematický zápis opakovaného součinu:
+
+$$\prod_{i=m}^n x_i = \underbrace{x \cdot x \cdot ... \cdot x}_n $$
+
+\PodSekce{Vlastnosti operace součin}
+
+Operace součin je komutativní a nezáleží tedy na pořadí jejich operandů:
+
+$$ a \cdot b = b \cdot a = c $$
+
+V operaci součin je neutrálním prvkem číslo 1, protože cokoli krát jedna je ve výsledku opět hodnota druhého operandu:
+
+$$ 1 \cdot a = a \cdot 1 = a $$
+
+Neutrálním prvkem k prvku {\it a} je v operaci součin {\bf převrácená hodnota} (zlomek) $1\over a$. Protože platí:
+
+$$ a \cdot {1 \over a} = {a \over a} = 1 $$
+
+Tím vzniká základ pro inverzní operaci dělení.
+
+
+\Sekce{Operace Mocnina}
+
+Operace mocnina je operace, která slouží ke zkrácení zápisu opakovaného násobení jednoho čísla samo sebou. Pro zápis mocniny čísla, popřípadě celého výrazu se používá číslo v horním indexu. Mocnina se zapisuje ve tvaru:
+
+$$ a^n $$
+
+kde číslu {\bf a} se říká {\bf základ mocniny} a číslu {\it n} se říká {\bf exponent}, který udává kolikrát bude základ násoben sám sebou.
+
+Protože se mocnina s různými exponenty chovají trochu jinak, jsou rozlišovány mocniny s kladným exponentem, se záporným exponentem a s racionálním exponentem. Souhrnně je možné jako exponent mocnin zvolit libovolné reálné číslo.
+
+\PodSekce{Mocnina s kladným exponentem}
+
+Kladný (přirozený) exponent mocnin může nabývat hodnot pouze hodnoty v intervalu $0:\infty$. Obecně lze mocninu s přirozeným exponentem vyjádřit:
+
+$$ \underbrace {a\cdot a \cdot ... \cdot a}_n = \prod_i^n {a_i} = a^n $$
+
+kde $n \in Z$, ale základem mocniny může být cokoliv - konstanta, proměnná, ale klidně i složitější výraz. Během výpočtu pak je daný výraz vynásoben sám sebou tolikrát, kolikrát udává exponent.
+
+\PodSekce{Mocnina se záporným exponentem}
+
+U záporného exponentu mocnin se vychází z toho, že $a^0 = 1$. Při výpočtu $a^1$, lze říct, že se vynásobí $a^0$ hodnotou {\it a}:
+
+$$ a^0 \cdot a = 1 \cdot a = a  $$
+
+Pro výpočet $a^2$, lze napsat $a^0 \cdot a \cdot a = 1 \cdot a \cdot a$, a tak dále...
+
+O hodnotě $a^0$ lze říci, že je to výchozí hodnota a když se počítá $a^n$, tak se jen n-krát vynásobí hodnota $a^0$ výrazem {\it a}.
+
+Pokud je tedy exponent kladný, tak se základ násobí. Pokud je ale exponent záporný, tak se základ násobí inverzní hodnotou základu {\it a} - dělí se.  Takže $a^{-1}$ se získá tak, že se vezme počáteční hodnota $a^0$, která se podělí hodnotou {\it a}:
+
+$$ a^0 \div a = {a^0 \over a} = {1 \over a} $$
+
+Pokud by bylo $a^{-2}$, vydělila by se hodnota $a^0$ operandem {\it a} dvakrát. Jestliže lze podíl $x \div y$ zapsat jako $x \cdot {1 \over y}$ lze dvojnásobné dělení zapsat jako $x \cdot {1 \over y} \cdot {1 \over y}$ a proto lze zapsat $a^{-2}$ jako:
+
+$$a^{-2} = a^0 \div a \div a = a^0 \cdot {1\over a} \cdot {1 \over a} = 1 \cdot {1 \over a \cdot a}  = {1 \over a^2} $$
+
+Z toho plyne obecný vztah pro záporný exponent:
+
+$$ a^{-n} = \prod_{i=0}^n ({1 \over a_i}) = {1 \over \underbrace{a \cdot a \cdot a \cdot ... \cdot a}_n} = {1 \over a^n} $$
+
+Zároveň platí opačný vztah, kdy je ve jmenovateli záporný exponent, pak po převedení na převrácenou hodnotu zlomku je hodnota daného čísla opět kladná:
+
+$$ {a^m \over b^n} = {b^{-n} \over a^{-m}} $$
+
+Díky tomu je možné říci, že pokud je daný zlomek umocněn na -1, pak se čitatel a jmenovatel prohodí, aniž by se jejich hodnota změnila:
+
+$$ ({a\over b})^{-1} = {a^{-1} \over b^{-1}} = {b \over a} $$
+
+\Sekce{Mocnina s racionálním exponentem}
+
+Racionální exponent mocniny vyjadřuje inverzní hodnotu exponentu, tedy inverzní operaci k operaci mocnina. Inverzní operace k operaci mocnina se nazývá odmocnina. Pro racionální exponent platí vztah:
+
+$$ a^{m \over n} = \root n\of{a^m}$$
+
+Díky této vlastnosti je při práci s mocninami snaha převést veškeré odmocniny na mocniny. To velice ulehčuje práci s odmocninami.
+
+\PodSekce{Mocniny nuly}
+
+Pokud je exponent kladný, pak mocnina nuly je rovna nule. To plyne z vlastnosti operace násobení, kde číslo nula je neutrální prvek. Tedy cokoli krát nula je ve výsledku nula:
+
+$$ 0^n = \underbrace{0 \cdot 0 \cdot ... \cdot 0}_n = 0 $$
+
+Jestliže je ale exponent záporný, pak operace mocnina není pro nulu definovaná, protože se jedná o opakované dělení a dělení nulou není v oboru reálných čísel definována:
+
+$$ 0^{-n} = {1 \over \underbrace {0 \cdot 0 \cdot ... \cdot 0}_n} = nedefinováno $$
+
+Dalším případem je základ umocněný nulou. Je pravidlem, že cokoli na nulu je vždy rovné jedné:
+
+$$  a^0 = 1$$
+
+To je odvozeno z vlastností mocnin s kladným a záporným exponentem. Pokud je exponent kladný a zároveň se bude postupně zvětšovat po jedničce $(1, 2, 3, …)$, výsledek se vždy bude násobit hodnotou základu:
+
+$$ a^1 = a $$
+
+$$ a^2 = a \cdot a $$
+
+$$ a^3 = a \cdot a \cdot a $$
+
+A tak dále se zvyšujícím se exponentem. Pokud ale bude exponent naopak záporný, pak se bude základ postupně dělit sám sebou:
+
+$$ a^{-1} = {1\over a} $$
+
+$$ a^{-2} = {1 \over a \cdot a} $$
+
+$$ a^{-3} = {1 \over a \cdot a \cdot a} $$
+
+Pokud se tedy vynásobí mocnina s kladným exponentem a mocnina se záporným exponentem, exponenty se sčítají respektive odčítají. Cílem je získat výraz kde vznikne nulový exponent mocniny. To lze rozepsat na zlomek, kde je ve jmenovateli i v čitateli stejný výraz. Podle vlastnosti dělení $ {a \over a} = 1$ platí:
+
+$$ a^n \cdot a^{-n} = {a^n \over a^n} = {\overbrace{a \cdot a \cdot ... \cdot a}^n \over \underbrace{a \cdot a \cdot ... \cdot a}_n} = a^{n-n} = a^0 = 1 $$
+
+Zvláštním případem je nula na nultou: $0^0$. Tento výraz není definován, ale aritmeticky nic nebrání jeho platnosti. Důvodem pro tuto nedefinovanost je dvojí pohled na tento výraz:
+
+První pohled na výraz hledí jako na výraz $x^0$, který je všude (kromě nuly) roven jedné, takže je možno ji v nule definovat stejně a klade se $0^0 = 1$. Naopak druhý pohled vychází z funkce $0^x$, který je pro všechna kladná {\it x} nulová, takže se i v nule definuje $0^0 = 0$.
+
+Jiný pohled přináší limita výrazu $\lim\limits_{x \to 0} x^0 = 1$. To je důležité pro některé matematické aplikace, u kterých je tak podmíněna jejich obecná platnost.
+
+\PodSekce{Druhá mocnina čísel od 2 do 20}
+
+V praxi se dost často pracuje s druhými mocninami v intervalu od 2 do 20 a proto je dobré znát jejich hodnoty. To může být s výhodou použito například při částečném odmocňování.
+
+$$
+\left[
+\matrix{
+Základ & Mocnina & Základ & Mocnina \cr
+2^2 & 4 & 11^2 & 122\cr
+3^2 & 9 & 12^2 & 144\cr
+4^2 & 16 & 13^2 & 169\cr
+5^2 & 25 & 14^2 & 196\cr
+6^2 & 36 & 15^2 & 225\cr
+7^2 & 49 & 16^2 & 256\cr
+8^2 & 64 & 17^2 & 289\cr
+9^2 & 81 & 18^2 & 324\cr
+10^2 & 100 & 19^2 & 361\cr
+- & - & 20^2 & 400\cr
+}
+\right]
+$$
+
+
+\PodSekce{Vlastnosti operace mocnina}
+
+Důležitá vlastnosti operace mocnina je komutativita:
+
+$$ a^n = n^a $$
+
+Tato vlastnost vychází z vlastnosti operace součin, pomocí které je definována operace mocnina:
+
+$$ \underbrace{b \cdot b \cdot ... \cdot b}_a = \underbrace{a \cdot a \cdot ... \cdot a}_b $$
+
+Obecně platí, že mocniny nelze mezi sebou sčítat podle vlastnosti operace násobení, která říká, že  operace násobení má přednost před operací součet:
+
+$$ a^m + b^n = (\underbrace{a\cdot a\cdot ... \cdot a}_m) + (\underbrace{b \cdot b \cdot ... \cdot b \ }_n)$$
+
+Výjimku tvoří případ, kdy se ve výrazu objeví více mocnin se stejným základem a stejným exponentem. V takovém případě lze součet převést na násobení podle vztahu:
+
+$$ (\underbrace{a + a + ... +a}_n = n \cdot a) \Rightarrow (\underbrace{a^k + a^k + ...+ a^k}_n = n\cdot a^k) $$
+
+Při násobení mocnin o stejném základu a různém exponentu se jejich exponenty sčítají. To proto, že pokud platí, že mocnina je opakované násobení, pak lze zapsat:
+
+$$ a^m \cdot a^n = \overbrace{\underbrace{a \cdot a \cdot ... \cdot a}_m \cdot \underbrace{a \cdot a \cdot ... \cdot a}_n}^{m+n} $$
+
+Jestliže ale mocniny nemají společný základ, daný vztah již neplatí.
+
+V případě umocnění mocniny se ve výrazu násobí daná mocnina tolikrát kolikrát udává hodnota nadřazeného exponentu. Díky tomu vznikne násobení mocniny a exponenty se sčítají. Ale proto, že se násobí n-krát jedná se o definici násobení a ve výsledku se exponenty násobí:
+
+$$ (a^m)^n = \underbrace{a^m \cdot a^m \cdot ... \cdot a^m}_n = a^{m \cdot n} $$
+
+Opakem násobení mocnin se stejným základem je podíl mocnin se stejným základem:
+
+$$ {a^m \over a^n} = {\overbrace{a\cdot a \cdot ... \cdot a}^m \over \underbrace{a \cdot a \cdot ... \cdot a}_n } = {a^{m-n}} $$
+
+Protože v čitateli i jmenovateli jsou stejné hodnoty, je možné je vzájemně pokrátit. Jestliže je exponent jmenovatele větší než exponent čitatele, znamená to, že po odečtení obou exponentů bude výsledný exponent záporný a výsledek je menší než jedna a bude to racionální číslo.
+
+Jestliže je tedy exponent jmenovatele větší než je exponent čitatele, platí:
+
+$$ {1 \over a^n} = {a^{-n}\over 1} = a^{-1} $$
+
+Pokud je zlomek uzavřený do závorky umocněný na n-tou mocninu, platí, že je danou hodnotou exponentu umocněn čitatel i jmenovatel:
+
+$$ ({a\over b})^n = \underbrace {{a\over b} \cdot {a\over b} \cdot ... \cdot {a \over b}}_n = {a^n \over b^n} $$
+
+\Sekce{Operace rozdíl}
+
+Operace rozdíl je inverzní operace k operaci součet. Rozdíl dvou čísel je definován jako zmenšení operandu {\it A}, který se nazývá {\bf menšenec}, o hodnotu operandu {\it B}, který se nazývá {\bf menšitel}. Výsledkem je pak hodnota  {\it C}, která se nazývá {\bf rozdíl}. Operace rozdíl se značí pomocí symbolu „-“. Matematický zápis vypadá takto:
+
+$$\forall a,b,c \in U: a - b = c $$
+
+Aby bylo možné odečíst libovolná dvě čísla, musí v operaci součet ke každému číslu existovat {\bf opačné číslo}. Pak lze říci, že rozdíl je totéž, jako součet menšence s opačným číslem k menšiteli:
+
+$$ A - B = A + (-B) = C$$
+
+Operace součtu dvou čísel je komutativní: $A+B = B+C$, ale operace rozdílu dvou čísel již komutativní není: $A - B \not = B -A$
+
+\PodSekce{Grafické Znázornění operace rozdíl}
+
+Odečítání lze stejně jako sčítání vyjádřit na číselné ose. Pouze se při nanášení úsečky změní její směr. Úsečka se ve druhém kroku nenanáší směrem napravo bodu, ale {\bf nalevo}. Při rozdílu čísel $2 - 5$, by se postupovalo takto. Opět je výchozí bod číslo nula. Od čísla nula se postoupí doprava k číslu dvě:
+
+\vskip 4mm
+\centerline{\pdfrefximage 7}
+\vskip 4mm
+
+Nyní se na číselné ose vyznačí postup o 5 bodů v inverzním směru, tedy vlevo od bodu dvě:
+
+\vskip 4mm
+\centerline{\pdfrefximage 8}
+\vskip 4mm
+
+Výsledkem operace je počet o který je druhý operand menší.
+
+\PodSekce{Popis operace rozdíl}
+
+Při odčítání dvou čísel platí stejně jako v případě operace součet, postupné odčítání jednotlivých řádů na stejnolehlých pozicích. U operace rozdíl ale místo řádového přetečení může za určitých okolností nastat snížení následujícího řádu o hodnotu jedna. To může nastat v případě kdy ve výrazu $a - b$ platí $a<b$.
+
+Při rozdílu dvou jednotkových hodnot může nastat snížení následujícího řádu maximálně o hodnotu jedna. Na číselném řádu ve kterém došlo k rozdílu daných čísel pak vznikne hodnota, která se rovná vztahu. Například:
+
+$$ 25-7 = (20-10) + (10-5-7) = (20-10)+(10-2) = 10+8 = 18 $$
+
+Na následujícím řádu došlo ke snížení o hodnotu deset (20-10), odečtená hodnota deset se přesune do nižšího řádu, kde dojde k nastavení hodnoty podle vztahu $10-a-b$.
+
+Při odčítání se následně stejně jako v případě operace součet odčítají jednotlivé stejnolehlé číselné řády od nejmenšího po největší:
+
+$$ \matrix{1345\cr\underline{-258}\cr 1087 \cr} = \matrix{1000 + 300 +40 + 5\cr -(200+ 50 + 8)} = 1000 + (300-200) + (40-50) + (5-8) = 1087 $$
+
+\PodSekce{Vlastnosti operace rozdíl}
+
+Nejdůležitější vlastností operace rozdíl je, že na rozdíl od operace součet není komutativní a záleží na pořadí jejich prvků, protože obrácením pořadí operandů je získán jiný výsledek.
+
+$$ A - B \not = B - A $$
+
+\Sekce{Operace podíl}
+
+Inverzní operace k operaci násobení je operace {\bf dělení}. Dělení si lze představit jako rozdělení jednoho celku na {\it x} stejně velkých dílků. Výsledek poté říká kolikrát se dané číslo vejde do daného celku a hodnota dělitele vyjadřuje jak velké tyto dílky jsou. Například pokud je třeba rozdělit metrové prkno na 5 stejně velkých dílků, každý dílek by byl velký přesně 20 centimetrů. Operace podíl se zapisuje několika způsoby. Buď pomocí znaku $\div$ a nebo ve formě zlomku. Obecný zápis dělení je:
+
+$$ A \cdot {1\over B} = {A\over B} = A \div B = C$$
+
+Operand A se nazývá dělenec, operand B se nazývá dělitel a výsledek C se nazývá podíl.
+
+Vztah mezi operacemi podíl a součitn vyjadřuje výrok:
+$$ C\div B= A \wedge C \div A = B \Rightarrow A \cdot B = C $$
+
+\PodSekce{Grafické zobrazení operace podíl}
+
+Grafické znázornění operace podíl lze uvažovat ze dvou pohledů - buď jako operaci dělení celku na nějaký počet stejně velkých dílků a nebo jako inverzní operaci součin.
+V případě dělení celku na {\it C} stejně velkých částí po {\it B} dílcích, lze si operaci podíl představit jako číselnou osu s hodnotami {\it 0} až {\it A}, která je rozdělená na {\it B} stejně velkých částí:
+
+\vskip 4mm
+\centerline{\pdfrefximage 11}
+\vskip 4mm
+
+Ilustrace je příkladem rozdělení celku o hodnotě 100 na 5 stejně velkých dílků. To by se dalo zapsat jako: $200 \div 5 = 20$
+
+Znázornění operace podíl jako inverzní operaci k operaci součin vychází z opět z popisu obsahu obdélníku, kde je znám jeho obsah (počet čtverečků uvnitř obdélníku) a jedna z jeho stran.
+
+\vskip 4mm
+\centerline{\pdfrefximage 5}
+\vskip 4mm
+
+Jestliže je celek získáno součinem $4\cdot 6 = 26$, pak lze říci, že jestliže je celek rozdělen na 4 řádky $24 \div 4$, každý řádek bude obsahovat 6 sloupců. Nebo jestliže je celek rozdělen na 6 sloupců $24\div 6 $, vzniknou 4 řádků po 6 sloupcích.
+
+\PodSekce{Zbytek po dělení}
+
+{\bf Zbytek po dělení}, nebo také {\bf modulo} je početní operace související s celočíselným dělením. Pokud neplatí že celek (dělenec) je dělitelný jeho dělitelem, znamená to, že výsledek není definován na oboru celých čísel a výsledek bude mít desetinnou část.  Jestliže je zbytek po dělení roven nule, znamená to že dělenec je dělitelný dělitelem.  Operace zbytek po dělení se většinou označuje buď zkratkou „mod“ a nebo jako operátor procento „\%“. Zbytek po dělení je číslo, které říká jaká hodnota přebývající dělenci do toho, aby byl bezezbytku dělitelný daným dělitelem:
+
+$$ 13 \% 2 = 1 \rightarrow (13-1)\div 2 = 6 $$
+
+Zbytek po dělení je důležitá aritmetická operace pro definování a popis různých algebraických struktur a modulární aritmetiku.
+
+Jestliže je tedy dělenec dělitelný dělitelem, jedná se o {\bf dělení bezezbytku} (zbytek po dělení je roven nule), ale pokud dělenc není dělitelný dělitelem, jedná se o {\bf dělení se zbytkem}.
+
+Při dělení se zbytkem je zbytek po dělení dělen do té doby dokud není zbytek po dělení roven nule, nebo není dosaženo určité periodicity výsledku, nebo není dosaženo požadované přesnosti výsledku. Výsledek je pak reprezentován pomocí desetinného čísla.
+
+\PodSekce{Dělení nulou}
+
+Dělení nulou není definováno, protože je-li operace podíl inverzní k operaci součin, pak je-li snahou dělit $c\div 0$ pak je hledáno nějaké číslo {\it b}, pro které platí $0 \cdot b = c$, ale podle vlastnosti operace součin cokoli krát nula je vždy nula a nikdy se nenajde takové číslo {\it c} pro které by dělení nulou dávalo smysl. Z toho důvodu se u operace podíl nacházejí definiční podmínky, které říkají:
+
+$$ a\div b = c \Rightarrow b \not = 0 $$
+
+\PodSekce{Dělení záporných čísel}
+
+Při dělení záporných čísel platí, že operace podíl je pouze inverzní operace k operaci součin. Proto pro operaci podíl platí stejná pravidla při počítání se zápornými čísly jako pro operaci součin:
+
+$$a\cdot b = c \Rightarrow c \div a = c \cdot {1 \over a} = b $$
+
+$$a\cdot (-b) = -c \Rightarrow (-c) \div a = (-c) \cdot {1\over a} = -b $$
+
+$$ (-a)\cdot b = -c \Rightarrow (-c) \div (-a) = (-c) \cdot (-{1\over a}) = b $$
+
+$$ (-a) \cdot (-b) = c \Rightarrow c\div (-a) = c \cdot (-{1\over a}) = -b $$
+
+
+\PodSekce{Popis operce podíl}
+
+Pro zjednodušení popisu operace podíl je dělenec rozdělen na jednotlivé číselné řády:
+
+$$ 122 = 100 + 20 + 2 $$
+
+V případě, že je dělitel menší než deset, jednoduše je výsledkem součet podílílů jednotlivých číselných řádů. Jednoduše řešeno se všechny číselné řády dělence podělí delitelem a navzájem sečtou:
+
+$$ 122 \div 2 = (100 \div 2) + (20 \div 2) + (2 \div 2) = 50 + 10 + 1 = 61 $$
+
+Pokud je dělitel větší než deset, je také vhodné pro zjednodušení popisu rozdělit dělence i dělitele na jednotlivé číselné řády:
+
+$$
+396 \div 33 = (300 + 90 + 6) \div (30 + 3) =  10 +  2  = 12
+$$
+
+\hskip 12mm$ \matrix {\underline{-330}  \cr
+66  & \cr
+\underline{-66}   \cr
+0 & \cr
+}$
+
+\vskip 4mm
+
+Principem takového výpočtu je podělit největší číselný řád dělence s největším číselným řádem dělitele. Tímto mezivýsledkem se následně vynásobí všechny řády dělitele a výsledná hodnota se odečte od dělence. S novou hodnotou dělence se postup opakuje dokud není hodnota dělence rovna nule, nebo menší než hodnota dělitele (zbytek po dělení). Hodnota každého mezivýsledku jsou opět navzájem sečteny a tvoří tak výsledný podíl.
+
+Principem tohoto výpočtu je zjistit kolikrát se vejde hodnota dělitele do hodnoty dělence. Tímto mezivýsledkem se vynásobí hodnota
+
+Stejný postup lze využít například při dělení polynomů s neznámíni (proměnnými) hodnotami v algebře.
+
+\PodSekce{Vlastnosti operace podíl}
+
+Operace podíl není na rozdíl od operace součin komutativní a záleží na pořadí jejich operandů, jestliže jsou tedy operandy {\it a} a {\it b} navzájem různé, pak obracením pořadí operandů je získán jiný výsledek:
+
+$$ A \div B \not = B \div A \Leftrightarrow A \not = B $$
+
+\Sekce {Zlomky}
+
+Zlomek je jednou z možností zápisu hodnoty {\bf racionálního čísla} - necelého (další možností je desetinné číslo). Zlomkem se vyjádřuje necelá část celku (část menší než jedna). Zlomek se skládá ze dvou částí. Horní část se nazývá {\bf čitatel} a spodní {\bf jmenovatel}. Ti jsou pak odděleni vodorovnou čárou, která se nazývá zlomková čára:
+
+$$ čitatel \over jmenovatel$$
+
+Obecně zlomek vyjadřuje podíl libovolných dvou čísel {\it a}, {\it b}, kde, $b \not = 0$ tedy:
+
+$$ a \over b $$
+
+Kde $a \in Z$ a $b \in N$. Jmenovatel patří do přirozených čísel protože udává velikost celku, který nemůže být záporný, Čitatel naopak patří do celých čísel, přotože udává množství z celku, které může být jak kladné tak záporné. Speciálně je-li $b = 10^n, n \in N$, zlomek se nazývá desetinný zlomek a využívá se k definici číselných řádů desetinných čísel. Výsledná hodnota desetinného čísla je rovna 10n-krát menší, než je hodnota jmenovatele desetinného zlomku. Jmenovateli se říká jmenovatel proto, že pojmenovává zlomek. Pětina, třetina, šestina… to je hlavní název zlomku a je odvozené od čísla, které se nachází ve jmenovateli zlomku, tedy pod zlomkovou čárou. Jedinou výjimkou je případ, kdy $ b = 2 $. V takovém případě se zlomek nazývá {\bf polovnina}. Čitatel naproti tomu určuje kolikrát se hodnota jmenovatele nachází v hodnotě zlomku. Například číslo $10 \over 2$ se nazývá "deset polovin" a číslo $2 \over 3$ se nazývá "dvě třetiny".
+
+V čitateli i jmenovateli může v podstatě být jakékoliv číslo nebo opět zlomek (kromě nuly ve jmenovateli), nejčastěji se ale vyskytuje zlomek, kde čitatel i jmenovatel je přirozeným číslem. Rozdělenám celku na {\it n} stejně velkých částí je každá t těchto částí {\it n-tinou} z daného celku ($1\over n$). Takové zlomky se nazývají {\bf kmenové}. Kmenovým zlomkem, který se v praxi velmi často používá je setina celku ($1\over 100$), která se nazývá procento - $1\%$.
+
+Zlomek je jen jinak zapsané dělení, hodnota zlomku se vypočítá tak, že se vydělí čitatel jmenovatelem. Takže obecně pokud je zlomek $a\over b$, pak hodnotou zlomku je číslo $a \div b$.
+
+Protože platí, že $ a \div 1 = a $ lze libovolné číslo {\it a} zapsat jako zlomek $a \over 1$ a zároveň každý zlomek lze zkrátit ${a\over 1} = a$.
+
+Při počítání (a psaní záporných čísel) je snahou psát aritmetická znaménka na úroveň zlomkové čáry $\pm {a\over b}$.
+
+Jestliže při jakékoli úpravě zlomku v čitateli i jmenovateli vznikne stejná hodnota, pak podle definice dělení $a \div a = 1$ lze celý zlomek vypustit a místo něj zapsat celé číslo jedna.
+
+\PodSekce{Rozšíření a krácení zlomku}
+
+Se zlomky lze různě pracovat a měnit jejich tvar - rozšiřovat je a krátit, přičemž hodnota zlomku se nijak nezmění.
+{\bf Rozšiřování zlomku} znamená, že čitatel i jmenovatel je vynásoben stejným nenulovým číslem {\it x}. Tím se změní hodnota čitatele i jmenovatele, ale ne podíl (poměr) mezi nimi. To znamená, že vynásobením čitetele i jmenovatele zlomku stejným nenulovým číselem se výsledná hodnota zlomku (dělení) nezmění:
+
+$$ {a\over b} \cdot {x\over x} = {ax \over bx} $$
+
+Například, jestliže je dán zlomek ${10 \over 2} = 10 \div 2 = 5$ pak po rozšíření hodnotou 2 vznikne zlomek ${10\over 2}\cdot {2\over 2} = {20\over 4} = 20\div 4 = 5$.
+
+Opakem rozšiřování je krácení. {\bf Krácení zlomku} znamená vydělit čitatele i jmenovatele zlomku stejným nenulovým číslem {\it x}. Pokud je čitatel i jmenovatel vydělen stejným nenulovým číslem, pak stejně jako v případě rozšiřování se hodnota zlomku (poměr mezi čitatelem a jmenovatelem) nezmění:
+
+$${a\over b}\div {x\over x} = {a\div x \over b\div x}$$
+
+Jestliže se tedy zlomek ${20\over 4} = 20 \div 4 = 5$ zkrátí hodnotou 2 vznikne zlomek ${20\over 4} \div {2\over 2} = {{20\div 2} \over 4\div 2} = {10\over 2} = 10 \div 2= 5$.
+
+To znamená že operace rozšiřování a krácení zlomku jsou stejně jako operace násobení a dělení navzájem inverzní operace. Pokud je tedy zlomek rozšířen a následně zkrácen stejnou nenulovou hodnotou, je získán opět původní zlomek.
+
+Při krácení zlomku obsahující větší číla lze využít vlastností operace součin a prvočísel. Jestliže se čísla v čitateli a jmenovateli obou zlomků převedou na prvočíselný rozklad, vzniknou samostatné prvočíselné zlomky:
+
+$$ {a \over b } = {{p_{a_1} \cdot p_{a_2} \cdot  ... \cdot p_{a_n} }\over {p_{b_1} \cdot p_{b_2} \cdot  ... \cdot p_{b_n}}} = {p_{a_1}\over p_{b_1}} \cdot {p_{a_2} \over p_{b_2}} \cdot ... \cdot {p_{a_n} \over p_{b_n}}$$
+
+Protože operace násobení je komutativní, je možné prohazovat čitatele (jmenovatele) jednoho zlomku s čitatelem (jmenovatelem) jiného zlomku.
+
+$$ {a\over b } \cdot {c \over d} = {a\over d} \cdot {c \over b}$$
+
+Protože je velice pravděpodobné, že v prvočíselných rozkladech čitatelů a jmenovatelů se vyskytnou stejná prvočísla, je možné tyto zlomky vypustit (protože jsou rovny jedné). Výsledné násobení pak jednodušší:
+
+$$ {20 \over 4} = {{2\cdot 2 \cdot 5}\over {2\cdot 2}} = {2\over 2} \cdot {2\over 2} \cdot {5 \over 1} = 5  $$
+
+Rozšiřování a krácení zlomku se využívá při různých matematických operacích, například krácení se používá při zjednodušování zlomku na jeho {\bf základní tvar} (zlomek, ve kterém jsou čitatel a jmenovatel čísla nesoudělná - neexistuje žádný společný dělitel čitatele a jmenovatele), a rozšiřování se využívá při sčítání zlomků, kdy je třeba jmenovatele obou zlomků převést na společného jmenovatele.
+
+\PodSekce{Násobení zlomků}
+
+Při {\bf násobení} dvou {\bf zlomků} jde o to, že se vynásobí počet částí (podíl) jednoho celku počtem částí (podílem) druhého celku. Vynásobí se tedy výsledky jednotlivých podílů, které zlomky zastupují. To částečně souvisí s rozšiřováním zlomku nenulovým číslem - rozšiřování zlomku je speciálním případem násobení zlomku. V případě rozšiřování zlomku se poměr mezi čitatelem a jmenovatelem nezměnil, ale v případě násobení dvou zlomků se poměr čitatele a jmenovatele musí zvýšit vynásobením poměru čitatele a jmenovatele druhého zlomku:
+
+$$ {a\over b} \cdot {c \over d} = {a \over b} \cdot e $$
+
+Kde číslo {\it e} je výsledek dělení čísel {\it c} a {\it d}. To znamená, že při násobení dvou zlomků se vynásobí čitatel jednoho zlomku s čitatelem druhého zlomku a zároveň jmenovatel jednoho zlomku se vynásobí jmenovatelem druhého zlomku:
+
+$$ {a\over b} \cdot {c\over d} = {ac \over bd}$$
+
+Důležitou, ale logickou vlastností je násobení zlomku hodnotou -1. V takovém případě se nezmění hodnota čitatele i jmenovatele zlomku, ale pouze čitatele a nebo jmenovatele:
+
+$$ -1 \cdot {a \over b} = {{-1} \over 1} \cdot {a \over b} = {{-a} \over b} = {a \over {-b}} $$
+
+V případě, že by se změnila hodnota čitatele i jmenovatele, na základě vlastností dělení záporných čísel by ve výsledku nedošlo ke změne hodnoty zlomku:
+
+$$ {-a \over -b } = {a \over b} $$
+
+{\bf Dělení zlomků} vychází z toho, že operace dělení je inverzní k operaci násobení. V operaci násobení je inverzní prvek k prvku {\it a} roven převrácené hodnotě zlomku:
+
+$$ {a\over 1} = {1 \over a }$$
+
+Z toho důvodu lze dělení zlomků jednoduše převést na násobení prohozením jmenovatele s čitatelem dělícího zlomku.
+$$  {a\over b} \div {c\over d} = {a\over b} \cdot {d\over c}  = e $$
+
+V případě, že by byl místo dělitele převrácen na inverzní hodnotu dělený zlomek byla by výsledná hodnota inverzní (převrácená) ke správné hodnotě podílu zlomků:
+
+$$ {a\over b} \div {c\over d} = {a\over b} \cdot {d\over c} \not = {b\over a} \cdot {c\over d} $$
+
+Operace násobení je sice komutativní, ale v případě převedení dělení na násobení již záleží na pořadí operandů.
+
+\PodSekce{Součet a roudíl zlomků}
+
+Při sčítání zlomků lze sčítat pouze ty zlomky, jejichž jmenovatelé jsou si rovni. To proto, že pokud zlomky mají různé jmenovatele, vyjadřují počty různě velkých částí celků. Cílem sčítání zlomků, ale je kolik částí daného (společného oběma zlomkům) celku oba zlomky vyjadřují. Zlomky vyjadřují nějaké necelé číslo, které může být vyjádřeno různými tvary zlomků, proto nezáleží na samostatných hodnotách čitatele a jmenovatele, ale na hodnotách čitatele a jmenovatele jako jeden celek.
+
+Z toho plyne, že při sčítání dvou zlomků je třeba vytvořit nového jmenovatele, který je x-tým násobkem prvního zlomku a y-tým násobkem druhého zlomku. Takovému jmenovateli, který je společným násobkem obou jmenovatelů zlomků se říká {\bf společný jmenovatel}. Zároveň však nesmí být změněna hodnota daného zlomku, proto musí být celý zlomek daným číslem {\it x} a {\it y} rozšířen:
+
+$$ ({a \over b} \pm {c \over b} \wedge b \not = d) \Rightarrow ({y\over y} \cdot {a\over b} \pm {x\over x}\cdot {c \over d} \Leftrightarrow y\cdot b = x \cdot d)$$
+
+Nejjednodušší způsob jak vytvořit společného jmenovatele je vynásobit navzájem oba jmenovatele zlomků. Tak podle definice operace součin vznikne vztah:
+
+$$ b \cdot d = e \Rightarrow e \div b = d \wedge e \div d = b $$
+
+Číslo {\it e} je následně dělitelné bezezbytku jak číslem {\it b} tak číslem {\it d}.
+
+Pokud se tedy oba zlomky rozšíří hodnotou součinu všech jmenovatelů, získají se po následném vykrácení zlomky se společným jmenovatelem, aniž by se změnila jejich hodnota:
+
+$$ {a \over b} \pm {c \over d} = ({a \cdot (b \cdot d) \over b \cdot (b\cdot d)}) \pm ({c \cdot (b \cdot d) \over d \cdot (b \cdot d)}) =  ({a\cdot d \over b \cdot d}) \pm ({c\cdot b \over b\cdot d})={a \cdot d \pm c \cdot b \over b \cdot d}$$
+
+Toto pravidlo je univerzální ať jsou ve jmenovateli prvočísla nebo čísla složená a lze zobecnit na libovolný počet slomků.
+
+Jestliže je ve jmenovateli alespoň jednoho ze zlomků prvočíslo, nelze najít nejmenší společný násobek jiným způsobem než jejich součinem. Ale pokud daní jmenovatelé prvočísla nejsou, je velmi pravděpodobné, že jejich součinem nevznikne jejich nejmenší násobek a pravděpodobně bude potřeba výsledný zlomek složitě krátit. Pomocí prvočíselného rozkladu lze ale najít nejmenší společný násobek, který zaručuje, že vzniklí společný jmenovatel bude $NSN <= b\cdot d$ a nebudou v čitateli zlomku (ani ve jmenovateli) vznikat tak vysoké hodnoty.
+
+\PodSekce{Rovnost zlomků}
+
+Dva zlomky jsou si rovny právě tehdy, když jsou si jejich hodnoty rovny. To znamená, že nezáleží na hodnotách čitatelů a jmenovatelů jednotlivých zlomků, ale na jejich podílech. Jestliže jsou si dva různé zlomky rovny, pak jejich podíl musí být roven jedné (podíl dvou stejných čísel je vždy roven jedné):
+
+$$ {a \over b} = {c \over d} \Leftrightarrow  {a \over b} \div {c \over d} = {a \over b} \cdot {d \over c} = 1 $$
+
+Z toho plyne jednoduché pravidlo, které říká, že dva zlomky jsou si rovny tehdy a jen tehdy pokud platí:
+
+$$ {a \over b} = {c \over d} \Leftrightarrow a\cdot d = b \cdot c $$
+
+\PodSekce{Složený zlomek}
+
+Složený zlomek je takový zlomek, který má v čitateli a (nebo) jmenovateli opět zlomek. Zlomkové čáře, která odděluje zlomky v čitateli a jmenovateli  hlavního zlomku se říká {\bf hlavní zlomková čára}. To v podstatě odpovídá dělení zlomků, proto se při počítání složený zlomek převání na násobení zlomků:
+
+$$ {{a \over b} \over {c \over d}} = {a \over b} \div {c \over d} = {a \over b} \cdot {d \over c} $$
+
+\PodSekce{Nepravý zlomek}
+
+Nepravý zlomek je takový zlomek, který lze převést na celo číslo a zlomek - {\bf smíšené číslo}. Jedná se tedy o zlomek, jehož absolutní hodnota (tedy i pro záporná čísla) je větší než jedna:
+
+$$ {a\over b} > 1 $$
+
+Nepravý zlomek se pozná tak, že čitatel daného zlomku je větší než jeho jmenovatel, například $15 \over 7$. Smíšené číslo je pak číslo, které se skládá z celého čísla a zlomku v základním tvaru:
+
+$$ Z {a \over b} $$
+
+Někdy se může tento zápis plést s násobením zlomku, ale pro pořádek se v případě násobení vždy píše operátor tečka a pokud se celé číslo nachází vedle zlomku bez jakékoliv operátora, jedná se vždy o složené číslo.
+
+Nepravý zlomek se na smíšené číslo převádí tak, že číslo v čitateli se převede na součet co největšího násobku čísla ve jmenovateli, plus zbytek, který je menší než číslo ve jmenovateli. Poté se první zlomek zkrátí na celé číslo. Nakonec se výsledek zapíše ve tvaru smíšeného čísla (čte se dva celky a jedna třetina):
+
+$$ {15 \over 7} = {14 + 1 \over 7} = {14 \over 7} + {1\over 7} = 2 + {1\over 7} = 2{1\over 7} $$
+
+Ze smíšeného čísla opět na nepravý zlomek se převádí inverzním postupem. Nejprve se celé číslo smíšeného zlomku vynásobí jmenovatelem zlomku a vytvoří se z něj zlomek. Následně se oba zlomky sečtou:
+
+$$ 2{1\over 7} = {2\over 1}\cdot {7\over 7} + {1\over 7} = {14 \over 7} + {1\over 7} = {15\over 7} $$
+
+\Sekce{Operace odmocnina}
+
+Operace odmocnina je inverzní operace k operaci mocnina. N-tou odmocninou daného čísla {\it a} je získáno číslo, pro které platí, že pokud by se umocnilo na n-tou, bylo by získáno opět číslo {\it a}:
+
+$$ \root n\of{a} = x \Rightarrow x^n = a $$
+
+Pro odmocninu se používá znak $\sqrt {a}$ pod kterým se nachází odmocňované číslo. Jestliže odmocnina neobsahuje žádný exponent, automaticky je tím myšlena druhá odmocnina. Pro definici odmocniny vyšších řádů se k značce odmocnin přidává ještě exponent, který udává řád odmocniny $\root n\of{a}$.
+
+V praxi se ale při výpočtech mocnin pro zjednodušení mocniny převádějí na mocniny:
+
+$$ \root n\of{a^m} = a^{m\over n}  $$
+
+Jestliže je odmocnina definovaná jako inverzní operace k operaci mocnina, pak musí platit vztah:
+
+$$ \root n\of{a^n} = |a| $$
+
+To proto, že exponenty mocniny a odmocniny, lze krátit. Zkrácením stejného exponentu mocniny a odmocniny vznikne číslo s exponentem o hodnotě 1, tedy:
+
+$$\root n\of{a^n} = a^{n\over n} = a^1 = |a|$$
+
+To má ale jistá omezení. Toto pravidlo platí, pouze v případě, že $n\geq 0$ nebo že exponent {\it n} je sudý. Protože sudý exponent mocniny změní záporné znaménko reálného čísla na kladné nevznikne v odmocnině záporná hodnota umocného čísla {\it a}. Pokud je exponent mocniny lichý, pak nezmění znaménko čísla {\it a}, proto číslo {\it a} musí být kladné. Z toho vyplývá, že hodnota čísla {\it a} je ve výsledku vždy kladná a nezáleží na tom, zda je pod odmocninou kladné nebo záporné $\rightarrow$ absolutní hodnota. 
+
+
+Vlastnost mocnin (odmocnin), která říká, že mocninu s racionálním exponentem je možné převést na operaci odmocnina (a naopak odmocninu na mocninu s racionálním exponentem) vychází z toho, že exponenty mocniny a odmocniny lze mezi sebou krátit.	 To vychází z toho, že jsou to navzájem inverzní operace.
+
+\PodSekce{Usměrňování odmocnin}
+
+Při počítání s mocninami a odmocninami je velice nepraktické, aby ve jmenovatelích zlomků byly odmocniny. Není to proto, že by zlomky s odmocninami ve jmenovateli nebyli definované (vypočítatelné), ale proto, že je daleko jednodušší odhadnout jak se daný zlomek bude při výpočtu chovat, tedy lze odhadnout jaká bude jeho přibližná hodnota. Další problém může nastat u algebraických výrazů při určování definiční podmínky lomených výrazů, tedy hodnoty, která nesmí nabývat proměnná ve jmenovateli, aby ve jmenovateli nevnikla nula.
+
+Při usměrňování odmocnin je tedy zlomek (lomený výraz) s odmocninou ve jmenovateli celý rozšířen vhodnou hodnotou, tak aby byla odmocnina ve jmenovateli odstraněna a zároveň, aby nebyla změněna hodnota daného zlomku. Ke zjištění vhodného výrazu (hodnoty) pro rozšíření zlomku se využívá různých vlastností aritmetických operací. To znamená vybrat nějakou inverzní hodnotu odmocniny pro danou operaci. Například:
+
+$$ {12 \over \sqrt{9}} = {12 \over \sqrt{9}} \cdot {\sqrt{9} \over \sqrt{9}} = {12 \cdot \sqrt{9} \over \sqrt{9^2}} = {12 \cdot \sqrt{9} \over 9} $$
+
+\PodSekce{Vlastnosti operace odmocnina}
+
+Základní vlastností operace odmocnina je, že nelze odmocňovat záporná čísla. To vychází z vlastnosti mocnin, respektive opakovaného násobení záporného čísla. Jestliže je umocněno nějaké číslo {\it a} na sudý exponent, pak nezáleží na tom, zda je toto číslo kladné nebo záporné, protože výsledek bude vždy kladný. Z tohoto důvodu nelze zjistit zda bude výsledek odmocniny záporného čísla kladný nebo záporný:
+
+$$ \forall a < 0, 2|n: (-a^n = x \Rightarrow \root n\of{x} = \pm a) $$
+
+
+Jestliže je ale exponent mocniny záporného čísla lichý, pak je podle vlastnosti opakovaného násobení záporného čísla výsledek vždy záporný. Z toho lze tedy odvodit, že lze odmocňovat záporná čísla pouze pokud je exponent odmocniny lichý:
+
+$$ \forall a < 0, 2 \not | n: (-a^n = x \Rightarrow \root n\of{x} = - a) $$
+
+
+Jestliže je exponent odmocniny záporný, pak je řešením takového výrazu převod na mocniny. Tím vznikne mocnina se záporným racionálním exponentem. Prohozením čitatele a jmenovatele se exponent změní ze záporného na kladný:
+
+$$ \root -n\of{x^m} = a^{-{n\over m}} = {1 \over a^{{n\over m}}} $$
+
+
+\PodSekce{Částečné odmocňování}
+
+Částečné odmocňování je postup, kdy je druhá mocnina daného čísla rozdělena na dvě nebo více částí, z nichž alespoň jedná část je z hlavy odmocnitelná. Principem částečného odmocňování odmocnin je rozdělit si dané odmocňované číslo na dvě (nebo více) menší celá čísla - násobky, kde alespoň jedno z nich je známé a z hlavy odmocnitelné. Z tohoto důvodu je třeba zvolit taková, čísla pro která je odmocnina celé číslo menší než 20. Samozřejmě, pokud je dané číslo prvočíslo, pak nelze najít takové celočíselné násobky, které by měli celočíselnou odmocninu. Příklad částečného odmocnění:
+
+$$ \sqrt {20} = \sqrt{4\cdot5} = \sqrt{4} \cdot {5} = 2 \cdot \sqrt{5} $$
+
+\Sekce{Priorita operací}
+
+Priorita aritmetických operací se dělí na přirozenou a logickou. Přirozená priorita operací vychází z vlastností jednotlivých operací, které většinou mají základ v některé jednodušší. Pokud se v jednom výrazu objeví více aritmetických operací, pořadí jejich vykonávání je:
+
+\vskip 4mm
+\bod{mocnina, odmocnina}
+\bod{násobení, dělení}
+\bod{sčítání, odčítání}
+\vskip 4mm
+
+Pokud se vedle sebe sejdou dvě operace se stejnou váhou, platí asociativní zákon, kdy nezáleží v jakém pořadí se mají operace vykonávat. V praxi ale platí nepsané pravidlo, že takové operace se vykonávají zleva doprava.
+
+V případě, že je nutné narušit přirozenou prioritu operací, je třeba využít logického členění na jednotlivé dílčí výrazy pomocí závorek. V matematických výrazech jsou většinou používány buď jednoho druhu a nebo závorky více druhů, kde je jednodušší orientace v případě vnoření závorek. V zápisech se nejčastěji využívají kulaté závorky:
+
+$$\left( ... \right)$$
+
+hranaté závorky:
+
+$$ \left[ ... \right] $$
+
+nebo složené závorky:
+
+$$ \left\{ ... \right\} $$
+
+V případě vnoření závorek pak je možné použít buď závorky jednoho druhu:
+
+$$ \left(...\left(\left(...\right)(...\right)\right)\left(...)\right)$$
+
+nebo závorky různého druhu:
+
+$$ \left(...\left[\left\{...\right\}\left\{...\right\}\right]\left[...\right]...\right) $$
+
+\Sekce{Shrnutí}
+
+
+
+\Nadpis {Číselné obory}
+%uvedení číselných obodrů, v teoretické aritmetice je pak jejich konstrukce
+
+Číselným oborem se rozumí číselná množina, na které jsou definovány bez omezení základní početní operace (sčítání, odčítání, …) - číselný obor je vzhledem k těmto operacím uzavřený. {\bf Uzavřenost} (úplnost) číselného oboru vzhledem k početní operaci znamená, že výsledkem početní operace mezi dvěma libovolnými prvky z příslušné číselné množiny je opět číslo, které také patří do této číselné množiny. Číselný obor je algebraická struktura, která slouží jako nosná množina definující pravidla aritmetických a algebraických operací.
+
+Množina všech čísel určitého druhu, ve které jsou definovány bez omezení operace sčítání a násobení se nazývá číselný obor.
+
+$$
+\left[
+\matrix{
+Název~číselného~oboru & Označení\cr
+ & \cr
+Obor~přirozených~čísel & N\cr
+Obor~nezáporných~čísel & N_0\cr
+Obor~celých~čísel & Z\cr
+Obor~racionálních~čísel & Q\cr
+Obor~iracionálních~čísel & IQ\cr
+Obor~reálných~čísel & R\cr
+Obor~komplexních~čísel & C\cr
+}
+\right]
+$$
+
+Přičemž platí:
+
+$$ N \subseteq N_0 \subseteq Z \subseteq (Q \cup IQ) \subseteq R \subseteq C $$
+
+\Sekce{Obor přirozených čísel}
+
+Za přirozené číslo se pokládá každé kladné číslo bez desetinné části. Množina přirozených čísel se označuje velkým písmenem {\bf N} od slova {\bf Natural}. 
+
+V některých případech je třeba zahrnout do přirozených čísel také číslo nula, například počet prvků prázdné množiny. Proto množina všech přirozených čísel rozšířená o nulu se označuje jako $N_0 = N \subseteq \{0\}$.
+
+Přirozená čísla se využívají ve dvou významech:
+\vskip 4mm
+\bod {Přirozenými čísly se vyjadřují počty prvků množin - Kolik?}
+\bod{Přirozenými čísly se vyjadřuje pořadí prvků při jejich uspořádání - Kolikátý?}
+\vskip 4mm
+
+Přirozená čísla slouží k určení počtu prvků množiny jako její velikost neboli {\bf míra}. Skládá-li se taková množina z približně stejných od sebe oddělených prvků (jednoznačná rozlišitělnost prvků) - homogenní množina.
+\PodSekce{Uzavřenost přirozených čísel}
+
+Je-li v nějakém číselném oboru proveditelná určitá operace bez omezení, říká se, že tento obor je {\bf uzavřený vzhledem k dané operaci}.
+Součet a součin libovolných přirozených čísel je opět přirozené číslo - jsou proveditelné bez omezení. To znamená, že obor přirozených čísel je uzavřena vzhledem k operacím sčítání a násobení.
+
+Ale rozdíl přirozených čísel {\it a}, {\it b} je přirozeným číslem pouze tehdy, když je operand {\it a} větší než operand {\it b}:
+
+$\forall a,b \in N, a-b = c: c \in N \Rightarrow  a > b$.
+
+Podíl přirozených čísel {\it a}, {\it b} je přirozeným číslem, právě když operand {\it a} je násobkem čísla operandu {\it b} v oboru přirozených čísel:
+
+$$ \forall a,b \in N, a \div b = c:  c \in N \Rightarrow a = b\cdot k $$
+
+Obor přirozených čísel tak není uzavřený vzhledem k operacím rozdíl a podíl.
+
+\Sekce{Obor celých čísel}
+
+Aby bylo možné dosáhnout uzavřenosti číselného oboru vzhledem k operaci odčítání, byl obor přirozených čísel rozšířen na obor {\bf celých čísel}. Celá čísla jsou čísla, která v sobě obsahují přirozená čísla, k nim inverzní (záporná) čísla a nulu $\left< - \infty :\infty \right >  $. To lze v jazyce matematické logiky zapsat jako:
+
+$$ Z = (-N_0) \cup N_0 \rightarrow \forall x \in Z: x \in (-N_0) \vee x \in N_0 $$
+
+Množina celých čísel se označuje velkým písmenem {\it Z} od slova Zahlen.
+
+Celá čísla umožňují vyjádřit nejen počty prvků konečných množin, ale též změny (přírůstky a úbytky) těchto počtů a podobně.
+
+\PodSekce{Uzavřenost celých čísel}
+
+V oboru celých čísel jsou bez omezení proveditelné operace součet, součin a rozdíl libovolných přirozených čísel. To ale neplatí pro podíl. Obor přirozených čísel není uzavřený vůči operaci dělení.
+
+\Sekce{Obor racionálních čísel}
+
+Aby bylo docíleno uzavřenosti číselného oboru vzhledem k operaci dělení, je obor celých čísel rozšířen na obor {\bf racionálních čísel}. Množina racionálních čísel se značí písmenem {\it Q}.
+
+Racionální číslo je každé číslo, které lze zapsat ve tvaru zlomku $p\over q$, kde číslo {\it p} je celé číslo a {\it q} je přirozené číslo.
+
+Racionální čísla umožňují kromě celých kladných a záporných celých čísel (přirozená a celá čísla jsou zároveň racionální čísla) vyjádřit počet částí určitého celku.
+
+\PodSekce{Vyjádření racionálního čísla desetinnými rozvoji}
+
+{\bf Desetinné číslo} je racionální číslo, které lze vyjádřit v rozvinutém tvaru:
+
+$$ a = \pm(a_n \cdot 10^n +a_{n-1}\cdot 10^{n-1} +...+ {a_0 \cdot 10^0}+ {a_{-1} \cdot 10^{-1}} + ... +{a_{-m} \cdot 10^{-m}}) $$
+
+Prakticky se ale používá zkrácený zápis ve tvaru:
+
+$$ a = a_n a_{n-1} ... a_0, a_{-1} a_{-2} ... a_m $$
+
+Čárce, která rozděluje celou a racionální část čísla se říká {\bf desetinná čárka} (desetinná tečka). Racionální části čísla (vpravo za desetinnou čárkou) se říká {\bf konečný desetinný rozvoj}, nebo také {\bf n-místné desetinné číslo} a vyjadřuje necelou část čísla, která je menší než jedna. O číslici $a_i$ se říká, že je na i-tém desetinném místě.
+
+Desetinnému číslu {\it A} v jehož desetinné části se od jistého indexu $j+1$ opakuje určitá skupina (uspořádaná k-tice) cifer $a_{j+1}+a_{j+2}+...+a_{j+k}$ se říká {\bf desetinné číslo s neukončeným (periodickým) desetinným rozvojem}.
+
+Neukončený periodický desetinný rozvoj jehož perioda začíná na indexu $j+1=1$ se nazývá ryze periodický.
+
+V případě, že se periodický rozvoj desetinného čísla $ a_1 + a_2 + ... + a_j + a_{j+1} + ...+ a_{j+k} $ na indexu $j+1 > 1$ tvoří jedno číslo, nazývá se {\bf neryze periodický desetinný rozvoj}. Skupině čísel $a_1 + a_2 + ... a_j$, které se nacházejí před libovolným periodickým rozvojem se nazývá {\bf předperioda desetinného rozvoje}.
+
+Věta o vyjádření racionálního čísla desetinným rozvojem říká že:
+
+Každé racionální číslo lze jednoznačně vyjádřit ve tvaru konečného desetinného rozvoje nebo nekonečného periodického desetinného rozvoje. A naopak každý konečný desetinný rozvoj nebo nekonečný periodický desetinný rozvoj vyjadřuje právě jedno racionální číslo.
+
+Desetinný rozvoj racionálního čísla daného zlomkem $p \over q$ je získán dělením jeho čitatele $p \in Z$ jmenovatelem $ q \in N $.
+
+\PodSekce{Aritmetické operace s desetinným číslem}
+
+S desetinnými čísly se počítá stejným způsobem jako s celými čísly, ale je nutné brát v úvahu desetinnou část čísla. S celou částí desetinného čísla se počítá běžnými postupy. Mírně odlišný postup nastává u počítání s desetinnou částí desetinného čísla. Jestliže celá část desetinného čísla je reprezentována v dekadickém zápise čísla kladnou mocninou čísla deset, tak desetinná část desetinného čísla je reprezentována v dekadickém zápise zápornou mocninou čísla deset. Díky tomu stačí sčítat, odčítat, násobit, dělit, … pouze násobky těchto mocnin, ale je nutné vždy dodržet přechod do vyššího řádu. Přenos do vyššího řádu na rozhraní celé a desetinné části desetinného čísla probíhá stejným způsobem jako v jakékoli jiné části desetinného čísla (celého, reálného, …).
+
+Pro zjednodušení operace dělení desetinných čísel se využívá posunu desetinné čárky u dělence i dělitele na takovou pozici, aby byla z obou čísel odstraněna desetinná část čísla (převod desetinného čísla na celé). Díky tomu se výpočet velmi zjednoduší a zpřehlední. Jedná se totiž o rozšíření daných čísel (stejně jako u rozšířování zlomků) a jejich poměr se nezmění, díky tomu se nezmění ani hodnota výsledného podílu:
+
+$$ 1,345 \div 0,3 = 1345 \div 300 = 4,48\overline{3} $$
+
+\PodSekce{Zakreslení racionálních čísel na číselné ose}
+
+Při zakreslování racionálního čísla ve tvaru zlomku na číselnou osu je třeba nejprve zjistit, zda hodnota daného zlomku je větší nebo menší (rovna) jedné.
+
+Jestliže je hodnota zlomku větší než jedna, pak je při zakreslování využita vlastnost složeného čísla, jehož celá hodnota říká mezi kterými dvěma body na číselné ose se hodnota racionálního čísla nachází a hodnota racionální části složeného čísla určuje kde přesně mezi danými dvěma body číselné osy se dané číslo nachází.
+
+\vskip 4mm
+\centerline{\pdfrefximage 12}
+\vskip 4mm
+
+Jestliže je hodnota daného zlomku menší než jedna, pak se jeho hodnota na číselné ose nachází někde mezi nulou a jedničkou.
+
+\PodSekce{Uzavřenost racionálních čísel}
+
+Součet, součin, rozdíl a podíl dvou libovolných racionálních čísel je opět racionální číslo. To znamená, že obor racionálních čísel je vzhledem k operacím součet, součin, rozdíl a podíl uzavřený. Při odmocnině racionálního čísla ale může vzniknout číslo, které nemusí mít ukončený periodický desetinný rozvot. Obor racionálních čísel tak není uzavřen k operace odmocnina.
+
+\Sekce{Obor reálných čísel}
+
+V oboru racionálních čísel jsou bez omezení proveditelné operace součet, součin, rozdíl a podíl jsou číslem různým od nuly a také operace mocnina s libovolným přirozeným exponentem. Ale v oboru racionálních čísel není bez omezení proveditelná operace odmocnina kladných čísel. Některé odmocniny přirozených čísel nejsou racionální čísla. Z těchto a dalších důvodů vznikl obor reálných čísel, který se značí písmenem {\it R}. Reálná čísla vznikla sjednocením racionálních a iracionálních čísel.
+
+$$ R = Q \cap IQ $$
+
+\PodSekce{Iracionální čísla}
+
+Reálná čísla jsou jednak {\bf racionální čísla}, která se dají vyjádřit ve tvaru zlomku $p \over q$ s celočíselným čitatelem {\it }p a přirozeným jmenovatelem {\it q} a dále iracionální čísla, která nelze v tomto tvaru vyjádřit.
+
+Iracionální čísla jsou charakterizovány svým desetinným rozvojem v desítkové soustavě. Každé iracionální číslo {\it a} je vyjádřeno {\bf nekonečným (neukončeným) neperiodickým desetinným rozvojem}, to znamená symbolem tvaru $ \pm a_k a_{k-1} ... a_0,a_{-1} ...a_{n} $ (n zaznamenaných číslic desetinného rozvoje a rozvoj dále pokračuje), kde část čísla vlevo od desetinné čárky $\{a_k a_{k-1}...a_0\}\in Z$ , $a_i \in {9, 8, ..., 0}$(čísla {\it a} o indexu {\it i} nabývají hodnot {\it 0} až {\it 9} a $i=1,2,...n,...$), přičemž v nekonečně mnoha cifrách $a_i$ se žádná skupina cifer neopakuje:
+
+$$ a =  \pm a_k  a_{k-1} ... a_0,a_{-1} ...a_{n}... $$
+
+Při zápisu iracionálních čísel v podobě desetinného čísla, ale nelze nikdy vypsat toto číslo celé. Iracionální čísla jsou vždy vypsána pouze na určitý počet desetinných míst. K vyjádření iracionálních čísel v podobě zlomku je vždy potřeba použít její aproximaci, tedy zaokrouhlenou hodnotu s předem definovanou přesností. Tím je z iracionálního čísla vytvořeno racionální - iracionální číslo nelze nikdy zapsat v plně rozvinutém tvaru desetinného čísla.
+
+\PodSekce{Zobrazení reálných čísel na přímku}
+
+Pro zobrazení množiny reálných čísel {\it R} na přímku platí několik vlastností:
+
+\vskip 4mm
+\bod{Je vzájemně jednoznačné, to znamená, že obrazem každého reálného čísla je právě jeden bod přímky a zároveň každý bod přímky je obrazem právě jednoho reálného čísla.}
+\bod{Jsou-li {\it a}, {\it b}, {\it c} libovolná reálná čísla, pro která platí $a < b <c$, pak obraz čísla {\it b} leží mezi obrazy čísel {\it a} a {\it c}.}
+\vskip 4mm
+
+Nejčastěji užívaným zobrazením těchto vlastností je {\bf grafické znázornění reálných čísel na číselné ose}, které se provádí takto:
+
+Zvolí se přímka {\it o} a na ní dva různé body {\it O}, {\it J}. Bod {\it O} se nazývá {\bf počátek číselné osy} a jedná se o obraz čísla nula. Bod {\it J} se nazývá {\bf jednotkový bod} a jedná se o obraz čísla jedna. Přímce o se říká {\bf číselná osa} (zpravidla se její poloha volí vodorovná a bod {\it J} se na ní vyskytuje napravo od bodu {\it O}, někdy se také užívá svislá číselná osa a v takovém případě se bod {\it J} nachází nad bodem {\it O}). Každému reálnému číslu a je přiřazen na číselné ose bod {\it A}, který se nazývá {\bf obraz čísla {\it a}}, přičemž kladné číslo {\it a} se zobrazuje vnitřním bodem polopřímky {\it OJ} (leží na polopřímce {\it OJ}) takovým, že jeho vzdálenost od počátku {\it O} je rovna hodnotě čísla {\it a}, záporné číslo {\it a'} se zobrazuje vnitřním bodem polopřímky opačné k polopřímce {\it OJ} jehož vzdálenost od počátku {\it O} je rovna absolutní hodnotě čísla {\it-a'}. Polopřímce {\it OJ} se říká {\bf kladná poloosa} a polopřímce opačné k polopřímce {\it OJ} se říká {\bf záporná poloosa} číselné osy. Vzhledem k tomu, že grafické znázornění reálných čísel na číselné ose je zobrazení {\bf vzájemně jednoznačné} (vzdálenost obrazu {\it A} od počátku {\it O} je dáno hodnotou čísla {\it a}) a zachovává uspořádání, obrazy reálných čísel na číselné ose se zpravidla označují stejnými symboly jako reálná čísla sama.
+
+\vskip 4mm
+\centerline{\pdfrefximage 1}
+\vskip 4mm
+
+Číselnou osu lze obecně použít i na zobrazení libovolné podmnožiny {\it M} reálných čísel {\it R}. Avšak pokud platí $M \not = R$, pak není toto zobrazení vzájemně jednoznačné, protože vždy budou existovat body číselné osy, které nejsou obrazem žádného čísla z dané množiny {\it M} (číselná osa je nekonečná).
+
+\Sekce{Absolutní hodnota reálného čísla}
+
+Důležitou vlastností reálného čísla je jeho {\bf absolutní hodnota}, která se značí dvěma svislými čárami s číselnou hodnotou (nebo obecnou proměnnou) uvnitř:
+
+$$ |a| $$
+
+Matematický zápis absolutní hodnoty tedy vypadá takto:
+
+$$ |a|= \cases{a & pro $a\geq 0$ \cr -a & pro $a < 0$} $$
+
+
+Matematický zápis říká, že absolutní hodnota čísla {a} je jeho hodnota bez znaménka. To znamená, že funkce absolutní hodnoty se chová jinak pro kladná čísla a jinak pro záporná čísla. Podle definice tedy v případě, že je počítána absolutní hodnota z kladného čísla, ve výsledku se s číslem nic nestane. Jestliže je ale počítána absolutní hodnota ze záporného čísla, pak je ve výsledku vrácena jeho opačná hodnota:
+
+$$ |-a| = -(-a) = a $$
+
+kde jedno znaménko je původní a druhé je přidáno uvnitř funkce pro výpočet absolutní hodnoty.
+
+Absolutní hodnota reálného čísla a vyjadřuje jak daleko na číselné ose se dané číslo nachází od nuly:
+
+\vskip 4mm
+\centerline{\pdfrefximage 31}
+\vskip 4mm
+
+Výraz ve tvaru $|a-b|$ pak říká jak daleko je na číselné ose číslo {\it a} od kladného čísla {\it b}:
+
+$$ |-7-(-5)| = |-7-5| = 2 $$
+
+Číslo -7 je vzdáleno od čísla -5 přesně 2 místa.
+
+Absolutní hodnota je funkce proměnné {\it x}, která vrací vždy kladnou hodnotu daného čísla. Její graf vypadá takto:
+
+\vskip 4mm
+\centerline{\pdfrefximage 32}
+\vskip 4mm
+
+\PodSekce{Vlastnosti absolutní hodnoty}
+
+\vskip 4mm
+
+\bod{$|a| = a\geq 0 \rightarrow$ Výsledkem funkce absolutní hodnoty je vždy číslo větší nebo rovno nule.}
+\bod{$|a\cdot b| = |a|\cdot |b|\rightarrow$ Při operaci násobení nezáleží na tom zda jsou násobeny absolutní hodnoty a nebo jestli je absolutní hodnota vytvořena až z daného výsledku násobení.}
+\bod{$|a+b|\leq |a|+|b| \rightarrow$ Jestliže je absolutní hodnota vypočítání z výsledku operace součtu, její hodnota může být menší nebo rovna součtu absolutních hodnot jejich operandů. To proto, že tyto operandy mohou být i záporné a tím se hodnota výsledku může také zmenšovat, nebo jít až do záporné hodnoty}
+\vskip 4mm
+
+Jestliže se absolutní hodnota nachází ve výrazech, je zapotřebí ještě než se začnou vykonávat aritmetické operace daného výrazu, aby se nejprve vypočítala absolutní hodnota daného čísla, nebo výrazu (absolutní hodnota má přednost před ostatními aritmetickými operacemi):
+
+$$ 2 +|-15| = 2 + 15 = 17 $$
+
+Jestliže se počítá absolutní hodnota nějakého výrazu, je třeba nejprve vypočítat, daný výraz a až z jeho výsledku vytvořit absolutní hodnotu:
+
+$$ 2 + |-15\cdot2| = 2 + |-30| = 2 + 30 = 32 $$
+
+\Sekce{Aproximace}
+
+Aproximace (přiblížení) je znázornění něčeho, co není přesné, ale je to stále dost blízko na to, aby to bylo pro praktické účely použitelné. Mnoho problémů ve fyzice je buď příliš složitých na analytické řešení, nebo nejdou řešit pomocí dostupných analytických nástrojů. Takže i když je přesné vyjádření známé, může aproximace poskytnout dostatečně přesné řešení a zároveň podstatně snížit složitost problému. Typickým příkladem je iracionální číslo $\pi$ (pi), které nelze přesně vypočítat (pouze s určitou přesností). V praxi je tedy znám pouze interval, do kterého dané číslo patří. Jestliže pro reálné číslo {\it a} platí:
+
+$$ a \in \left< a_d : a_h \right> \rightarrow  a_d < a < a_h$$
+
+lze považovat číslo $\tilde{a}$ z intervalu  $\left< a_d : a_h \right>$ za {\bf aproximaci} čísla {\bf a}, to se zapisuje jako: $a \approx
+ \tilde{a}$ ({it a} je přibližně rovno $\tilde{a}$). Speciálně číslo $a_d$ se nazývá {\bf dolní aproximace} čísla {\it a}, číslo $a_h$ se nazývá {\bf horní aproximace} čísla {\it a}. Jejich střednímu aritmetickému průměru $a_s$ se říká {\bf střední aproximace}:
+
+ $$ a_s = {1\over 2}\cdot (a_d+a_h) $$
+
+ {\bf Chybu (nepřesnost)} $a-\tilde{a}$ aproximace $\tilde{a}$ čísla {\it a} zpravidla nelze určit, lze však provést odhad její absolutní hodnoty (absolutní hodnotu nepřesnosti) $|a - \tilde{a}|$ pomocí čísla $ \alpha > 0 $, pro které platí:
+
+ $$ |a - \tilde{a}| \leq \alpha  $$
+
+
+ Kde číslo {\it a} je zkutečná hodnota a $\tilde{a}$ je jeho přibližná hodnota (aproximace). Jejím rozdílem je získána hodnota o kterou se tyto dvě čísla liší - {\bf chyba nepřesnosti}. Chyba nepřesnosti může být kladná (v případě, že $a < \tilde{a}$), ale i záporná (v případě, že $a>tilde{a}$ ). Rozdílem horní a dolní aproximace je získána délka intervalu ve kterém se nachází číslo {\it a}:
+
+$$ a_h - a_d $$
+
+Protože hodnota nepřesnosti dané aproximace nemůže být větší než je délka intervalu aproximace:
+
+$$ |a - \tilde{a}| \leq |a_h - a_d| $$
+
+je možné považovat délku intervalu aproximace za její odhad absolutní chyby:
+
+$$  |a_h - a_d| = \alpha $$
+
+Jestliže je aproximace $\tilde{a}$ vyjádřena desetinným číslem, nazývá se {\bf desetinná aproximace}. Speciálními případy jsou horní a dolní desetinné aproximace reálných čísel:
+
+\Sekce{Zaokrouhlování}
+
+Zaokrouhlování se týká racionálních a iracionálních čísel u kterých je buď příšliš dlouhý desetinný rozvoj nebo je jejich rozvoj periodický a je třeba z důvodu snazšího zápisu upravit jeho délku s přihlédnutím k tomu, aby se jeho hodnota změnila co nejméně.
+
+Zaokrouhlení je proces, při kterém se snižuje počet významových číslic v daném čísle. Výsledek zaokrouhlení je "kratší" číslo, které má menší počet nenulových číslic zprava, ale jeho hodnota je méně přesna. Díky tomu se s ním ale lépe manipuluje a lépe se zobrazuje. Výsledek zaokrouhlování se zobrazuje pomocí přiřazovacího znamínka nad kterým je tečka "$\doteq$".
+
+Například:
+
+$$ 250,33 \doteq 250 $$
+
+V praxi se rozlišují tři různé metody zaokrouhlování:
+
+\vskip 4mm
+\bod{Zaokrouhlování nahoru}
+\bod{Zaokrouhlování dolů}
+\bod{Přirozené (aritmetické) zaokrouhlování}
+\vskip 4mm
+
+Při zaokrouhlování je nejprve třeba určit {\bf řád zaokrouhlování}. Řádem jsou myšleny desítky, stovky, tisíce, ale také desetiny, setiny, tisícina a další. To tedy znamená vytvořit ze zaokrouhlovaného čísla nové číslo, které bude dělitelné bezezbytku daným řádem ($10^{-1}$, $10^{-2}$, ...). Číslicím na číselném řádů vyšším než je řád zaokrouhlení se říká {\bf platné číslice} a číslicím na číselném řádu nižším než je řád zaokrouhlení se říká {\bf neplatné číslice}. Podle typu zaokrouhlování je následně číslo dále upravováno.
+
+Výsledkem {\bf zaokrouhlování dolů} je číslo, jehož hodnota je menší nebo rovna zaokrouhlovanému číslo. Zaokrouhlením dolů se u kladných čísel provádí prostým odstraněním (respektive vynulování) číslic nižších řádů, než je zvolený řád zaokrouhlení:
+
+$$ 4,12345 \doteq 4,12 \rightarrow 4,12345 \geq 4,12 $$
+
+U záporných čísel je třeba vynulovat dané řády a zvětšit první platnou číslici o jedničku, protože by jinak výsledné číslo bylo větší než číslo zaokrouhlované:
+
+$$ -4,1234 \doteq -4,13 \rightarrow (-4,12345) \geq (-4,13) $$
+
+Výsledkem {\bf zaokrouhlování nahoru} je nejbližší  číslo, které je větší nebo rovno zaokrouhlovanému číslu. Zaokrouhlování nahoru u kladných čísel probíhá stejným způsobem jako zaokrouhlování dolů u záporných čísel. Tedy odstraní (respektive vynulují) se všechny číslice nižších řádů než je zvolený řád zaokrouhlování a první platná číslice se zvětší o jedničku:
+
+$$ 4,12345 \doteq 4,13 \rightarrow 4,12345 \leq 4,13 $$
+
+Naopak u záporných čísel se pouze odstraní (respektive vynulují) číslice na řádech nižších než je řád zaokrouhlování, stejně jako u zaokrouhlování dolů u kladných čísel:
+
+$$ -4,1234 \doteq -4,12 \rightarrow (-4,12345) \leq (-4,12) $$
+
+Výsledkem {\bf přirozeného} nebo také {\bf aritmetického zaokrouhlování} je číslo, které je na číselné ose nejblíže zaokrouhlovanému číslu. V závislosti na tom na který číselný řád se dané číslo zaokrouhluje a jaká je hodnota první neplatné číslice se tedy zaokrouhluje buď nahoru a nebo dolů. Díky tomu dojde k vytvoření menší chyby nepřesnosti. Platí tedy, jestliže je první neplatná číslice v intervalu $\left< 4:0 \right>$, pak se zaokrouhluje směrem dolů. Jestliže je ale první neplatná číslice v intervalu $\left< 5:9 \right>$, pak se zaokrouhluje směrem nahoru:
+
+$$ 54 \doteq 50 $$
+
+$$ 57 \doteq 60 $$
+
+\vskip 4mm
+\centerline{\pdfrefximage 14}
+\vskip 4mm
+
+Při zaokrouhlování čísla 5, ale vzniká dilema. Číslo 5 je totiž na číselné ose stejně daleko k vyššímu číslu i k nižšímu číslu:
+
+\vskip 4mm
+\centerline{\pdfrefximage 13}
+\vskip 4mm
+
+Z toho vyplývá, že výsledné zaokrouhlené číslo má stejnou přesnost v případě že zaokrouhleno nahoru i když je zaokrouhleno dolů. Jedná se tedy o aproximaci daného čísla, kdy výsledné zaokrouhlené číslo spadá do určitého intervalu, který definuje přípustnou chybovost daného čísla. V praxi se ale v takovém případě většinou volí zaokrouhlování nahoru. Nejedná se o žádné matematické pravidlo, ale o dohodnutý postup.
+
+
+Při zaokrouhlování dochází k nutné a žádoucí chybě (nepřesnosti). Kromě toho ovšem dochází k chybám nežádoucím jako je například {\bf postupné zaokrouhlování}. Pokud je třeba zaokrouhlit nějaké číslo na nějaký řád, je důležité jakou hodnotu má číslice o jeden řád níže, tedy první neplatná číslice. Nikdy nesmí dojít k případu, kdy je zaokrouhlováno postupně několik řádů po sobě, tedy například nejprve zaokrouhlit na tisíciny, pak tento výsledek zaokrouhlit na setiny, a tak dál. Chyba která vznikne při zaokrouhlení se tímto postupným zaokrouhlením postupně násobí a zvětšuje. Absolutní chyba takto zaokrouhleného čísla by byla několikrát vyšší, než absolutní chyba čísla, které by bylo zaokrouhleno na daný řád přímo:
+
+\vskip 4mm
+\bod{Špatně - $ 746 \doteq 750 \doteq 800 $}
+\bod{Správně - $ 746 \doteq 700 $}
+\vskip 4mm
+
+\PodSekce{Rovnost a nerovnost reálných čísel}
+
+Rovnost čísel vyjadřuje vztah (relaci), kdy dva symboly (sekvence symbolů) vyjadřují stejnou číselnou hodnotu. Tato vlastnost je vyjádřena symbolem rovnosti „=“ (rovnítko). Mají-li čísla {\it a}, {\it b} stejnou hodnotu, je tento vztah vyjadřován zápisem $ a = b $, čte se: {\it a} je rovno {\it b}. Pokud čísla {\it a}, {\it b} vyjadřují různé číselné hodnoty, je tento vztah zapisován $a \not = b$ , čte se: {\it a} není rovno {\it b}.
+
+Jednou z vlastností reálných čísel je, že se dají mezi sebou vzájemně porovnávat. K tomuto účelu slouží operátory nerovnosti:
+
+\vskip 4mm
+\bod {$a < b$ - číslo {\it a} je menší než číslo {\it b}}
+\bod {$ a > b $ - číslo {\it a} je větší než číslo {\it b}}
+\bod{$ a \leq b $ - číslo {\it a} je menší nebo rovno číslu {\it b}}
+\bod{$ a \geq b $ - číslo {\it a} je větší nebo rovno číslu {\it b}}
+\vskip 4mm
+
+Nerovnosti s operátory $<$ nebo $>$ se nazývají ostré nerovnosti. Nerovnosti s operátory $\leq$ nebo $\geq$ se nazývají neostré nerovnosti.
+
+\Nadpis{Intervaly}
+
+Množina přirozených čísel stejně jako množina reálných (celých, racionálních, iracionálních) čísel je nekonečná množina, ale jejich společnou vlastností je, že se jednotlivé jejich prvky, čísla, dají seřadit podle toho jakou hodnotu vyjadřují, podle jejich velikosti: 1, 2, 3, … U přirozených (celých) čísel lze tato čísla jednoduše vypsat tak jak jdou za sebou. To ale nelze udělat s čísly z množiny racionálních a reálných čísel, protože teoreticky se mezi dvěma celými čísly {\it A}, {\it B} nachází nekonečně mnoho reálných čísel větších než číslo {\it A}  a menších než číslo {\it B}. To znamená, že nikdy nelze vypsat všechna tato čísla podle velikosti. Proto byly zavedeny intervaly, které umožňují definovat libovolnou podmnožinu reálných čísel. {\bf Interval} je speciální množina reálných čísel, jejichž obrazy na číselné ose vyplňují její souvislou podmnožinu (intervaly představují libovolné souvislé podmnožiny reálných čísel). Intervaly se vyjadřují pomocí dvou hodnot, které se nazývají {\bf krajní body intervalu}. Tyto hodnoty definují počátek a konec intervalu. Libovolný bod intervalu, který není jeho krajním bodem, se nazývá {\bf vnitřní bod intervalu}.
+
+Pro kterýkoli z omezených (konečných) intervalů {\it I} s krajními body $a, b: a < b$ se zavádí pojem {\bf délka intervalu}, kterou se rozumí číslo $ d(I) = b - a $ a {\bf střed intervalu} $ s(I) = {1 \over 2}\cdot (a + b) $ (jedná se o číselnou řadu, kde čísla rostou postupně, viz střed aritmetické posloupnosti).
+
+Krajním bodům intervalu se říká také {\bf meze intervalu} (dolní - {\it a}, horní - {\it b}). Pokud je potřeba vyjádřit, že nějaká hodnota {\it x} je v daném intervalu, tak protože je interval druhem množiny, použije se pro to symbol množinového přiřazení: $ x \in (a:b) $.
+
+\Sekce{Druhy intervalů}
+
+Podle toho zda do intervalu spadají i krajní body a podle jeho omezenosti se rozlišuje několik druhů intervalu:
+
+\vskip 4mm
+\bod{Otevřený interval}
+\bod{Uzavřený interval}
+\bod{Na půl uzavřený interval zleva}
+\bod{Na půl uzavřený interval zprava}
+\bod{Zprava otevřený interval}
+\bod{Zprava uzavřený interva}
+\bod{Zleva otevřený interval}
+\bod{Zleva uzavřený interval}
+\bod{Interval oboustraně neomezený}
+\vskip 4mm
+
+Kulatá závorka znamená v matematických zápisech intervalů, že hodnota krajních bodů intervalu není součástí daného intervalu. Špičatá závorka naopak znamená, že hodnoty krajních bodů intervalu jsou součástí daného intervalu. V případě zápisů intervalu s nekonečnem se u něj vždy píše kulatá závorka, protože nekonečno nelze brát jako číslo. Kdyby v zápisu intervalu s nekonečnem byla kulatá závorka, znamenalo by to, že interval začíná (končí) hodnotou nekonečna, ale ta není známá.
+
+\PodSekce{Otevřený interval}
+
+Otevřený interval je takový interval, jehož součástí {\bf nejsou} hodnoty krajních bodů, kterými je definován:
+
+$$ a < x < b $$
+
+Grafické značení otevřeného intervalu:
+
+\vskip 4mm
+\centerline{\pdfrefximage 15}
+\vskip 4mm
+
+V matematických zápisech je otevřený interval značen:
+
+$$ \left(a:b\right) $$
+
+\PodSekce{Uzavřený interval}
+
+Oteřený interval je takový interval, jehož součástí {\bf jsou} hodnoty krajních bodů, kterými je definován:
+
+$$ q \leq x \leq b $$
+
+Grafické značení otevřeného intervalu:
+
+\vskip 4mm
+\centerline{\pdfrefximage 16}
+\vskip 4mm
+
+V matematických zápisech je otevřený interval značen:
+
+$$ \left< a:b \right> $$
+
+\PodSekce{Napůl uzavřený interval zleva}
+
+Na půl uzavřený interval zleva je takový interval, který obsahuje dolní krajní bod a zároveň nebosahuje horní kraní bod:
+
+$$ a \leq x < b $$
+
+Grafické značení napůl uzavřeného intervalu zleva:
+
+\vskip 4mm
+\centerline{\pdfrefximage 17}
+\vskip 4mm
+
+V matematických zápisech je napůl uzavřený interval zleva značen:
+
+$$ \left< a:b\right) $$
+
+\PodSekce{Napůl uzavřený interval zprava}
+
+Na půl uzavřený interval zleva je takový interval, který neobsahuje dolní krajní bod a zároveň osahuje horní kraní bod:
+
+$$ a<x \leq b $$
+
+Grafické značení napůl uzavřeného intervalu zprava:
+
+\vskip 4mm
+\centerline{\pdfrefximage 18}
+\vskip 4mm
+
+V matematických zápisech je napůl uzavřený interval zprava značen:
+
+$$ \left( a:b \right>  $$
+
+\PodSekce{Zleva otevřený interval}
+
+Zleva otevřený interval je takový interval, jehož levý krajní bod {\bf není} součástí intervalu a jeho pravý krajní bod jde do nekonečna:
+
+$$ x > a $$
+
+Grafické značení zleva otevřeného intervalu:
+
+\vskip 4mm
+\centerline{\pdfrefximage 19}
+\vskip 4mm
+
+V matematických zápisech je zleva otevřený interval značen:
+
+$$ \left( a:\infty \right) $$
+
+\PodSekce{Zleva uzavřený interva}
+
+Zleva uzavřený interval je takový interval, jehož levý krajní bod {\bf je} součástí intervalu a jeho pravý krajní bod jde do nekonečna:
+
+$$ x \geq a $$
+
+Grafické značení zleva uzavřeného intervalu:
+
+\vskip 4mm
+\centerline{\pdfrefximage 20}
+\vskip 4mm
+
+V matematických zápisech je zleva uzavřený interval značen:
+
+$$ \left< a:\infty \right) $$
+
+\PodSekce{Zprava otevřený interval}
+
+Zprava otevřený interval je takový interval, jehož pravý krajní bod {\bf není} součástí intervalu a jeho levý krajní bod jde do nekonečna:
+
+$$ \left( x < a \right) $$
+
+Grafické značení zprava otevřeného intervalu:
+
+\vskip 4mm
+\centerline{\pdfrefximage 21}
+\vskip 4mm
+
+V matematických zápisech je zprava otevřený interval značen:
+
+$$ \left( -\infty : a \right) $$
+
+\PodSekce{Zprava uzavřený interval}
+
+Zprava uzavřený interval je takový interval, jehož pravý krajní bod {\bf je} součástí intervalu a jeho levý krajní bod jde do nekonečna:
+
+$$ x \leq a $$
+
+Grafické značení zprava uzavřeného intervalu:
+
+\vskip 4mm
+\centerline{\pdfrefximage 22}
+\vskip 4mm
+
+V matematických zápisech je zprava uzavřený interval značen:
+
+$$ \left( -\infty : a \right> $$
+
+
+\PodSekce{Interval oboustranně neomezený}
+
+Oboustranně neomezený interval je takový interval, jehož oba krajní body jdou do nekonečna:
+
+$$ x \in R $$
+
+Grafické značení oboustranně neomezeného intervalu:
+
+\vskip 4mm
+\centerline{\pdfrefximage 23}
+\vskip 4mm
+
+V matematických zípisech je oboustranně neomezený interval značen:
+
+$$ \left( -\infty:\infty \right) $$
+
+\Sekce{Intervalová aritmetika}
+
+Protože intervaly jsou speciální případy množin, lze s nimi provádět základní množinové operace (sjednocení, průnik, ...). Toho se využívá především v algebře pro definování spojitých ale také nespojitých definičních oborů funkcí tvořící podmnožinu daného číselného oboru (většinou reálných čísel).
+
+Ke grafickému vyjádření intervalů je potřeba číselná osa a symboly vyjadřující daný interval:
+
+\vskip 4mm
+\centerline{\pdfrefximage 24}
+\vskip 4mm
+
+\PodSekce{Sjednocení intervalů}
+
+{\bf Sjednocení} dvou, nebo více intervalů znamená, že se jednotlivé dílčí intervaly spojí do jednoho intervalu, který nemusí být na číselné ose spojitý. To se může využívat například při vyjadřování definičních oborů výrazů, které obsahují nějakou podmnožinu přirozených, celých nebo reálných čísel, ale nesmí v nich být obsaženy některé nepřípustné hodnoty (nula ve jmenovateli zlomku, záporné hodnoty v odmocnině, ...).  Sjednocení intervalů se matematicky zapisuje:
+
+$$ x \in (a:b) \cup (c:d) $$
+
+Tento zápis říká, že daná proměnná {\it x} může nabývat hodnot, které jsou definovány jedním z intervalů sjednocení. Grafický význam sjednocení je, že na číselné ose vzniknou ze dvou (nebo více) dílčích intervalů jeden, který obsahuje prvky všech těchto intervalů:
+
+\vskip 4mm
+\centerline{\pdfrefximage 25}
+\vskip 4mm
+
+Grafické symboly intervalů se v případě sjednocení zakreslují na stejnou úroveň (ve stejné výšce). To vyjadřuje, že mezi danými intervaly je vztah (jedná se o součást jednoho intervalu). Pokud se na číselné ose vyskytují grafická vyjádření několika různých intervalů, které ale nejsou v žádném vzájemném vztahu, musejí se nacházet v různých úrovní.
+
+\PodSekce{Průnik}
+
+{\bf Průnik} dvou nebo více intervalů vyjadřuje, že výsledný interval obsahuje pouze ty hodnoty (prvky), které mají tyto intervaly společné, tedy vyskytují se ve všech intervalech průniku. Průnik intervalů se matematicky zapisuje:
+
+$$ x \in (a:b) \cap (c:d) $$
+
+Grafické vyjádření průniku intervalů $ \left< -1:2\right> \cap \left< 1: \infty\right) $ vypadá takto:
+
+\vskip 4mm
+\centerline{\pdfrefximage 26}
+\vskip 4mm
+
+Výsledkem průniku intervalů $ \left< -1:2\right> \cap \left< 1: \infty\right) $ je interval $ \left< 1:2 \right> $.
+
+\PodSekce{Rozdíl intervalů}
+
+Rozdíl intervalů vyjadřuje, že ve výsledném intervalu se nacházejí hodnoty prvního intervalu a zároveň se v něm nevyskytují hodnoty z druhého intervalu. Tato množinová operace se matematicky zapisuje:
+
+$$ \left(a : b \right) \ZLomitko \left( c:d \right)$$
+
+Grafický význam rozdílu intervalů vypadá takto:
+
+\vskip 4mm
+\centerline{\pdfrefximage 27}
+\vskip 4mm
+
+Výsledkem rozdílu intervalů většinou bývá nějaký sjednocený (nespojitý) interval. Například rozdílem intervalů $\left< -1:2 \right> \ZLomitko \left< 0:1 \right> = \left< -1:0 \right) \cap  \left( 1:2 \right>$ . Je třeba dávat pozor na to, zda jsou hraniční hodnoty intervalu součástí intervalu či nikoli, protože pokud je odčítán interval, jehož součástí jsou jeho hraniční hodnoty, pak daná hodnota již nemůže být součástí výsledného sjednoceného intervalu a je třeba to vyjádřit pomocí kulaté závorky v matematickém zápisu. Pokud jsou od sebe odčítány dva různé intervaly $A \ZLomitko B$ , které nemají společné žádné hodnoty, pak výsledkem je opět daný interval {\it A}, protože z něj nebyly odstraněny žádné hodnoty.
+
+\PodSekce{Doplněk intervalu}
+
+Doplněk intervalu {\it A} je interval, který vůči jinému intervalu {\it B} neobsahuje všechny hodnoty intervalu {\it B} a zároveň žádné hodnoty z intervalu {\it A}. Jestliže je například vytvářen doplněk intervalu {\it A} vůči množině reálných čísel, pak výsledkem bude množina reálných čísel, která neobsahuje interval {\it A}. Doplněk množiny {\it A} do množiny {\it B} lze brát jako rozdíl množiny {\it B} a {\it A}. Platí, že pokud je doplněk na daný interval aplikován dvakrát, je získán opět původní interval.
+
+\vskip 4mm
+\centerline{\pdfrefximage 28}
+\vskip 4mm
+
+Jestliže je například vytvářen doplněk intervalu $ \left< 0:1 \right> $ vůči intervalu $ \left< -1:2 \right> $ pak platí $ \left< -1:2 \right> \ZLomitko \left< 0:1 \right> = \left< -1:0\right) \cup \left(1:2 \right> $.
+
+\Nadpis{Procenta}
+
+Procenta jsou matematický nástroj, který umožňuje vyjádřit nějakou relativní část z celku pomocí celých čísla (ne nutně), přičemž celek jako takový je vyjádřen hodnotou 100. Jinak řečeno je pomocí procent možné vyjádřit racionální čísla pomocí čísel celých. Z toho vyplývá, že jedno procento je tedy $ 1\over 100 $ daného celku - hodnota jednoho procenta je závislá na hodnotě celku jako takového. {\bf Procentuální část} vyjadřuje hodnotu jakou představuje $x\%$ z nějakého celku. Ke značení hodnot procent se používá znak „$\%$“ za číselnou hodnotou. Slovo procento pochází z latinského slova {\bf centum}. Je tím myšleno rozdělení daného celku na 100 stejně velkých částí a následné vyjádření {\it x} částí ze sta. Například $20\%$ ze základu 100 představuje procentuální část 20.
+
+Jestliže je dán nějaký počet procent menší než 100, pak hodnota, kterou vyjadřují je {\bf menší než je hodnota základu}. Jestliže je počet procent větší než 100, pak hodnota, kterou vyjadřují je {\bf větší než hodnota základu}. Při používání procent je velmi důležité vždy zdůraznit, jakou hodnotu má základ (nebo jakou hodnotu daný počet procent vyjadřuje).
+
+Pro získání hodnoty jednoho procenta z nějakého celku se hodnota daného celku podělí hodnotou 100:
+
+$$ z \div {1\over 100} = {z \over 100} = 1\% $$
+
+Procenta se dají vždy přepsat do zlomku. {\it X} procent z celku je možné vyjádřit jako {\it x} setin z daného celku tedy:
+
+$$ { x \over 100}\cdot z = x\% $$
+
+V případě, že hodnota tohoto zlomku je menší než jedna (menší než $100\%$), pak procentuální část je menší než je hodnota celku. Pokud je zlomek větší než jedna (větší než $100\%$), pak je procentuální část vetší než je hodnota celku.
+
+Procenta se používají ve chvíli, kdy je třeba vyjádřit část nějakého celku. Procenty lze nahradit výrazy ve smyslu třetina pizzy, nebo sedmina lidstva, … Tedy vždy když existuje nějaký celek, jehož určitá část má určitou vlastnost (relaci).
+
+\Sekce{Grafické vyjádření procent}
+
+Procenta lze graficky vyjádřit pomocí kruhového grafu, který představuje celek. Tento graf je rozdělen na 100 stejně velkých částí a každá tato část pak vyjadřuje hodnotu jednoho procenta z daného celku. Podle toho kolik dílků z grafu je zvýrazněno, tolik procent daný graf vyjadřuje z daného celku.
+
+\vskip 4mm
+\centerline{\pdfrefximage 9}
+\vskip 4mm
+
+\Sekce{Promile}
+
+Promile je stejně jako procento matematický nástroj, který slouží k vyjádření části celku pomocí celého čísla. Jestliže procento je jedna setina z daného celku, pak promile je jedna tisícina z daného celku. Jedno promile se značí pomocí symbolu, který se podobá symbolu procenta, ale s jedním kolečkem navíc: $\%_o$ Jedno promile z daného celku je tedy rovno:
+
+$${1\over 1000} \cdot z = 1\%_o $$
+
+Jestliže je jedno procento rovno $1\over 100$ a jedno promile je rovno $1\over 1000$ pak platí, že jedno promile je 10-krát menší než jedno procento. Jedno promile je tedy desetina procenta: ${{1\%} \over 10} = 1\%_o$.
+
+\Sekce{Výpočet 1\% a 100\% z procentuální hodnoty}
+
+Pokud je dána nějaká hodnota, o které je známo, že odpovídá nějakému $x\%$ z daného celku, pak je většinou třeba zjistit jaká hodnota odpovídá $1\%$ a jaká hodnota odpovídá $100\%$.
+
+\PodSekce{Výpočet 1\% z dané hodnoty}
+
+Jestliže je známa hodnota, která odpovídá $x\%$, pak $x\%$ je x-krát větší než je hodnota jednoho procenta. Pro získání hodnoty, kterou vyjadřuje jednoho procento je tedy třeba hodnotu $x\%$ vydělit hodnotou {\it x}:
+
+$$ {z \over x} = 1\% \Rightarrow x\% = 1\% \cdot x \Rightarrow {x\% \over x} = 1\% $$
+
+\PodSekce{Výpočet 100\% z dané hodnoty}
+Pro výpočet hodnoty $100\%$ z dané hodnoty, o které je známo, že je rovna $x\%$ z daného celku je využit postup pro výpočet jednoho procenta. Poté co je vypočítána hodnota jednoho procenta je tato hodnota pouze vynásobena stem:
+
+$$ {x\%\over x} = 1\% \wedge 1\% \cdot 100 = 100\% \Rightarrow {x\%\over x}\cdot 100 = {{x\%\cdot 100}\over x} = 100\% $$
+
+\Sekce{Výpočet x\% z daného celku}
+
+Jiná situace je když je známa hodnota celku která odpovídá stům procentům a je třeba zjistit, jaká hodnota odpovídá $x\%$.  K tomuto účelu slouží několik metod.
+
+Nejjednodušší způsob je nejprve vypočítat hodnotu odpovídající jednomu procentu z daného celku a následně tuto hodnotu vynásobit hodnotou {\it x}, která vyjadřuje daný počet procent:
+
+$$ {z \over 100 = 1\%} \rightarrow 1\% \cdot x = x\%  $$
+
+Daleko rychlejší způsob je ale zřetězit tento postup a zkrátit tak celý zápis:
+
+$$ {x\over 100}\cdot z = x\% $$
+
+Protože vydělením dané hodnoty {\it x} vznikne hodnota 100-krát menší, dojde k posuvu desetinné čárky doleva o dvě číselná místa. Díky tomu je možné automaticky vynásobit daný základ 100-krát menší hodnotou x, čímž se celý proces výpočtu velmi zrychlí:
+
+$$ z \cdot 0,0x = x\% $$
+
+Jestliže je dána nějaká hodnota {\it n} pro kterou je třeba zjistit kolik procent tvoří z daného celku, je třeba nejprve vypočítat hodnotu jednoho procenta z daného celku a následně zjistit, kolikrát se vejde do dané hodnoty:
+
+$$ {n\over {z\over 100}} = x\% $$
+
+\Sekce{Procenta z procent}
+
+Při počítání procenta z procent je dána nějaká hodnota, o které je známo, nějaké $x\%$,  ze kterých je potřeba vypočítat $y\%$. Jako základ pro další výpočet procent je tedy brána jiná procentuální hodnota. Typickým příkladem jsou slevy.
+%dodělat
+
+
+\Sekce{Shrnutí}
+
+\vskip 4mm
+\bod{{\bf Procenta} je nástroj vyjádření relativní části z celku pomocí celočíselné hodnoty v intervalu 0-100, kde hodnota 100 vyhadřuje hodnotu celku.}
+\bod{{\bf Procentuální část} je taková hodnota, kterou vyjadřuje x\% z daného základu}
+\bod{{\bf Promile} představují rozšíření procent, představují $1\over 1000$ z celku, používají se k práci s velmi malými hodnotami představující část nějakého celku}
+\vskip 4mm
+
+\Nadpis{Trojčlenka, poměr a úměra}
+
+Trojčlenka je matematický nástroj (postup), který se používá pro řešení slovních úloh.
+
+\Sekce{Poměr}
+
+Poměr je pojem, který úzce souvisí se zlomky. Poměr vyjadřuje způsob jakým je daný celek rozdělen do {\it x} částí, přičemž každá část může obsahovat jiné množství z daného celku. Jedná se o vztah mezi jednotlivými částmi do kterých je celek rozdělen. Poměr se značí zápisem, který říká kolik dílů daného celku obsahuje takterá část:
+
+$$ x_1:y_2:...:x_n $$
+
+kde písmena  $x_1$, $y_2$, ..., $x_n$ vyjadřují části do kterých je celek rozdělen a číselné hodnoty, které vyjadřují poměr v jakém je daný celek rozdělen. Jednotlivé části jsou odděleny symbolem dvojtečka (neplést s intervaly). Výsledný zápis se čte: "Celek je rozdělen v poměru $x_1$ ku $x_2$ ku ... ku $x_n$". Důležité je že součtem hodnot jednotlivých částí poměru dá ve výsledku celkový počet dílů celku:
+
+$$ \sum_{i=1}^{n} x_i = celek $$
+
+
+Poměr se využíví například v chemii kde vyjadřuje poměr jednotlivých látek pro namýchází potřebné směsy (roztoku). Poměr se také využívá v kontextu přímé a nepřímé úměrnosti.
+
+\PodSekce{Krácení a rozšiřování poměru}
+
+Důležité je poměr lze stejně jako zlomky krátit a rozšířovat, proto výsledný součet jednotlivých poměrů nemusí odpovídat výslednému celku. Typickým případem je poměr:
+
+$$ 1200:600 = 2:1 $$
+
+Přičemž byl poměr zkrácen hodntou 600. To znamená, že v praxi {\bf každý díl poměru zastupuje určitou předem dohodnutou hodnotu}. Proto aby byla získána zkutečná hodnota celku je nutné poměr opět rozšířit hodnotou jednoho dílku. V případě, že hodnota jednoho dílku celku je 600, pak je celek roven:
+
+$$ 2:1 \cdot 600 = 1200:600 \rightarrow celek=1200+600=1800$$
+
+\PodSekce{Opačný poměr}
+
+Opačný poměr k danému poměru je takový poměr, který má zrcadlově prohozené hodnoty jednotlivých částí poměru. Tedy například:
+
+$$ 2:1 \rightarrow 1:2 $$
+
+Opačný poměr se využívá k popisu nepřímé úměrnosti.
+
+\Sekce{Úměra}
+
+Úměra vyjadřuje závislost (vztah) jedné veličiny na druhé. To znamená, že pokud se změní hodnota jedné veličiny, změní se v {\bf určitém poměru} i hodnota druhé veličiny.
+
+Rozlišují se dva druhy úměry:
+
+\vskip 4mm
+\bod{Přímá úměrnost}
+\bod{Nepřímá úměrnost}
+\vskip 4mm
+
+\PodSekce{Přímá úměrnost}
+
+Pokud mezi dvěma veličinami platí přímá úměrnost, pak pokud se zvýší hodnota jedné veličiny, tak se zvíší v daném poměru i hodnota druhé veličiny. Matematicky má přímá úměrnost tvar:
+
+$$ y = k\cdot x $$
+
+To znamená, že vstup {\it x} je vždy ve stejném poměru k výstupu {\it y}. Tento výsledný poměr vždy udává konstanta {\it k} v konkrétním případě.
+
+Typickým příkladem přímé úměrnosti je produkce strojů. Čím více strojů pracuje tím více vyrobí.
+
+\PodSekce{Nepřímá úměrnost}
+
+Pokud mězi dvěma veličinami platí nepřímá úměrnost, pak pokud se zvýší hodnota jedné veličiny, tak se v daném poměru sníží hodnota druhé veličiny. Matematicky má nepřímá úměrnost tvar:
+
+$$ y = {k \over x} $$
+
+U nepřímé úměrnoti narozdíl od přímé úměrnosti se poměr mezi vstupem a výstupem mění se vstupem {\it x}.
+
+Typickým příkladem nepřímé úměrnosti je rychlost pohybu. Čím vyšší rychlost tím méně času je třeba na uražení dané vzdálenosti.
+
+\PodSekce{Trojčlenka}
+
+Trojčlenka je matematický nástroj (postup), který pracuje s poměry a přímou a nepřímou úměrností. Pomocí trojčlenky lze řešit různé druhy slovních úloh. Díky trojčlence lze jednoduše vypočítat jak se změní výsledek pokud se změní vstupní hodnoty pro nějaký již známé řešení, ve kterém platí přímá nebo nepřímá úměrnost.
+
+Principem trojčlenky je nejprve vypočítat poměr mezi vstupem a výsledkem známého řešení a tento poměr aplikovat buď v přímé nebo nepřímé úměře na jiný vstup.
+
+Pro zápis trojčlenky se používá orientační zápis, který se sestává ze zápisu známeho řešení, které se nachází na prvním řádku (čte se pro {\it X} odpovídá {\it Y}) a dále ze vstupu {\it x} pro které je hledána hodnota {\it y}. V zápisu se většinou označuje pomocí otazníku, aby bylo jasé, že se jedná o neznámou hodnotu.
+
+\PodSekce{Trojčlenka v přímé úměrnosti}
+
+V orientačním zápisu trojčlenky se vztah přímé úměrnosti vstupu a výstupu zapisuje pomocí dvou orinetovaných šipek mířících vzhůru, které naznačují postup v jakém jsou jednotlivé hodnoty zapisovány do vztahu:
+
+\vskip 4mm
+\centerline{\pdfrefximage 29}
+\vskip 4mm
+
+Pro sestavení řešení je nejprve vypočítán poměr mezi vstupem a výstupem známého řešení:
+
+$$ p = {Y \over X} $$
+
+V dalším kroku je tento poměr použit k výpočetu hodnoty pro jiný vstup:
+
+$$ y =  p \cdot x $$
+
+Celý postup lze zapsat v jednom kroku:
+
+$$ y = {Y\over X} \cdot x $$
+
+\PodSekce{Trojčlenka v nepřímé úměrnosti}
+
+V orientačním zápisu trojčlenky se vztah nepřímé úměrnosti vstupu a výstupu zapisuje pomocí dvou orientovaných šípek kde první (vpravo) míří vzhůru a druhá (vlevo) míří dolů. Opět tyto orientované šipky naznačují postup zápisu jednotlivých hodnot do vztahu:
+
+\vskip 4mm
+\centerline{\pdfrefximage 30}
+\vskip 4mm
+
+Pro sestavení řešení je třeba nejprve vypočítat honotu celku:
+
+$$ c = X \cdot Y $$
+
+
+Pokud je znám celek, který byl získán se vstupem {\it X} na základě výsledku {\it Y}, pak je možné zjistit výsledek {\it y}:
+
+$$ y = {c \over x} $$
+
+Opět lze vše zapsat v jednom kroku:
+
+$$ y = {{X \cdot Y}\over x} $$
+
+\Nadpis{Mentální matematika}
+
+Mentální matematika je schopnost daného jedince počítat základní aritmetické operace (sčítání, odčítání, násobení, dělení a mocnina) z paměti. Slovo mentální naznačuje, že vykonávané operace provádějí stejně přirozeně jako jakékoli jiné běžné myšlenkové pochody (chůze, čtení, ...). Jedná se o schopnosti, které se nejvíce rozvíjejí v mládí (stejně jako čtení), nicméně je možné je rozvíjet v jakémkoli věku pomocí speciálních postupů a pomocí různých početních metod, které jsou speciálně určeny k rychlému počítání z hlavy.
+
+Elementární operace s čísly patří mezi základní znalosti matematiky. Tyto operace jsou ale ve světě moderní technologie značně podceňovány, jelikož je lze provádět jednoduše na výpočetních zařízeních. Tato zařízení ale slouží k urychlení složitých operací a výpočtů a při počítání malých hodnot se jedná ne jen o (relativně) zdlouhavou činnost, která se skládá ze zadávání cifer do zařízení, ale také díky ní nezvratně dochází k úpadku početních schopností daného jedince. Díky těmto technickým vymoženostem se jeví výpočty na papíře jako přežitek, který lze jednodušeji a bez námahy provést zařízením k tomu určeným. Díky pravidelnému procvičování jednoduchých výpočtů z hlavy je ne jen procvičován mozek a logické (matematické) myšlení, ale také je dosaženo vyšší rychlosti praktických výpočtů v oborovém zaměření.
+
+\Sekce{Shrnutí}
+
+\Nadpis{Typy a rady}
+
+Matematik by si měl vypěstovat několik typických způsobů jak přistupovat k matematickým problémům, protože díky tomu si ušetří spoustu práce a ulehčí její řešení.
+
+\Sekce{Matematický instinkt}
+
+Při řešení matematických úloh by si člověk měl vytvořit instinkt a naučit se předpokládat (předvídat) jaký asi pravděpodobně bude (orientačně) výsledek dané matematické úlohy. Díky tomu pokud člověk dostane úplně jiný výsledek než očekával, pak by měl znejistět a předpokládat buď jiné chování dané matematické úlohy než si myslel a nebo udělal chybu při jejím řešení. V každém případě, by měl překontrolovat celý postup výpočtu.
+
+Jedná se o předvídání jednotlivých kroků podobně jako u hry šachy, kdy na základě možných tahů šachista předvídá soupeřův tah. V tomto případě je soupeř matematická úloha a matematik na základě daných matematických operací se snaží předvídat jak bude vypadat následující krok a její výsledek. To ovšem nejde vždy. Při složitějších matematických operací, které zaberou třeba několik hodin výpočtu, ale je možné předpovídat možný výsledek u jednotlivých výpočetních kroků řešení dané matematické úlohy a tak přeci jen se částečně vyhnout možnosti udělat chybu.
+
+\Sekce{Počítání z hlavy}
+
+Při výpočtech by se měl matematik co nejméně spoléhat na výpočetní nástroje jako je například kalkulátor, nebo matematický software na počítači. To ovšem platí pouze u triviálních výpočtů, které je možné vypočítat z hlavy. Díky tomu je výpočet výrazně zrychlen (díky tomu že se daný matematik nezdržuje pracným zadáváním hodnot do výpočetního nástroje) a navíc se mu tím trénuje schopnost počítat z hlavy a tak může lépe předvídat další krok výpočtu pouhým pohledem na matematickou úlohu. Matematický nástroj by měl sloužit maximálně jen jako ověření správnosti výsledku v případě, že si matematik není jistý výsledkem u složitějších úloh a nebo na zkrácení času velmi složitých výpočetních úloh.
+
+\end

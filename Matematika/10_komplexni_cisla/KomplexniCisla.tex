@@ -1,0 +1,163 @@
+%preambule
+\def\addr{/home/petr/.texLib}
+
+\input \addr/TeXMakro
+\setAddress{\addr}
+%\input \addr/KonfiguracePaperBook
+\input \addr/KonfiguraceEBook
+
+%makra
+
+%Načtení obrázků
+%\pdfximage width/height \the\SirkaOdstavce mm {./Obrazky/obr}
+\pdfximage width 70 mm {./Obrazky/GrafickeZnaceniKomplexnichCisel.png}
+
+%Titulní stránka
+%\VlozitDokument{TitulniStranka}
+
+%generování obsahu
+\Obsah
+
+\Nadpis{ Úvod}
+
+Číselné množiny se vyvíjely postupně tak jak se rozvýjely početní operace se kterými pro danou množinu přicházela jistá omezení. Výsledkem dané početní operace při určitých argumentech z předem dafinované číselné množiny mohlo vzniknou číslo, které již nepatří do stejné číslené množiny. To znamená, že aritmetická operace není uzevřená na danou číselnou množinu. Tím přišla nutnost rozšířit danou číselnou množinu o nové hodnoty a vytvořit tak číselnou množinu novou. 
+
+Přirozená čísla nejsou uzavřená na aritmetickou operaci rozdíl, celá čísla nejsou uzavřená na aritmetickou operaci podíl, racionální řísla nejsou uzavřená na aritmetickou operaci odmocnina a reálná čísla nejsou uzavřena na aritmetickou operaci odmocnina ze záporných hodnot na sudý exponent. Vlivem toho dochází k tomu, že některé výrazy nejsou definované na celé množině reálných čísel a rovnice s těmito výrazy nemají v těchto bodech definované řešení (kořeny). To je dáno definicí operace mocnina, která je definována jako opakované násobení čísla sebou samím:
+
+$$ a^b = \underbrace{a\cdot a\cdot ... \cdot a}_b = c$$
+
+Z toho vyplývá vlastnost, při umocnění libovolného reálného čísla na sudý exponent je výsledkem vždy kladné číslo:
+
+$$ (-a)^{b}, b = 2\cdot k:  \underbrace{(-a) \cdot (-a) \cdot ... \cdot (-a) \cdot (-a)}_b = c \wedge c \ge 0 $$
+
+Proto nelze na množině reálných čísel nikdy nalézt takové čáslo pro které by platilo:
+
+$$ \sqrt{-b} = a $$
+
+
+Výsledkem je taková hodnota, kterou nelze zobrazit na {\bf ose reálných čísel}. Tento nedostatek tak přirozeným způsobem řeší rozšíření reálných čísel o tato čísla a vznikne tak nová množina, která se nazývá {\bf množina komplexních čísel}. {\bf Obor (mnžina) komplexních čísel} se značí symbolem ${\setC}$ a jedná se o nástroj, který řeší nedokonalost oboru reálných čísel při odmocňování záporných čísel na sudý exponent. 
+
+Pomocí komplexních čísel lze vždy vypočítat příslušný počet řešení algebraické rovnice podle {\bf základní věty algebry}.
+
+Základní otázkou je důvod proč bylo nutné, aby bylo možné odmocňovat záporná čísla na sudý exponent, respektive aby každá algebraická rovnice měla příslušný počet řešení, tedy praktický význam komplexních čísel. 
+
+\Nadpis{Zavedení komplexních čísel}
+
+Pro zavedení komplexních čísel je nutné předpokládat, že odmocňování záporných čísel na sudý exponent je možné. Výsledkem je nějaké číslo, které nelze vyjádřit pomocí reálných čísel a nelze ho tak zobrazit na reálné ose. Při definici komplexních čísel je tedy vytvořen předpoklad, že existuje nějaké číslo {\it i} pro které platí:
+
+$$ i^2 = -1 $$
+
+Díky tomu je možné celou rovnici upravit na tvar:
+
+$$ \sqrt{-1} = i$$
+
+Díky tomu je možné definovat, že odmocnina z hodnoty -1 je nějaké imaginární číslo {\bf i}, kterým lze dále pracovat. Toto číslo se nazývá {\bf imaginární jednotka}.  Jedná se o speciální součást (konstanta) komplexního čísla, díky které je možné řešit odmocniny ze záporných čísel. Imaginární jednotka se značí písmenem {\it i} a její nejdůležitější vlastnost je,  že její druhá mocnina je rovna -1. 
+
+Tato vlastnost komplexní jednotky je na rozdíl od hodnot reálných čísel dosti podivná a těžko pochopitelná, nicméně je důležité si uvědomit, že číslo i není reálné a proto pro něj podmínka, že sudá mocnina reálného čísla je vždy kladná hodnota, neplatí.
+
+Hodnotu samotného čísla {\it i} nelze určit, protože nemá reálný základ, ale lze říci, že bude platit:
+
+$$ i^2 = -1 $$
+
+$$ i^3 = (-1) \cdot i = -i $$
+
+$$ i^4 = i^2 \cdot i^2 = (-1) \cdot (-1) = 1 $$
+
+$$ i^5 = i^4 \cdot i = 1 \cdot i = i $$
+
+$$ i^6 = i^4 \cdot i^2 = 1 \cdot (-1) = -1 $$
+
+
+Pro vyšší mocniny imaginárního čísla se pak výsledky cyklicky opakují.
+
+\Sekce {Grafické značení komplexních čísel}
+
+Reálná čísla jsou pouze jednorozměrné hodnoty, které se graficky zobrazují na jednorozměrné (reálné) číselné ose. Na této  ose se lze pohybovat buď dopředu, v kladném směru a nebo dozadu, v záporném směru. V případě komplexních čísel již jeden rozměr nestačí a je nutné se pohybovat v dalším rozměru a to nahoru a dolů. To má velký význam například v počítačové grafice, kde je díky tomu pootáčen libovolný obraz (zobrazení). 
+
+Protože komplexní číslo je tvořeno uspořádanou dvojicí čísel, nelze je zobrazit na jednorozměrné soustavě souřadnic (číselná osa), ale je třeba využít dvojrozměrnou soustavu souřadnic (kartézská soustava souřadnic, graf). Graficky (geometricky) se komplexní čísla zobrazují pomocí bodů roviny, ve které je zavedena kartézská soustava souřadnic. Tato rovina se nazývá {\bf rovina komplexních čísel}, nebo krátce {\bf komplexní rovina}. Protože komplexní číslo $z=[x,y] $ je tvořeno uspořádanou dvojicí reálných hodnot, je v komplexní rovině zobrazeno bodem o souřadnicích x, y. Zobrazení mezi komplexními čísly, body komplexní roviny je vzájemně jednoznačné zobrazení - každému komplexnímu číslu je přiřazen právě jeden bod komplexní roviny jako jeho obraz a naopak každému bodu komplexní roviny je přiřazeno právě jedno komplexní číslo. 
+
+Osa x se v komplexní rovině nazývá {\bf osa reálných čísel}, nebo krátce {\bf reálná osa} a osa y se nazývá {\bf osa ryze imaginárních čísel}, nebo krátce {\bf imaginární osa}. 
+
+\vskip 4mm
+\centerline{\pdfrefximage 1}
+\vskip 4mm
+
+
+\Sekce {Absolutní hodnota komplexního čísla}
+Stejně jako absolutní hodnota reálného čísla vyjadřuje vzdálenost od bodu nula na reálné ose, která je jednorozměrný vyjadřuje absolutní hodnota z komplexního čísla vzdálenost od bodu nula na rovině komplexních čísel, která je ale dvou rozměrná. V komplexní rovině tvoří komplexní číslo pravoúhlý trojúhelník, proto absolutní hodnota komplexního čísla vyjadřuje délku přepony tohoto trojúhelníka. 
+
+%obrázek
+
+Pro výpočet absolutní hodnoty komplexního čísla je tedy možné použít Pythagorovu větu:
+
+$$ c = a + bi \Rightarrow |c| = \sqrt{a^2 + b^2} $$
+
+
+\Sekce{Rotace komplexního čísla}
+
+Pojem rotace čísel souvisí s jejich grafickým zobrazením na číslené ose, respektive komplexní rovině a popisuje jeho charakteristické chování, kterého je využíváno v praxi. 
+
+V případě reálného čísla, které je zobrazeno na reálné ose je možné 
+
+
+\Nadpis{Tvary komplexních čísel}
+
+\Sekce{Algebraický tvar komplexního čísla}
+Komplexní číslo se nazývá uspořádaná dvojice reálných čísel, pro které jsou definované početní operace sčítání, odčítání, násobení a dělení:
+
+$$ z = [x,y]; x,y \in \setR $$
+
+Číslu $x \in R $ se říká {\bf reálná část (reálná složka) komplexního čísla z}, číslu $y \in \setR $ se říká {\bf imaginární část (imaginární složka) komplexního čísla z} a symbolicky se zapisuje:
+
+\centerline{\it Re z = x, Im z = y}
+
+Rozlišují se dva druhy komplexních čísel $z=[x,y]$:
+
+\vskip 4mm
+\bod{Je-li $y=0$, pak $z=[x,0]=x$ je {\bf reálné číslo}. Takováto uspořádaná dvojice je tedy pouze jinou formou zápisu reálného čísla, protože nula v imaginární části v aritmetických operacích nemá žádný efekt.}
+\bod{Je-li $y \neq 0$, pak číslo {\bf z} není reálné a říká se mu  {\bf imaginární číslo}. Přitom může být buď $x \neq 0$ a nebo $x=0$. Jeli speciálně $x=0$, pak číslo {\it z} je ryze {\bf imaginární číslo}.}
+
+
+\Sekce {Goniometrický tvar koplexního čísla}
+
+\Sekce {Exponenciální tvar komplexního čísla}
+
+\Sekce {Převody mezi tvary komplexního čísla}
+
+
+\Nadpis{Operace s komplexními čísly}
+
+Tak jako s kterýmikoliv jinými čísly lze i s komplexními čísly provýdět aritmetické operace. Komplexní číslo zapsané v jakémkoli tvaru s imaginární jednotkou reprezentuje racionální algebraický tvar (polynom). Díky tomu se s při vykonávání aritmetických operací se s algebraickými čísly pracuje jako s algebraickými výrazy. 
+
+\Sekce {Rovnost komplexních čísel}
+
+Na rozdíl od běžných čísel komplexní čísla obsahují dvě složky. Jestliže komplexní číslo tvoří algebraický výraz pak, pokud se mají dvě komplexní čísla rovnat, musí se rovnat v obou složkách. Dvě komplexní čísla $z_1=[x_1,y_2]$ a $z_2=[x_2,y_2]$ jsou si rovna $ z_1=z_2$ právě když jsou si rovny jejich reálné části $x_1=x_2$ a jejich imaginární části $y_1 = y_2$. 
+
+Rozdílem od reálných čísel je, že je nelze uspořádat od největšího po nejmenší protože ve svém rozvinutém tvaru nevyjadřují pouze jednu hodnotu, ale vyjařují hodnotu reálné složky a imaginární složky (jedná se o podobný případ jako u zlomu). Lze ale porovnávat absolutní hodnotu komplexních čísel:
+
+$$ |z_1| \gtreqless |z_2| $$
+
+\Sekce{Komplexně stružená čísla}
+
+\Sekce{Součet a rozdíl komplexních čísel}
+
+Z vlastností algebraických výrazu platí, že lze mezi sebou sčítat pouze konstanty nebo proměnné, vyjadřující stejnou hodnotu. Z toho vyplývá intuitivní pravidlo pro sčítání dvou komplexních čísel, že se sčátají zvlášť reálné složky a zvlášť imaginární složky:
+
+$$ (a_1 +b_1i) \pm (a_2 +b_2i) = (a_1 + a_2) \pm (b_1i +b_2i) $$
+
+\Sekce{Násobení komplexních čísel}
+
+\Sekce{Dělení komplexních čísel}
+
+\Sekce{Mocnění komplexních čísel}
+
+\Sekce{Umocnění komplexních čísel}
+
+\Nadpis {Řešení rovnic oboru komplexních čísel}
+
+\Nadpis {Komplexní analýza}
+
+
+
+
+\end
